@@ -1,0 +1,41 @@
+name: Build macOS app
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  macos:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Test core
+        run: swift test
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Generate Xcode project
+        run: xcodegen generate
+
+      - name: Build
+        run: >
+          xcodebuild
+          -project WanLaNit.xcodeproj
+          -scheme WanLaNit
+          -configuration Release
+          -destination "platform=macOS"
+          -derivedDataPath build
+          CODE_SIGNING_ALLOWED=NO
+          CODE_SIGNING_REQUIRED=NO
+
+      - name: Zip unsigned app
+        run: |
+          cd build/Build/Products/Release
+          ditto -c -k --keepParent WanLaNit.app WanLaNit-unsigned.zip
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: WanLaNit-unsigned
+          path: build/Build/Products/Release/WanLaNit-unsigned.zip

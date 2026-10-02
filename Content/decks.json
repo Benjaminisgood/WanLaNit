@@ -1,0 +1,58 @@
+[
+  {
+    "id": "greetings",
+    "title": "见面和礼貌",
+    "blurb": "你好、谢谢、对不起。男生句尾用 ครับ。",
+    "phase": "pronunciation",
+    "order": 1
+  },
+  {
+    "id": "intro",
+    "title": "自我介绍",
+    "blurb": "名字、从哪来、正在学泰语。认识人的第一段。",
+    "phase": "pronunciation",
+    "order": 2
+  },
+  {
+    "id": "food",
+    "title": "吃饭点单",
+    "blurb": "吃了吗、点菜、辣不辣、买单。",
+    "phase": "pronunciation",
+    "order": 3
+  },
+  {
+    "id": "friends",
+    "title": "交朋友",
+    "blurb": "约饭、夸人、留联系方式。语气放轻。",
+    "phase": "pronunciation",
+    "order": 4
+  },
+  {
+    "id": "numbers",
+    "title": "数字和时间",
+    "blurb": "一到万，今天明天，几点。",
+    "phase": "pronunciation",
+    "order": 5
+  },
+  {
+    "id": "travel",
+    "title": "问路出行",
+    "blurb": "左右转、车站、出租车、洗手间。",
+    "phase": "script",
+    "order": 6
+  },
+  {
+    "id": "grammar",
+    "title": "小词和句式",
+    "blurb": "是、有、想、吗、在哪里。把句子拆开看。",
+    "phase": "grammar",
+    "order": 7
+  },
+  {
+    "id": "people",
+    "title": "家人和形容",
+    "blurb": "家人称呼、颜色、大小、冷热。",
+    "phase": "grammar",
+    "order": 8
+  }
+]

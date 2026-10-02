@@ -1,0 +1,184 @@
+[
+  {
+    "id": "voiced-stops",
+    "title": "浊音 บ 和 ด",
+    "problem": "普通话没有真正的浊塞音。拼音 b、d 其实是不送气的清音，对应泰语的 ป bp、ต dt。泰语另外还有声带振动的 บ b、ด d。",
+    "howTo": "手轻轻放在喉咙上。发 บ、ด 时要感到振动，像英语 ball、dog 的开头。发 ป、ต 时喉咙不振，气流也几乎不出。三组都不要在后面加一个“呃”。",
+    "pairs": [
+      {
+        "id": "snd-baa",
+        "thai": "บ่า",
+        "roman": "bàa",
+        "meaning": "肩膀"
+      },
+      {
+        "id": "snd-daa",
+        "thai": "ด่า",
+        "roman": "dàa",
+        "meaning": "责骂"
+      },
+      {
+        "id": "snd-bpaa",
+        "thai": "ป้า",
+        "roman": "bpâa",
+        "meaning": "姑姑，阿姨"
+      },
+      {
+        "id": "snd-dtaa",
+        "thai": "ตา",
+        "roman": "dtaa",
+        "meaning": "眼睛；外公"
+      },
+      {
+        "id": "snd-baan",
+        "thai": "บ้าน",
+        "roman": "bâan",
+        "meaning": "家"
+      },
+      {
+        "id": "snd-bpaan",
+        "thai": "ปาน",
+        "roman": "bpaan",
+        "meaning": "胎记；中等"
+      }
+    ]
+  },
+  {
+    "id": "initial-ng",
+    "title": "词首的 ง",
+    "problem": "普通话的 ng 只出现在韵尾，比如“英”“中”。泰语的 ง 可以出现在一个词的开头。",
+    "howTo": "先发“英”的尾音，停在那里。嘴不要松开，也不要先加 e 或 n，直接接后面的元音。งู 不是 en-guu，是从鼻音直接开始。",
+    "pairs": [
+      {
+        "id": "snd-nguu",
+        "thai": "งู",
+        "roman": "nguu",
+        "meaning": "蛇"
+      },
+      {
+        "id": "snd-ngaan",
+        "thai": "งาน",
+        "roman": "ngaan",
+        "meaning": "工作"
+      },
+      {
+        "id": "snd-ngaai",
+        "thai": "ง่าย",
+        "roman": "ngâai",
+        "meaning": "容易"
+      },
+      {
+        "id": "snd-ngoen",
+        "thai": "เงิน",
+        "roman": "ngəən",
+        "meaning": "钱；银"
+      }
+    ]
+  },
+  {
+    "id": "unreleased-finals",
+    "title": "不除阻的韵尾",
+    "problem": "泰语韵尾的 p、t、k 只摆口型，不把气放出来。普通话习惯在后面再加一个元音，听起来就会多出一个音节。",
+    "howTo": "说到韵尾时轻轻闭上：p 双唇，t 舌尖，k 舌根。停住，不要送气，也不要读成 po、te、ke。รัก 是一个音节，不是 ra-ke。",
+    "pairs": [
+      {
+        "id": "snd-rak",
+        "thai": "รัก",
+        "roman": "rák",
+        "meaning": "爱"
+      },
+      {
+        "id": "snd-maak",
+        "thai": "มาก",
+        "roman": "mâak",
+        "meaning": "很，多"
+      },
+      {
+        "id": "snd-khrap",
+        "thai": "ครับ",
+        "roman": "khráp",
+        "meaning": "男生礼貌词"
+      },
+      {
+        "id": "snd-jet",
+        "thai": "เจ็ด",
+        "roman": "jèt",
+        "meaning": "七"
+      },
+      {
+        "id": "snd-bpaak",
+        "thai": "ปาก",
+        "roman": "bpàak",
+        "meaning": "嘴"
+      },
+      {
+        "id": "snd-sip",
+        "thai": "สิบ",
+        "roman": "sìp",
+        "meaning": "十"
+      }
+    ]
+  },
+  {
+    "id": "aspiration",
+    "title": "送气和不送气",
+    "problem": "ก 和 ข/ค、ป 和 ผ/พ、ต 和 ถ/ท 能区分不同的词。送气的那一组有一股气，不送气的几乎没有。这和浊音 บ、ด 又是另一件事。",
+    "howTo": "手掌放在嘴前。ก ป ต 几乎吹不动纸。ข ค ผ พ ถ ท 有明显的气，接近拼音 k、p、t。先把这两组分开，再单独练喉咙振动的 บ 和 ด。",
+    "pairs": [
+      {
+        "id": "snd-kaa",
+        "thai": "กา",
+        "roman": "kaa",
+        "meaning": "乌鸦"
+      },
+      {
+        "id": "snd-khaa",
+        "thai": "ขา",
+        "roman": "khǎa",
+        "meaning": "腿"
+      },
+      {
+        "id": "snd-khaa-low",
+        "thai": "คา",
+        "roman": "khaa",
+        "meaning": "卡住"
+      },
+      {
+        "id": "snd-bpaa-forest",
+        "thai": "ป่า",
+        "roman": "bpàa",
+        "meaning": "森林"
+      },
+      {
+        "id": "snd-phaa",
+        "thai": "ผ้า",
+        "roman": "phâa",
+        "meaning": "布"
+      },
+      {
+        "id": "snd-phaa-low",
+        "thai": "พา",
+        "roman": "phaa",
+        "meaning": "带领"
+      },
+      {
+        "id": "snd-dtaa-eye",
+        "thai": "ตา",
+        "roman": "dtaa",
+        "meaning": "眼睛"
+      },
+      {
+        "id": "snd-thaam",
+        "thai": "ถาม",
+        "roman": "thǎam",
+        "meaning": "问"
+      },
+      {
+        "id": "snd-thaa",
+        "thai": "ทา",
+        "roman": "thaa",
+        "meaning": "涂"
+      }
+    ]
+  }
+]

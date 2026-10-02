@@ -1,0 +1,597 @@
+[
+  {
+    "id": "v-a",
+    "symbols": "◌ะ  ◌ั",
+    "roman": "a",
+    "lengthLabel": "短",
+    "soundHint": "很短的 a，像“啊”马上收住。闭音节里写成 ั，比如 กับ。",
+    "exampleThai": "จะ",
+    "exampleRoman": "jà",
+    "exampleMeaning": "将要",
+    "order": 1,
+    "syllables": [
+      {
+        "thai": "จะ",
+        "roman": "jà",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "dead",
+        "length": "short",
+        "word": 0
+      }
+    ]
+  },
+  {
+    "id": "v-aa",
+    "symbols": "◌า",
+    "roman": "aa",
+    "lengthLabel": "长",
+    "soundHint": "把 a 拉长。",
+    "exampleThai": "มา",
+    "exampleRoman": "maa",
+    "exampleMeaning": "来",
+    "order": 2,
+    "syllables": [
+      {
+        "thai": "มา",
+        "roman": "maa",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      }
+    ]
+  },
+  {
+    "id": "v-i",
+    "symbols": "◌ิ",
+    "roman": "i",
+    "lengthLabel": "短",
+    "soundHint": "短 i，像“衣”，马上停。",
+    "exampleThai": "กิน",
+    "exampleRoman": "kin",
+    "exampleMeaning": "吃",
+    "order": 3,
+    "syllables": [
+      {
+        "thai": "กิน",
+        "roman": "kin",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "short",
+        "word": 0
+      }
+    ]
+  },
+  {
+    "id": "v-ii",
+    "symbols": "◌ี",
+    "roman": "ii",
+    "lengthLabel": "长",
+    "soundHint": "长 i。",
+    "exampleThai": "มี",
+    "exampleRoman": "mii",
+    "exampleMeaning": "有",
+    "order": 4,
+    "syllables": [
+      {
+        "thai": "มี",
+        "roman": "mii",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      }
+    ]
+  },
+  {
+    "id": "v-ue",
+    "symbols": "◌ึ",
+    "roman": "ʉ",
+    "lengthLabel": "短",
+    "soundHint": "舌位像 i，嘴唇收圆。先发“衣”，嘴唇慢慢圆起来，不要滑成“乌”。",
+    "exampleThai": "ถึง",
+    "exampleRoman": "thʉ̌ng",
+    "exampleMeaning": "到",
+    "order": 5,
+    "syllables": [
+      {
+        "thai": "ถึง",
+        "roman": "thʉ̌ng",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "short",
+        "word": 0
+      }
+    ]
+  },
+  {
+    "id": "v-uee",
+    "symbols": "◌ือ",
+    "roman": "ʉʉ",
+    "lengthLabel": "长",
+    "soundHint": "和短 ʉ 是同一个音，拉长。",
+    "exampleThai": "มือ",
+    "exampleRoman": "mʉʉ",
+    "exampleMeaning": "手",
+    "order": 6,
+    "syllables": [
+      {
+        "thai": "มือ",
+        "roman": "mʉʉ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      }
+    ]
+  },
+  {
+    "id": "v-u",
+    "symbols": "◌ุ",
+    "roman": "u",
+    "lengthLabel": "短",
+    "soundHint": "短 u。",
+    "exampleThai": "คุณ",
+    "exampleRoman": "khun",
+    "exampleMeaning": "您",
+    "order": 7,
+    "syllables": [
+      {
+        "thai": "คุณ",
+        "roman": "khun",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "short",
+        "word": 0
+      }
+    ]
+  },
+  {
+    "id": "v-uu",
+    "symbols": "◌ู",
+    "roman": "uu",
+    "lengthLabel": "长",
+    "soundHint": "长 u。",
+    "exampleThai": "ดู",
+    "exampleRoman": "duu",
+    "exampleMeaning": "看",
+    "order": 8,
+    "syllables": [
+      {
+        "thai": "ดู",
+        "roman": "duu",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      }
+    ]
+  },
+  {
+    "id": "v-e",
+    "symbols": "เ◌ะ  เ◌็",
+    "roman": "e",
+    "lengthLabel": "短",
+    "soundHint": "短 e，嘴比“诶”稍闭，马上停。闭音节里常加 ็。",
+    "exampleThai": "เป็ด",
+    "exampleRoman": "bpèt",
+    "exampleMeaning": "鸭子",
+    "order": 9,
+    "syllables": [
+      {
+        "thai": "เป็ด",
+        "roman": "bpèt",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "dead",
+        "length": "short",
+        "word": 0
+      }
+    ]
+  },
+  {
+    "id": "v-ee",
+    "symbols": "เ◌",
+    "roman": "ee",
+    "lengthLabel": "长",
+    "soundHint": "长 e。",
+    "exampleThai": "เจ",
+    "exampleRoman": "jee",
+    "exampleMeaning": "素食",
+    "order": 10,
+    "syllables": [
+      {
+        "thai": "เจ",
+        "roman": "jee",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      }
+    ]
+  },
+  {
+    "id": "v-ae",
+    "symbols": "แ◌ะ  แ◌็",
+    "roman": "ɛ",
+    "lengthLabel": "短",
+    "soundHint": "嘴张得比 e 大，接近“哎”，但是短的。",
+    "exampleThai": "แข็ง",
+    "exampleRoman": "khɛ̌ng",
+    "exampleMeaning": "硬",
+    "order": 11,
+    "syllables": [
+      {
+        "thai": "แข็ง",
+        "roman": "khɛ̌ng",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "short",
+        "word": 0
+      }
+    ]
+  },
+  {
+    "id": "v-aee",
+    "symbols": "แ◌",
+    "roman": "ɛɛ",
+    "lengthLabel": "长",
+    "soundHint": "长 ɛ。",
+    "exampleThai": "แดง",
+    "exampleRoman": "dɛɛng",
+    "exampleMeaning": "红",
+    "order": 12,
+    "syllables": [
+      {
+        "thai": "แดง",
+        "roman": "dɛɛng",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      }
+    ]
+  },
+  {
+    "id": "v-o",
+    "symbols": "โ◌ะ  ◌",
+    "roman": "o",
+    "lengthLabel": "短",
+    "soundHint": "短 o。没有元音符号、又以辅音收尾时，常常就是这个短 o，比如 นก。",
+    "exampleThai": "นก",
+    "exampleRoman": "nók",
+    "exampleMeaning": "鸟",
+    "order": 13,
+    "syllables": [
+      {
+        "thai": "นก",
+        "roman": "nók",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "dead",
+        "length": "short",
+        "word": 0
+      }
+    ]
+  },
+  {
+    "id": "v-oo",
+    "symbols": "โ◌",
+    "roman": "oo",
+    "lengthLabel": "长",
+    "soundHint": "长 o，像“欧”拉长。",
+    "exampleThai": "โต",
+    "exampleRoman": "dtoo",
+    "exampleMeaning": "长大",
+    "order": 14,
+    "syllables": [
+      {
+        "thai": "โต",
+        "roman": "dtoo",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      }
+    ]
+  },
+  {
+    "id": "v-aw",
+    "symbols": "เ◌าะ  ◌็อ",
+    "roman": "ɔ",
+    "lengthLabel": "短",
+    "soundHint": "嘴比 o 更开，像“奥”的开头，但是短的。",
+    "exampleThai": "อก",
+    "exampleRoman": "ɔ̀k",
+    "exampleMeaning": "胸",
+    "order": 15,
+    "syllables": [
+      {
+        "thai": "อก",
+        "roman": "ɔ̀k",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "dead",
+        "length": "short",
+        "word": 0
+      }
+    ]
+  },
+  {
+    "id": "v-aww",
+    "symbols": "◌อ",
+    "roman": "ɔɔ",
+    "lengthLabel": "长",
+    "soundHint": "长 ɔ。",
+    "exampleThai": "รอ",
+    "exampleRoman": "rɔɔ",
+    "exampleMeaning": "等",
+    "order": 16,
+    "syllables": [
+      {
+        "thai": "รอ",
+        "roman": "rɔɔ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      }
+    ]
+  },
+  {
+    "id": "v-er",
+    "symbols": "เ◌ิ◌",
+    "roman": "ə",
+    "lengthLabel": "短",
+    "soundHint": "嘴巴放松的中央元音，像英语 uh，但更短。闭音节里写成 เ◌ิ◌。",
+    "exampleThai": "เพิ่ง",
+    "exampleRoman": "phə̂ng",
+    "exampleMeaning": "刚刚",
+    "order": 17,
+    "syllables": [
+      {
+        "thai": "เพิ่ง",
+        "roman": "phə̂ng",
+        "consonantClass": "low",
+        "toneMark": "maiEk",
+        "ending": "live",
+        "length": "short",
+        "word": 0
+      }
+    ]
+  },
+  {
+    "id": "v-err",
+    "symbols": "เ◌อ",
+    "roman": "əə",
+    "lengthLabel": "长",
+    "soundHint": "长 ə。เธอ 的元音就是它。",
+    "exampleThai": "เธอ",
+    "exampleRoman": "thəə",
+    "exampleMeaning": "你（口语）",
+    "order": 18,
+    "syllables": [
+      {
+        "thai": "เธอ",
+        "roman": "thəə",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      }
+    ]
+  },
+  {
+    "id": "v-ia",
+    "symbols": "เ◌ีย",
+    "roman": "iia",
+    "lengthLabel": "长",
+    "soundHint": "从 i 滑到 a。",
+    "exampleThai": "เรียน",
+    "exampleRoman": "riian",
+    "exampleMeaning": "学习",
+    "order": 19,
+    "syllables": [
+      {
+        "thai": "เรียน",
+        "roman": "riian",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      }
+    ]
+  },
+  {
+    "id": "v-uea",
+    "symbols": "เ◌ือ",
+    "roman": "ʉʉa",
+    "lengthLabel": "长",
+    "soundHint": "从 ʉ 滑到 a。",
+    "exampleThai": "เรือ",
+    "exampleRoman": "rʉʉa",
+    "exampleMeaning": "船",
+    "order": 20,
+    "syllables": [
+      {
+        "thai": "เรือ",
+        "roman": "rʉʉa",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      }
+    ]
+  },
+  {
+    "id": "v-ua",
+    "symbols": "◌ัว",
+    "roman": "uua",
+    "lengthLabel": "长",
+    "soundHint": "从 u 滑到 a。",
+    "exampleThai": "ตัว",
+    "exampleRoman": "dtuua",
+    "exampleMeaning": "身体，自己",
+    "order": 21,
+    "syllables": [
+      {
+        "thai": "ตัว",
+        "roman": "dtuua",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      }
+    ]
+  },
+  {
+    "id": "v-am",
+    "symbols": "◌ำ",
+    "roman": "am",
+    "lengthLabel": "短",
+    "soundHint": "短 a 再加 m。ำ 把这个音写成一个符号。",
+    "exampleThai": "ทำ",
+    "exampleRoman": "tham",
+    "exampleMeaning": "做",
+    "order": 22,
+    "syllables": [
+      {
+        "thai": "ทำ",
+        "roman": "tham",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "short",
+        "word": 0
+      }
+    ]
+  },
+  {
+    "id": "v-ai",
+    "symbols": "ไ◌",
+    "roman": "ai",
+    "lengthLabel": "长",
+    "soundHint": "从 a 滑到 i。",
+    "exampleThai": "ไป",
+    "exampleRoman": "bpai",
+    "exampleMeaning": "去",
+    "order": 23,
+    "syllables": [
+      {
+        "thai": "ไป",
+        "roman": "bpai",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      }
+    ]
+  },
+  {
+    "id": "v-ai-mai",
+    "symbols": "ใ◌",
+    "roman": "ai",
+    "lengthLabel": "长",
+    "soundHint": "读音和 ไ 一样。常用词只有二十来个，比如 ใจ、ใส่、ใกล้。",
+    "exampleThai": "ใจ",
+    "exampleRoman": "jai",
+    "exampleMeaning": "心",
+    "order": 24,
+    "syllables": [
+      {
+        "thai": "ใจ",
+        "roman": "jai",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      }
+    ],
+    "note": "看到 ใ 先当成 ai。不要单独编一个新的音。"
+  },
+  {
+    "id": "v-ao",
+    "symbols": "เ◌า",
+    "roman": "ao",
+    "lengthLabel": "长",
+    "soundHint": "从 a 滑到 o。เขา 是这个音。เช้า 更长，写成 cháao。",
+    "exampleThai": "เขา",
+    "exampleRoman": "khǎo",
+    "exampleMeaning": "他，她",
+    "order": 25,
+    "syllables": [
+      {
+        "thai": "เขา",
+        "roman": "khǎo",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      }
+    ]
+  },
+  {
+    "id": "v-ui",
+    "symbols": "◌ุย",
+    "roman": "ui",
+    "lengthLabel": "长",
+    "soundHint": "从 u 滑到 i。",
+    "exampleThai": "คุย",
+    "exampleRoman": "khui",
+    "exampleMeaning": "聊天",
+    "order": 26,
+    "syllables": [
+      {
+        "thai": "คุย",
+        "roman": "khui",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      }
+    ]
+  },
+  {
+    "id": "v-oi",
+    "symbols": "◌อย",
+    "roman": "ɔɔi",
+    "lengthLabel": "长",
+    "soundHint": "从长 ɔ 滑到 i。",
+    "exampleThai": "ลอย",
+    "exampleRoman": "lɔɔi",
+    "exampleMeaning": "漂",
+    "order": 27,
+    "syllables": [
+      {
+        "thai": "ลอย",
+        "roman": "lɔɔi",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      }
+    ]
+  }
+]
