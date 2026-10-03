@@ -283,6 +283,18 @@ final class AppAPISurfaceTests: XCTestCase {
         }
         _ = progress.library.first?.source
         _ = progress.readerNotes.first?.context
+
+        let steps = LearningPath.steps(catalog: catalog, progress: progress)
+        XCTAssertEqual(steps.map(\.kind), [.letters, .tones, .vocabulary, .reading])
+        for step in steps {
+            _ = step.id
+            _ = step.title
+            _ = step.detail
+            XCTAssertEqual(step.unlocked, LearningPath.isUnlocked(step.kind, catalog: catalog, progress: progress))
+        }
+        XCTAssertEqual(LearningPath.consonantsBeforeTones, 8)
+        XCTAssertEqual(LearningPath.toneCardsBeforeVocabulary, 4)
+        XCTAssertEqual(LearningPath.wordCardsBeforeReading, 10)
     }
 
     private func touch(_ phrase: Phrase) {

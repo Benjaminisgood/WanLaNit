@@ -319,6 +319,9 @@ struct SessionView: View {
                 gradeButton(.good, shortcut: "3")
                 gradeButton(.easy, shortcut: "4")
             }
+            Text("空格看答案，数字键 1 到 4 打分。")
+                .font(.caption)
+                .foregroundStyle(Ink.muted)
         }
     }
 
@@ -327,7 +330,7 @@ struct SessionView: View {
             model.grade(grade)
         } label: {
             VStack(spacing: 2) {
-                Text(grade.title).font(.body.weight(.semibold))
+                Text("\(shortcut)  \(grade.title)").font(.body.weight(.semibold))
                 Text(intervalText(grade))
                     .font(.caption2)
                     .foregroundStyle(Ink.muted)

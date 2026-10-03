@@ -11,7 +11,7 @@ struct RootView: View {
                 MissingContentView(message: message)
             } else {
                 NavigationSplitView {
-                    List(AppSection.allCases, selection: Binding<AppSection?>(
+                    List(visibleSections, selection: Binding<AppSection?>(
                         get: { model.section },
                         set: { model.section = $0 ?? model.section }
                     )) { section in
@@ -25,7 +25,7 @@ struct RootView: View {
                         if model.active != nil {
                             SessionView()
                         } else {
-                            switch model.section {
+                            switch shownSection {
                             case .today: TodayView()
                             case .tones: ToneTrainerView()
                             case .decks: DecksView()
@@ -44,6 +44,28 @@ struct RootView: View {
         }
         .onReceive(NotificationCenter.default.publisher(for: NSApplication.didBecomeActiveNotification)) { _ in
             speech.refresh()
+        }
+    }
+
+    private var visibleSections: [AppSection] {
+        AppSection.allCases.filter(isVisible)
+    }
+
+    private var shownSection: AppSection {
+        isVisible(model.section) ? model.section : .today
+    }
+
+    private func isVisible(_ section: AppSection) -> Bool {
+        guard let catalog = model.catalog else { return true }
+        switch section {
+        case .tones:
+            return LearningPath.isUnlocked(.tones, catalog: catalog, progress: model.progress)
+        case .vocab:
+            return LearningPath.isUnlocked(.vocabulary, catalog: catalog, progress: model.progress)
+        case .reader:
+            return LearningPath.isUnlocked(.reading, catalog: catalog, progress: model.progress)
+        case .today, .decks, .script, .culture, .stats:
+            return true
         }
     }
 }

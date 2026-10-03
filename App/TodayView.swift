@@ -63,9 +63,25 @@ struct TodayView: View {
                         } else {
                             Text("今天没有要背的")
                                 .font(.headline)
-                            Text("新句子暂时没有了，到期的也复习完了。可以去「句子」里翻一翻，或者明天再来。文字和声调随时能看。")
+                            Text("新句子暂时没有了，到期的也复习完了。可以去「句子」里翻一翻，或者明天再来。文字随时能看。")
                                 .foregroundStyle(Ink.muted)
                                 .fixedSize(horizontal: false, vertical: true)
+                        }
+                    }
+                }
+
+                if let catalog = model.catalog {
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("学习路线")
+                            .font(.headline)
+                        Text("每天的卡片仍按日期排。这条线按文字、声调、词汇、阅读依次打开。")
+                            .font(.callout)
+                            .foregroundStyle(Ink.muted)
+                            .fixedSize(horizontal: false, vertical: true)
+                        ForEach(LearningPath.steps(catalog: catalog, progress: model.progress)) { step in
+                            PathRow(step: step) {
+                                model.section = section(for: step.kind)
+                            }
                         }
                     }
                 }
@@ -91,6 +107,45 @@ struct TodayView: View {
             .frame(maxWidth: 760, alignment: .leading)
         }
         .navigationTitle("今天")
+    }
+}
+
+private func section(for kind: PathStep.Kind) -> AppSection {
+    switch kind {
+    case .letters: return .script
+    case .tones: return .tones
+    case .vocabulary: return .vocab
+    case .reading: return .reader
+    }
+}
+
+private struct PathRow: View {
+    var step: PathStep
+    var open: () -> Void
+
+    var body: some View {
+        HStack(alignment: .center, spacing: 12) {
+            VStack(alignment: .leading, spacing: 2) {
+                Text(step.title)
+                    .font(.body.weight(.semibold))
+                Text(step.detail)
+                    .font(.callout)
+                    .foregroundStyle(Ink.muted)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+            Spacer(minLength: 8)
+            if step.unlocked {
+                Button("打开", action: open)
+                    .buttonStyle(.bordered)
+            } else {
+                Text("还没到")
+                    .font(.callout)
+                    .foregroundStyle(Ink.muted)
+            }
+        }
+        .padding(12)
+        .background(Ink.card, in: RoundedRectangle(cornerRadius: 12))
+        .overlay(RoundedRectangle(cornerRadius: 12).stroke(Ink.line, lineWidth: 1))
     }
 }
 
