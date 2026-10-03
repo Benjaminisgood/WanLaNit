@@ -283,6 +283,8 @@ public struct LearningProgress: Equatable, Sendable {
     public var wordMemory: [String: WordMemory]
     public var library: [ReaderDocument]
     public var readerNotes: [ReaderNote]
+    /// 打开后，侧栏不再按学习路线藏起声调、词汇和阅读。
+    public var unlockAll: Bool
 
     public init(
         schema: Int,
@@ -296,7 +298,8 @@ public struct LearningProgress: Equatable, Sendable {
         newCardLimit: Int = 20,
         wordMemory: [String: WordMemory] = [:],
         library: [ReaderDocument] = [],
-        readerNotes: [ReaderNote] = []
+        readerNotes: [ReaderNote] = [],
+        unlockAll: Bool = false
     ) {
         self.schema = schema
         self.startDate = startDate
@@ -310,6 +313,7 @@ public struct LearningProgress: Equatable, Sendable {
         self.wordMemory = wordMemory
         self.library = library
         self.readerNotes = readerNotes
+        self.unlockAll = unlockAll
     }
 
     public static func fresh(start: CivilDay = StudyPlan.defaultStart) -> LearningProgress {
@@ -355,7 +359,7 @@ public struct LearningProgress: Equatable, Sendable {
 extension LearningProgress: Codable {
     private enum CodingKeys: String, CodingKey {
         case schema, startDate, cards, streak, lastStudiedDay, dayLogs, resume
-        case desiredRetention, newCardLimit, wordMemory, library, readerNotes
+        case desiredRetention, newCardLimit, wordMemory, library, readerNotes, unlockAll
     }
 
     public init(from decoder: Decoder) throws {
@@ -373,6 +377,7 @@ extension LearningProgress: Codable {
         wordMemory = try container.decodeIfPresent([String: WordMemory].self, forKey: .wordMemory) ?? [:]
         library = try container.decodeIfPresent([ReaderDocument].self, forKey: .library) ?? []
         readerNotes = try container.decodeIfPresent([ReaderNote].self, forKey: .readerNotes) ?? []
+        unlockAll = try container.decodeIfPresent(Bool.self, forKey: .unlockAll) ?? false
     }
 
     public func encode(to encoder: Encoder) throws {
@@ -389,6 +394,7 @@ extension LearningProgress: Codable {
         try container.encode(wordMemory, forKey: .wordMemory)
         try container.encode(library, forKey: .library)
         try container.encode(readerNotes, forKey: .readerNotes)
+        try container.encode(unlockAll, forKey: .unlockAll)
     }
 }
 

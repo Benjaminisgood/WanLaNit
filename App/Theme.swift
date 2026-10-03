@@ -24,7 +24,11 @@ extension ConsonantClass {
 
 struct PaperBackground: ViewModifier {
     func body(content: Content) -> some View {
-        content.background(Ink.paper)
+        // Color fills the column, including under the title bar. The content
+        // itself stays in the safe area, so it does not slide under the toolbar.
+        content.background {
+            Ink.paper.ignoresSafeArea()
+        }
     }
 }
 

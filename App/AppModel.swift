@@ -13,7 +13,7 @@ final class AppModel {
     var importMessage: String?
     var progress: LearningProgress
     var active: ActiveSession?
-    var section: AppSection = .today
+    var selectedSection: AppSection? = .today
 
     init() {
         speech = SpeechService()
@@ -49,6 +49,11 @@ final class AppModel {
 
     func setNewCardLimit(_ value: Int) {
         progress.newCardLimit = min(60, max(0, value))
+        store.save(progress)
+    }
+
+    func setUnlockAll(_ value: Bool) {
+        progress.unlockAll = value
         store.save(progress)
     }
 
@@ -171,7 +176,7 @@ final class AppModel {
     }
 }
 
-enum AppSection: String, CaseIterable, Identifiable {
+enum AppSection: String, CaseIterable, Identifiable, Hashable {
     case today
     case tones
     case decks
@@ -181,7 +186,7 @@ enum AppSection: String, CaseIterable, Identifiable {
     case reader
     case stats
 
-    var id: String { rawValue }
+    var id: Self { self }
 
     var title: String {
         switch self {

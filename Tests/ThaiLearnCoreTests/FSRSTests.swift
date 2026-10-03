@@ -82,6 +82,7 @@ final class FSRSTests: XCTestCase {
         XCTAssertEqual(progress.startDate, try CivilDay(iso: "2026-10-02"))
         XCTAssertEqual(progress.desiredRetention, 0.9, accuracy: 0.0001)
         XCTAssertEqual(progress.newCardLimit, 20)
+        XCTAssertFalse(progress.unlockAll)
         XCTAssertEqual(progress.dayLogs.first?.remembered, 0)
         XCTAssertEqual(progress.resume?.items.first?.template, .recognition)
         let card = try XCTUnwrap(progress.cards["greet-hello"])
@@ -98,6 +99,12 @@ final class FSRSTests: XCTestCase {
         XCTAssertEqual(again.cards["greet-hello"]?.due, card.due)
         XCTAssertEqual(again.cards["greet-hello"]?.lapses, 1)
         XCTAssertEqual(again.streak, 3)
+        XCTAssertFalse(again.unlockAll)
+
+        var freed = again
+        freed.unlockAll = true
+        let freedAgain = try JSONDecoder().decode(LearningProgress.self, from: JSONEncoder().encode(freed))
+        XCTAssertTrue(freedAgain.unlockAll)
     }
 
     func testLapsedSM2CardBecomesRelearning() throws {

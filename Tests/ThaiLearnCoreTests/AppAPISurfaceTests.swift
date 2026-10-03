@@ -106,6 +106,9 @@ final class AppAPISurfaceTests: XCTestCase {
         }
         _ = progress.desiredRetention
         _ = progress.newCardLimit
+        XCTAssertFalse(progress.unlockAll)
+        progress.unlockAll = true
+        XCTAssertTrue(progress.unlockAll)
         _ = StudySession.intervalLabel(for: .good, card: nil, on: today, retention: progress.desiredRetention)
         let stats = StudyStats.make(catalog: catalog, progress: progress, today: today)
         _ = stats.retention

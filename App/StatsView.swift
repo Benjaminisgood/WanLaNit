@@ -76,6 +76,8 @@ struct StatsView: View {
             .frame(maxWidth: .infinity, alignment: .topLeading)
         }
         .navigationTitle("统计")
+        .toolbarBackground(Ink.paper, for: .windowToolbar)
+        .toolbarBackground(.visible, for: .windowToolbar)
     }
 
     private var settings: some View {
@@ -106,6 +108,17 @@ struct StatsView: View {
                     in: 0...60
                 )
                 Text("课程自己还有节奏：前两周大约 8 张新句子，认字阶段会换成字母和声调规则。这里是上限。")
+                    .font(.caption)
+                    .foregroundStyle(Ink.muted)
+                    .fixedSize(horizontal: false, vertical: true)
+                Toggle(
+                    "全部解锁（自由模式）",
+                    isOn: Binding(
+                        get: { model.progress.unlockAll },
+                        set: { model.setUnlockAll($0) }
+                    )
+                )
+                Text("打开后，声调、词汇和阅读都会出现在侧栏，不再等前面的进度。今天页上的路线仍按实际进度显示。")
                     .font(.caption)
                     .foregroundStyle(Ink.muted)
                     .fixedSize(horizontal: false, vertical: true)
