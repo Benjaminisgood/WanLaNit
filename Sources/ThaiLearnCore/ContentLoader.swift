@@ -3,6 +3,11 @@ import Foundation
 public struct ContentError: Error, Equatable, CustomStringConvertible {
     public var issues: [String]
 
+    // Memberwise inits stay internal unless written out. The app target constructs this.
+    public init(issues: [String]) {
+        self.issues = issues
+    }
+
     public var description: String {
         issues.joined(separator: "\n")
     }
