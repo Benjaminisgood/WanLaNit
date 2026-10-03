@@ -57,6 +57,31 @@ final class AppModel {
         store.save(progress)
     }
 
+    func setTypingFallback(_ enabled: Bool) {
+        progress.setTypingFallback(enabled)
+        store.save(progress)
+    }
+
+    func recordTyping(lesson id: String, score: TypingScore, expected: String, typed: String) {
+        progress.recordTyping(lesson: id, score: score, expected: expected, typed: typed, on: today)
+        store.save(progress)
+    }
+
+    func markPassageRead(_ id: String) {
+        progress.recordPassageRead(id, on: today)
+        store.save(progress)
+    }
+
+    func recordPassageQuiz(id: String, correct: Int, asked: Int) {
+        progress.recordPassageQuiz(id: id, correct: correct, asked: asked)
+        store.save(progress)
+    }
+
+    func recordPassageDictation(id: String, completed: Int) {
+        progress.recordPassageDictation(id: id, completed: completed)
+        store.save(progress)
+    }
+
     func planToday() -> PlannedSession? {
         guard let catalog else { return nil }
         return StudySession.planToday(catalog: catalog, progress: progress, today: today)
@@ -184,6 +209,8 @@ enum AppSection: String, CaseIterable, Identifiable, Hashable {
     case culture
     case vocab
     case reader
+    case typing
+    case passages
     case stats
 
     var id: Self { self }
@@ -197,6 +224,8 @@ enum AppSection: String, CaseIterable, Identifiable, Hashable {
         case .culture: return "文化"
         case .vocab: return "词汇"
         case .reader: return "阅读"
+        case .typing: return "打字"
+        case .passages: return "精读"
         case .stats: return "统计"
         }
     }
@@ -210,6 +239,8 @@ enum AppSection: String, CaseIterable, Identifiable, Hashable {
         case .culture: return "leaf"
         case .vocab: return "text.book.closed"
         case .reader: return "book"
+        case .typing: return "keyboard"
+        case .passages: return "book.fill"
         case .stats: return "chart.bar"
         }
     }

@@ -241,6 +241,7 @@ public struct Catalog: Equatable, Sendable {
     public var culture: [CultureNote]
     public var words: [VocabWord]
     public var starters: [StarterText]
+    public var passages: [ReadingPassage]
 
     public init(
         decks: [Deck],
@@ -252,7 +253,8 @@ public struct Catalog: Equatable, Sendable {
         sounds: [SoundLesson],
         culture: [CultureNote],
         words: [VocabWord] = [],
-        starters: [StarterText] = []
+        starters: [StarterText] = [],
+        passages: [ReadingPassage] = []
     ) {
         self.decks = decks
         self.phrases = phrases
@@ -264,6 +266,11 @@ public struct Catalog: Equatable, Sendable {
         self.culture = culture
         self.words = words
         self.starters = starters
+        self.passages = passages
+    }
+
+    public func passage(_ id: String) -> ReadingPassage? {
+        passages.first { $0.id == id }
     }
 
     public func deck(_ id: String) -> Deck? {

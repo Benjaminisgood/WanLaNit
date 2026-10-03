@@ -70,6 +70,13 @@ struct TodayView: View {
                     }
                 }
 
+                HStack(spacing: 12) {
+                    Button(typingTitle) { model.selectedSection = .typing }
+                        .buttonStyle(.bordered)
+                    Button(readingTitle) { model.selectedSection = .passages }
+                        .buttonStyle(.bordered)
+                }
+
                 if let catalog = model.catalog {
                     VStack(alignment: .leading, spacing: 10) {
                         Text("学习路线")
@@ -109,6 +116,21 @@ struct TodayView: View {
         .navigationTitle("今天")
         .toolbarBackground(Ink.paper, for: .windowToolbar)
         .toolbarBackground(.visible, for: .windowToolbar)
+    }
+}
+
+private extension TodayView {
+    var typingTitle: String {
+        let minutes = Int(model.progress.typing.seconds(on: model.today) / 60)
+        if minutes >= 5 { return "打字 5 分钟 · 今天练过了" }
+        if minutes > 0 { return "打字 5 分钟 · 已练 \(minutes) 分钟" }
+        return "打字 5 分钟"
+    }
+
+    var readingTitle: String {
+        let count = model.progress.passagesRead(on: model.today)
+        if count > 0 { return "读一篇 · 今天 \(count) 篇" }
+        return "读一篇"
     }
 }
 

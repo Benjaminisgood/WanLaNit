@@ -83,6 +83,8 @@ final class FSRSTests: XCTestCase {
         XCTAssertEqual(progress.desiredRetention, 0.9, accuracy: 0.0001)
         XCTAssertEqual(progress.newCardLimit, 20)
         XCTAssertFalse(progress.unlockAll)
+        XCTAssertTrue(progress.typing.best.isEmpty)
+        XCTAssertTrue(progress.passageLog.isEmpty)
         XCTAssertEqual(progress.dayLogs.first?.remembered, 0)
         XCTAssertEqual(progress.resume?.items.first?.template, .recognition)
         let card = try XCTUnwrap(progress.cards["greet-hello"])

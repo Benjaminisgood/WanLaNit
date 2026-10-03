@@ -128,6 +128,7 @@ public enum ContentLoader {
         let culture: [CultureNote] = decode("culture.json", from: directory, issues: &issues) ?? []
         let words: [VocabWord] = decode("words.json", from: directory, issues: &issues) ?? []
         let starters: [StarterText] = decode("starters.json", from: directory, issues: &issues) ?? []
+        let passages: [ReadingPassage] = decode("passages.json", from: directory, issues: &issues) ?? []
 
         if !issues.isEmpty {
             throw ContentError(issues: issues)
@@ -143,7 +144,8 @@ public enum ContentLoader {
             sounds: sounds,
             culture: culture,
             words: words,
-            starters: starters
+            starters: starters,
+            passages: passages
         )
         let validation = validate(catalog)
         if !validation.isEmpty {
@@ -164,6 +166,7 @@ public enum ContentLoader {
         validateCulture(catalog, issues: &issues)
         validateWords(catalog, issues: &issues)
         validateStarters(catalog, issues: &issues)
+        validatePassages(catalog, issues: &issues)
         return issues
     }
 
@@ -419,6 +422,55 @@ public enum ContentLoader {
             if !(1...3).contains(text.level) {
                 issues.append("短文 \(text.id) 的难度必须是 1 到 3")
             }
+        }
+    }
+
+    private static func validatePassages(_ catalog: Catalog, issues: inout [String]) {
+        if catalog.passages.count < 30 {
+            issues.append("精读只有 \(catalog.passages.count) 篇，至少要 30 篇")
+        }
+        let topics = Set(["日常生活", "食物", "旅行", "交朋友", "泰国文化"])
+        var perLevel: [Int: Int] = [:]
+        for passage in catalog.passages {
+            perLevel[passage.level, default: 0] += 1
+            if !(1...4).contains(passage.level) {
+                issues.append("短文 \(passage.id) 的难度必须是 1 到 4")
+            }
+            if !topics.contains(passage.topic) {
+                issues.append("短文 \(passage.id) 的话题不在范围内")
+            }
+            if passage.title.isEmpty || passage.chinese.isEmpty {
+                issues.append("短文 \(passage.id) 缺少标题或译文")
+            }
+            if !containsThai(passage.thai) {
+                issues.append("短文 \(passage.id) 没有泰文")
+            }
+            let sentences = passage.sentences
+            switch passage.level {
+            case 1 where !(2...3).contains(sentences.count):
+                issues.append("短文 \(passage.id) 是入门篇，要有 2 到 3 句，现在 \(sentences.count) 句")
+            case 4 where sentences.count < 5 || passage.thai.unicodeScalars.count < 80:
+                issues.append("短文 \(passage.id) 作为第四级太短")
+            default:
+                break
+            }
+            if passage.glosses.isEmpty {
+                issues.append("短文 \(passage.id) 没有词注")
+            }
+            for gloss in passage.glosses where !passage.thai.contains(gloss.thai) || gloss.romanization.isEmpty || gloss.meaning.isEmpty {
+                issues.append("短文 \(passage.id) 的词注「\(gloss.thai)」对不上")
+            }
+            if !(3...4).contains(passage.questions.count) {
+                issues.append("短文 \(passage.id) 要有 3 到 4 道理解题")
+            }
+            for question in passage.questions {
+                if question.choices.count < 3 || !question.choices.indices.contains(question.answer) {
+                    issues.append("短文 \(passage.id) 有一道题的选项不对")
+                }
+            }
+        }
+        for level in 1...4 where (perLevel[level] ?? 0) < 6 {
+            issues.append("第 \(level) 级短文不够")
         }
     }
 

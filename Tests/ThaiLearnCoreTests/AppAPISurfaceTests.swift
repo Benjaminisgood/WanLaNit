@@ -298,6 +298,80 @@ final class AppAPISurfaceTests: XCTestCase {
         XCTAssertEqual(LearningPath.consonantsBeforeTones, 8)
         XCTAssertEqual(LearningPath.toneCardsBeforeVocabulary, 4)
         XCTAssertEqual(LearningPath.wordCardsBeforeReading, 10)
+
+        XCTAssertEqual(KedmaneeKeyboard.keys.count, 47)
+        for key in KedmaneeKeyboard.keys {
+            _ = key.usPlain
+            _ = key.usShift
+            _ = key.plain
+            _ = key.shifted
+            _ = key.finger.chinese
+            _ = key.row
+            _ = key.homeBump
+            _ = key.plainLabel
+            _ = key.shiftedLabel
+            _ = key.id
+        }
+        XCTAssertEqual(TypingInput.thai(fromQWERTY: "a"), "ฟ")
+        let typingDiff = TypingCompare.diff(expected: "กา", typed: "ก")
+        _ = typingDiff.focus?.expected
+        _ = typingDiff.marks.first?.status
+        _ = typingDiff.correct
+        _ = typingDiff.wrong
+        _ = typingDiff.pending
+        _ = typingDiff.extra
+        _ = typingDiff.finished
+        _ = typingDiff.accuracy
+        let typingScore = TypingMetrics.score(correct: 2, wrong: 0, seconds: 2)
+        _ = typingScore.cpm
+        _ = typingScore.wpm
+        _ = typingScore.seconds
+        let typingLessons = TypingCourse.lessons(in: catalog)
+        XCTAssertEqual(typingLessons.map(\.stage), TypingStage.allCases)
+        _ = typingLessons[0].title
+        _ = typingLessons[0].detail
+        _ = typingLessons[0].text
+        let drill = TypingCourse.weakDrill(from: progress.typing)
+        XCTAssertEqual(drill.id, "weak")
+        progress.recordTyping(lesson: "home-left", score: typingScore, expected: "กา", typed: "กา", on: today)
+        _ = progress.typing.best["home-left"]?.cpm
+        _ = progress.typing.best["home-left"]?.accuracy
+        _ = progress.typing.seconds(on: today)
+        _ = progress.typing.weakKeys
+        progress.setTypingFallback(true)
+        XCTAssertTrue(progress.typing.qwertyFallback)
+
+        XCTAssertGreaterThanOrEqual(catalog.passages.count, 30)
+        if let passage = catalog.passage(catalog.passages[0].id) {
+            _ = passage.level
+            _ = passage.topic
+            _ = passage.title
+            _ = passage.thai
+            _ = passage.chinese
+            _ = passage.paragraph
+            XCTAssertFalse(passage.sentences.isEmpty)
+            for gloss in passage.glosses {
+                _ = gloss.thai
+                _ = gloss.romanization
+                _ = gloss.meaning
+            }
+            for question in passage.questions {
+                _ = question.prompt
+                _ = question.choices
+                _ = question.answer
+            }
+        }
+        XCTAssertEqual(ThaiSentences.split("กิน\nไป"), ["กิน", "ไป"])
+        progress.recordPassageRead("p-01", on: today)
+        progress.recordPassageQuiz(id: "p-01", correct: 2, asked: 3)
+        progress.recordPassageDictation(id: "p-01", completed: 1)
+        XCTAssertEqual(progress.passagesRead(on: today), 1)
+        let passageLog = progress.passageLog["p-01"]
+        XCTAssertEqual(passageLog?.read, true)
+        XCTAssertEqual(passageLog?.readOn, today.iso)
+        XCTAssertEqual(passageLog?.correct, 2)
+        XCTAssertEqual(passageLog?.asked, 3)
+        XCTAssertEqual(passageLog?.dictated, 1)
     }
 
     private func touch(_ phrase: Phrase) {

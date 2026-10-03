@@ -285,6 +285,8 @@ public struct LearningProgress: Equatable, Sendable {
     public var readerNotes: [ReaderNote]
     /// 打开后，侧栏不再按学习路线藏起声调、词汇和阅读。
     public var unlockAll: Bool
+    public var typing: TypingProgress
+    public var passageLog: [String: PassageLog]
 
     public init(
         schema: Int,
@@ -299,7 +301,9 @@ public struct LearningProgress: Equatable, Sendable {
         wordMemory: [String: WordMemory] = [:],
         library: [ReaderDocument] = [],
         readerNotes: [ReaderNote] = [],
-        unlockAll: Bool = false
+        unlockAll: Bool = false,
+        typing: TypingProgress = TypingProgress(),
+        passageLog: [String: PassageLog] = [:]
     ) {
         self.schema = schema
         self.startDate = startDate
@@ -314,6 +318,8 @@ public struct LearningProgress: Equatable, Sendable {
         self.library = library
         self.readerNotes = readerNotes
         self.unlockAll = unlockAll
+        self.typing = typing
+        self.passageLog = passageLog
     }
 
     public static func fresh(start: CivilDay = StudyPlan.defaultStart) -> LearningProgress {
@@ -359,7 +365,7 @@ public struct LearningProgress: Equatable, Sendable {
 extension LearningProgress: Codable {
     private enum CodingKeys: String, CodingKey {
         case schema, startDate, cards, streak, lastStudiedDay, dayLogs, resume
-        case desiredRetention, newCardLimit, wordMemory, library, readerNotes, unlockAll
+        case desiredRetention, newCardLimit, wordMemory, library, readerNotes, unlockAll, typing, passageLog
     }
 
     public init(from decoder: Decoder) throws {
@@ -378,6 +384,8 @@ extension LearningProgress: Codable {
         library = try container.decodeIfPresent([ReaderDocument].self, forKey: .library) ?? []
         readerNotes = try container.decodeIfPresent([ReaderNote].self, forKey: .readerNotes) ?? []
         unlockAll = try container.decodeIfPresent(Bool.self, forKey: .unlockAll) ?? false
+        typing = try container.decodeIfPresent(TypingProgress.self, forKey: .typing) ?? TypingProgress()
+        passageLog = try container.decodeIfPresent([String: PassageLog].self, forKey: .passageLog) ?? [:]
     }
 
     public func encode(to encoder: Encoder) throws {
@@ -395,6 +403,8 @@ extension LearningProgress: Codable {
         try container.encode(library, forKey: .library)
         try container.encode(readerNotes, forKey: .readerNotes)
         try container.encode(unlockAll, forKey: .unlockAll)
+        try container.encode(typing, forKey: .typing)
+        try container.encode(passageLog, forKey: .passageLog)
     }
 }
 
