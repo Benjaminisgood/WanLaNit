@@ -97,6 +97,7 @@ enum AppSection: String, CaseIterable, Identifiable {
     case decks
     case script
     case culture
+    case vocab
     case stats
 
     var id: String { rawValue }
@@ -108,6 +109,7 @@ enum AppSection: String, CaseIterable, Identifiable {
         case .decks: return "句子"
         case .script: return "文字"
         case .culture: return "文化"
+        case .vocab: return "词汇"
         case .stats: return "统计"
         }
     }
@@ -119,6 +121,7 @@ enum AppSection: String, CaseIterable, Identifiable {
         case .decks: return "text.bubble"
         case .script: return "character.book.closed"
         case .culture: return "leaf"
+        case .vocab: return "text.book.closed"
         case .stats: return "chart.bar"
         }
     }

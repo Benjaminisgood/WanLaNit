@@ -76,7 +76,9 @@ struct SessionView: View {
                         toneCard(drill)
                     }
                 case .word:
-                    wordCard(ref)
+                    if let word = model.catalog?.word(ref.id) {
+                        wordCard(word, template: ref.template)
+                    }
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -241,12 +243,39 @@ struct SessionView: View {
     }
 
     @ViewBuilder
-    private func wordCard(_ ref: StudyRef) -> some View {
-        ThaiLine(text: ref.id, size: 40)
-            .frame(maxWidth: .infinity)
-        if revealed {
-            Text("这张词卡会在阅读里补上释义。")
+    private func wordCard(_ word: VocabWord, template: CardTemplate) -> some View {
+        if template == .production {
+            Text(word.meaning)
+                .font(.title2.bold())
+                .frame(maxWidth: .infinity)
+            Text(word.topic)
+                .font(.callout)
                 .foregroundStyle(Ink.muted)
+                .frame(maxWidth: .infinity)
+        } else {
+            ThaiLine(text: word.thai, size: 52)
+                .frame(maxWidth: .infinity)
+            PlayButton(text: word.spoken)
+                .frame(maxWidth: .infinity)
+        }
+        if revealed {
+            if template == .production {
+                ThaiLine(text: word.thai, size: 44)
+                    .frame(maxWidth: .infinity)
+                PlayButton(text: word.spoken)
+                    .frame(maxWidth: .infinity)
+            } else {
+                Text(word.meaning)
+                    .font(.title3)
+                    .frame(maxWidth: .infinity)
+            }
+            Text(word.romanization)
+                .font(.title3)
+                .frame(maxWidth: .infinity)
+            Text("词频第 \(word.band) 档 · \(word.topic)")
+                .font(.caption)
+                .foregroundStyle(Ink.muted)
+                .frame(maxWidth: .infinity)
         }
     }
 

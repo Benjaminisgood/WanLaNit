@@ -209,6 +209,18 @@ public struct SoundLesson: Codable, Equatable, Identifiable, Sendable {
     public var pairs: [SoundPair]
 }
 
+public struct VocabWord: Codable, Equatable, Identifiable, Sendable {
+    public var id: String
+    public var thai: String
+    public var romanization: String
+    public var meaning: String
+    public var band: Int
+    public var topic: String
+    public var order: Int
+
+    public var spoken: String { thai }
+}
+
 public struct CultureNote: Codable, Equatable, Identifiable, Sendable {
     public var id: String
     public var title: String
@@ -227,6 +239,7 @@ public struct Catalog: Equatable, Sendable {
     public var minimalSets: [MinimalSet]
     public var sounds: [SoundLesson]
     public var culture: [CultureNote]
+    public var words: [VocabWord]
 
     public init(
         decks: [Deck],
@@ -236,7 +249,8 @@ public struct Catalog: Equatable, Sendable {
         tones: [ToneLesson],
         minimalSets: [MinimalSet],
         sounds: [SoundLesson],
-        culture: [CultureNote]
+        culture: [CultureNote],
+        words: [VocabWord] = []
     ) {
         self.decks = decks
         self.phrases = phrases
@@ -246,6 +260,7 @@ public struct Catalog: Equatable, Sendable {
         self.minimalSets = minimalSets
         self.sounds = sounds
         self.culture = culture
+        self.words = words
     }
 
     public func deck(_ id: String) -> Deck? {
@@ -262,6 +277,14 @@ public struct Catalog: Equatable, Sendable {
 
     public func vowel(_ id: String) -> Vowel? {
         vowels.first { $0.id == id }
+    }
+
+    public func word(_ id: String) -> VocabWord? {
+        words.first { $0.id == id }
+    }
+
+    public func word(thai: String) -> VocabWord? {
+        words.first { $0.thai == thai }
     }
 
     public struct ToneExample: Equatable, Sendable {

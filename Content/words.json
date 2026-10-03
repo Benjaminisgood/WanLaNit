@@ -1,0 +1,9938 @@
+[
+  {
+    "id": "w-0001",
+    "thai": "กิน",
+    "romanization": "kin",
+    "meaning": "吃",
+    "band": 1,
+    "topic": "动作",
+    "order": 1
+  },
+  {
+    "id": "w-0002",
+    "thai": "ไป",
+    "romanization": "bpai",
+    "meaning": "去",
+    "band": 1,
+    "topic": "动作",
+    "order": 2
+  },
+  {
+    "id": "w-0003",
+    "thai": "มา",
+    "romanization": "maa",
+    "meaning": "来",
+    "band": 1,
+    "topic": "动作",
+    "order": 3
+  },
+  {
+    "id": "w-0004",
+    "thai": "อยู่",
+    "romanization": "yùu",
+    "meaning": "在；住",
+    "band": 1,
+    "topic": "动作",
+    "order": 4
+  },
+  {
+    "id": "w-0005",
+    "thai": "มี",
+    "romanization": "mii",
+    "meaning": "有",
+    "band": 1,
+    "topic": "动作",
+    "order": 5
+  },
+  {
+    "id": "w-0006",
+    "thai": "เป็น",
+    "romanization": "bpen",
+    "meaning": "是",
+    "band": 1,
+    "topic": "动作",
+    "order": 6
+  },
+  {
+    "id": "w-0007",
+    "thai": "ได้",
+    "romanization": "dâai",
+    "meaning": "能；得到",
+    "band": 1,
+    "topic": "动作",
+    "order": 7
+  },
+  {
+    "id": "w-0008",
+    "thai": "ให้",
+    "romanization": "hâi",
+    "meaning": "给",
+    "band": 1,
+    "topic": "动作",
+    "order": 8
+  },
+  {
+    "id": "w-0009",
+    "thai": "เอา",
+    "romanization": "ao",
+    "meaning": "拿",
+    "band": 1,
+    "topic": "动作",
+    "order": 9
+  },
+  {
+    "id": "w-0010",
+    "thai": "ดู",
+    "romanization": "duu",
+    "meaning": "看",
+    "band": 1,
+    "topic": "动作",
+    "order": 10
+  },
+  {
+    "id": "w-0011",
+    "thai": "ฟัง",
+    "romanization": "fang",
+    "meaning": "听",
+    "band": 1,
+    "topic": "动作",
+    "order": 11
+  },
+  {
+    "id": "w-0012",
+    "thai": "พูด",
+    "romanization": "phûut",
+    "meaning": "说",
+    "band": 1,
+    "topic": "动作",
+    "order": 12
+  },
+  {
+    "id": "w-0013",
+    "thai": "รู้",
+    "romanization": "rúu",
+    "meaning": "知道",
+    "band": 1,
+    "topic": "动作",
+    "order": 13
+  },
+  {
+    "id": "w-0014",
+    "thai": "อยาก",
+    "romanization": "yàak",
+    "meaning": "想要",
+    "band": 1,
+    "topic": "动作",
+    "order": 14
+  },
+  {
+    "id": "w-0015",
+    "thai": "ชอบ",
+    "romanization": "chɔ̂ɔp",
+    "meaning": "喜欢",
+    "band": 1,
+    "topic": "动作",
+    "order": 15
+  },
+  {
+    "id": "w-0016",
+    "thai": "รัก",
+    "romanization": "rák",
+    "meaning": "爱",
+    "band": 1,
+    "topic": "动作",
+    "order": 16
+  },
+  {
+    "id": "w-0017",
+    "thai": "ทำ",
+    "romanization": "tham",
+    "meaning": "做",
+    "band": 1,
+    "topic": "动作",
+    "order": 17
+  },
+  {
+    "id": "w-0018",
+    "thai": "ใช้",
+    "romanization": "chái",
+    "meaning": "用",
+    "band": 1,
+    "topic": "动作",
+    "order": 18
+  },
+  {
+    "id": "w-0019",
+    "thai": "ซื้อ",
+    "romanization": "sʉ́ʉ",
+    "meaning": "买",
+    "band": 1,
+    "topic": "动作",
+    "order": 19
+  },
+  {
+    "id": "w-0020",
+    "thai": "ขาย",
+    "romanization": "khǎai",
+    "meaning": "卖",
+    "band": 1,
+    "topic": "动作",
+    "order": 20
+  },
+  {
+    "id": "w-0021",
+    "thai": "เปิด",
+    "romanization": "bpə̀ət",
+    "meaning": "打开",
+    "band": 1,
+    "topic": "动作",
+    "order": 21
+  },
+  {
+    "id": "w-0022",
+    "thai": "ปิด",
+    "romanization": "bpìt",
+    "meaning": "关上",
+    "band": 1,
+    "topic": "动作",
+    "order": 22
+  },
+  {
+    "id": "w-0023",
+    "thai": "เข้า",
+    "romanization": "khâo",
+    "meaning": "进入",
+    "band": 1,
+    "topic": "动作",
+    "order": 23
+  },
+  {
+    "id": "w-0024",
+    "thai": "ออก",
+    "romanization": "ɔ̀ɔk",
+    "meaning": "出去",
+    "band": 1,
+    "topic": "动作",
+    "order": 24
+  },
+  {
+    "id": "w-0025",
+    "thai": "ขึ้น",
+    "romanization": "khʉ̂n",
+    "meaning": "上去",
+    "band": 1,
+    "topic": "动作",
+    "order": 25
+  },
+  {
+    "id": "w-0026",
+    "thai": "ลง",
+    "romanization": "long",
+    "meaning": "下去",
+    "band": 1,
+    "topic": "动作",
+    "order": 26
+  },
+  {
+    "id": "w-0027",
+    "thai": "นั่ง",
+    "romanization": "nâng",
+    "meaning": "坐",
+    "band": 1,
+    "topic": "动作",
+    "order": 27
+  },
+  {
+    "id": "w-0028",
+    "thai": "ยืน",
+    "romanization": "yʉʉn",
+    "meaning": "站",
+    "band": 1,
+    "topic": "动作",
+    "order": 28
+  },
+  {
+    "id": "w-0029",
+    "thai": "เดิน",
+    "romanization": "dəən",
+    "meaning": "走",
+    "band": 1,
+    "topic": "动作",
+    "order": 29
+  },
+  {
+    "id": "w-0030",
+    "thai": "วิ่ง",
+    "romanization": "wîng",
+    "meaning": "跑",
+    "band": 1,
+    "topic": "动作",
+    "order": 30
+  },
+  {
+    "id": "w-0031",
+    "thai": "นอน",
+    "romanization": "nɔɔn",
+    "meaning": "躺；睡觉",
+    "band": 1,
+    "topic": "动作",
+    "order": 31
+  },
+  {
+    "id": "w-0032",
+    "thai": "ตื่น",
+    "romanization": "dtʉ̀ʉn",
+    "meaning": "醒来",
+    "band": 1,
+    "topic": "动作",
+    "order": 32
+  },
+  {
+    "id": "w-0033",
+    "thai": "อาบน้ำ",
+    "romanization": "àap-náam",
+    "meaning": "洗澡",
+    "band": 1,
+    "topic": "动作",
+    "order": 33
+  },
+  {
+    "id": "w-0034",
+    "thai": "แปรงฟัน",
+    "romanization": "bprɛɛng-fan",
+    "meaning": "刷牙",
+    "band": 1,
+    "topic": "动作",
+    "order": 34
+  },
+  {
+    "id": "w-0035",
+    "thai": "อ่าน",
+    "romanization": "àan",
+    "meaning": "读",
+    "band": 1,
+    "topic": "动作",
+    "order": 35
+  },
+  {
+    "id": "w-0036",
+    "thai": "เขียน",
+    "romanization": "khǐan",
+    "meaning": "写",
+    "band": 1,
+    "topic": "动作",
+    "order": 36
+  },
+  {
+    "id": "w-0037",
+    "thai": "เรียน",
+    "romanization": "rian",
+    "meaning": "学习",
+    "band": 1,
+    "topic": "动作",
+    "order": 37
+  },
+  {
+    "id": "w-0038",
+    "thai": "สอน",
+    "romanization": "sɔ̌ɔn",
+    "meaning": "教",
+    "band": 1,
+    "topic": "动作",
+    "order": 38
+  },
+  {
+    "id": "w-0039",
+    "thai": "ถาม",
+    "romanization": "thǎam",
+    "meaning": "问",
+    "band": 1,
+    "topic": "动作",
+    "order": 39
+  },
+  {
+    "id": "w-0040",
+    "thai": "ตอบ",
+    "romanization": "dtɔ̀ɔp",
+    "meaning": "回答",
+    "band": 1,
+    "topic": "动作",
+    "order": 40
+  },
+  {
+    "id": "w-0041",
+    "thai": "บอก",
+    "romanization": "bɔ̀ɔk",
+    "meaning": "告诉",
+    "band": 1,
+    "topic": "动作",
+    "order": 41
+  },
+  {
+    "id": "w-0042",
+    "thai": "เรียก",
+    "romanization": "rîak",
+    "meaning": "叫",
+    "band": 1,
+    "topic": "动作",
+    "order": 42
+  },
+  {
+    "id": "w-0043",
+    "thai": "รอ",
+    "romanization": "rɔɔ",
+    "meaning": "等",
+    "band": 1,
+    "topic": "动作",
+    "order": 43
+  },
+  {
+    "id": "w-0044",
+    "thai": "หา",
+    "romanization": "hǎa",
+    "meaning": "找",
+    "band": 1,
+    "topic": "动作",
+    "order": 44
+  },
+  {
+    "id": "w-0045",
+    "thai": "เจอ",
+    "romanization": "jəə",
+    "meaning": "遇见",
+    "band": 1,
+    "topic": "动作",
+    "order": 45
+  },
+  {
+    "id": "w-0046",
+    "thai": "คิด",
+    "romanization": "khít",
+    "meaning": "想",
+    "band": 1,
+    "topic": "动作",
+    "order": 46
+  },
+  {
+    "id": "w-0047",
+    "thai": "จำ",
+    "romanization": "jam",
+    "meaning": "记得",
+    "band": 1,
+    "topic": "动作",
+    "order": 47
+  },
+  {
+    "id": "w-0048",
+    "thai": "ลืม",
+    "romanization": "lʉʉm",
+    "meaning": "忘记",
+    "band": 1,
+    "topic": "动作",
+    "order": 48
+  },
+  {
+    "id": "w-0049",
+    "thai": "ช่วย",
+    "romanization": "chûai",
+    "meaning": "帮助",
+    "band": 1,
+    "topic": "动作",
+    "order": 49
+  },
+  {
+    "id": "w-0050",
+    "thai": "ขอ",
+    "romanization": "khɔ̌ɔ",
+    "meaning": "请求",
+    "band": 1,
+    "topic": "动作",
+    "order": 50
+  },
+  {
+    "id": "w-0051",
+    "thai": "พา",
+    "romanization": "phaa",
+    "meaning": "带",
+    "band": 1,
+    "topic": "动作",
+    "order": 51
+  },
+  {
+    "id": "w-0052",
+    "thai": "ส่ง",
+    "romanization": "sòng",
+    "meaning": "送",
+    "band": 1,
+    "topic": "动作",
+    "order": 52
+  },
+  {
+    "id": "w-0053",
+    "thai": "รับ",
+    "romanization": "ráp",
+    "meaning": "接；收",
+    "band": 1,
+    "topic": "动作",
+    "order": 53
+  },
+  {
+    "id": "w-0054",
+    "thai": "เก็บ",
+    "romanization": "kèp",
+    "meaning": "收起来",
+    "band": 1,
+    "topic": "动作",
+    "order": 54
+  },
+  {
+    "id": "w-0055",
+    "thai": "วาง",
+    "romanization": "waang",
+    "meaning": "放",
+    "band": 1,
+    "topic": "动作",
+    "order": 55
+  },
+  {
+    "id": "w-0056",
+    "thai": "ถือ",
+    "romanization": "thʉ̌ʉ",
+    "meaning": "拿着",
+    "band": 1,
+    "topic": "动作",
+    "order": 56
+  },
+  {
+    "id": "w-0057",
+    "thai": "ใส่",
+    "romanization": "sài",
+    "meaning": "放进；穿",
+    "band": 1,
+    "topic": "动作",
+    "order": 57
+  },
+  {
+    "id": "w-0058",
+    "thai": "ถอด",
+    "romanization": "thɔ̀ɔt",
+    "meaning": "脱掉",
+    "band": 1,
+    "topic": "动作",
+    "order": 58
+  },
+  {
+    "id": "w-0059",
+    "thai": "ล้าง",
+    "romanization": "láang",
+    "meaning": "洗",
+    "band": 1,
+    "topic": "动作",
+    "order": 59
+  },
+  {
+    "id": "w-0060",
+    "thai": "เช็ด",
+    "romanization": "chét",
+    "meaning": "擦",
+    "band": 1,
+    "topic": "动作",
+    "order": 60
+  },
+  {
+    "id": "w-0061",
+    "thai": "กวาด",
+    "romanization": "kwàat",
+    "meaning": "扫",
+    "band": 1,
+    "topic": "动作",
+    "order": 61
+  },
+  {
+    "id": "w-0062",
+    "thai": "ถู",
+    "romanization": "thǔu",
+    "meaning": "擦地板",
+    "band": 1,
+    "topic": "动作",
+    "order": 62
+  },
+  {
+    "id": "w-0063",
+    "thai": "หั่น",
+    "romanization": "hàn",
+    "meaning": "切",
+    "band": 1,
+    "topic": "动作",
+    "order": 63
+  },
+  {
+    "id": "w-0064",
+    "thai": "ผัด",
+    "romanization": "phàt",
+    "meaning": "炒",
+    "band": 1,
+    "topic": "动作",
+    "order": 64
+  },
+  {
+    "id": "w-0065",
+    "thai": "ต้ม",
+    "romanization": "dtôm",
+    "meaning": "煮",
+    "band": 1,
+    "topic": "动作",
+    "order": 65
+  },
+  {
+    "id": "w-0066",
+    "thai": "ทอด",
+    "romanization": "thɔ̂ɔt",
+    "meaning": "炸",
+    "band": 1,
+    "topic": "动作",
+    "order": 66
+  },
+  {
+    "id": "w-0067",
+    "thai": "ย่าง",
+    "romanization": "yâang",
+    "meaning": "烤",
+    "band": 1,
+    "topic": "动作",
+    "order": 67
+  },
+  {
+    "id": "w-0068",
+    "thai": "กินข้าว",
+    "romanization": "kin-khâao",
+    "meaning": "吃饭",
+    "band": 1,
+    "topic": "动作",
+    "order": 68
+  },
+  {
+    "id": "w-0069",
+    "thai": "ดื่ม",
+    "romanization": "dʉ̀ʉm",
+    "meaning": "喝",
+    "band": 1,
+    "topic": "动作",
+    "order": 69
+  },
+  {
+    "id": "w-0070",
+    "thai": "หิว",
+    "romanization": "hǐw",
+    "meaning": "饿",
+    "band": 1,
+    "topic": "动作",
+    "order": 70
+  },
+  {
+    "id": "w-0071",
+    "thai": "อิ่ม",
+    "romanization": "ìm",
+    "meaning": "饱",
+    "band": 1,
+    "topic": "动作",
+    "order": 71
+  },
+  {
+    "id": "w-0072",
+    "thai": "นอนหลับ",
+    "romanization": "nɔɔn-làp",
+    "meaning": "睡着",
+    "band": 1,
+    "topic": "动作",
+    "order": 72
+  },
+  {
+    "id": "w-0073",
+    "thai": "ฝัน",
+    "romanization": "fǎn",
+    "meaning": "做梦",
+    "band": 1,
+    "topic": "动作",
+    "order": 73
+  },
+  {
+    "id": "w-0074",
+    "thai": "หัวเราะ",
+    "romanization": "hǔa-rɔ́",
+    "meaning": "笑",
+    "band": 1,
+    "topic": "动作",
+    "order": 74
+  },
+  {
+    "id": "w-0075",
+    "thai": "ร้องไห้",
+    "romanization": "rɔ́ɔng-hâi",
+    "meaning": "哭",
+    "band": 1,
+    "topic": "动作",
+    "order": 75
+  },
+  {
+    "id": "w-0076",
+    "thai": "ยิ้ม",
+    "romanization": "yím",
+    "meaning": "微笑",
+    "band": 1,
+    "topic": "动作",
+    "order": 76
+  },
+  {
+    "id": "w-0077",
+    "thai": "โกรธ",
+    "romanization": "kròot",
+    "meaning": "生气",
+    "band": 1,
+    "topic": "动作",
+    "order": 77
+  },
+  {
+    "id": "w-0078",
+    "thai": "กลัว",
+    "romanization": "klua",
+    "meaning": "害怕",
+    "band": 1,
+    "topic": "动作",
+    "order": 78
+  },
+  {
+    "id": "w-0079",
+    "thai": "ดีใจ",
+    "romanization": "dii-jai",
+    "meaning": "高兴",
+    "band": 1,
+    "topic": "动作",
+    "order": 79
+  },
+  {
+    "id": "w-0080",
+    "thai": "เสียใจ",
+    "romanization": "sǐa-jai",
+    "meaning": "难过",
+    "band": 1,
+    "topic": "动作",
+    "order": 80
+  },
+  {
+    "id": "w-0081",
+    "thai": "ผม",
+    "romanization": "phǒm",
+    "meaning": "我（男性）",
+    "band": 1,
+    "topic": "人",
+    "order": 81
+  },
+  {
+    "id": "w-0082",
+    "thai": "ฉัน",
+    "romanization": "chǎn",
+    "meaning": "我",
+    "band": 1,
+    "topic": "人",
+    "order": 82
+  },
+  {
+    "id": "w-0083",
+    "thai": "คุณ",
+    "romanization": "khun",
+    "meaning": "你",
+    "band": 1,
+    "topic": "人",
+    "order": 83
+  },
+  {
+    "id": "w-0084",
+    "thai": "เขา",
+    "romanization": "khǎo",
+    "meaning": "他",
+    "band": 1,
+    "topic": "人",
+    "order": 84
+  },
+  {
+    "id": "w-0085",
+    "thai": "เธอ",
+    "romanization": "thəə",
+    "meaning": "她；你",
+    "band": 1,
+    "topic": "人",
+    "order": 85
+  },
+  {
+    "id": "w-0086",
+    "thai": "เรา",
+    "romanization": "rao",
+    "meaning": "我们",
+    "band": 1,
+    "topic": "人",
+    "order": 86
+  },
+  {
+    "id": "w-0087",
+    "thai": "พวกเขา",
+    "romanization": "phûak-khǎo",
+    "meaning": "他们",
+    "band": 1,
+    "topic": "人",
+    "order": 87
+  },
+  {
+    "id": "w-0088",
+    "thai": "คน",
+    "romanization": "khon",
+    "meaning": "人",
+    "band": 1,
+    "topic": "人",
+    "order": 88
+  },
+  {
+    "id": "w-0089",
+    "thai": "ผู้ชาย",
+    "romanization": "phûu-chaai",
+    "meaning": "男人",
+    "band": 1,
+    "topic": "人",
+    "order": 89
+  },
+  {
+    "id": "w-0090",
+    "thai": "ผู้หญิง",
+    "romanization": "phûu-yǐng",
+    "meaning": "女人",
+    "band": 1,
+    "topic": "人",
+    "order": 90
+  },
+  {
+    "id": "w-0091",
+    "thai": "เด็ก",
+    "romanization": "dèk",
+    "meaning": "小孩",
+    "band": 1,
+    "topic": "人",
+    "order": 91
+  },
+  {
+    "id": "w-0092",
+    "thai": "ผู้ใหญ่",
+    "romanization": "phûu-yài",
+    "meaning": "大人",
+    "band": 1,
+    "topic": "人",
+    "order": 92
+  },
+  {
+    "id": "w-0093",
+    "thai": "เพื่อน",
+    "romanization": "phʉ̂an",
+    "meaning": "朋友",
+    "band": 1,
+    "topic": "人",
+    "order": 93
+  },
+  {
+    "id": "w-0094",
+    "thai": "ครู",
+    "romanization": "khruu",
+    "meaning": "老师",
+    "band": 1,
+    "topic": "人",
+    "order": 94
+  },
+  {
+    "id": "w-0095",
+    "thai": "นักเรียน",
+    "romanization": "nák-rian",
+    "meaning": "学生",
+    "band": 1,
+    "topic": "人",
+    "order": 95
+  },
+  {
+    "id": "w-0096",
+    "thai": "หมอ",
+    "romanization": "mɔ̌ɔ",
+    "meaning": "医生",
+    "band": 1,
+    "topic": "人",
+    "order": 96
+  },
+  {
+    "id": "w-0097",
+    "thai": "ตำรวจ",
+    "romanization": "dtam-rùat",
+    "meaning": "警察",
+    "band": 1,
+    "topic": "人",
+    "order": 97
+  },
+  {
+    "id": "w-0098",
+    "thai": "คนขับ",
+    "romanization": "khon-khàp",
+    "meaning": "司机",
+    "band": 1,
+    "topic": "人",
+    "order": 98
+  },
+  {
+    "id": "w-0099",
+    "thai": "พ่อ",
+    "romanization": "phɔ̂ɔ",
+    "meaning": "爸爸",
+    "band": 1,
+    "topic": "家庭",
+    "order": 99
+  },
+  {
+    "id": "w-0100",
+    "thai": "แม่",
+    "romanization": "mɛ̂ɛ",
+    "meaning": "妈妈",
+    "band": 1,
+    "topic": "家庭",
+    "order": 100
+  },
+  {
+    "id": "w-0101",
+    "thai": "ลูก",
+    "romanization": "lûuk",
+    "meaning": "孩子",
+    "band": 1,
+    "topic": "家庭",
+    "order": 101
+  },
+  {
+    "id": "w-0102",
+    "thai": "พี่",
+    "romanization": "phîi",
+    "meaning": "哥哥姐姐",
+    "band": 1,
+    "topic": "家庭",
+    "order": 102
+  },
+  {
+    "id": "w-0103",
+    "thai": "น้อง",
+    "romanization": "nɔ́ɔng",
+    "meaning": "弟弟妹妹",
+    "band": 1,
+    "topic": "家庭",
+    "order": 103
+  },
+  {
+    "id": "w-0104",
+    "thai": "ปู่",
+    "romanization": "bpùu",
+    "meaning": "爷爷（父系）",
+    "band": 1,
+    "topic": "家庭",
+    "order": 104
+  },
+  {
+    "id": "w-0105",
+    "thai": "ย่า",
+    "romanization": "yâa",
+    "meaning": "奶奶（父系）",
+    "band": 1,
+    "topic": "家庭",
+    "order": 105
+  },
+  {
+    "id": "w-0106",
+    "thai": "ตา",
+    "romanization": "dtaa",
+    "meaning": "外公",
+    "band": 1,
+    "topic": "家庭",
+    "order": 106
+  },
+  {
+    "id": "w-0107",
+    "thai": "ยาย",
+    "romanization": "yaai",
+    "meaning": "外婆",
+    "band": 1,
+    "topic": "家庭",
+    "order": 107
+  },
+  {
+    "id": "w-0108",
+    "thai": "ลุง",
+    "romanization": "lung",
+    "meaning": "伯伯；舅舅",
+    "band": 1,
+    "topic": "家庭",
+    "order": 108
+  },
+  {
+    "id": "w-0109",
+    "thai": "ป้า",
+    "romanization": "bpâa",
+    "meaning": "姑姑；阿姨（年长）",
+    "band": 1,
+    "topic": "家庭",
+    "order": 109
+  },
+  {
+    "id": "w-0110",
+    "thai": "น้า",
+    "romanization": "náa",
+    "meaning": "阿姨；舅舅（母系年幼）",
+    "band": 1,
+    "topic": "家庭",
+    "order": 110
+  },
+  {
+    "id": "w-0111",
+    "thai": "อา",
+    "romanization": "aa",
+    "meaning": "叔叔；姑姑（父系年幼）",
+    "band": 1,
+    "topic": "家庭",
+    "order": 111
+  },
+  {
+    "id": "w-0112",
+    "thai": "สามี",
+    "romanization": "sǎa-mii",
+    "meaning": "丈夫",
+    "band": 1,
+    "topic": "家庭",
+    "order": 112
+  },
+  {
+    "id": "w-0113",
+    "thai": "ภรรยา",
+    "romanization": "phan-rá-yaa",
+    "meaning": "妻子",
+    "band": 1,
+    "topic": "家庭",
+    "order": 113
+  },
+  {
+    "id": "w-0114",
+    "thai": "ครอบครัว",
+    "romanization": "khrɔ̂ɔp-khrua",
+    "meaning": "家庭",
+    "band": 1,
+    "topic": "家庭",
+    "order": 114
+  },
+  {
+    "id": "w-0115",
+    "thai": "น้ำ",
+    "romanization": "náam",
+    "meaning": "水",
+    "band": 1,
+    "topic": "东西",
+    "order": 115
+  },
+  {
+    "id": "w-0116",
+    "thai": "ข้าว",
+    "romanization": "khâao",
+    "meaning": "饭",
+    "band": 1,
+    "topic": "东西",
+    "order": 116
+  },
+  {
+    "id": "w-0117",
+    "thai": "อาหาร",
+    "romanization": "aa-hǎan",
+    "meaning": "食物",
+    "band": 1,
+    "topic": "东西",
+    "order": 117
+  },
+  {
+    "id": "w-0118",
+    "thai": "บ้าน",
+    "romanization": "bâan",
+    "meaning": "家",
+    "band": 1,
+    "topic": "东西",
+    "order": 118
+  },
+  {
+    "id": "w-0119",
+    "thai": "ห้อง",
+    "romanization": "hɔ̂ɔng",
+    "meaning": "房间",
+    "band": 1,
+    "topic": "东西",
+    "order": 119
+  },
+  {
+    "id": "w-0120",
+    "thai": "ประตู",
+    "romanization": "bprà-dtuu",
+    "meaning": "门",
+    "band": 1,
+    "topic": "东西",
+    "order": 120
+  },
+  {
+    "id": "w-0121",
+    "thai": "หน้าต่าง",
+    "romanization": "nâa-dtàang",
+    "meaning": "窗户",
+    "band": 1,
+    "topic": "东西",
+    "order": 121
+  },
+  {
+    "id": "w-0122",
+    "thai": "โต๊ะ",
+    "romanization": "dtó",
+    "meaning": "桌子",
+    "band": 1,
+    "topic": "东西",
+    "order": 122
+  },
+  {
+    "id": "w-0123",
+    "thai": "เก้าอี้",
+    "romanization": "kâo-îi",
+    "meaning": "椅子",
+    "band": 1,
+    "topic": "东西",
+    "order": 123
+  },
+  {
+    "id": "w-0124",
+    "thai": "เตียง",
+    "romanization": "dtiang",
+    "meaning": "床",
+    "band": 1,
+    "topic": "东西",
+    "order": 124
+  },
+  {
+    "id": "w-0125",
+    "thai": "หนังสือ",
+    "romanization": "nǎng-sʉ̌ʉ",
+    "meaning": "书",
+    "band": 1,
+    "topic": "东西",
+    "order": 125
+  },
+  {
+    "id": "w-0126",
+    "thai": "ปากกา",
+    "romanization": "bpàak-gaa",
+    "meaning": "笔",
+    "band": 1,
+    "topic": "东西",
+    "order": 126
+  },
+  {
+    "id": "w-0127",
+    "thai": "กระดาษ",
+    "romanization": "grà-dàat",
+    "meaning": "纸",
+    "band": 1,
+    "topic": "东西",
+    "order": 127
+  },
+  {
+    "id": "w-0128",
+    "thai": "โทรศัพท์",
+    "romanization": "thoo-rá-sàp",
+    "meaning": "电话",
+    "band": 1,
+    "topic": "东西",
+    "order": 128
+  },
+  {
+    "id": "w-0129",
+    "thai": "เงิน",
+    "romanization": "ngən",
+    "meaning": "钱",
+    "band": 1,
+    "topic": "东西",
+    "order": 129
+  },
+  {
+    "id": "w-0130",
+    "thai": "รถ",
+    "romanization": "rót",
+    "meaning": "车",
+    "band": 1,
+    "topic": "东西",
+    "order": 130
+  },
+  {
+    "id": "w-0131",
+    "thai": "ถนน",
+    "romanization": "thà-nǒn",
+    "meaning": "路",
+    "band": 1,
+    "topic": "东西",
+    "order": 131
+  },
+  {
+    "id": "w-0132",
+    "thai": "ร้าน",
+    "romanization": "ráan",
+    "meaning": "店",
+    "band": 1,
+    "topic": "东西",
+    "order": 132
+  },
+  {
+    "id": "w-0133",
+    "thai": "ตลาด",
+    "romanization": "dtà-làat",
+    "meaning": "市场",
+    "band": 1,
+    "topic": "东西",
+    "order": 133
+  },
+  {
+    "id": "w-0134",
+    "thai": "โรงเรียน",
+    "romanization": "roong-rian",
+    "meaning": "学校",
+    "band": 1,
+    "topic": "东西",
+    "order": 134
+  },
+  {
+    "id": "w-0135",
+    "thai": "โรงพยาบาล",
+    "romanization": "roong-phá-yaa-baan",
+    "meaning": "医院",
+    "band": 1,
+    "topic": "东西",
+    "order": 135
+  },
+  {
+    "id": "w-0136",
+    "thai": "งาน",
+    "romanization": "ngaan",
+    "meaning": "工作",
+    "band": 1,
+    "topic": "东西",
+    "order": 136
+  },
+  {
+    "id": "w-0137",
+    "thai": "ชื่อ",
+    "romanization": "chʉ̂ʉ",
+    "meaning": "名字",
+    "band": 1,
+    "topic": "东西",
+    "order": 137
+  },
+  {
+    "id": "w-0138",
+    "thai": "ภาษา",
+    "romanization": "phaa-sǎa",
+    "meaning": "语言",
+    "band": 1,
+    "topic": "东西",
+    "order": 138
+  },
+  {
+    "id": "w-0139",
+    "thai": "คำ",
+    "romanization": "kham",
+    "meaning": "词",
+    "band": 1,
+    "topic": "东西",
+    "order": 139
+  },
+  {
+    "id": "w-0140",
+    "thai": "ประโยค",
+    "romanization": "bprà-yòok",
+    "meaning": "句子",
+    "band": 1,
+    "topic": "东西",
+    "order": 140
+  },
+  {
+    "id": "w-0141",
+    "thai": "วัน",
+    "romanization": "wan",
+    "meaning": "天",
+    "band": 1,
+    "topic": "时间",
+    "order": 141
+  },
+  {
+    "id": "w-0142",
+    "thai": "วันนี้",
+    "romanization": "wan-níi",
+    "meaning": "今天",
+    "band": 1,
+    "topic": "时间",
+    "order": 142
+  },
+  {
+    "id": "w-0143",
+    "thai": "พรุ่งนี้",
+    "romanization": "phrûng-níi",
+    "meaning": "明天",
+    "band": 1,
+    "topic": "时间",
+    "order": 143
+  },
+  {
+    "id": "w-0144",
+    "thai": "เมื่อวาน",
+    "romanization": "mʉ̂a-waan",
+    "meaning": "昨天",
+    "band": 1,
+    "topic": "时间",
+    "order": 144
+  },
+  {
+    "id": "w-0145",
+    "thai": "ตอนนี้",
+    "romanization": "dtɔɔn-níi",
+    "meaning": "现在",
+    "band": 1,
+    "topic": "时间",
+    "order": 145
+  },
+  {
+    "id": "w-0146",
+    "thai": "เช้า",
+    "romanization": "cháo",
+    "meaning": "早上",
+    "band": 1,
+    "topic": "时间",
+    "order": 146
+  },
+  {
+    "id": "w-0147",
+    "thai": "กลางวัน",
+    "romanization": "glaang-wan",
+    "meaning": "白天",
+    "band": 1,
+    "topic": "时间",
+    "order": 147
+  },
+  {
+    "id": "w-0148",
+    "thai": "ตอนเย็น",
+    "romanization": "dtɔɔn-yen",
+    "meaning": "傍晚",
+    "band": 1,
+    "topic": "时间",
+    "order": 148
+  },
+  {
+    "id": "w-0149",
+    "thai": "กลางคืน",
+    "romanization": "glaang-khʉʉn",
+    "meaning": "夜里",
+    "band": 1,
+    "topic": "时间",
+    "order": 149
+  },
+  {
+    "id": "w-0150",
+    "thai": "ชั่วโมง",
+    "romanization": "chûa-moong",
+    "meaning": "小时",
+    "band": 1,
+    "topic": "时间",
+    "order": 150
+  },
+  {
+    "id": "w-0151",
+    "thai": "นาที",
+    "romanization": "naa-thii",
+    "meaning": "分钟",
+    "band": 1,
+    "topic": "时间",
+    "order": 151
+  },
+  {
+    "id": "w-0152",
+    "thai": "ปี",
+    "romanization": "bpii",
+    "meaning": "年",
+    "band": 1,
+    "topic": "时间",
+    "order": 152
+  },
+  {
+    "id": "w-0153",
+    "thai": "เดือน",
+    "romanization": "dʉan",
+    "meaning": "月",
+    "band": 1,
+    "topic": "时间",
+    "order": 153
+  },
+  {
+    "id": "w-0154",
+    "thai": "อาทิตย์",
+    "romanization": "aa-thít",
+    "meaning": "星期",
+    "band": 1,
+    "topic": "时间",
+    "order": 154
+  },
+  {
+    "id": "w-0155",
+    "thai": "เวลา",
+    "romanization": "wee-laa",
+    "meaning": "时间",
+    "band": 1,
+    "topic": "时间",
+    "order": 155
+  },
+  {
+    "id": "w-0156",
+    "thai": "ก่อน",
+    "romanization": "gɔ̀ɔn",
+    "meaning": "之前",
+    "band": 1,
+    "topic": "时间",
+    "order": 156
+  },
+  {
+    "id": "w-0157",
+    "thai": "หลัง",
+    "romanization": "lǎng",
+    "meaning": "之后",
+    "band": 1,
+    "topic": "时间",
+    "order": 157
+  },
+  {
+    "id": "w-0158",
+    "thai": "เดี๋ยว",
+    "romanization": "dǐao",
+    "meaning": "等一下",
+    "band": 1,
+    "topic": "时间",
+    "order": 158
+  },
+  {
+    "id": "w-0159",
+    "thai": "ดี",
+    "romanization": "dii",
+    "meaning": "好",
+    "band": 1,
+    "topic": "描述",
+    "order": 159
+  },
+  {
+    "id": "w-0160",
+    "thai": "ไม่ดี",
+    "romanization": "mâi-dii",
+    "meaning": "不好",
+    "band": 1,
+    "topic": "描述",
+    "order": 160
+  },
+  {
+    "id": "w-0161",
+    "thai": "ใหม่",
+    "romanization": "mài",
+    "meaning": "新",
+    "band": 1,
+    "topic": "描述",
+    "order": 161
+  },
+  {
+    "id": "w-0162",
+    "thai": "เก่า",
+    "romanization": "gào",
+    "meaning": "旧",
+    "band": 1,
+    "topic": "描述",
+    "order": 162
+  },
+  {
+    "id": "w-0163",
+    "thai": "ใหญ่",
+    "romanization": "yài",
+    "meaning": "大",
+    "band": 1,
+    "topic": "描述",
+    "order": 163
+  },
+  {
+    "id": "w-0164",
+    "thai": "เล็ก",
+    "romanization": "lék",
+    "meaning": "小",
+    "band": 1,
+    "topic": "描述",
+    "order": 164
+  },
+  {
+    "id": "w-0165",
+    "thai": "มาก",
+    "romanization": "mâak",
+    "meaning": "很多",
+    "band": 1,
+    "topic": "描述",
+    "order": 165
+  },
+  {
+    "id": "w-0166",
+    "thai": "น้อย",
+    "romanization": "nɔ́ɔi",
+    "meaning": "少",
+    "band": 1,
+    "topic": "描述",
+    "order": 166
+  },
+  {
+    "id": "w-0167",
+    "thai": "ร้อน",
+    "romanization": "rɔ́ɔn",
+    "meaning": "热",
+    "band": 1,
+    "topic": "描述",
+    "order": 167
+  },
+  {
+    "id": "w-0168",
+    "thai": "เย็น",
+    "romanization": "yen",
+    "meaning": "凉",
+    "band": 1,
+    "topic": "描述",
+    "order": 168
+  },
+  {
+    "id": "w-0169",
+    "thai": "อร่อย",
+    "romanization": "à-rɔ̀i",
+    "meaning": "好吃",
+    "band": 1,
+    "topic": "描述",
+    "order": 169
+  },
+  {
+    "id": "w-0170",
+    "thai": "แพง",
+    "romanization": "phɛɛng",
+    "meaning": "贵",
+    "band": 1,
+    "topic": "描述",
+    "order": 170
+  },
+  {
+    "id": "w-0171",
+    "thai": "ถูก",
+    "romanization": "thùuk",
+    "meaning": "便宜；正确",
+    "band": 1,
+    "topic": "描述",
+    "order": 171
+  },
+  {
+    "id": "w-0172",
+    "thai": "สวย",
+    "romanization": "sǔai",
+    "meaning": "漂亮",
+    "band": 1,
+    "topic": "描述",
+    "order": 172
+  },
+  {
+    "id": "w-0173",
+    "thai": "หล่อ",
+    "romanization": "lɔ̀ɔ",
+    "meaning": "英俊",
+    "band": 1,
+    "topic": "描述",
+    "order": 173
+  },
+  {
+    "id": "w-0174",
+    "thai": "เก่ง",
+    "romanization": "gèng",
+    "meaning": "能干",
+    "band": 1,
+    "topic": "描述",
+    "order": 174
+  },
+  {
+    "id": "w-0175",
+    "thai": "ง่าย",
+    "romanization": "ngâai",
+    "meaning": "容易",
+    "band": 1,
+    "topic": "描述",
+    "order": 175
+  },
+  {
+    "id": "w-0176",
+    "thai": "ยาก",
+    "romanization": "yâak",
+    "meaning": "难",
+    "band": 1,
+    "topic": "描述",
+    "order": 176
+  },
+  {
+    "id": "w-0177",
+    "thai": "เร็ว",
+    "romanization": "reo",
+    "meaning": "快",
+    "band": 1,
+    "topic": "描述",
+    "order": 177
+  },
+  {
+    "id": "w-0178",
+    "thai": "ช้า",
+    "romanization": "cháa",
+    "meaning": "慢",
+    "band": 1,
+    "topic": "描述",
+    "order": 178
+  },
+  {
+    "id": "w-0179",
+    "thai": "ไกล",
+    "romanization": "glai",
+    "meaning": "远",
+    "band": 1,
+    "topic": "描述",
+    "order": 179
+  },
+  {
+    "id": "w-0180",
+    "thai": "ใกล้",
+    "romanization": "glâi",
+    "meaning": "近",
+    "band": 1,
+    "topic": "描述",
+    "order": 180
+  },
+  {
+    "id": "w-0181",
+    "thai": "สูง",
+    "romanization": "sǔung",
+    "meaning": "高",
+    "band": 1,
+    "topic": "描述",
+    "order": 181
+  },
+  {
+    "id": "w-0182",
+    "thai": "เตี้ย",
+    "romanization": "dtîa",
+    "meaning": "矮",
+    "band": 1,
+    "topic": "描述",
+    "order": 182
+  },
+  {
+    "id": "w-0183",
+    "thai": "อ้วน",
+    "romanization": "ûan",
+    "meaning": "胖",
+    "band": 1,
+    "topic": "描述",
+    "order": 183
+  },
+  {
+    "id": "w-0184",
+    "thai": "ผอม",
+    "romanization": "phɔ̌ɔm",
+    "meaning": "瘦",
+    "band": 1,
+    "topic": "描述",
+    "order": 184
+  },
+  {
+    "id": "w-0185",
+    "thai": "ไม่",
+    "romanization": "mâi",
+    "meaning": "不",
+    "band": 1,
+    "topic": "功能",
+    "order": 185
+  },
+  {
+    "id": "w-0186",
+    "thai": "ใช่",
+    "romanization": "châi",
+    "meaning": "是的",
+    "band": 1,
+    "topic": "功能",
+    "order": 186
+  },
+  {
+    "id": "w-0187",
+    "thai": "และ",
+    "romanization": "lɛ́",
+    "meaning": "和",
+    "band": 1,
+    "topic": "功能",
+    "order": 187
+  },
+  {
+    "id": "w-0188",
+    "thai": "หรือ",
+    "romanization": "rʉ̌ʉ",
+    "meaning": "或者",
+    "band": 1,
+    "topic": "功能",
+    "order": 188
+  },
+  {
+    "id": "w-0189",
+    "thai": "แต่",
+    "romanization": "dtɛ̀ɛ",
+    "meaning": "但是",
+    "band": 1,
+    "topic": "功能",
+    "order": 189
+  },
+  {
+    "id": "w-0190",
+    "thai": "ก็",
+    "romanization": "gɔ̂",
+    "meaning": "也就",
+    "band": 1,
+    "topic": "功能",
+    "order": 190
+  },
+  {
+    "id": "w-0191",
+    "thai": "ที่",
+    "romanization": "thîi",
+    "meaning": "的；地方",
+    "band": 1,
+    "topic": "功能",
+    "order": 191
+  },
+  {
+    "id": "w-0192",
+    "thai": "ที่นี่",
+    "romanization": "thîi-nîi",
+    "meaning": "这里",
+    "band": 1,
+    "topic": "功能",
+    "order": 192
+  },
+  {
+    "id": "w-0193",
+    "thai": "ที่นั่น",
+    "romanization": "thîi-nân",
+    "meaning": "那里",
+    "band": 1,
+    "topic": "功能",
+    "order": 193
+  },
+  {
+    "id": "w-0194",
+    "thai": "อะไร",
+    "romanization": "à-rai",
+    "meaning": "什么",
+    "band": 1,
+    "topic": "功能",
+    "order": 194
+  },
+  {
+    "id": "w-0195",
+    "thai": "ใคร",
+    "romanization": "khrai",
+    "meaning": "谁",
+    "band": 1,
+    "topic": "功能",
+    "order": 195
+  },
+  {
+    "id": "w-0196",
+    "thai": "ที่ไหน",
+    "romanization": "thîi-nǎi",
+    "meaning": "哪里",
+    "band": 1,
+    "topic": "功能",
+    "order": 196
+  },
+  {
+    "id": "w-0197",
+    "thai": "เมื่อไหร่",
+    "romanization": "mʉ̂a-rài",
+    "meaning": "什么时候",
+    "band": 1,
+    "topic": "功能",
+    "order": 197
+  },
+  {
+    "id": "w-0198",
+    "thai": "ทำไม",
+    "romanization": "tham-mai",
+    "meaning": "为什么",
+    "band": 1,
+    "topic": "功能",
+    "order": 198
+  },
+  {
+    "id": "w-0199",
+    "thai": "ยังไง",
+    "romanization": "yang-ngai",
+    "meaning": "怎么样",
+    "band": 1,
+    "topic": "功能",
+    "order": 199
+  },
+  {
+    "id": "w-0200",
+    "thai": "กี่",
+    "romanization": "gìi",
+    "meaning": "几",
+    "band": 1,
+    "topic": "功能",
+    "order": 200
+  },
+  {
+    "id": "w-0201",
+    "thai": "นี้",
+    "romanization": "níi",
+    "meaning": "这",
+    "band": 1,
+    "topic": "功能",
+    "order": 201
+  },
+  {
+    "id": "w-0202",
+    "thai": "นั่น",
+    "romanization": "nân",
+    "meaning": "那",
+    "band": 1,
+    "topic": "功能",
+    "order": 202
+  },
+  {
+    "id": "w-0203",
+    "thai": "โน่น",
+    "romanization": "nôon",
+    "meaning": "那边那个",
+    "band": 1,
+    "topic": "功能",
+    "order": 203
+  },
+  {
+    "id": "w-0204",
+    "thai": "ทุก",
+    "romanization": "thúk",
+    "meaning": "每",
+    "band": 1,
+    "topic": "功能",
+    "order": 204
+  },
+  {
+    "id": "w-0205",
+    "thai": "บาง",
+    "romanization": "baang",
+    "meaning": "有些",
+    "band": 1,
+    "topic": "功能",
+    "order": 205
+  },
+  {
+    "id": "w-0206",
+    "thai": "ด้วย",
+    "romanization": "dûai",
+    "meaning": "也；一起",
+    "band": 1,
+    "topic": "功能",
+    "order": 206
+  },
+  {
+    "id": "w-0207",
+    "thai": "แล้ว",
+    "romanization": "lɛ́ɛo",
+    "meaning": "已经",
+    "band": 1,
+    "topic": "功能",
+    "order": 207
+  },
+  {
+    "id": "w-0208",
+    "thai": "ยัง",
+    "romanization": "yang",
+    "meaning": "还",
+    "band": 1,
+    "topic": "功能",
+    "order": 208
+  },
+  {
+    "id": "w-0209",
+    "thai": "กำลัง",
+    "romanization": "gam-lang",
+    "meaning": "正在",
+    "band": 1,
+    "topic": "功能",
+    "order": 209
+  },
+  {
+    "id": "w-0210",
+    "thai": "จะ",
+    "romanization": "jà",
+    "meaning": "将要",
+    "band": 1,
+    "topic": "功能",
+    "order": 210
+  },
+  {
+    "id": "w-0211",
+    "thai": "ต้อง",
+    "romanization": "dtɔ̂ɔng",
+    "meaning": "必须",
+    "band": 1,
+    "topic": "功能",
+    "order": 211
+  },
+  {
+    "id": "w-0212",
+    "thai": "ควร",
+    "romanization": "khuan",
+    "meaning": "应该",
+    "band": 1,
+    "topic": "功能",
+    "order": 212
+  },
+  {
+    "id": "w-0213",
+    "thai": "อาจ",
+    "romanization": "àat",
+    "meaning": "也许",
+    "band": 1,
+    "topic": "功能",
+    "order": 213
+  },
+  {
+    "id": "w-0214",
+    "thai": "ศูนย์",
+    "romanization": "sǔun",
+    "meaning": "零",
+    "band": 1,
+    "topic": "数字",
+    "order": 214
+  },
+  {
+    "id": "w-0215",
+    "thai": "หนึ่ง",
+    "romanization": "nʉ̀ng",
+    "meaning": "一",
+    "band": 1,
+    "topic": "数字",
+    "order": 215
+  },
+  {
+    "id": "w-0216",
+    "thai": "สอง",
+    "romanization": "sɔ̌ɔng",
+    "meaning": "二",
+    "band": 1,
+    "topic": "数字",
+    "order": 216
+  },
+  {
+    "id": "w-0217",
+    "thai": "สาม",
+    "romanization": "sǎam",
+    "meaning": "三",
+    "band": 1,
+    "topic": "数字",
+    "order": 217
+  },
+  {
+    "id": "w-0218",
+    "thai": "สี่",
+    "romanization": "sìi",
+    "meaning": "四",
+    "band": 1,
+    "topic": "数字",
+    "order": 218
+  },
+  {
+    "id": "w-0219",
+    "thai": "ห้า",
+    "romanization": "hâa",
+    "meaning": "五",
+    "band": 1,
+    "topic": "数字",
+    "order": 219
+  },
+  {
+    "id": "w-0220",
+    "thai": "หก",
+    "romanization": "hòk",
+    "meaning": "六",
+    "band": 1,
+    "topic": "数字",
+    "order": 220
+  },
+  {
+    "id": "w-0221",
+    "thai": "เจ็ด",
+    "romanization": "jèt",
+    "meaning": "七",
+    "band": 1,
+    "topic": "数字",
+    "order": 221
+  },
+  {
+    "id": "w-0222",
+    "thai": "แปด",
+    "romanization": "bpàɛt",
+    "meaning": "八",
+    "band": 1,
+    "topic": "数字",
+    "order": 222
+  },
+  {
+    "id": "w-0223",
+    "thai": "เก้า",
+    "romanization": "kâao",
+    "meaning": "九",
+    "band": 1,
+    "topic": "数字",
+    "order": 223
+  },
+  {
+    "id": "w-0224",
+    "thai": "สิบ",
+    "romanization": "sìp",
+    "meaning": "十",
+    "band": 1,
+    "topic": "数字",
+    "order": 224
+  },
+  {
+    "id": "w-0225",
+    "thai": "สิบเอ็ด",
+    "romanization": "sìp-èt",
+    "meaning": "十一",
+    "band": 1,
+    "topic": "数字",
+    "order": 225
+  },
+  {
+    "id": "w-0226",
+    "thai": "ยี่สิบ",
+    "romanization": "yîi-sìp",
+    "meaning": "二十",
+    "band": 1,
+    "topic": "数字",
+    "order": 226
+  },
+  {
+    "id": "w-0227",
+    "thai": "สามสิบ",
+    "romanization": "sǎam-sìp",
+    "meaning": "三十",
+    "band": 1,
+    "topic": "数字",
+    "order": 227
+  },
+  {
+    "id": "w-0228",
+    "thai": "สี่สิบ",
+    "romanization": "sìi-sìp",
+    "meaning": "四十",
+    "band": 1,
+    "topic": "数字",
+    "order": 228
+  },
+  {
+    "id": "w-0229",
+    "thai": "ห้าสิบ",
+    "romanization": "hâa-sìp",
+    "meaning": "五十",
+    "band": 1,
+    "topic": "数字",
+    "order": 229
+  },
+  {
+    "id": "w-0230",
+    "thai": "หกสิบ",
+    "romanization": "hòk-sìp",
+    "meaning": "六十",
+    "band": 1,
+    "topic": "数字",
+    "order": 230
+  },
+  {
+    "id": "w-0231",
+    "thai": "เจ็ดสิบ",
+    "romanization": "jèt-sìp",
+    "meaning": "七十",
+    "band": 1,
+    "topic": "数字",
+    "order": 231
+  },
+  {
+    "id": "w-0232",
+    "thai": "แปดสิบ",
+    "romanization": "bpàɛt-sìp",
+    "meaning": "八十",
+    "band": 1,
+    "topic": "数字",
+    "order": 232
+  },
+  {
+    "id": "w-0233",
+    "thai": "เก้าสิบ",
+    "romanization": "kâao-sìp",
+    "meaning": "九十",
+    "band": 1,
+    "topic": "数字",
+    "order": 233
+  },
+  {
+    "id": "w-0234",
+    "thai": "ร้อย",
+    "romanization": "rɔ́ɔi",
+    "meaning": "百",
+    "band": 1,
+    "topic": "数字",
+    "order": 234
+  },
+  {
+    "id": "w-0235",
+    "thai": "พัน",
+    "romanization": "phan",
+    "meaning": "千",
+    "band": 1,
+    "topic": "数字",
+    "order": 235
+  },
+  {
+    "id": "w-0236",
+    "thai": "หมื่น",
+    "romanization": "mʉ̀ʉn",
+    "meaning": "万",
+    "band": 1,
+    "topic": "数字",
+    "order": 236
+  },
+  {
+    "id": "w-0237",
+    "thai": "แสน",
+    "romanization": "sǎɛn",
+    "meaning": "十万",
+    "band": 1,
+    "topic": "数字",
+    "order": 237
+  },
+  {
+    "id": "w-0238",
+    "thai": "ล้าน",
+    "romanization": "láan",
+    "meaning": "百万",
+    "band": 1,
+    "topic": "数字",
+    "order": 238
+  },
+  {
+    "id": "w-0239",
+    "thai": "ครึ่ง",
+    "romanization": "khrʉ̂ng",
+    "meaning": "一半",
+    "band": 1,
+    "topic": "数字",
+    "order": 239
+  },
+  {
+    "id": "w-0240",
+    "thai": "คู่",
+    "romanization": "khûu",
+    "meaning": "一对",
+    "band": 1,
+    "topic": "数字",
+    "order": 240
+  },
+  {
+    "id": "w-0241",
+    "thai": "แรก",
+    "romanization": "rɛ̂ɛk",
+    "meaning": "第一",
+    "band": 1,
+    "topic": "数字",
+    "order": 241
+  },
+  {
+    "id": "w-0242",
+    "thai": "สุดท้าย",
+    "romanization": "sùt-tháai",
+    "meaning": "最后",
+    "band": 1,
+    "topic": "数字",
+    "order": 242
+  },
+  {
+    "id": "w-0243",
+    "thai": "วันจันทร์",
+    "romanization": "wan-jan",
+    "meaning": "星期一",
+    "band": 1,
+    "topic": "星期",
+    "order": 243
+  },
+  {
+    "id": "w-0244",
+    "thai": "วันอังคาร",
+    "romanization": "wan-ang-khaan",
+    "meaning": "星期二",
+    "band": 1,
+    "topic": "星期",
+    "order": 244
+  },
+  {
+    "id": "w-0245",
+    "thai": "วันพุธ",
+    "romanization": "wan-phút",
+    "meaning": "星期三",
+    "band": 1,
+    "topic": "星期",
+    "order": 245
+  },
+  {
+    "id": "w-0246",
+    "thai": "วันพฤหัสบดี",
+    "romanization": "wan-phá-rʉ́-hàt-sà-bɔɔ-dii",
+    "meaning": "星期四",
+    "band": 1,
+    "topic": "星期",
+    "order": 246
+  },
+  {
+    "id": "w-0247",
+    "thai": "วันศุกร์",
+    "romanization": "wan-sùk",
+    "meaning": "星期五",
+    "band": 1,
+    "topic": "星期",
+    "order": 247
+  },
+  {
+    "id": "w-0248",
+    "thai": "วันเสาร์",
+    "romanization": "wan-sǎo",
+    "meaning": "星期六",
+    "band": 1,
+    "topic": "星期",
+    "order": 248
+  },
+  {
+    "id": "w-0249",
+    "thai": "วันอาทิตย์",
+    "romanization": "wan-aa-thít",
+    "meaning": "星期日",
+    "band": 1,
+    "topic": "星期",
+    "order": 249
+  },
+  {
+    "id": "w-0250",
+    "thai": "มกราคม",
+    "romanization": "mók-gà-raa-khom",
+    "meaning": "一月",
+    "band": 2,
+    "topic": "月份",
+    "order": 250
+  },
+  {
+    "id": "w-0251",
+    "thai": "กุมภาพันธ์",
+    "romanization": "gum-phaa-phan",
+    "meaning": "二月",
+    "band": 2,
+    "topic": "月份",
+    "order": 251
+  },
+  {
+    "id": "w-0252",
+    "thai": "มีนาคม",
+    "romanization": "mii-naa-khom",
+    "meaning": "三月",
+    "band": 2,
+    "topic": "月份",
+    "order": 252
+  },
+  {
+    "id": "w-0253",
+    "thai": "เมษายน",
+    "romanization": "mee-sǎa-yon",
+    "meaning": "四月",
+    "band": 2,
+    "topic": "月份",
+    "order": 253
+  },
+  {
+    "id": "w-0254",
+    "thai": "พฤษภาคม",
+    "romanization": "phrʉ́t-sà-phaa-khom",
+    "meaning": "五月",
+    "band": 2,
+    "topic": "月份",
+    "order": 254
+  },
+  {
+    "id": "w-0255",
+    "thai": "มิถุนายน",
+    "romanization": "mí-thù-naa-yon",
+    "meaning": "六月",
+    "band": 2,
+    "topic": "月份",
+    "order": 255
+  },
+  {
+    "id": "w-0256",
+    "thai": "กรกฎาคม",
+    "romanization": "gà-rá-gà-daa-khom",
+    "meaning": "七月",
+    "band": 2,
+    "topic": "月份",
+    "order": 256
+  },
+  {
+    "id": "w-0257",
+    "thai": "สิงหาคม",
+    "romanization": "sǐng-hǎa-khom",
+    "meaning": "八月",
+    "band": 2,
+    "topic": "月份",
+    "order": 257
+  },
+  {
+    "id": "w-0258",
+    "thai": "กันยายน",
+    "romanization": "gan-yaa-yon",
+    "meaning": "九月",
+    "band": 2,
+    "topic": "月份",
+    "order": 258
+  },
+  {
+    "id": "w-0259",
+    "thai": "ตุลาคม",
+    "romanization": "dtù-laa-khom",
+    "meaning": "十月",
+    "band": 2,
+    "topic": "月份",
+    "order": 259
+  },
+  {
+    "id": "w-0260",
+    "thai": "พฤศจิกายน",
+    "romanization": "phrʉ́t-sà-jì-gaa-yon",
+    "meaning": "十一月",
+    "band": 2,
+    "topic": "月份",
+    "order": 260
+  },
+  {
+    "id": "w-0261",
+    "thai": "ธันวาคม",
+    "romanization": "than-waa-khom",
+    "meaning": "十二月",
+    "band": 2,
+    "topic": "月份",
+    "order": 261
+  },
+  {
+    "id": "w-0262",
+    "thai": "สี",
+    "romanization": "sǐi",
+    "meaning": "颜色",
+    "band": 1,
+    "topic": "颜色",
+    "order": 262
+  },
+  {
+    "id": "w-0263",
+    "thai": "ขาว",
+    "romanization": "khǎao",
+    "meaning": "白色",
+    "band": 1,
+    "topic": "颜色",
+    "order": 263
+  },
+  {
+    "id": "w-0264",
+    "thai": "ดำ",
+    "romanization": "dam",
+    "meaning": "黑色",
+    "band": 1,
+    "topic": "颜色",
+    "order": 264
+  },
+  {
+    "id": "w-0265",
+    "thai": "แดง",
+    "romanization": "dɛɛng",
+    "meaning": "红色",
+    "band": 1,
+    "topic": "颜色",
+    "order": 265
+  },
+  {
+    "id": "w-0266",
+    "thai": "เหลือง",
+    "romanization": "lʉ̌ang",
+    "meaning": "黄色",
+    "band": 1,
+    "topic": "颜色",
+    "order": 266
+  },
+  {
+    "id": "w-0267",
+    "thai": "เขียว",
+    "romanization": "khǐao",
+    "meaning": "绿色",
+    "band": 1,
+    "topic": "颜色",
+    "order": 267
+  },
+  {
+    "id": "w-0268",
+    "thai": "ฟ้า",
+    "romanization": "fáa",
+    "meaning": "蓝色",
+    "band": 1,
+    "topic": "颜色",
+    "order": 268
+  },
+  {
+    "id": "w-0269",
+    "thai": "น้ำเงิน",
+    "romanization": "náam-ngən",
+    "meaning": "深蓝",
+    "band": 1,
+    "topic": "颜色",
+    "order": 269
+  },
+  {
+    "id": "w-0270",
+    "thai": "สีส้ม",
+    "romanization": "sǐi-sôm",
+    "meaning": "橙色",
+    "band": 1,
+    "topic": "颜色",
+    "order": 270
+  },
+  {
+    "id": "w-0271",
+    "thai": "ม่วง",
+    "romanization": "mûang",
+    "meaning": "紫色",
+    "band": 1,
+    "topic": "颜色",
+    "order": 271
+  },
+  {
+    "id": "w-0272",
+    "thai": "ชมพู",
+    "romanization": "chom-phuu",
+    "meaning": "粉色",
+    "band": 1,
+    "topic": "颜色",
+    "order": 272
+  },
+  {
+    "id": "w-0273",
+    "thai": "สีน้ำตาล",
+    "romanization": "sǐi-náam-dtaan",
+    "meaning": "棕色",
+    "band": 1,
+    "topic": "颜色",
+    "order": 273
+  },
+  {
+    "id": "w-0274",
+    "thai": "เทา",
+    "romanization": "thao",
+    "meaning": "灰色",
+    "band": 1,
+    "topic": "颜色",
+    "order": 274
+  },
+  {
+    "id": "w-0275",
+    "thai": "ทอง",
+    "romanization": "thɔɔng",
+    "meaning": "金色",
+    "band": 1,
+    "topic": "颜色",
+    "order": 275
+  },
+  {
+    "id": "w-0276",
+    "thai": "สีเงิน",
+    "romanization": "sǐi-ngən",
+    "meaning": "银色",
+    "band": 1,
+    "topic": "颜色",
+    "order": 276
+  },
+  {
+    "id": "w-0277",
+    "thai": "ข้าวสวย",
+    "romanization": "khâao-sǔai",
+    "meaning": "白饭",
+    "band": 2,
+    "topic": "食物",
+    "order": 277
+  },
+  {
+    "id": "w-0278",
+    "thai": "ข้าวผัด",
+    "romanization": "khâao-phàt",
+    "meaning": "炒饭",
+    "band": 2,
+    "topic": "食物",
+    "order": 278
+  },
+  {
+    "id": "w-0279",
+    "thai": "ข้าวต้ม",
+    "romanization": "khâao-dtôm",
+    "meaning": "粥",
+    "band": 2,
+    "topic": "食物",
+    "order": 279
+  },
+  {
+    "id": "w-0280",
+    "thai": "ก๋วยเตี๋ยว",
+    "romanization": "gwǎai-dtǐao",
+    "meaning": "面条",
+    "band": 2,
+    "topic": "食物",
+    "order": 280
+  },
+  {
+    "id": "w-0281",
+    "thai": "บะหมี่",
+    "romanization": "bà-mìi",
+    "meaning": "鸡蛋面",
+    "band": 2,
+    "topic": "食物",
+    "order": 281
+  },
+  {
+    "id": "w-0282",
+    "thai": "ขนมปัง",
+    "romanization": "khà-nǒm-bpang",
+    "meaning": "面包",
+    "band": 2,
+    "topic": "食物",
+    "order": 282
+  },
+  {
+    "id": "w-0283",
+    "thai": "ไข่",
+    "romanization": "khài",
+    "meaning": "蛋",
+    "band": 2,
+    "topic": "食物",
+    "order": 283
+  },
+  {
+    "id": "w-0284",
+    "thai": "ไข่ดาว",
+    "romanization": "khài-daao",
+    "meaning": "煎蛋",
+    "band": 2,
+    "topic": "食物",
+    "order": 284
+  },
+  {
+    "id": "w-0285",
+    "thai": "ไข่เจียว",
+    "romanization": "khài-jiao",
+    "meaning": "蛋饼",
+    "band": 2,
+    "topic": "食物",
+    "order": 285
+  },
+  {
+    "id": "w-0286",
+    "thai": "เนื้อ",
+    "romanization": "nʉ́a",
+    "meaning": "肉",
+    "band": 2,
+    "topic": "食物",
+    "order": 286
+  },
+  {
+    "id": "w-0287",
+    "thai": "เนื้อวัว",
+    "romanization": "nʉ́a-wua",
+    "meaning": "牛肉",
+    "band": 2,
+    "topic": "食物",
+    "order": 287
+  },
+  {
+    "id": "w-0288",
+    "thai": "เนื้อหมู",
+    "romanization": "nʉ́a-mǔu",
+    "meaning": "猪肉",
+    "band": 2,
+    "topic": "食物",
+    "order": 288
+  },
+  {
+    "id": "w-0289",
+    "thai": "ไก่",
+    "romanization": "gài",
+    "meaning": "鸡",
+    "band": 2,
+    "topic": "食物",
+    "order": 289
+  },
+  {
+    "id": "w-0290",
+    "thai": "ปลา",
+    "romanization": "bplaa",
+    "meaning": "鱼",
+    "band": 2,
+    "topic": "食物",
+    "order": 290
+  },
+  {
+    "id": "w-0291",
+    "thai": "กุ้ง",
+    "romanization": "gûng",
+    "meaning": "虾",
+    "band": 2,
+    "topic": "食物",
+    "order": 291
+  },
+  {
+    "id": "w-0292",
+    "thai": "ปู",
+    "romanization": "bpuu",
+    "meaning": "蟹",
+    "band": 2,
+    "topic": "食物",
+    "order": 292
+  },
+  {
+    "id": "w-0293",
+    "thai": "หมึก",
+    "romanization": "mʉ̀k",
+    "meaning": "鱿鱼",
+    "band": 2,
+    "topic": "食物",
+    "order": 293
+  },
+  {
+    "id": "w-0294",
+    "thai": "ผัก",
+    "romanization": "phàk",
+    "meaning": "蔬菜",
+    "band": 2,
+    "topic": "食物",
+    "order": 294
+  },
+  {
+    "id": "w-0295",
+    "thai": "ผลไม้",
+    "romanization": "phǒn-lá-mái",
+    "meaning": "水果",
+    "band": 2,
+    "topic": "食物",
+    "order": 295
+  },
+  {
+    "id": "w-0296",
+    "thai": "แอปเปิ้ล",
+    "romanization": "ɛ́p-bpə̂n",
+    "meaning": "苹果",
+    "band": 2,
+    "topic": "食物",
+    "order": 296
+  },
+  {
+    "id": "w-0297",
+    "thai": "กล้วย",
+    "romanization": "glûai",
+    "meaning": "香蕉",
+    "band": 2,
+    "topic": "食物",
+    "order": 297
+  },
+  {
+    "id": "w-0298",
+    "thai": "มะม่วง",
+    "romanization": "má-mûang",
+    "meaning": "芒果",
+    "band": 2,
+    "topic": "食物",
+    "order": 298
+  },
+  {
+    "id": "w-0299",
+    "thai": "ส้ม",
+    "romanization": "sôm",
+    "meaning": "橙子",
+    "band": 2,
+    "topic": "食物",
+    "order": 299
+  },
+  {
+    "id": "w-0300",
+    "thai": "แตงโม",
+    "romanization": "dtɛɛng-moo",
+    "meaning": "西瓜",
+    "band": 2,
+    "topic": "食物",
+    "order": 300
+  },
+  {
+    "id": "w-0301",
+    "thai": "สับปะรด",
+    "romanization": "sàp-bpà-rót",
+    "meaning": "菠萝",
+    "band": 2,
+    "topic": "食物",
+    "order": 301
+  },
+  {
+    "id": "w-0302",
+    "thai": "มะละกอ",
+    "romanization": "má-lá-gɔɔ",
+    "meaning": "木瓜",
+    "band": 2,
+    "topic": "食物",
+    "order": 302
+  },
+  {
+    "id": "w-0303",
+    "thai": "องุ่น",
+    "romanization": "à-ngùn",
+    "meaning": "葡萄",
+    "band": 2,
+    "topic": "食物",
+    "order": 303
+  },
+  {
+    "id": "w-0304",
+    "thai": "สตรอว์เบอร์รี่",
+    "romanization": "sà-dtrɔɔ-bəə-rîi",
+    "meaning": "草莓",
+    "band": 2,
+    "topic": "食物",
+    "order": 304
+  },
+  {
+    "id": "w-0305",
+    "thai": "นม",
+    "romanization": "nom",
+    "meaning": "牛奶",
+    "band": 2,
+    "topic": "食物",
+    "order": 305
+  },
+  {
+    "id": "w-0306",
+    "thai": "กาแฟ",
+    "romanization": "gaa-fɛɛ",
+    "meaning": "咖啡",
+    "band": 2,
+    "topic": "食物",
+    "order": 306
+  },
+  {
+    "id": "w-0307",
+    "thai": "ชา",
+    "romanization": "chaa",
+    "meaning": "茶",
+    "band": 2,
+    "topic": "食物",
+    "order": 307
+  },
+  {
+    "id": "w-0308",
+    "thai": "น้ำเปล่า",
+    "romanization": "náam-bplào",
+    "meaning": "白水",
+    "band": 2,
+    "topic": "食物",
+    "order": 308
+  },
+  {
+    "id": "w-0309",
+    "thai": "น้ำแข็ง",
+    "romanization": "náam-khɛ̌ng",
+    "meaning": "冰",
+    "band": 2,
+    "topic": "食物",
+    "order": 309
+  },
+  {
+    "id": "w-0310",
+    "thai": "น้ำตาล",
+    "romanization": "náam-dtaan",
+    "meaning": "糖",
+    "band": 2,
+    "topic": "食物",
+    "order": 310
+  },
+  {
+    "id": "w-0311",
+    "thai": "เกลือ",
+    "romanization": "glʉa",
+    "meaning": "盐",
+    "band": 2,
+    "topic": "食物",
+    "order": 311
+  },
+  {
+    "id": "w-0312",
+    "thai": "พริก",
+    "romanization": "phrík",
+    "meaning": "辣椒",
+    "band": 2,
+    "topic": "食物",
+    "order": 312
+  },
+  {
+    "id": "w-0313",
+    "thai": "กระเทียม",
+    "romanization": "grà-thiam",
+    "meaning": "蒜",
+    "band": 2,
+    "topic": "食物",
+    "order": 313
+  },
+  {
+    "id": "w-0314",
+    "thai": "หอม",
+    "romanization": "hɔ̌ɔm",
+    "meaning": "洋葱",
+    "band": 2,
+    "topic": "食物",
+    "order": 314
+  },
+  {
+    "id": "w-0315",
+    "thai": "น้ำมัน",
+    "romanization": "náam-man",
+    "meaning": "油",
+    "band": 2,
+    "topic": "食物",
+    "order": 315
+  },
+  {
+    "id": "w-0316",
+    "thai": "ซอส",
+    "romanization": "sɔ́t",
+    "meaning": "酱",
+    "band": 2,
+    "topic": "食物",
+    "order": 316
+  },
+  {
+    "id": "w-0317",
+    "thai": "น้ำปลา",
+    "romanization": "náam-bplaa",
+    "meaning": "鱼露",
+    "band": 2,
+    "topic": "食物",
+    "order": 317
+  },
+  {
+    "id": "w-0318",
+    "thai": "ซีอิ๊ว",
+    "romanization": "sii-íu",
+    "meaning": "酱油",
+    "band": 2,
+    "topic": "食物",
+    "order": 318
+  },
+  {
+    "id": "w-0319",
+    "thai": "ข้าวต้มกุ๊ย",
+    "romanization": "khâao-dtôm-gúi",
+    "meaning": "带配菜的粥",
+    "band": 2,
+    "topic": "食物",
+    "order": 319
+  },
+  {
+    "id": "w-0320",
+    "thai": "ต้มยำ",
+    "romanization": "dtôm-yam",
+    "meaning": "冬阴功",
+    "band": 2,
+    "topic": "食物",
+    "order": 320
+  },
+  {
+    "id": "w-0321",
+    "thai": "ต้มยำกุ้ง",
+    "romanization": "dtôm-yam-gûng",
+    "meaning": "冬阴功虾",
+    "band": 2,
+    "topic": "食物",
+    "order": 321
+  },
+  {
+    "id": "w-0322",
+    "thai": "ส้มตำ",
+    "romanization": "sôm-dtam",
+    "meaning": "青木瓜沙拉",
+    "band": 2,
+    "topic": "食物",
+    "order": 322
+  },
+  {
+    "id": "w-0323",
+    "thai": "ผัดไทย",
+    "romanization": "phàt-thai",
+    "meaning": "泰式炒河粉",
+    "band": 2,
+    "topic": "食物",
+    "order": 323
+  },
+  {
+    "id": "w-0324",
+    "thai": "แกงเขียวหวาน",
+    "romanization": "gɛɛng-khǐao-wǎan",
+    "meaning": "绿咖喱",
+    "band": 2,
+    "topic": "食物",
+    "order": 324
+  },
+  {
+    "id": "w-0325",
+    "thai": "แกงเผ็ด",
+    "romanization": "gɛɛng-phèt",
+    "meaning": "红咖喱",
+    "band": 2,
+    "topic": "食物",
+    "order": 325
+  },
+  {
+    "id": "w-0326",
+    "thai": "แกงมัสมั่น",
+    "romanization": "gɛɛng-mát-sà-màn",
+    "meaning": "马沙曼咖喱",
+    "band": 2,
+    "topic": "食物",
+    "order": 326
+  },
+  {
+    "id": "w-0327",
+    "thai": "ข้าวมันไก่",
+    "romanization": "khâao-man-gài",
+    "meaning": "海南鸡饭",
+    "band": 2,
+    "topic": "食物",
+    "order": 327
+  },
+  {
+    "id": "w-0328",
+    "thai": "ข้าวขาหมู",
+    "romanization": "khâao-khǎa-mǔu",
+    "meaning": "卤猪腿饭",
+    "band": 2,
+    "topic": "食物",
+    "order": 328
+  },
+  {
+    "id": "w-0329",
+    "thai": "ผัดกะเพรา",
+    "romanization": "phàt-gà-phrao",
+    "meaning": "打抛炒肉",
+    "band": 2,
+    "topic": "食物",
+    "order": 329
+  },
+  {
+    "id": "w-0330",
+    "thai": "ผัดซีอิ๊ว",
+    "romanization": "phàt-sii-íu",
+    "meaning": "酱油炒面",
+    "band": 2,
+    "topic": "食物",
+    "order": 330
+  },
+  {
+    "id": "w-0331",
+    "thai": "ราดหน้า",
+    "romanization": "râat-nâa",
+    "meaning": "浇卤面",
+    "band": 2,
+    "topic": "食物",
+    "order": 331
+  },
+  {
+    "id": "w-0332",
+    "thai": "โจ๊ก",
+    "romanization": "jóok",
+    "meaning": "粥（中式）",
+    "band": 2,
+    "topic": "食物",
+    "order": 332
+  },
+  {
+    "id": "w-0333",
+    "thai": "ขนม",
+    "romanization": "khà-nǒm",
+    "meaning": "点心",
+    "band": 2,
+    "topic": "食物",
+    "order": 333
+  },
+  {
+    "id": "w-0334",
+    "thai": "ไอศกรีม",
+    "romanization": "ai-sà-griim",
+    "meaning": "冰淇淋",
+    "band": 2,
+    "topic": "食物",
+    "order": 334
+  },
+  {
+    "id": "w-0335",
+    "thai": "เค้ก",
+    "romanization": "khéek",
+    "meaning": "蛋糕",
+    "band": 2,
+    "topic": "食物",
+    "order": 335
+  },
+  {
+    "id": "w-0336",
+    "thai": "คุกกี้",
+    "romanization": "khúk-gîi",
+    "meaning": "饼干",
+    "band": 2,
+    "topic": "食物",
+    "order": 336
+  },
+  {
+    "id": "w-0337",
+    "thai": "ถั่ว",
+    "romanization": "thùa",
+    "meaning": "豆子",
+    "band": 2,
+    "topic": "食物",
+    "order": 337
+  },
+  {
+    "id": "w-0338",
+    "thai": "ข้าวโพด",
+    "romanization": "khâao-phôot",
+    "meaning": "玉米",
+    "band": 2,
+    "topic": "食物",
+    "order": 338
+  },
+  {
+    "id": "w-0339",
+    "thai": "มันฝรั่ง",
+    "romanization": "man-fà-ràng",
+    "meaning": "土豆",
+    "band": 2,
+    "topic": "食物",
+    "order": 339
+  },
+  {
+    "id": "w-0340",
+    "thai": "แครอท",
+    "romanization": "khɛɛ-rɔ̀t",
+    "meaning": "胡萝卜",
+    "band": 2,
+    "topic": "食物",
+    "order": 340
+  },
+  {
+    "id": "w-0341",
+    "thai": "มะเขือเทศ",
+    "romanization": "má-khʉ̌a-thêet",
+    "meaning": "西红柿",
+    "band": 2,
+    "topic": "食物",
+    "order": 341
+  },
+  {
+    "id": "w-0342",
+    "thai": "แตงกวา",
+    "romanization": "dtɛɛng-gwaa",
+    "meaning": "黄瓜",
+    "band": 2,
+    "topic": "食物",
+    "order": 342
+  },
+  {
+    "id": "w-0343",
+    "thai": "กะหล่ำ",
+    "romanization": "gà-làm",
+    "meaning": "卷心菜",
+    "band": 2,
+    "topic": "食物",
+    "order": 343
+  },
+  {
+    "id": "w-0344",
+    "thai": "ผักกาด",
+    "romanization": "phàk-gàat",
+    "meaning": "生菜",
+    "band": 2,
+    "topic": "食物",
+    "order": 344
+  },
+  {
+    "id": "w-0345",
+    "thai": "เห็ด",
+    "romanization": "hèt",
+    "meaning": "蘑菇",
+    "band": 2,
+    "topic": "食物",
+    "order": 345
+  },
+  {
+    "id": "w-0346",
+    "thai": "เต้าหู้",
+    "romanization": "dtâo-hûu",
+    "meaning": "豆腐",
+    "band": 2,
+    "topic": "食物",
+    "order": 346
+  },
+  {
+    "id": "w-0347",
+    "thai": "ไข่ต้ม",
+    "romanization": "khài-dtôm",
+    "meaning": "水煮蛋",
+    "band": 2,
+    "topic": "食物",
+    "order": 347
+  },
+  {
+    "id": "w-0348",
+    "thai": "ไข่ลวก",
+    "romanization": "khài-lûak",
+    "meaning": "半熟蛋",
+    "band": 2,
+    "topic": "食物",
+    "order": 348
+  },
+  {
+    "id": "w-0349",
+    "thai": "ไส้กรอก",
+    "romanization": "sâi-grɔ̀ɔk",
+    "meaning": "香肠",
+    "band": 2,
+    "topic": "食物",
+    "order": 349
+  },
+  {
+    "id": "w-0350",
+    "thai": "แฮม",
+    "romanization": "hɛɛm",
+    "meaning": "火腿",
+    "band": 2,
+    "topic": "食物",
+    "order": 350
+  },
+  {
+    "id": "w-0351",
+    "thai": "เนย",
+    "romanization": "nəəi",
+    "meaning": "黄油",
+    "band": 2,
+    "topic": "食物",
+    "order": 351
+  },
+  {
+    "id": "w-0352",
+    "thai": "แยม",
+    "romanization": "yɛɛm",
+    "meaning": "果酱",
+    "band": 2,
+    "topic": "食物",
+    "order": 352
+  },
+  {
+    "id": "w-0353",
+    "thai": "โยเกิร์ต",
+    "romanization": "yoo-gə̀ət",
+    "meaning": "酸奶",
+    "band": 2,
+    "topic": "食物",
+    "order": 353
+  },
+  {
+    "id": "w-0354",
+    "thai": "น้ำผลไม้",
+    "romanization": "náam-phǒn-lá-mái",
+    "meaning": "果汁",
+    "band": 2,
+    "topic": "食物",
+    "order": 354
+  },
+  {
+    "id": "w-0355",
+    "thai": "น้ำอัดลม",
+    "romanization": "náam-àt-lom",
+    "meaning": "汽水",
+    "band": 2,
+    "topic": "食物",
+    "order": 355
+  },
+  {
+    "id": "w-0356",
+    "thai": "เบียร์",
+    "romanization": "bia",
+    "meaning": "啤酒",
+    "band": 2,
+    "topic": "食物",
+    "order": 356
+  },
+  {
+    "id": "w-0357",
+    "thai": "ไวน์",
+    "romanization": "wai",
+    "meaning": "葡萄酒",
+    "band": 2,
+    "topic": "食物",
+    "order": 357
+  },
+  {
+    "id": "w-0358",
+    "thai": "เหล้า",
+    "romanization": "lâo",
+    "meaning": "酒",
+    "band": 2,
+    "topic": "食物",
+    "order": 358
+  },
+  {
+    "id": "w-0359",
+    "thai": "กับข้าว",
+    "romanization": "gàp-khâao",
+    "meaning": "下饭菜",
+    "band": 2,
+    "topic": "食物",
+    "order": 359
+  },
+  {
+    "id": "w-0360",
+    "thai": "จาน",
+    "romanization": "jaan",
+    "meaning": "盘子",
+    "band": 2,
+    "topic": "食物",
+    "order": 360
+  },
+  {
+    "id": "w-0361",
+    "thai": "ชาม",
+    "romanization": "chaam",
+    "meaning": "碗",
+    "band": 2,
+    "topic": "食物",
+    "order": 361
+  },
+  {
+    "id": "w-0362",
+    "thai": "ช้อน",
+    "romanization": "chɔ́ɔn",
+    "meaning": "勺子",
+    "band": 2,
+    "topic": "食物",
+    "order": 362
+  },
+  {
+    "id": "w-0363",
+    "thai": "ส้อม",
+    "romanization": "sɔ̂ɔm",
+    "meaning": "叉子",
+    "band": 2,
+    "topic": "食物",
+    "order": 363
+  },
+  {
+    "id": "w-0364",
+    "thai": "ตะเกียบ",
+    "romanization": "dtà-gìap",
+    "meaning": "筷子",
+    "band": 2,
+    "topic": "食物",
+    "order": 364
+  },
+  {
+    "id": "w-0365",
+    "thai": "มีด",
+    "romanization": "mîit",
+    "meaning": "刀",
+    "band": 2,
+    "topic": "食物",
+    "order": 365
+  },
+  {
+    "id": "w-0366",
+    "thai": "เขียง",
+    "romanization": "khǐang",
+    "meaning": "砧板",
+    "band": 2,
+    "topic": "食物",
+    "order": 366
+  },
+  {
+    "id": "w-0367",
+    "thai": "หม้อ",
+    "romanization": "mɔ̂ɔ",
+    "meaning": "锅",
+    "band": 2,
+    "topic": "食物",
+    "order": 367
+  },
+  {
+    "id": "w-0368",
+    "thai": "กระทะ",
+    "romanization": "grà-thá",
+    "meaning": "炒锅",
+    "band": 2,
+    "topic": "食物",
+    "order": 368
+  },
+  {
+    "id": "w-0369",
+    "thai": "แก้ว",
+    "romanization": "gɛ̂ɛo",
+    "meaning": "杯子",
+    "band": 2,
+    "topic": "食物",
+    "order": 369
+  },
+  {
+    "id": "w-0370",
+    "thai": "ขวด",
+    "romanization": "khùat",
+    "meaning": "瓶子",
+    "band": 2,
+    "topic": "食物",
+    "order": 370
+  },
+  {
+    "id": "w-0371",
+    "thai": "ถุง",
+    "romanization": "thǔng",
+    "meaning": "袋子",
+    "band": 2,
+    "topic": "食物",
+    "order": 371
+  },
+  {
+    "id": "w-0372",
+    "thai": "หัว",
+    "romanization": "hǔa",
+    "meaning": "头",
+    "band": 2,
+    "topic": "身体",
+    "order": 372
+  },
+  {
+    "id": "w-0373",
+    "thai": "เส้นผม",
+    "romanization": "sên-phǒm",
+    "meaning": "头发",
+    "band": 2,
+    "topic": "身体",
+    "order": 373
+  },
+  {
+    "id": "w-0374",
+    "thai": "หน้า",
+    "romanization": "nâa",
+    "meaning": "脸",
+    "band": 2,
+    "topic": "身体",
+    "order": 374
+  },
+  {
+    "id": "w-0375",
+    "thai": "ดวงตา",
+    "romanization": "duang-dtaa",
+    "meaning": "眼睛",
+    "band": 2,
+    "topic": "身体",
+    "order": 375
+  },
+  {
+    "id": "w-0376",
+    "thai": "หู",
+    "romanization": "hǔu",
+    "meaning": "耳朵",
+    "band": 2,
+    "topic": "身体",
+    "order": 376
+  },
+  {
+    "id": "w-0377",
+    "thai": "จมูก",
+    "romanization": "jà-mùuk",
+    "meaning": "鼻子",
+    "band": 2,
+    "topic": "身体",
+    "order": 377
+  },
+  {
+    "id": "w-0378",
+    "thai": "ปาก",
+    "romanization": "bpàak",
+    "meaning": "嘴",
+    "band": 2,
+    "topic": "身体",
+    "order": 378
+  },
+  {
+    "id": "w-0379",
+    "thai": "ฟัน",
+    "romanization": "fan",
+    "meaning": "牙齿",
+    "band": 2,
+    "topic": "身体",
+    "order": 379
+  },
+  {
+    "id": "w-0380",
+    "thai": "ลิ้น",
+    "romanization": "lín",
+    "meaning": "舌头",
+    "band": 2,
+    "topic": "身体",
+    "order": 380
+  },
+  {
+    "id": "w-0381",
+    "thai": "คอ",
+    "romanization": "khɔɔ",
+    "meaning": "脖子",
+    "band": 2,
+    "topic": "身体",
+    "order": 381
+  },
+  {
+    "id": "w-0382",
+    "thai": "ไหล่",
+    "romanization": "lài",
+    "meaning": "肩膀",
+    "band": 2,
+    "topic": "身体",
+    "order": 382
+  },
+  {
+    "id": "w-0383",
+    "thai": "แขน",
+    "romanization": "khɛ̌ɛn",
+    "meaning": "手臂",
+    "band": 2,
+    "topic": "身体",
+    "order": 383
+  },
+  {
+    "id": "w-0384",
+    "thai": "มือ",
+    "romanization": "mʉʉ",
+    "meaning": "手",
+    "band": 2,
+    "topic": "身体",
+    "order": 384
+  },
+  {
+    "id": "w-0385",
+    "thai": "นิ้ว",
+    "romanization": "níu",
+    "meaning": "手指",
+    "band": 2,
+    "topic": "身体",
+    "order": 385
+  },
+  {
+    "id": "w-0386",
+    "thai": "อก",
+    "romanization": "òk",
+    "meaning": "胸",
+    "band": 2,
+    "topic": "身体",
+    "order": 386
+  },
+  {
+    "id": "w-0387",
+    "thai": "แผ่นหลัง",
+    "romanization": "phɛ̀n-lǎng",
+    "meaning": "背",
+    "band": 2,
+    "topic": "身体",
+    "order": 387
+  },
+  {
+    "id": "w-0388",
+    "thai": "ท้อง",
+    "romanization": "thɔ́ɔng",
+    "meaning": "肚子",
+    "band": 2,
+    "topic": "身体",
+    "order": 388
+  },
+  {
+    "id": "w-0389",
+    "thai": "เอว",
+    "romanization": "eo",
+    "meaning": "腰",
+    "band": 2,
+    "topic": "身体",
+    "order": 389
+  },
+  {
+    "id": "w-0390",
+    "thai": "ขา",
+    "romanization": "khǎa",
+    "meaning": "腿",
+    "band": 2,
+    "topic": "身体",
+    "order": 390
+  },
+  {
+    "id": "w-0391",
+    "thai": "เข่า",
+    "romanization": "khào",
+    "meaning": "膝盖",
+    "band": 2,
+    "topic": "身体",
+    "order": 391
+  },
+  {
+    "id": "w-0392",
+    "thai": "เท้า",
+    "romanization": "tháo",
+    "meaning": "脚",
+    "band": 2,
+    "topic": "身体",
+    "order": 392
+  },
+  {
+    "id": "w-0393",
+    "thai": "หัวใจ",
+    "romanization": "hǔa-jai",
+    "meaning": "心脏",
+    "band": 2,
+    "topic": "身体",
+    "order": 393
+  },
+  {
+    "id": "w-0394",
+    "thai": "เลือด",
+    "romanization": "lʉ̂at",
+    "meaning": "血",
+    "band": 2,
+    "topic": "身体",
+    "order": 394
+  },
+  {
+    "id": "w-0395",
+    "thai": "กระดูก",
+    "romanization": "grà-dùuk",
+    "meaning": "骨头",
+    "band": 2,
+    "topic": "身体",
+    "order": 395
+  },
+  {
+    "id": "w-0396",
+    "thai": "ผิว",
+    "romanization": "phǐw",
+    "meaning": "皮肤",
+    "band": 2,
+    "topic": "身体",
+    "order": 396
+  },
+  {
+    "id": "w-0397",
+    "thai": "เล็บ",
+    "romanization": "lép",
+    "meaning": "指甲",
+    "band": 2,
+    "topic": "身体",
+    "order": 397
+  },
+  {
+    "id": "w-0398",
+    "thai": "คิ้ว",
+    "romanization": "khíu",
+    "meaning": "眉毛",
+    "band": 2,
+    "topic": "身体",
+    "order": 398
+  },
+  {
+    "id": "w-0399",
+    "thai": "ขนตา",
+    "romanization": "khǒn-dtaa",
+    "meaning": "睫毛",
+    "band": 2,
+    "topic": "身体",
+    "order": 399
+  },
+  {
+    "id": "w-0400",
+    "thai": "แก้ม",
+    "romanization": "gɛ̂ɛm",
+    "meaning": "脸颊",
+    "band": 2,
+    "topic": "身体",
+    "order": 400
+  },
+  {
+    "id": "w-0401",
+    "thai": "คาง",
+    "romanization": "khaang",
+    "meaning": "下巴",
+    "band": 2,
+    "topic": "身体",
+    "order": 401
+  },
+  {
+    "id": "w-0402",
+    "thai": "ข้อมือ",
+    "romanization": "khɔ̂ɔ-mʉʉ",
+    "meaning": "手腕",
+    "band": 2,
+    "topic": "身体",
+    "order": 402
+  },
+  {
+    "id": "w-0403",
+    "thai": "ข้อเท้า",
+    "romanization": "khɔ̂ɔ-tháo",
+    "meaning": "脚踝",
+    "band": 2,
+    "topic": "身体",
+    "order": 403
+  },
+  {
+    "id": "w-0404",
+    "thai": "เมือง",
+    "romanization": "mʉang",
+    "meaning": "城市",
+    "band": 2,
+    "topic": "地方",
+    "order": 404
+  },
+  {
+    "id": "w-0405",
+    "thai": "ชนบท",
+    "romanization": "chon-ná-bòt",
+    "meaning": "乡下",
+    "band": 2,
+    "topic": "地方",
+    "order": 405
+  },
+  {
+    "id": "w-0406",
+    "thai": "ประเทศ",
+    "romanization": "bprà-thêet",
+    "meaning": "国家",
+    "band": 2,
+    "topic": "地方",
+    "order": 406
+  },
+  {
+    "id": "w-0407",
+    "thai": "จังหวัด",
+    "romanization": "jang-wàt",
+    "meaning": "府",
+    "band": 2,
+    "topic": "地方",
+    "order": 407
+  },
+  {
+    "id": "w-0408",
+    "thai": "อำเภอ",
+    "romanization": "am-phəə",
+    "meaning": "县",
+    "band": 2,
+    "topic": "地方",
+    "order": 408
+  },
+  {
+    "id": "w-0409",
+    "thai": "ตำบล",
+    "romanization": "dtam-bon",
+    "meaning": "乡",
+    "band": 2,
+    "topic": "地方",
+    "order": 409
+  },
+  {
+    "id": "w-0410",
+    "thai": "หมู่บ้าน",
+    "romanization": "mùu-bâan",
+    "meaning": "村庄",
+    "band": 2,
+    "topic": "地方",
+    "order": 410
+  },
+  {
+    "id": "w-0411",
+    "thai": "กรุงเทพ",
+    "romanization": "grung-thêep",
+    "meaning": "曼谷",
+    "band": 2,
+    "topic": "地方",
+    "order": 411
+  },
+  {
+    "id": "w-0412",
+    "thai": "เชียงใหม่",
+    "romanization": "chiang-mài",
+    "meaning": "清迈",
+    "band": 2,
+    "topic": "地方",
+    "order": 412
+  },
+  {
+    "id": "w-0413",
+    "thai": "ภูเก็ต",
+    "romanization": "phuu-gèt",
+    "meaning": "普吉",
+    "band": 2,
+    "topic": "地方",
+    "order": 413
+  },
+  {
+    "id": "w-0414",
+    "thai": "สนามบิน",
+    "romanization": "sà-nǎam-bin",
+    "meaning": "机场",
+    "band": 2,
+    "topic": "地方",
+    "order": 414
+  },
+  {
+    "id": "w-0415",
+    "thai": "สถานี",
+    "romanization": "sà-thǎa-nii",
+    "meaning": "车站",
+    "band": 2,
+    "topic": "地方",
+    "order": 415
+  },
+  {
+    "id": "w-0416",
+    "thai": "รถไฟ",
+    "romanization": "rót-fai",
+    "meaning": "火车",
+    "band": 2,
+    "topic": "地方",
+    "order": 416
+  },
+  {
+    "id": "w-0417",
+    "thai": "รถเมล์",
+    "romanization": "rót-mee",
+    "meaning": "公共汽车",
+    "band": 2,
+    "topic": "地方",
+    "order": 417
+  },
+  {
+    "id": "w-0418",
+    "thai": "รถไฟฟ้า",
+    "romanization": "rót-fai-fáa",
+    "meaning": "地铁",
+    "band": 2,
+    "topic": "地方",
+    "order": 418
+  },
+  {
+    "id": "w-0419",
+    "thai": "แท็กซี่",
+    "romanization": "thɛ́k-sîi",
+    "meaning": "出租车",
+    "band": 2,
+    "topic": "地方",
+    "order": 419
+  },
+  {
+    "id": "w-0420",
+    "thai": "รถมอเตอร์ไซค์",
+    "romanization": "rót-mɔɔ-dtəə-sai",
+    "meaning": "摩托车",
+    "band": 2,
+    "topic": "地方",
+    "order": 420
+  },
+  {
+    "id": "w-0421",
+    "thai": "จักรยาน",
+    "romanization": "jàk-grà-yaan",
+    "meaning": "自行车",
+    "band": 2,
+    "topic": "地方",
+    "order": 421
+  },
+  {
+    "id": "w-0422",
+    "thai": "เรือ",
+    "romanization": "rʉa",
+    "meaning": "船",
+    "band": 2,
+    "topic": "地方",
+    "order": 422
+  },
+  {
+    "id": "w-0423",
+    "thai": "เครื่องบิน",
+    "romanization": "krʉ̂ang-bin",
+    "meaning": "飞机",
+    "band": 2,
+    "topic": "地方",
+    "order": 423
+  },
+  {
+    "id": "w-0424",
+    "thai": "สนาม",
+    "romanization": "sà-nǎam",
+    "meaning": "场地",
+    "band": 2,
+    "topic": "地方",
+    "order": 424
+  },
+  {
+    "id": "w-0425",
+    "thai": "สวน",
+    "romanization": "sǔan",
+    "meaning": "花园",
+    "band": 2,
+    "topic": "地方",
+    "order": 425
+  },
+  {
+    "id": "w-0426",
+    "thai": "สวนสาธารณะ",
+    "romanization": "sǔan-sǎa-thaa-rá-ná",
+    "meaning": "公园",
+    "band": 2,
+    "topic": "地方",
+    "order": 426
+  },
+  {
+    "id": "w-0427",
+    "thai": "วัด",
+    "romanization": "wát",
+    "meaning": "寺庙",
+    "band": 2,
+    "topic": "地方",
+    "order": 427
+  },
+  {
+    "id": "w-0428",
+    "thai": "โบสถ์",
+    "romanization": "bòot",
+    "meaning": "教堂",
+    "band": 2,
+    "topic": "地方",
+    "order": 428
+  },
+  {
+    "id": "w-0429",
+    "thai": "มัสยิด",
+    "romanization": "mát-sà-yít",
+    "meaning": "清真寺",
+    "band": 2,
+    "topic": "地方",
+    "order": 429
+  },
+  {
+    "id": "w-0430",
+    "thai": "ธนาคาร",
+    "romanization": "thá-naa-khaan",
+    "meaning": "银行",
+    "band": 2,
+    "topic": "地方",
+    "order": 430
+  },
+  {
+    "id": "w-0431",
+    "thai": "ไปรษณีย์",
+    "romanization": "bprai-sà-nii",
+    "meaning": "邮局",
+    "band": 2,
+    "topic": "地方",
+    "order": 431
+  },
+  {
+    "id": "w-0432",
+    "thai": "โรงแรม",
+    "romanization": "roong-rɛɛm",
+    "meaning": "酒店",
+    "band": 2,
+    "topic": "地方",
+    "order": 432
+  },
+  {
+    "id": "w-0433",
+    "thai": "หอพัก",
+    "romanization": "hɔ̌ɔ-phák",
+    "meaning": "宿舍",
+    "band": 2,
+    "topic": "地方",
+    "order": 433
+  },
+  {
+    "id": "w-0434",
+    "thai": "คอนโด",
+    "romanization": "khɔn-doo",
+    "meaning": "公寓",
+    "band": 2,
+    "topic": "地方",
+    "order": 434
+  },
+  {
+    "id": "w-0435",
+    "thai": "ตึก",
+    "romanization": "dtʉ̀k",
+    "meaning": "楼",
+    "band": 2,
+    "topic": "地方",
+    "order": 435
+  },
+  {
+    "id": "w-0436",
+    "thai": "สะพาน",
+    "romanization": "sà-phaan",
+    "meaning": "桥",
+    "band": 2,
+    "topic": "地方",
+    "order": 436
+  },
+  {
+    "id": "w-0437",
+    "thai": "แม่น้ำ",
+    "romanization": "mɛ̂ɛ-náam",
+    "meaning": "河",
+    "band": 2,
+    "topic": "地方",
+    "order": 437
+  },
+  {
+    "id": "w-0438",
+    "thai": "ทะเล",
+    "romanization": "thá-lee",
+    "meaning": "海",
+    "band": 2,
+    "topic": "地方",
+    "order": 438
+  },
+  {
+    "id": "w-0439",
+    "thai": "หาด",
+    "romanization": "hàat",
+    "meaning": "海滩",
+    "band": 2,
+    "topic": "地方",
+    "order": 439
+  },
+  {
+    "id": "w-0440",
+    "thai": "ภูเขา",
+    "romanization": "phuu-khǎo",
+    "meaning": "山",
+    "band": 2,
+    "topic": "地方",
+    "order": 440
+  },
+  {
+    "id": "w-0441",
+    "thai": "ป่า",
+    "romanization": "bpàa",
+    "meaning": "森林",
+    "band": 2,
+    "topic": "地方",
+    "order": 441
+  },
+  {
+    "id": "w-0442",
+    "thai": "เกาะ",
+    "romanization": "gɔ̀",
+    "meaning": "岛",
+    "band": 2,
+    "topic": "地方",
+    "order": 442
+  },
+  {
+    "id": "w-0443",
+    "thai": "นา",
+    "romanization": "naa",
+    "meaning": "稻田",
+    "band": 2,
+    "topic": "地方",
+    "order": 443
+  },
+  {
+    "id": "w-0444",
+    "thai": "ตลาดนัด",
+    "romanization": "dtà-làat-nát",
+    "meaning": "集市",
+    "band": 2,
+    "topic": "地方",
+    "order": 444
+  },
+  {
+    "id": "w-0445",
+    "thai": "ห้าง",
+    "romanization": "hâang",
+    "meaning": "商场",
+    "band": 2,
+    "topic": "地方",
+    "order": 445
+  },
+  {
+    "id": "w-0446",
+    "thai": "ซูเปอร์มาร์เก็ต",
+    "romanization": "súu-bpəə-máa-gèt",
+    "meaning": "超市",
+    "band": 2,
+    "topic": "地方",
+    "order": 446
+  },
+  {
+    "id": "w-0447",
+    "thai": "ร้านอาหาร",
+    "romanization": "ráan-aa-hǎan",
+    "meaning": "餐馆",
+    "band": 2,
+    "topic": "地方",
+    "order": 447
+  },
+  {
+    "id": "w-0448",
+    "thai": "ร้านกาแฟ",
+    "romanization": "ráan-gaa-fɛɛ",
+    "meaning": "咖啡馆",
+    "band": 2,
+    "topic": "地方",
+    "order": 448
+  },
+  {
+    "id": "w-0449",
+    "thai": "ร้านยา",
+    "romanization": "ráan-yaa",
+    "meaning": "药店",
+    "band": 2,
+    "topic": "地方",
+    "order": 449
+  },
+  {
+    "id": "w-0450",
+    "thai": "ร้านหนังสือ",
+    "romanization": "ráan-nǎng-sʉ̌ʉ",
+    "meaning": "书店",
+    "band": 2,
+    "topic": "地方",
+    "order": 450
+  },
+  {
+    "id": "w-0451",
+    "thai": "โรงภาพยนตร์",
+    "romanization": "roong-phâap-phá-yon",
+    "meaning": "电影院",
+    "band": 2,
+    "topic": "地方",
+    "order": 451
+  },
+  {
+    "id": "w-0452",
+    "thai": "พิพิธภัณฑ์",
+    "romanization": "phí-phít-thá-phan",
+    "meaning": "博物馆",
+    "band": 2,
+    "topic": "地方",
+    "order": 452
+  },
+  {
+    "id": "w-0453",
+    "thai": "ห้องสมุด",
+    "romanization": "hɔ̂ɔng-sà-mùt",
+    "meaning": "图书馆",
+    "band": 2,
+    "topic": "地方",
+    "order": 453
+  },
+  {
+    "id": "w-0454",
+    "thai": "ห้องนอน",
+    "romanization": "hɔ̂ɔng-nɔɔn",
+    "meaning": "卧室",
+    "band": 2,
+    "topic": "家",
+    "order": 454
+  },
+  {
+    "id": "w-0455",
+    "thai": "ห้องน้ำ",
+    "romanization": "hɔ̂ɔng-náam",
+    "meaning": "卫生间",
+    "band": 2,
+    "topic": "家",
+    "order": 455
+  },
+  {
+    "id": "w-0456",
+    "thai": "ห้องครัว",
+    "romanization": "hɔ̂ɔng-khrua",
+    "meaning": "厨房",
+    "band": 2,
+    "topic": "家",
+    "order": 456
+  },
+  {
+    "id": "w-0457",
+    "thai": "ห้องนั่งเล่น",
+    "romanization": "hɔ̂ɔng-nâng-lên",
+    "meaning": "客厅",
+    "band": 2,
+    "topic": "家",
+    "order": 457
+  },
+  {
+    "id": "w-0458",
+    "thai": "ระเบียง",
+    "romanization": "rá-biang",
+    "meaning": "阳台",
+    "band": 2,
+    "topic": "家",
+    "order": 458
+  },
+  {
+    "id": "w-0459",
+    "thai": "หลังคา",
+    "romanization": "lǎng-khaa",
+    "meaning": "屋顶",
+    "band": 2,
+    "topic": "家",
+    "order": 459
+  },
+  {
+    "id": "w-0460",
+    "thai": "กำแพง",
+    "romanization": "gam-phɛɛng",
+    "meaning": "墙",
+    "band": 2,
+    "topic": "家",
+    "order": 460
+  },
+  {
+    "id": "w-0461",
+    "thai": "พื้น",
+    "romanization": "phʉ́ʉn",
+    "meaning": "地板",
+    "band": 2,
+    "topic": "家",
+    "order": 461
+  },
+  {
+    "id": "w-0462",
+    "thai": "เพดาน",
+    "romanization": "phee-daan",
+    "meaning": "天花板",
+    "band": 2,
+    "topic": "家",
+    "order": 462
+  },
+  {
+    "id": "w-0463",
+    "thai": "บันได",
+    "romanization": "ban-dai",
+    "meaning": "楼梯",
+    "band": 2,
+    "topic": "家",
+    "order": 463
+  },
+  {
+    "id": "w-0464",
+    "thai": "กุญแจ",
+    "romanization": "gun-jɛɛ",
+    "meaning": "钥匙",
+    "band": 2,
+    "topic": "家",
+    "order": 464
+  },
+  {
+    "id": "w-0465",
+    "thai": "ล็อค",
+    "romanization": "lɔ́k",
+    "meaning": "锁",
+    "band": 2,
+    "topic": "家",
+    "order": 465
+  },
+  {
+    "id": "w-0466",
+    "thai": "ไฟ",
+    "romanization": "fai",
+    "meaning": "灯；火",
+    "band": 2,
+    "topic": "家",
+    "order": 466
+  },
+  {
+    "id": "w-0467",
+    "thai": "ปลั๊ก",
+    "romanization": "bplák",
+    "meaning": "插座",
+    "band": 2,
+    "topic": "家",
+    "order": 467
+  },
+  {
+    "id": "w-0468",
+    "thai": "สวิตช์",
+    "romanization": "sà-wít",
+    "meaning": "开关",
+    "band": 2,
+    "topic": "家",
+    "order": 468
+  },
+  {
+    "id": "w-0469",
+    "thai": "พัดลม",
+    "romanization": "phát-lom",
+    "meaning": "风扇",
+    "band": 2,
+    "topic": "家",
+    "order": 469
+  },
+  {
+    "id": "w-0470",
+    "thai": "แอร์",
+    "romanization": "ɛɛ",
+    "meaning": "空调",
+    "band": 2,
+    "topic": "家",
+    "order": 470
+  },
+  {
+    "id": "w-0471",
+    "thai": "ตู้เย็น",
+    "romanization": "dtûu-yen",
+    "meaning": "冰箱",
+    "band": 2,
+    "topic": "家",
+    "order": 471
+  },
+  {
+    "id": "w-0472",
+    "thai": "เตา",
+    "romanization": "dtao",
+    "meaning": "炉子",
+    "band": 2,
+    "topic": "家",
+    "order": 472
+  },
+  {
+    "id": "w-0473",
+    "thai": "ไมโครเวฟ",
+    "romanization": "mai-khroo-wêep",
+    "meaning": "微波炉",
+    "band": 2,
+    "topic": "家",
+    "order": 473
+  },
+  {
+    "id": "w-0474",
+    "thai": "เครื่องซักผ้า",
+    "romanization": "krʉ̂ang-sák-phâa",
+    "meaning": "洗衣机",
+    "band": 2,
+    "topic": "家",
+    "order": 474
+  },
+  {
+    "id": "w-0475",
+    "thai": "ผ้า",
+    "romanization": "phâa",
+    "meaning": "布",
+    "band": 2,
+    "topic": "家",
+    "order": 475
+  },
+  {
+    "id": "w-0476",
+    "thai": "ผ้าเช็ดตัว",
+    "romanization": "phâa-chét-dtua",
+    "meaning": "毛巾",
+    "band": 2,
+    "topic": "家",
+    "order": 476
+  },
+  {
+    "id": "w-0477",
+    "thai": "สบู่",
+    "romanization": "sà-bùu",
+    "meaning": "肥皂",
+    "band": 2,
+    "topic": "家",
+    "order": 477
+  },
+  {
+    "id": "w-0478",
+    "thai": "ยาสีฟัน",
+    "romanization": "yaa-sǐi-fan",
+    "meaning": "牙膏",
+    "band": 2,
+    "topic": "家",
+    "order": 478
+  },
+  {
+    "id": "w-0479",
+    "thai": "แชมพู",
+    "romanization": "chɛɛm-phuu",
+    "meaning": "洗发水",
+    "band": 2,
+    "topic": "家",
+    "order": 479
+  },
+  {
+    "id": "w-0480",
+    "thai": "กระจก",
+    "romanization": "grà-jòk",
+    "meaning": "镜子",
+    "band": 2,
+    "topic": "家",
+    "order": 480
+  },
+  {
+    "id": "w-0481",
+    "thai": "หมอน",
+    "romanization": "mɔ̌ɔn",
+    "meaning": "枕头",
+    "band": 2,
+    "topic": "家",
+    "order": 481
+  },
+  {
+    "id": "w-0482",
+    "thai": "ผ้าห่ม",
+    "romanization": "phâa-hòm",
+    "meaning": "被子",
+    "band": 2,
+    "topic": "家",
+    "order": 482
+  },
+  {
+    "id": "w-0483",
+    "thai": "ผ้าปูที่นอน",
+    "romanization": "phâa-bpuu-thîi-nɔɔn",
+    "meaning": "床单",
+    "band": 2,
+    "topic": "家",
+    "order": 483
+  },
+  {
+    "id": "w-0484",
+    "thai": "ตู้เสื้อผ้า",
+    "romanization": "dtûu-sʉ̂a-phâa",
+    "meaning": "衣柜",
+    "band": 2,
+    "topic": "家",
+    "order": 484
+  },
+  {
+    "id": "w-0485",
+    "thai": "ชั้น",
+    "romanization": "chán",
+    "meaning": "架子；层",
+    "band": 2,
+    "topic": "家",
+    "order": 485
+  },
+  {
+    "id": "w-0486",
+    "thai": "โซฟา",
+    "romanization": "soo-faa",
+    "meaning": "沙发",
+    "band": 2,
+    "topic": "家",
+    "order": 486
+  },
+  {
+    "id": "w-0487",
+    "thai": "พรม",
+    "romanization": "phrom",
+    "meaning": "地毯",
+    "band": 2,
+    "topic": "家",
+    "order": 487
+  },
+  {
+    "id": "w-0488",
+    "thai": "ม่าน",
+    "romanization": "mâan",
+    "meaning": "窗帘",
+    "band": 2,
+    "topic": "家",
+    "order": 488
+  },
+  {
+    "id": "w-0489",
+    "thai": "นาฬิกา",
+    "romanization": "naa-lí-gaa",
+    "meaning": "钟",
+    "band": 2,
+    "topic": "家",
+    "order": 489
+  },
+  {
+    "id": "w-0490",
+    "thai": "รูป",
+    "romanization": "rûup",
+    "meaning": "图画",
+    "band": 2,
+    "topic": "家",
+    "order": 490
+  },
+  {
+    "id": "w-0491",
+    "thai": "ต้นไม้",
+    "romanization": "dtôn-mái",
+    "meaning": "树",
+    "band": 2,
+    "topic": "家",
+    "order": 491
+  },
+  {
+    "id": "w-0492",
+    "thai": "ดอกไม้",
+    "romanization": "dɔ̀ɔk-mái",
+    "meaning": "花",
+    "band": 2,
+    "topic": "家",
+    "order": 492
+  },
+  {
+    "id": "w-0493",
+    "thai": "กระถาง",
+    "romanization": "grà-thǎang",
+    "meaning": "花盆",
+    "band": 2,
+    "topic": "家",
+    "order": 493
+  },
+  {
+    "id": "w-0494",
+    "thai": "เสื้อ",
+    "romanization": "sʉ̂a",
+    "meaning": "上衣",
+    "band": 2,
+    "topic": "衣物",
+    "order": 494
+  },
+  {
+    "id": "w-0495",
+    "thai": "กางเกง",
+    "romanization": "gaang-geeng",
+    "meaning": "裤子",
+    "band": 2,
+    "topic": "衣物",
+    "order": 495
+  },
+  {
+    "id": "w-0496",
+    "thai": "กระโปรง",
+    "romanization": "grà-bproong",
+    "meaning": "裙子",
+    "band": 2,
+    "topic": "衣物",
+    "order": 496
+  },
+  {
+    "id": "w-0497",
+    "thai": "ชุด",
+    "romanization": "chút",
+    "meaning": "一套衣服",
+    "band": 2,
+    "topic": "衣物",
+    "order": 497
+  },
+  {
+    "id": "w-0498",
+    "thai": "เสื้อยืด",
+    "romanization": "sʉ̂a-yʉ̂ʉt",
+    "meaning": "T恤",
+    "band": 2,
+    "topic": "衣物",
+    "order": 498
+  },
+  {
+    "id": "w-0499",
+    "thai": "เสื้อเชิ้ต",
+    "romanization": "sʉ̂a-chə̂ət",
+    "meaning": "衬衫",
+    "band": 2,
+    "topic": "衣物",
+    "order": 499
+  },
+  {
+    "id": "w-0500",
+    "thai": "เสื้อกันหนาว",
+    "romanization": "sʉ̂a-gan-nǎao",
+    "meaning": "毛衣",
+    "band": 2,
+    "topic": "衣物",
+    "order": 500
+  },
+  {
+    "id": "w-0501",
+    "thai": "เสื้อกันฝน",
+    "romanization": "sʉ̂a-gan-fǒn",
+    "meaning": "雨衣",
+    "band": 2,
+    "topic": "衣物",
+    "order": 501
+  },
+  {
+    "id": "w-0502",
+    "thai": "กางเกงยีนส์",
+    "romanization": "gaang-geeng-yiin",
+    "meaning": "牛仔裤",
+    "band": 2,
+    "topic": "衣物",
+    "order": 502
+  },
+  {
+    "id": "w-0503",
+    "thai": "กางเกงขาสั้น",
+    "romanization": "gaang-geeng-khǎa-sân",
+    "meaning": "短裤",
+    "band": 2,
+    "topic": "衣物",
+    "order": 503
+  },
+  {
+    "id": "w-0504",
+    "thai": "ถุงเท้า",
+    "romanization": "thǔng-tháo",
+    "meaning": "袜子",
+    "band": 2,
+    "topic": "衣物",
+    "order": 504
+  },
+  {
+    "id": "w-0505",
+    "thai": "รองเท้า",
+    "romanization": "rɔɔng-tháo",
+    "meaning": "鞋",
+    "band": 2,
+    "topic": "衣物",
+    "order": 505
+  },
+  {
+    "id": "w-0506",
+    "thai": "รองเท้าผ้าใบ",
+    "romanization": "rɔɔng-tháo-phâa-bai",
+    "meaning": "运动鞋",
+    "band": 2,
+    "topic": "衣物",
+    "order": 506
+  },
+  {
+    "id": "w-0507",
+    "thai": "รองเท้าแตะ",
+    "romanization": "rɔɔng-tháo-dtɛ̀",
+    "meaning": "拖鞋",
+    "band": 2,
+    "topic": "衣物",
+    "order": 507
+  },
+  {
+    "id": "w-0508",
+    "thai": "หมวก",
+    "romanization": "mùak",
+    "meaning": "帽子",
+    "band": 2,
+    "topic": "衣物",
+    "order": 508
+  },
+  {
+    "id": "w-0509",
+    "thai": "แว่นตา",
+    "romanization": "wɛ̂n-dtaa",
+    "meaning": "眼镜",
+    "band": 2,
+    "topic": "衣物",
+    "order": 509
+  },
+  {
+    "id": "w-0510",
+    "thai": "เข็มขัด",
+    "romanization": "khěm-khàt",
+    "meaning": "皮带",
+    "band": 2,
+    "topic": "衣物",
+    "order": 510
+  },
+  {
+    "id": "w-0511",
+    "thai": "กระเป๋า",
+    "romanization": "grà-bpǎo",
+    "meaning": "包",
+    "band": 2,
+    "topic": "衣物",
+    "order": 511
+  },
+  {
+    "id": "w-0512",
+    "thai": "กระเป๋าสตางค์",
+    "romanization": "grà-bpǎo-sà-dtaang",
+    "meaning": "钱包",
+    "band": 2,
+    "topic": "衣物",
+    "order": 512
+  },
+  {
+    "id": "w-0513",
+    "thai": "ร่ม",
+    "romanization": "rôm",
+    "meaning": "伞",
+    "band": 2,
+    "topic": "衣物",
+    "order": 513
+  },
+  {
+    "id": "w-0514",
+    "thai": "นาฬิกาข้อมือ",
+    "romanization": "naa-lí-gaa-khɔ̂ɔ-mʉʉ",
+    "meaning": "手表",
+    "band": 2,
+    "topic": "衣物",
+    "order": 514
+  },
+  {
+    "id": "w-0515",
+    "thai": "สร้อย",
+    "romanization": "sɔ̂ɔi",
+    "meaning": "项链",
+    "band": 2,
+    "topic": "衣物",
+    "order": 515
+  },
+  {
+    "id": "w-0516",
+    "thai": "แหวน",
+    "romanization": "wɛ̌ɛn",
+    "meaning": "戒指",
+    "band": 2,
+    "topic": "衣物",
+    "order": 516
+  },
+  {
+    "id": "w-0517",
+    "thai": "ต่างหู",
+    "romanization": "dtàang-hǔu",
+    "meaning": "耳环",
+    "band": 2,
+    "topic": "衣物",
+    "order": 517
+  },
+  {
+    "id": "w-0518",
+    "thai": "สุนัข",
+    "romanization": "sù-nák",
+    "meaning": "狗",
+    "band": 2,
+    "topic": "动物",
+    "order": 518
+  },
+  {
+    "id": "w-0519",
+    "thai": "แมว",
+    "romanization": "mɛɛo",
+    "meaning": "猫",
+    "band": 2,
+    "topic": "动物",
+    "order": 519
+  },
+  {
+    "id": "w-0520",
+    "thai": "นก",
+    "romanization": "nók",
+    "meaning": "鸟",
+    "band": 2,
+    "topic": "动物",
+    "order": 520
+  },
+  {
+    "id": "w-0521",
+    "thai": "หนู",
+    "romanization": "nǔu",
+    "meaning": "老鼠",
+    "band": 2,
+    "topic": "动物",
+    "order": 521
+  },
+  {
+    "id": "w-0522",
+    "thai": "ช้าง",
+    "romanization": "cháang",
+    "meaning": "大象",
+    "band": 2,
+    "topic": "动物",
+    "order": 522
+  },
+  {
+    "id": "w-0523",
+    "thai": "ม้า",
+    "romanization": "máa",
+    "meaning": "马",
+    "band": 2,
+    "topic": "动物",
+    "order": 523
+  },
+  {
+    "id": "w-0524",
+    "thai": "วัว",
+    "romanization": "wua",
+    "meaning": "牛",
+    "band": 2,
+    "topic": "动物",
+    "order": 524
+  },
+  {
+    "id": "w-0525",
+    "thai": "ควาย",
+    "romanization": "khwaai",
+    "meaning": "水牛",
+    "band": 2,
+    "topic": "动物",
+    "order": 525
+  },
+  {
+    "id": "w-0526",
+    "thai": "หมู",
+    "romanization": "mǔu",
+    "meaning": "猪",
+    "band": 2,
+    "topic": "动物",
+    "order": 526
+  },
+  {
+    "id": "w-0527",
+    "thai": "เป็ด",
+    "romanization": "bpèt",
+    "meaning": "鸭子",
+    "band": 2,
+    "topic": "动物",
+    "order": 527
+  },
+  {
+    "id": "w-0528",
+    "thai": "ห่าน",
+    "romanization": "hàan",
+    "meaning": "鹅",
+    "band": 2,
+    "topic": "动物",
+    "order": 528
+  },
+  {
+    "id": "w-0529",
+    "thai": "แกะ",
+    "romanization": "gɛ̀",
+    "meaning": "羊",
+    "band": 2,
+    "topic": "动物",
+    "order": 529
+  },
+  {
+    "id": "w-0530",
+    "thai": "แพะ",
+    "romanization": "phɛ́",
+    "meaning": "山羊",
+    "band": 2,
+    "topic": "动物",
+    "order": 530
+  },
+  {
+    "id": "w-0531",
+    "thai": "ลิง",
+    "romanization": "ling",
+    "meaning": "猴子",
+    "band": 2,
+    "topic": "动物",
+    "order": 531
+  },
+  {
+    "id": "w-0532",
+    "thai": "เสือ",
+    "romanization": "sʉ̌a",
+    "meaning": "老虎",
+    "band": 2,
+    "topic": "动物",
+    "order": 532
+  },
+  {
+    "id": "w-0533",
+    "thai": "สิงโต",
+    "romanization": "sǐng-dtoo",
+    "meaning": "狮子",
+    "band": 2,
+    "topic": "动物",
+    "order": 533
+  },
+  {
+    "id": "w-0534",
+    "thai": "หมี",
+    "romanization": "mǐi",
+    "meaning": "熊",
+    "band": 2,
+    "topic": "动物",
+    "order": 534
+  },
+  {
+    "id": "w-0535",
+    "thai": "งู",
+    "romanization": "nguu",
+    "meaning": "蛇",
+    "band": 2,
+    "topic": "动物",
+    "order": 535
+  },
+  {
+    "id": "w-0536",
+    "thai": "กบ",
+    "romanization": "gòp",
+    "meaning": "青蛙",
+    "band": 2,
+    "topic": "动物",
+    "order": 536
+  },
+  {
+    "id": "w-0537",
+    "thai": "เต่า",
+    "romanization": "dtào",
+    "meaning": "乌龟",
+    "band": 2,
+    "topic": "动物",
+    "order": 537
+  },
+  {
+    "id": "w-0538",
+    "thai": "จระเข้",
+    "romanization": "jɔɔ-rá-khêe",
+    "meaning": "鳄鱼",
+    "band": 2,
+    "topic": "动物",
+    "order": 538
+  },
+  {
+    "id": "w-0539",
+    "thai": "ผีเสื้อ",
+    "romanization": "phǐi-sʉ̂a",
+    "meaning": "蝴蝶",
+    "band": 2,
+    "topic": "动物",
+    "order": 539
+  },
+  {
+    "id": "w-0540",
+    "thai": "มด",
+    "romanization": "mót",
+    "meaning": "蚂蚁",
+    "band": 2,
+    "topic": "动物",
+    "order": 540
+  },
+  {
+    "id": "w-0541",
+    "thai": "ยุง",
+    "romanization": "yung",
+    "meaning": "蚊子",
+    "band": 2,
+    "topic": "动物",
+    "order": 541
+  },
+  {
+    "id": "w-0542",
+    "thai": "แมลงวัน",
+    "romanization": "má-lɛɛng-wan",
+    "meaning": "苍蝇",
+    "band": 2,
+    "topic": "动物",
+    "order": 542
+  },
+  {
+    "id": "w-0543",
+    "thai": "แมลงสาบ",
+    "romanization": "má-lɛɛng-sàap",
+    "meaning": "蟑螂",
+    "band": 2,
+    "topic": "动物",
+    "order": 543
+  },
+  {
+    "id": "w-0544",
+    "thai": "ผึ้ง",
+    "romanization": "phʉ̂ng",
+    "meaning": "蜜蜂",
+    "band": 2,
+    "topic": "动物",
+    "order": 544
+  },
+  {
+    "id": "w-0545",
+    "thai": "ปลาทอง",
+    "romanization": "bplaa-thɔɔng",
+    "meaning": "金鱼",
+    "band": 2,
+    "topic": "动物",
+    "order": 545
+  },
+  {
+    "id": "w-0546",
+    "thai": "ฉลาม",
+    "romanization": "chà-lǎam",
+    "meaning": "鲨鱼",
+    "band": 2,
+    "topic": "动物",
+    "order": 546
+  },
+  {
+    "id": "w-0547",
+    "thai": "ปลาวาฬ",
+    "romanization": "bplaa-waan",
+    "meaning": "鲸鱼",
+    "band": 2,
+    "topic": "动物",
+    "order": 547
+  },
+  {
+    "id": "w-0548",
+    "thai": "โลมา",
+    "romanization": "loo-maa",
+    "meaning": "海豚",
+    "band": 2,
+    "topic": "动物",
+    "order": 548
+  },
+  {
+    "id": "w-0549",
+    "thai": "ขับรถ",
+    "romanization": "khàp-rót",
+    "meaning": "开车",
+    "band": 2,
+    "topic": "动作",
+    "order": 549
+  },
+  {
+    "id": "w-0550",
+    "thai": "ขี่",
+    "romanization": "khìi",
+    "meaning": "骑",
+    "band": 2,
+    "topic": "动作",
+    "order": 550
+  },
+  {
+    "id": "w-0551",
+    "thai": "บิน",
+    "romanization": "bin",
+    "meaning": "飞",
+    "band": 2,
+    "topic": "动作",
+    "order": 551
+  },
+  {
+    "id": "w-0552",
+    "thai": "ว่ายน้ำ",
+    "romanization": "wâai-náam",
+    "meaning": "游泳",
+    "band": 2,
+    "topic": "动作",
+    "order": 552
+  },
+  {
+    "id": "w-0553",
+    "thai": "ปีน",
+    "romanization": "bpiin",
+    "meaning": "爬",
+    "band": 2,
+    "topic": "动作",
+    "order": 553
+  },
+  {
+    "id": "w-0554",
+    "thai": "กระโดด",
+    "romanization": "grà-dòot",
+    "meaning": "跳",
+    "band": 2,
+    "topic": "动作",
+    "order": 554
+  },
+  {
+    "id": "w-0555",
+    "thai": "ผลัก",
+    "romanization": "phlàk",
+    "meaning": "推",
+    "band": 2,
+    "topic": "动作",
+    "order": 555
+  },
+  {
+    "id": "w-0556",
+    "thai": "ดึง",
+    "romanization": "dʉng",
+    "meaning": "拉",
+    "band": 2,
+    "topic": "动作",
+    "order": 556
+  },
+  {
+    "id": "w-0557",
+    "thai": "ยก",
+    "romanization": "yók",
+    "meaning": "举起",
+    "band": 2,
+    "topic": "动作",
+    "order": 557
+  },
+  {
+    "id": "w-0558",
+    "thai": "แบก",
+    "romanization": "bɛ̀ɛk",
+    "meaning": "背着",
+    "band": 2,
+    "topic": "动作",
+    "order": 558
+  },
+  {
+    "id": "w-0559",
+    "thai": "หิ้ว",
+    "romanization": "hîw",
+    "meaning": "提",
+    "band": 2,
+    "topic": "动作",
+    "order": 559
+  },
+  {
+    "id": "w-0560",
+    "thai": "โยน",
+    "romanization": "yoon",
+    "meaning": "扔",
+    "band": 2,
+    "topic": "动作",
+    "order": 560
+  },
+  {
+    "id": "w-0561",
+    "thai": "จับ",
+    "romanization": "jàp",
+    "meaning": "抓住",
+    "band": 2,
+    "topic": "动作",
+    "order": 561
+  },
+  {
+    "id": "w-0562",
+    "thai": "ปล่อย",
+    "romanization": "bplɔ̀ɔi",
+    "meaning": "放开",
+    "band": 2,
+    "topic": "动作",
+    "order": 562
+  },
+  {
+    "id": "w-0563",
+    "thai": "เลือก",
+    "romanization": "lʉ̂ak",
+    "meaning": "选择",
+    "band": 2,
+    "topic": "动作",
+    "order": 563
+  },
+  {
+    "id": "w-0564",
+    "thai": "เปลี่ยน",
+    "romanization": "bplìan",
+    "meaning": "更换",
+    "band": 2,
+    "topic": "动作",
+    "order": 564
+  },
+  {
+    "id": "w-0565",
+    "thai": "ซ่อม",
+    "romanization": "sɔ̂ɔm",
+    "meaning": "修理",
+    "band": 2,
+    "topic": "动作",
+    "order": 565
+  },
+  {
+    "id": "w-0566",
+    "thai": "สร้าง",
+    "romanization": "sâang",
+    "meaning": "建造",
+    "band": 2,
+    "topic": "动作",
+    "order": 566
+  },
+  {
+    "id": "w-0567",
+    "thai": "พัง",
+    "romanization": "phang",
+    "meaning": "坏了",
+    "band": 2,
+    "topic": "动作",
+    "order": 567
+  },
+  {
+    "id": "w-0568",
+    "thai": "หัก",
+    "romanization": "hàk",
+    "meaning": "折断",
+    "band": 2,
+    "topic": "动作",
+    "order": 568
+  },
+  {
+    "id": "w-0569",
+    "thai": "ขาด",
+    "romanization": "khàat",
+    "meaning": "撕裂；缺少",
+    "band": 2,
+    "topic": "动作",
+    "order": 569
+  },
+  {
+    "id": "w-0570",
+    "thai": "เต็ม",
+    "romanization": "dtem",
+    "meaning": "满",
+    "band": 2,
+    "topic": "动作",
+    "order": 570
+  },
+  {
+    "id": "w-0571",
+    "thai": "ว่าง",
+    "romanization": "wâang",
+    "meaning": "空的",
+    "band": 2,
+    "topic": "动作",
+    "order": 571
+  },
+  {
+    "id": "w-0572",
+    "thai": "เริ่ม",
+    "romanization": "rə̂əm",
+    "meaning": "开始",
+    "band": 2,
+    "topic": "动作",
+    "order": 572
+  },
+  {
+    "id": "w-0573",
+    "thai": "จบ",
+    "romanization": "jòp",
+    "meaning": "结束",
+    "band": 2,
+    "topic": "动作",
+    "order": 573
+  },
+  {
+    "id": "w-0574",
+    "thai": "หยุด",
+    "romanization": "yùt",
+    "meaning": "停止",
+    "band": 2,
+    "topic": "动作",
+    "order": 574
+  },
+  {
+    "id": "w-0575",
+    "thai": "ต่อ",
+    "romanization": "dtɔ̀ɔ",
+    "meaning": "继续；连接",
+    "band": 2,
+    "topic": "动作",
+    "order": 575
+  },
+  {
+    "id": "w-0576",
+    "thai": "เลิก",
+    "romanization": "lə̂ək",
+    "meaning": "放弃",
+    "band": 2,
+    "topic": "动作",
+    "order": 576
+  },
+  {
+    "id": "w-0577",
+    "thai": "แพ้",
+    "romanization": "phɛ́ɛ",
+    "meaning": "输",
+    "band": 2,
+    "topic": "动作",
+    "order": 577
+  },
+  {
+    "id": "w-0578",
+    "thai": "ชนะ",
+    "romanization": "chá-ná",
+    "meaning": "赢",
+    "band": 2,
+    "topic": "动作",
+    "order": 578
+  },
+  {
+    "id": "w-0579",
+    "thai": "เล่น",
+    "romanization": "lên",
+    "meaning": "玩",
+    "band": 2,
+    "topic": "动作",
+    "order": 579
+  },
+  {
+    "id": "w-0580",
+    "thai": "แข่ง",
+    "romanization": "khɛ̀ng",
+    "meaning": "比赛",
+    "band": 2,
+    "topic": "动作",
+    "order": 580
+  },
+  {
+    "id": "w-0581",
+    "thai": "ชน",
+    "romanization": "chon",
+    "meaning": "撞",
+    "band": 2,
+    "topic": "动作",
+    "order": 581
+  },
+  {
+    "id": "w-0582",
+    "thai": "ตก",
+    "romanization": "dtòk",
+    "meaning": "掉落",
+    "band": 2,
+    "topic": "动作",
+    "order": 582
+  },
+  {
+    "id": "w-0583",
+    "thai": "ล้ม",
+    "romanization": "lóm",
+    "meaning": "摔倒",
+    "band": 2,
+    "topic": "动作",
+    "order": 583
+  },
+  {
+    "id": "w-0584",
+    "thai": "ลุก",
+    "romanization": "lúk",
+    "meaning": "起身",
+    "band": 2,
+    "topic": "动作",
+    "order": 584
+  },
+  {
+    "id": "w-0585",
+    "thai": "หัน",
+    "romanization": "hǎn",
+    "meaning": "转身",
+    "band": 2,
+    "topic": "动作",
+    "order": 585
+  },
+  {
+    "id": "w-0586",
+    "thai": "มอง",
+    "romanization": "mɔɔng",
+    "meaning": "注视",
+    "band": 2,
+    "topic": "动作",
+    "order": 586
+  },
+  {
+    "id": "w-0587",
+    "thai": "เห็น",
+    "romanization": "hěn",
+    "meaning": "看见",
+    "band": 2,
+    "topic": "动作",
+    "order": 587
+  },
+  {
+    "id": "w-0588",
+    "thai": "ได้ยิน",
+    "romanization": "dâai-yin",
+    "meaning": "听见",
+    "band": 2,
+    "topic": "动作",
+    "order": 588
+  },
+  {
+    "id": "w-0589",
+    "thai": "ได้กลิ่น",
+    "romanization": "dâai-glìn",
+    "meaning": "闻到",
+    "band": 2,
+    "topic": "动作",
+    "order": 589
+  },
+  {
+    "id": "w-0590",
+    "thai": "ชิม",
+    "romanization": "chim",
+    "meaning": "品尝",
+    "band": 2,
+    "topic": "动作",
+    "order": 590
+  },
+  {
+    "id": "w-0591",
+    "thai": "กลืน",
+    "romanization": "glʉʉn",
+    "meaning": "吞",
+    "band": 2,
+    "topic": "动作",
+    "order": 591
+  },
+  {
+    "id": "w-0592",
+    "thai": "เคี้ยว",
+    "romanization": "khíao",
+    "meaning": "嚼",
+    "band": 2,
+    "topic": "动作",
+    "order": 592
+  },
+  {
+    "id": "w-0593",
+    "thai": "หายใจ",
+    "romanization": "hǎai-jai",
+    "meaning": "呼吸",
+    "band": 2,
+    "topic": "动作",
+    "order": 593
+  },
+  {
+    "id": "w-0594",
+    "thai": "ไอ",
+    "romanization": "ai",
+    "meaning": "咳嗽",
+    "band": 2,
+    "topic": "动作",
+    "order": 594
+  },
+  {
+    "id": "w-0595",
+    "thai": "จาม",
+    "romanization": "jaam",
+    "meaning": "打喷嚏",
+    "band": 2,
+    "topic": "动作",
+    "order": 595
+  },
+  {
+    "id": "w-0596",
+    "thai": "หาว",
+    "romanization": "hǎao",
+    "meaning": "打哈欠",
+    "band": 2,
+    "topic": "动作",
+    "order": 596
+  },
+  {
+    "id": "w-0597",
+    "thai": "กอด",
+    "romanization": "gɔ̀ɔt",
+    "meaning": "拥抱",
+    "band": 2,
+    "topic": "动作",
+    "order": 597
+  },
+  {
+    "id": "w-0598",
+    "thai": "หอมแก้ม",
+    "romanization": "hɔ̌ɔm-gɛ̂ɛm",
+    "meaning": "亲脸颊",
+    "band": 2,
+    "topic": "动作",
+    "order": 598
+  },
+  {
+    "id": "w-0599",
+    "thai": "จับมือ",
+    "romanization": "jàp-mʉʉ",
+    "meaning": "握手",
+    "band": 2,
+    "topic": "动作",
+    "order": 599
+  },
+  {
+    "id": "w-0600",
+    "thai": "โบก",
+    "romanization": "bòok",
+    "meaning": "挥手",
+    "band": 2,
+    "topic": "动作",
+    "order": 600
+  },
+  {
+    "id": "w-0601",
+    "thai": "ชี้",
+    "romanization": "chíi",
+    "meaning": "指",
+    "band": 2,
+    "topic": "动作",
+    "order": 601
+  },
+  {
+    "id": "w-0602",
+    "thai": "พยักหน้า",
+    "romanization": "phá-yák-nâa",
+    "meaning": "点头",
+    "band": 2,
+    "topic": "动作",
+    "order": 602
+  },
+  {
+    "id": "w-0603",
+    "thai": "ส่ายหน้า",
+    "romanization": "sàai-nâa",
+    "meaning": "摇头",
+    "band": 2,
+    "topic": "动作",
+    "order": 603
+  },
+  {
+    "id": "w-0604",
+    "thai": "โค้ง",
+    "romanization": "khóong",
+    "meaning": "鞠躬",
+    "band": 2,
+    "topic": "动作",
+    "order": 604
+  },
+  {
+    "id": "w-0605",
+    "thai": "ไหว้",
+    "romanization": "wâi",
+    "meaning": "合十礼",
+    "band": 2,
+    "topic": "动作",
+    "order": 605
+  },
+  {
+    "id": "w-0606",
+    "thai": "กราบ",
+    "romanization": "gràap",
+    "meaning": "跪拜",
+    "band": 2,
+    "topic": "动作",
+    "order": 606
+  },
+  {
+    "id": "w-0607",
+    "thai": "สวด",
+    "romanization": "sùat",
+    "meaning": "诵经",
+    "band": 2,
+    "topic": "动作",
+    "order": 607
+  },
+  {
+    "id": "w-0608",
+    "thai": "ทำบุญ",
+    "romanization": "tham-bun",
+    "meaning": "做功德",
+    "band": 2,
+    "topic": "动作",
+    "order": 608
+  },
+  {
+    "id": "w-0609",
+    "thai": "บริจาค",
+    "romanization": "bɔɔ-rí-jàak",
+    "meaning": "捐赠",
+    "band": 2,
+    "topic": "动作",
+    "order": 609
+  },
+  {
+    "id": "w-0610",
+    "thai": "อธิษฐาน",
+    "romanization": "à-thít-thǎan",
+    "meaning": "许愿",
+    "band": 2,
+    "topic": "动作",
+    "order": 610
+  },
+  {
+    "id": "w-0611",
+    "thai": "สัญญา",
+    "romanization": "sǎn-yaa",
+    "meaning": "答应",
+    "band": 2,
+    "topic": "动作",
+    "order": 611
+  },
+  {
+    "id": "w-0612",
+    "thai": "ปฏิเสธ",
+    "romanization": "bpà-tì-sèet",
+    "meaning": "拒绝",
+    "band": 2,
+    "topic": "动作",
+    "order": 612
+  },
+  {
+    "id": "w-0613",
+    "thai": "ยอมรับ",
+    "romanization": "yɔɔm-ráp",
+    "meaning": "接受",
+    "band": 2,
+    "topic": "动作",
+    "order": 613
+  },
+  {
+    "id": "w-0614",
+    "thai": "ขอโทษ",
+    "romanization": "khɔ̌ɔ-thôot",
+    "meaning": "道歉",
+    "band": 2,
+    "topic": "动作",
+    "order": 614
+  },
+  {
+    "id": "w-0615",
+    "thai": "ขอบคุณ",
+    "romanization": "khɔ̀ɔp-khun",
+    "meaning": "感谢",
+    "band": 2,
+    "topic": "动作",
+    "order": 615
+  },
+  {
+    "id": "w-0616",
+    "thai": "ยินดี",
+    "romanization": "yin-dii",
+    "meaning": "乐意",
+    "band": 2,
+    "topic": "动作",
+    "order": 616
+  },
+  {
+    "id": "w-0617",
+    "thai": "แสดงความยินดี",
+    "romanization": "sà-dɛɛng-khwaam-yin-dii",
+    "meaning": "祝贺",
+    "band": 2,
+    "topic": "动作",
+    "order": 617
+  },
+  {
+    "id": "w-0618",
+    "thai": "เชิญ",
+    "romanization": "chəən",
+    "meaning": "邀请",
+    "band": 2,
+    "topic": "动作",
+    "order": 618
+  },
+  {
+    "id": "w-0619",
+    "thai": "ต้อนรับ",
+    "romanization": "dtɔ̂ɔn-ráp",
+    "meaning": "欢迎",
+    "band": 2,
+    "topic": "动作",
+    "order": 619
+  },
+  {
+    "id": "w-0620",
+    "thai": "ลา",
+    "romanization": "laa",
+    "meaning": "告别",
+    "band": 2,
+    "topic": "动作",
+    "order": 620
+  },
+  {
+    "id": "w-0621",
+    "thai": "จาก",
+    "romanization": "jàak",
+    "meaning": "离开",
+    "band": 2,
+    "topic": "动作",
+    "order": 621
+  },
+  {
+    "id": "w-0622",
+    "thai": "กลับ",
+    "romanization": "glàp",
+    "meaning": "回去",
+    "band": 2,
+    "topic": "动作",
+    "order": 622
+  },
+  {
+    "id": "w-0623",
+    "thai": "ถึง",
+    "romanization": "thʉ̌ng",
+    "meaning": "到达",
+    "band": 2,
+    "topic": "动作",
+    "order": 623
+  },
+  {
+    "id": "w-0624",
+    "thai": "ออกเดินทาง",
+    "romanization": "ɔ̀ɔk-dəən-thaang",
+    "meaning": "出发",
+    "band": 2,
+    "topic": "动作",
+    "order": 624
+  },
+  {
+    "id": "w-0625",
+    "thai": "จอง",
+    "romanization": "jɔɔng",
+    "meaning": "预订",
+    "band": 2,
+    "topic": "动作",
+    "order": 625
+  },
+  {
+    "id": "w-0626",
+    "thai": "จ่าย",
+    "romanization": "jàai",
+    "meaning": "付款",
+    "band": 2,
+    "topic": "动作",
+    "order": 626
+  },
+  {
+    "id": "w-0627",
+    "thai": "ทอน",
+    "romanization": "thɔɔn",
+    "meaning": "找零",
+    "band": 2,
+    "topic": "动作",
+    "order": 627
+  },
+  {
+    "id": "w-0628",
+    "thai": "ลด",
+    "romanization": "lót",
+    "meaning": "减价",
+    "band": 2,
+    "topic": "动作",
+    "order": 628
+  },
+  {
+    "id": "w-0629",
+    "thai": "เพิ่ม",
+    "romanization": "phə̂əm",
+    "meaning": "增加",
+    "band": 2,
+    "topic": "动作",
+    "order": 629
+  },
+  {
+    "id": "w-0630",
+    "thai": "หาร",
+    "romanization": "hǎan",
+    "meaning": "除；分摊",
+    "band": 2,
+    "topic": "动作",
+    "order": 630
+  },
+  {
+    "id": "w-0631",
+    "thai": "คูณ",
+    "romanization": "khuun",
+    "meaning": "乘",
+    "band": 2,
+    "topic": "动作",
+    "order": 631
+  },
+  {
+    "id": "w-0632",
+    "thai": "บวก",
+    "romanization": "bùak",
+    "meaning": "加",
+    "band": 2,
+    "topic": "动作",
+    "order": 632
+  },
+  {
+    "id": "w-0633",
+    "thai": "ลบ",
+    "romanization": "lóp",
+    "meaning": "减；删除",
+    "band": 2,
+    "topic": "动作",
+    "order": 633
+  },
+  {
+    "id": "w-0634",
+    "thai": "นับ",
+    "romanization": "náp",
+    "meaning": "数",
+    "band": 2,
+    "topic": "动作",
+    "order": 634
+  },
+  {
+    "id": "w-0635",
+    "thai": "ชั่ง",
+    "romanization": "châng",
+    "meaning": "称重",
+    "band": 2,
+    "topic": "动作",
+    "order": 635
+  },
+  {
+    "id": "w-0636",
+    "thai": "ตวง",
+    "romanization": "dtuang",
+    "meaning": "量",
+    "band": 2,
+    "topic": "动作",
+    "order": 636
+  },
+  {
+    "id": "w-0637",
+    "thai": "ตัด",
+    "romanization": "dtàt",
+    "meaning": "剪",
+    "band": 2,
+    "topic": "动作",
+    "order": 637
+  },
+  {
+    "id": "w-0638",
+    "thai": "เย็บ",
+    "romanization": "yép",
+    "meaning": "缝",
+    "band": 2,
+    "topic": "动作",
+    "order": 638
+  },
+  {
+    "id": "w-0639",
+    "thai": "ถัก",
+    "romanization": "thàk",
+    "meaning": "编织",
+    "band": 2,
+    "topic": "动作",
+    "order": 639
+  },
+  {
+    "id": "w-0640",
+    "thai": "ทอ",
+    "romanization": "thɔɔ",
+    "meaning": "织布",
+    "band": 2,
+    "topic": "动作",
+    "order": 640
+  },
+  {
+    "id": "w-0641",
+    "thai": "วาด",
+    "romanization": "wâat",
+    "meaning": "画",
+    "band": 2,
+    "topic": "动作",
+    "order": 641
+  },
+  {
+    "id": "w-0642",
+    "thai": "ระบายสี",
+    "romanization": "rá-baai-sǐi",
+    "meaning": "上色",
+    "band": 2,
+    "topic": "动作",
+    "order": 642
+  },
+  {
+    "id": "w-0643",
+    "thai": "ถ่ายรูป",
+    "romanization": "thàai-rûup",
+    "meaning": "拍照",
+    "band": 2,
+    "topic": "动作",
+    "order": 643
+  },
+  {
+    "id": "w-0644",
+    "thai": "อัด",
+    "romanization": "àt",
+    "meaning": "录",
+    "band": 2,
+    "topic": "动作",
+    "order": 644
+  },
+  {
+    "id": "w-0645",
+    "thai": "ฟังเพลง",
+    "romanization": "fang-phleeeng",
+    "meaning": "听音乐",
+    "band": 2,
+    "topic": "动作",
+    "order": 645
+  },
+  {
+    "id": "w-0646",
+    "thai": "ร้องเพลง",
+    "romanization": "rɔ́ɔng-phleeeng",
+    "meaning": "唱歌",
+    "band": 2,
+    "topic": "动作",
+    "order": 646
+  },
+  {
+    "id": "w-0647",
+    "thai": "เต้น",
+    "romanization": "dtên",
+    "meaning": "跳舞",
+    "band": 2,
+    "topic": "动作",
+    "order": 647
+  },
+  {
+    "id": "w-0648",
+    "thai": "เล่นกีฬา",
+    "romanization": "lên-gii-laa",
+    "meaning": "运动",
+    "band": 2,
+    "topic": "动作",
+    "order": 648
+  },
+  {
+    "id": "w-0649",
+    "thai": "เตะ",
+    "romanization": "dtè",
+    "meaning": "踢",
+    "band": 2,
+    "topic": "动作",
+    "order": 649
+  },
+  {
+    "id": "w-0650",
+    "thai": "ตี",
+    "romanization": "dtii",
+    "meaning": "打",
+    "band": 2,
+    "topic": "动作",
+    "order": 650
+  },
+  {
+    "id": "w-0651",
+    "thai": "ขว้าง",
+    "romanization": "khwâang",
+    "meaning": "投掷",
+    "band": 2,
+    "topic": "动作",
+    "order": 651
+  },
+  {
+    "id": "w-0652",
+    "thai": "รับลูก",
+    "romanization": "ráp-lûuk",
+    "meaning": "接球",
+    "band": 2,
+    "topic": "动作",
+    "order": 652
+  },
+  {
+    "id": "w-0653",
+    "thai": "ค้นหา",
+    "romanization": "khón-hǎa",
+    "meaning": "搜索",
+    "band": 3,
+    "topic": "动作",
+    "order": 653
+  },
+  {
+    "id": "w-0654",
+    "thai": "ดาวน์โหลด",
+    "romanization": "daao-lòot",
+    "meaning": "下载",
+    "band": 3,
+    "topic": "动作",
+    "order": 654
+  },
+  {
+    "id": "w-0655",
+    "thai": "อัปโหลด",
+    "romanization": "áp-lòot",
+    "meaning": "上传",
+    "band": 3,
+    "topic": "动作",
+    "order": 655
+  },
+  {
+    "id": "w-0656",
+    "thai": "พิมพ์",
+    "romanization": "phim",
+    "meaning": "打字；打印",
+    "band": 3,
+    "topic": "动作",
+    "order": 656
+  },
+  {
+    "id": "w-0657",
+    "thai": "คัดลอก",
+    "romanization": "khát-lɔ̂ɔk",
+    "meaning": "复制",
+    "band": 3,
+    "topic": "动作",
+    "order": 657
+  },
+  {
+    "id": "w-0658",
+    "thai": "แปะ",
+    "romanization": "bpɛ̀",
+    "meaning": "粘贴",
+    "band": 3,
+    "topic": "动作",
+    "order": 658
+  },
+  {
+    "id": "w-0659",
+    "thai": "บันทึก",
+    "romanization": "ban-thʉ́k",
+    "meaning": "保存",
+    "band": 3,
+    "topic": "动作",
+    "order": 659
+  },
+  {
+    "id": "w-0660",
+    "thai": "ลบไฟล์",
+    "romanization": "lóp-fai",
+    "meaning": "删除文件",
+    "band": 3,
+    "topic": "动作",
+    "order": 660
+  },
+  {
+    "id": "w-0661",
+    "thai": "แชร์",
+    "romanization": "chɛɛ",
+    "meaning": "分享",
+    "band": 3,
+    "topic": "动作",
+    "order": 661
+  },
+  {
+    "id": "w-0662",
+    "thai": "กดไลก์",
+    "romanization": "gòt-lai",
+    "meaning": "点赞",
+    "band": 3,
+    "topic": "动作",
+    "order": 662
+  },
+  {
+    "id": "w-0663",
+    "thai": "คอมเมนต์",
+    "romanization": "khɔm-mên",
+    "meaning": "评论",
+    "band": 3,
+    "topic": "动作",
+    "order": 663
+  },
+  {
+    "id": "w-0664",
+    "thai": "โทร",
+    "romanization": "thoo",
+    "meaning": "打电话",
+    "band": 3,
+    "topic": "动作",
+    "order": 664
+  },
+  {
+    "id": "w-0665",
+    "thai": "สาย",
+    "romanization": "sǎai",
+    "meaning": "线路",
+    "band": 3,
+    "topic": "动作",
+    "order": 665
+  },
+  {
+    "id": "w-0666",
+    "thai": "วางสาย",
+    "romanization": "waang-sǎai",
+    "meaning": "挂电话",
+    "band": 3,
+    "topic": "动作",
+    "order": 666
+  },
+  {
+    "id": "w-0667",
+    "thai": "ส่งข้อความ",
+    "romanization": "sòng-khɔ̂ɔ-khwaam",
+    "meaning": "发消息",
+    "band": 3,
+    "topic": "动作",
+    "order": 667
+  },
+  {
+    "id": "w-0668",
+    "thai": "ตอบกลับ",
+    "romanization": "dtɔ̀ɔp-glàp",
+    "meaning": "回复",
+    "band": 3,
+    "topic": "动作",
+    "order": 668
+  },
+  {
+    "id": "w-0669",
+    "thai": "นัด",
+    "romanization": "nát",
+    "meaning": "约定",
+    "band": 3,
+    "topic": "动作",
+    "order": 669
+  },
+  {
+    "id": "w-0670",
+    "thai": "เลื่อน",
+    "romanization": "lʉ̂an",
+    "meaning": "推迟",
+    "band": 3,
+    "topic": "动作",
+    "order": 670
+  },
+  {
+    "id": "w-0671",
+    "thai": "ยกเลิก",
+    "romanization": "yók-lə̂ək",
+    "meaning": "取消",
+    "band": 3,
+    "topic": "动作",
+    "order": 671
+  },
+  {
+    "id": "w-0672",
+    "thai": "ยืนยัน",
+    "romanization": "yʉʉn-yan",
+    "meaning": "确认",
+    "band": 3,
+    "topic": "动作",
+    "order": 672
+  },
+  {
+    "id": "w-0673",
+    "thai": "ลงทะเบียน",
+    "romanization": "long-thá-bian",
+    "meaning": "注册",
+    "band": 3,
+    "topic": "动作",
+    "order": 673
+  },
+  {
+    "id": "w-0674",
+    "thai": "เข้าสู่ระบบ",
+    "romanization": "khâo-sùu-rá-bòp",
+    "meaning": "登录",
+    "band": 3,
+    "topic": "动作",
+    "order": 674
+  },
+  {
+    "id": "w-0675",
+    "thai": "ออกจากระบบ",
+    "romanization": "ɔ̀ɔk-jàak-rá-bòp",
+    "meaning": "退出登录",
+    "band": 3,
+    "topic": "动作",
+    "order": 675
+  },
+  {
+    "id": "w-0676",
+    "thai": "สมัคร",
+    "romanization": "sà-màk",
+    "meaning": "申请",
+    "band": 3,
+    "topic": "动作",
+    "order": 676
+  },
+  {
+    "id": "w-0677",
+    "thai": "สัมภาษณ์",
+    "romanization": "sǎm-phâat",
+    "meaning": "面试",
+    "band": 3,
+    "topic": "动作",
+    "order": 677
+  },
+  {
+    "id": "w-0678",
+    "thai": "จ้าง",
+    "romanization": "jâang",
+    "meaning": "雇用",
+    "band": 3,
+    "topic": "动作",
+    "order": 678
+  },
+  {
+    "id": "w-0679",
+    "thai": "ไล่ออก",
+    "romanization": "lâi-ɔ̀ɔk",
+    "meaning": "解雇",
+    "band": 3,
+    "topic": "动作",
+    "order": 679
+  },
+  {
+    "id": "w-0680",
+    "thai": "ลาออก",
+    "romanization": "laa-ɔ̀ɔk",
+    "meaning": "辞职",
+    "band": 3,
+    "topic": "动作",
+    "order": 680
+  },
+  {
+    "id": "w-0681",
+    "thai": "ประชุม",
+    "romanization": "bprà-chum",
+    "meaning": "开会",
+    "band": 3,
+    "topic": "动作",
+    "order": 681
+  },
+  {
+    "id": "w-0682",
+    "thai": "รายงาน",
+    "romanization": "raai-ngaan",
+    "meaning": "汇报",
+    "band": 3,
+    "topic": "动作",
+    "order": 682
+  },
+  {
+    "id": "w-0683",
+    "thai": "เซ็น",
+    "romanization": "sen",
+    "meaning": "签名",
+    "band": 3,
+    "topic": "动作",
+    "order": 683
+  },
+  {
+    "id": "w-0684",
+    "thai": "ประทับตรา",
+    "romanization": "bprà-tháp-dtraa",
+    "meaning": "盖章",
+    "band": 3,
+    "topic": "动作",
+    "order": 684
+  },
+  {
+    "id": "w-0685",
+    "thai": "สะอาด",
+    "romanization": "sà-àat",
+    "meaning": "干净",
+    "band": 2,
+    "topic": "描述",
+    "order": 685
+  },
+  {
+    "id": "w-0686",
+    "thai": "สกปรก",
+    "romanization": "sòk-gà-bpròk",
+    "meaning": "脏",
+    "band": 2,
+    "topic": "描述",
+    "order": 686
+  },
+  {
+    "id": "w-0687",
+    "thai": "แห้ง",
+    "romanization": "hɛ̂ɛng",
+    "meaning": "干",
+    "band": 2,
+    "topic": "描述",
+    "order": 687
+  },
+  {
+    "id": "w-0688",
+    "thai": "เปียก",
+    "romanization": "bpìak",
+    "meaning": "湿",
+    "band": 2,
+    "topic": "描述",
+    "order": 688
+  },
+  {
+    "id": "w-0689",
+    "thai": "นิ่ม",
+    "romanization": "nîm",
+    "meaning": "软",
+    "band": 2,
+    "topic": "描述",
+    "order": 689
+  },
+  {
+    "id": "w-0690",
+    "thai": "แข็ง",
+    "romanization": "khɛ̌ng",
+    "meaning": "硬",
+    "band": 2,
+    "topic": "描述",
+    "order": 690
+  },
+  {
+    "id": "w-0691",
+    "thai": "คม",
+    "romanization": "khom",
+    "meaning": "锋利",
+    "band": 2,
+    "topic": "描述",
+    "order": 691
+  },
+  {
+    "id": "w-0692",
+    "thai": "ทื่อ",
+    "romanization": "thʉ̂ʉ",
+    "meaning": "钝",
+    "band": 2,
+    "topic": "描述",
+    "order": 692
+  },
+  {
+    "id": "w-0693",
+    "thai": "หวาน",
+    "romanization": "wǎan",
+    "meaning": "甜",
+    "band": 2,
+    "topic": "描述",
+    "order": 693
+  },
+  {
+    "id": "w-0694",
+    "thai": "เปรี้ยว",
+    "romanization": "bprîao",
+    "meaning": "酸",
+    "band": 2,
+    "topic": "描述",
+    "order": 694
+  },
+  {
+    "id": "w-0695",
+    "thai": "เค็ม",
+    "romanization": "khem",
+    "meaning": "咸",
+    "band": 2,
+    "topic": "描述",
+    "order": 695
+  },
+  {
+    "id": "w-0696",
+    "thai": "ขม",
+    "romanization": "khǒm",
+    "meaning": "苦",
+    "band": 2,
+    "topic": "描述",
+    "order": 696
+  },
+  {
+    "id": "w-0697",
+    "thai": "เผ็ด",
+    "romanization": "phèt",
+    "meaning": "辣",
+    "band": 2,
+    "topic": "描述",
+    "order": 697
+  },
+  {
+    "id": "w-0698",
+    "thai": "จืด",
+    "romanization": "jʉ̀ʉt",
+    "meaning": "淡",
+    "band": 2,
+    "topic": "描述",
+    "order": 698
+  },
+  {
+    "id": "w-0699",
+    "thai": "กลิ่นหอม",
+    "romanization": "glìn-hɔ̌ɔm",
+    "meaning": "香味",
+    "band": 2,
+    "topic": "描述",
+    "order": 699
+  },
+  {
+    "id": "w-0700",
+    "thai": "เหม็น",
+    "romanization": "měn",
+    "meaning": "臭",
+    "band": 2,
+    "topic": "描述",
+    "order": 700
+  },
+  {
+    "id": "w-0701",
+    "thai": "ดัง",
+    "romanization": "dang",
+    "meaning": "响",
+    "band": 2,
+    "topic": "描述",
+    "order": 701
+  },
+  {
+    "id": "w-0702",
+    "thai": "เบา",
+    "romanization": "bao",
+    "meaning": "轻；小声",
+    "band": 2,
+    "topic": "描述",
+    "order": 702
+  },
+  {
+    "id": "w-0703",
+    "thai": "หนัก",
+    "romanization": "nàk",
+    "meaning": "重",
+    "band": 2,
+    "topic": "描述",
+    "order": 703
+  },
+  {
+    "id": "w-0704",
+    "thai": "โปร่ง",
+    "romanization": "bpròong",
+    "meaning": "稀疏",
+    "band": 2,
+    "topic": "描述",
+    "order": 704
+  },
+  {
+    "id": "w-0705",
+    "thai": "หนา",
+    "romanization": "nǎa",
+    "meaning": "厚",
+    "band": 2,
+    "topic": "描述",
+    "order": 705
+  },
+  {
+    "id": "w-0706",
+    "thai": "กว้าง",
+    "romanization": "gwâang",
+    "meaning": "宽",
+    "band": 2,
+    "topic": "描述",
+    "order": 706
+  },
+  {
+    "id": "w-0707",
+    "thai": "แคบ",
+    "romanization": "khɛ̂ɛp",
+    "meaning": "窄",
+    "band": 2,
+    "topic": "描述",
+    "order": 707
+  },
+  {
+    "id": "w-0708",
+    "thai": "ยาว",
+    "romanization": "yaao",
+    "meaning": "长",
+    "band": 2,
+    "topic": "描述",
+    "order": 708
+  },
+  {
+    "id": "w-0709",
+    "thai": "สั้น",
+    "romanization": "sân",
+    "meaning": "短",
+    "band": 2,
+    "topic": "描述",
+    "order": 709
+  },
+  {
+    "id": "w-0710",
+    "thai": "ลึก",
+    "romanization": "lʉ́k",
+    "meaning": "深",
+    "band": 2,
+    "topic": "描述",
+    "order": 710
+  },
+  {
+    "id": "w-0711",
+    "thai": "ตื้น",
+    "romanization": "dtʉ̂ʉn",
+    "meaning": "浅",
+    "band": 2,
+    "topic": "描述",
+    "order": 711
+  },
+  {
+    "id": "w-0712",
+    "thai": "มืด",
+    "romanization": "mʉ̂ʉt",
+    "meaning": "暗",
+    "band": 2,
+    "topic": "描述",
+    "order": 712
+  },
+  {
+    "id": "w-0713",
+    "thai": "สว่าง",
+    "romanization": "sà-wàang",
+    "meaning": "亮",
+    "band": 2,
+    "topic": "描述",
+    "order": 713
+  },
+  {
+    "id": "w-0714",
+    "thai": "เงียบ",
+    "romanization": "ngîap",
+    "meaning": "安静",
+    "band": 2,
+    "topic": "描述",
+    "order": 714
+  },
+  {
+    "id": "w-0715",
+    "thai": "วุ่นวาย",
+    "romanization": "wûn-waai",
+    "meaning": "吵闹",
+    "band": 2,
+    "topic": "描述",
+    "order": 715
+  },
+  {
+    "id": "w-0716",
+    "thai": "อันตราย",
+    "romanization": "an-dtà-raai",
+    "meaning": "危险",
+    "band": 2,
+    "topic": "描述",
+    "order": 716
+  },
+  {
+    "id": "w-0717",
+    "thai": "ปลอดภัย",
+    "romanization": "bplɔ̀ɔt-phai",
+    "meaning": "安全",
+    "band": 2,
+    "topic": "描述",
+    "order": 717
+  },
+  {
+    "id": "w-0718",
+    "thai": "สำคัญ",
+    "romanization": "sǎm-khan",
+    "meaning": "重要",
+    "band": 2,
+    "topic": "描述",
+    "order": 718
+  },
+  {
+    "id": "w-0719",
+    "thai": "จำเป็น",
+    "romanization": "jam-bpen",
+    "meaning": "必要",
+    "band": 2,
+    "topic": "描述",
+    "order": 719
+  },
+  {
+    "id": "w-0720",
+    "thai": "พิเศษ",
+    "romanization": "phí-sèet",
+    "meaning": "特别",
+    "band": 2,
+    "topic": "描述",
+    "order": 720
+  },
+  {
+    "id": "w-0721",
+    "thai": "ธรรมดา",
+    "romanization": "tham-má-daa",
+    "meaning": "普通",
+    "band": 2,
+    "topic": "描述",
+    "order": 721
+  },
+  {
+    "id": "w-0722",
+    "thai": "แปลก",
+    "romanization": "bplɛ̀ɛk",
+    "meaning": "奇怪",
+    "band": 2,
+    "topic": "描述",
+    "order": 722
+  },
+  {
+    "id": "w-0723",
+    "thai": "น่าสนใจ",
+    "romanization": "nâa-sǒn-jai",
+    "meaning": "有趣",
+    "band": 2,
+    "topic": "描述",
+    "order": 723
+  },
+  {
+    "id": "w-0724",
+    "thai": "น่าเบื่อ",
+    "romanization": "nâa-bʉ̀a",
+    "meaning": "无聊",
+    "band": 2,
+    "topic": "描述",
+    "order": 724
+  },
+  {
+    "id": "w-0725",
+    "thai": "สนุก",
+    "romanization": "sà-nùk",
+    "meaning": "好玩",
+    "band": 2,
+    "topic": "描述",
+    "order": 725
+  },
+  {
+    "id": "w-0726",
+    "thai": "เครียด",
+    "romanization": "khrîat",
+    "meaning": "紧张",
+    "band": 2,
+    "topic": "描述",
+    "order": 726
+  },
+  {
+    "id": "w-0727",
+    "thai": "สบาย",
+    "romanization": "sà-baai",
+    "meaning": "舒服",
+    "band": 2,
+    "topic": "描述",
+    "order": 727
+  },
+  {
+    "id": "w-0728",
+    "thai": "เหนื่อย",
+    "romanization": "nʉ̀ai",
+    "meaning": "累",
+    "band": 2,
+    "topic": "描述",
+    "order": 728
+  },
+  {
+    "id": "w-0729",
+    "thai": "ง่วง",
+    "romanization": "ngûang",
+    "meaning": "困",
+    "band": 2,
+    "topic": "描述",
+    "order": 729
+  },
+  {
+    "id": "w-0730",
+    "thai": "ป่วย",
+    "romanization": "bpùai",
+    "meaning": "生病",
+    "band": 2,
+    "topic": "描述",
+    "order": 730
+  },
+  {
+    "id": "w-0731",
+    "thai": "แข็งแรง",
+    "romanization": "khɛ̌ng-rɛɛng",
+    "meaning": "强壮",
+    "band": 2,
+    "topic": "描述",
+    "order": 731
+  },
+  {
+    "id": "w-0732",
+    "thai": "อ่อนแอ",
+    "romanization": "ɔ̀ɔn-ɛɛ",
+    "meaning": "虚弱",
+    "band": 2,
+    "topic": "描述",
+    "order": 732
+  },
+  {
+    "id": "w-0733",
+    "thai": "หนุ่ม",
+    "romanization": "nùm",
+    "meaning": "年轻男子",
+    "band": 2,
+    "topic": "描述",
+    "order": 733
+  },
+  {
+    "id": "w-0734",
+    "thai": "สาว",
+    "romanization": "sǎao",
+    "meaning": "年轻女子",
+    "band": 2,
+    "topic": "描述",
+    "order": 734
+  },
+  {
+    "id": "w-0735",
+    "thai": "แก่",
+    "romanization": "gɛ̀ɛ",
+    "meaning": "年老",
+    "band": 2,
+    "topic": "描述",
+    "order": 735
+  },
+  {
+    "id": "w-0736",
+    "thai": "รวย",
+    "romanization": "ruai",
+    "meaning": "富",
+    "band": 2,
+    "topic": "描述",
+    "order": 736
+  },
+  {
+    "id": "w-0737",
+    "thai": "จน",
+    "romanization": "jon",
+    "meaning": "穷",
+    "band": 2,
+    "topic": "描述",
+    "order": 737
+  },
+  {
+    "id": "w-0738",
+    "thai": "โสด",
+    "romanization": "sòot",
+    "meaning": "单身",
+    "band": 2,
+    "topic": "描述",
+    "order": 738
+  },
+  {
+    "id": "w-0739",
+    "thai": "ยุ่ง",
+    "romanization": "yûng",
+    "meaning": "忙",
+    "band": 2,
+    "topic": "描述",
+    "order": 739
+  },
+  {
+    "id": "w-0740",
+    "thai": "โล่ง",
+    "romanization": "lôong",
+    "meaning": "松一口气",
+    "band": 2,
+    "topic": "描述",
+    "order": 740
+  },
+  {
+    "id": "w-0741",
+    "thai": "ไข้",
+    "romanization": "khâi",
+    "meaning": "发烧",
+    "band": 2,
+    "topic": "健康",
+    "order": 741
+  },
+  {
+    "id": "w-0742",
+    "thai": "ปวดหัว",
+    "romanization": "bpùat-hǔa",
+    "meaning": "头疼",
+    "band": 2,
+    "topic": "健康",
+    "order": 742
+  },
+  {
+    "id": "w-0743",
+    "thai": "ปวดท้อง",
+    "romanization": "bpùat-thɔ́ɔng",
+    "meaning": "肚子疼",
+    "band": 2,
+    "topic": "健康",
+    "order": 743
+  },
+  {
+    "id": "w-0744",
+    "thai": "ปวดฟัน",
+    "romanization": "bpùat-fan",
+    "meaning": "牙疼",
+    "band": 2,
+    "topic": "健康",
+    "order": 744
+  },
+  {
+    "id": "w-0745",
+    "thai": "เจ็บ",
+    "romanization": "jèp",
+    "meaning": "疼",
+    "band": 2,
+    "topic": "健康",
+    "order": 745
+  },
+  {
+    "id": "w-0746",
+    "thai": "คัน",
+    "romanization": "khan",
+    "meaning": "痒",
+    "band": 2,
+    "topic": "健康",
+    "order": 746
+  },
+  {
+    "id": "w-0747",
+    "thai": "บวม",
+    "romanization": "buam",
+    "meaning": "肿",
+    "band": 2,
+    "topic": "健康",
+    "order": 747
+  },
+  {
+    "id": "w-0748",
+    "thai": "แผล",
+    "romanization": "phlɛ̌ɛ",
+    "meaning": "伤口",
+    "band": 2,
+    "topic": "健康",
+    "order": 748
+  },
+  {
+    "id": "w-0749",
+    "thai": "เลือดกำเดา",
+    "romanization": "lʉ̂at-gam-dao",
+    "meaning": "鼻血",
+    "band": 2,
+    "topic": "健康",
+    "order": 749
+  },
+  {
+    "id": "w-0750",
+    "thai": "ภูมิแพ้",
+    "romanization": "phuum-phɛ́ɛ",
+    "meaning": "过敏",
+    "band": 2,
+    "topic": "健康",
+    "order": 750
+  },
+  {
+    "id": "w-0751",
+    "thai": "ยา",
+    "romanization": "yaa",
+    "meaning": "药",
+    "band": 2,
+    "topic": "健康",
+    "order": 751
+  },
+  {
+    "id": "w-0752",
+    "thai": "ยาเม็ด",
+    "romanization": "yaa-mét",
+    "meaning": "药片",
+    "band": 2,
+    "topic": "健康",
+    "order": 752
+  },
+  {
+    "id": "w-0753",
+    "thai": "ยาฉีด",
+    "romanization": "yaa-chìit",
+    "meaning": "针剂",
+    "band": 2,
+    "topic": "健康",
+    "order": 753
+  },
+  {
+    "id": "w-0754",
+    "thai": "พลาสเตอร์",
+    "romanization": "phláat-dtəə",
+    "meaning": "创可贴",
+    "band": 2,
+    "topic": "健康",
+    "order": 754
+  },
+  {
+    "id": "w-0755",
+    "thai": "ผ้าพันแผล",
+    "romanization": "phâa-phan-phlɛ̌ɛ",
+    "meaning": "绷带",
+    "band": 2,
+    "topic": "健康",
+    "order": 755
+  },
+  {
+    "id": "w-0756",
+    "thai": "หมอฟัน",
+    "romanization": "mɔ̌ɔ-fan",
+    "meaning": "牙医",
+    "band": 2,
+    "topic": "健康",
+    "order": 756
+  },
+  {
+    "id": "w-0757",
+    "thai": "พยาบาล",
+    "romanization": "phá-yaa-baan",
+    "meaning": "护士",
+    "band": 2,
+    "topic": "健康",
+    "order": 757
+  },
+  {
+    "id": "w-0758",
+    "thai": "คนไข้",
+    "romanization": "khon-khâi",
+    "meaning": "病人",
+    "band": 2,
+    "topic": "健康",
+    "order": 758
+  },
+  {
+    "id": "w-0759",
+    "thai": "นัดหมาย",
+    "romanization": "nát-mǎai",
+    "meaning": "预约",
+    "band": 2,
+    "topic": "健康",
+    "order": 759
+  },
+  {
+    "id": "w-0760",
+    "thai": "ตรวจ",
+    "romanization": "dtrùat",
+    "meaning": "检查",
+    "band": 2,
+    "topic": "健康",
+    "order": 760
+  },
+  {
+    "id": "w-0761",
+    "thai": "ผลตรวจ",
+    "romanization": "phǒn-dtrùat",
+    "meaning": "检查结果",
+    "band": 2,
+    "topic": "健康",
+    "order": 761
+  },
+  {
+    "id": "w-0762",
+    "thai": "ใบสั่งยา",
+    "romanization": "bai-sàng-yaa",
+    "meaning": "处方",
+    "band": 2,
+    "topic": "健康",
+    "order": 762
+  },
+  {
+    "id": "w-0763",
+    "thai": "ประกัน",
+    "romanization": "bprà-gan",
+    "meaning": "保险",
+    "band": 2,
+    "topic": "健康",
+    "order": 763
+  },
+  {
+    "id": "w-0764",
+    "thai": "พักผ่อน",
+    "romanization": "phák-phɔ̀ɔn",
+    "meaning": "休息",
+    "band": 2,
+    "topic": "健康",
+    "order": 764
+  },
+  {
+    "id": "w-0765",
+    "thai": "ออกกำลังกาย",
+    "romanization": "ɔ̀ɔk-gam-lang-gaai",
+    "meaning": "锻炼",
+    "band": 2,
+    "topic": "健康",
+    "order": 765
+  },
+  {
+    "id": "w-0766",
+    "thai": "ชั้นเรียน",
+    "romanization": "chán-rian",
+    "meaning": "班级",
+    "band": 2,
+    "topic": "学校",
+    "order": 766
+  },
+  {
+    "id": "w-0767",
+    "thai": "วิชา",
+    "romanization": "wí-chaa",
+    "meaning": "科目",
+    "band": 2,
+    "topic": "学校",
+    "order": 767
+  },
+  {
+    "id": "w-0768",
+    "thai": "คณิตศาสตร์",
+    "romanization": "khá-nít-sàat",
+    "meaning": "数学",
+    "band": 2,
+    "topic": "学校",
+    "order": 768
+  },
+  {
+    "id": "w-0769",
+    "thai": "วิทยาศาสตร์",
+    "romanization": "wít-thá-yaa-sàat",
+    "meaning": "科学",
+    "band": 2,
+    "topic": "学校",
+    "order": 769
+  },
+  {
+    "id": "w-0770",
+    "thai": "ประวัติศาสตร์",
+    "romanization": "bprà-wàt-dtì-sàat",
+    "meaning": "历史",
+    "band": 2,
+    "topic": "学校",
+    "order": 770
+  },
+  {
+    "id": "w-0771",
+    "thai": "ภูมิศาสตร์",
+    "romanization": "phuu-mí-sàat",
+    "meaning": "地理",
+    "band": 2,
+    "topic": "学校",
+    "order": 771
+  },
+  {
+    "id": "w-0772",
+    "thai": "ภาษาอังกฤษ",
+    "romanization": "phaa-sǎa-ang-grìt",
+    "meaning": "英语",
+    "band": 2,
+    "topic": "学校",
+    "order": 772
+  },
+  {
+    "id": "w-0773",
+    "thai": "ภาษาไทย",
+    "romanization": "phaa-sǎa-thai",
+    "meaning": "泰语",
+    "band": 2,
+    "topic": "学校",
+    "order": 773
+  },
+  {
+    "id": "w-0774",
+    "thai": "ภาษาจีน",
+    "romanization": "phaa-sǎa-jiin",
+    "meaning": "中文",
+    "band": 2,
+    "topic": "学校",
+    "order": 774
+  },
+  {
+    "id": "w-0775",
+    "thai": "ศิลปะ",
+    "romanization": "sǐn-lá-bpà",
+    "meaning": "艺术",
+    "band": 2,
+    "topic": "学校",
+    "order": 775
+  },
+  {
+    "id": "w-0776",
+    "thai": "ดนตรี",
+    "romanization": "don-dtrii",
+    "meaning": "音乐",
+    "band": 2,
+    "topic": "学校",
+    "order": 776
+  },
+  {
+    "id": "w-0777",
+    "thai": "กีฬา",
+    "romanization": "gii-laa",
+    "meaning": "体育",
+    "band": 2,
+    "topic": "学校",
+    "order": 777
+  },
+  {
+    "id": "w-0778",
+    "thai": "การบ้าน",
+    "romanization": "gaan-bâan",
+    "meaning": "作业",
+    "band": 2,
+    "topic": "学校",
+    "order": 778
+  },
+  {
+    "id": "w-0779",
+    "thai": "ข้อสอบ",
+    "romanization": "khɔ̂ɔ-sɔ̀ɔp",
+    "meaning": "考卷",
+    "band": 2,
+    "topic": "学校",
+    "order": 779
+  },
+  {
+    "id": "w-0780",
+    "thai": "คะแนน",
+    "romanization": "khá-nɛɛn",
+    "meaning": "分数",
+    "band": 2,
+    "topic": "学校",
+    "order": 780
+  },
+  {
+    "id": "w-0781",
+    "thai": "สอบผ่าน",
+    "romanization": "sɔ̀ɔp-phàan",
+    "meaning": "及格",
+    "band": 2,
+    "topic": "学校",
+    "order": 781
+  },
+  {
+    "id": "w-0782",
+    "thai": "สอบตก",
+    "romanization": "sɔ̀ɔp-dtòk",
+    "meaning": "不及格",
+    "band": 2,
+    "topic": "学校",
+    "order": 782
+  },
+  {
+    "id": "w-0783",
+    "thai": "เกรด",
+    "romanization": "grèet",
+    "meaning": "等级",
+    "band": 2,
+    "topic": "学校",
+    "order": 783
+  },
+  {
+    "id": "w-0784",
+    "thai": "โรงอาหาร",
+    "romanization": "roong-aa-hǎan",
+    "meaning": "食堂",
+    "band": 2,
+    "topic": "学校",
+    "order": 784
+  },
+  {
+    "id": "w-0785",
+    "thai": "สนามเด็กเล่น",
+    "romanization": "sà-nǎam-dèk-lên",
+    "meaning": "操场",
+    "band": 2,
+    "topic": "学校",
+    "order": 785
+  },
+  {
+    "id": "w-0786",
+    "thai": "กระดาน",
+    "romanization": "grà-daan",
+    "meaning": "黑板",
+    "band": 2,
+    "topic": "学校",
+    "order": 786
+  },
+  {
+    "id": "w-0787",
+    "thai": "ชอล์ก",
+    "romanization": "chɔ́ɔk",
+    "meaning": "粉笔",
+    "band": 2,
+    "topic": "学校",
+    "order": 787
+  },
+  {
+    "id": "w-0788",
+    "thai": "ยางลบ",
+    "romanization": "yaang-lóp",
+    "meaning": "橡皮",
+    "band": 2,
+    "topic": "学校",
+    "order": 788
+  },
+  {
+    "id": "w-0789",
+    "thai": "ดินสอ",
+    "romanization": "din-sɔ̌ɔ",
+    "meaning": "铅笔",
+    "band": 2,
+    "topic": "学校",
+    "order": 789
+  },
+  {
+    "id": "w-0790",
+    "thai": "สมุด",
+    "romanization": "sà-mùt",
+    "meaning": "笔记本",
+    "band": 2,
+    "topic": "学校",
+    "order": 790
+  },
+  {
+    "id": "w-0791",
+    "thai": "ไม้บรรทัด",
+    "romanization": "mái-ban-thát",
+    "meaning": "尺子",
+    "band": 2,
+    "topic": "学校",
+    "order": 791
+  },
+  {
+    "id": "w-0792",
+    "thai": "กรรไกร",
+    "romanization": "gan-grai",
+    "meaning": "剪刀",
+    "band": 2,
+    "topic": "学校",
+    "order": 792
+  },
+  {
+    "id": "w-0793",
+    "thai": "กาว",
+    "romanization": "gaao",
+    "meaning": "胶水",
+    "band": 2,
+    "topic": "学校",
+    "order": 793
+  },
+  {
+    "id": "w-0794",
+    "thai": "แฟ้ม",
+    "romanization": "fɛ̂ɛm",
+    "meaning": "文件夹",
+    "band": 2,
+    "topic": "学校",
+    "order": 794
+  },
+  {
+    "id": "w-0795",
+    "thai": "ปริญญา",
+    "romanization": "bpà-rin-yaa",
+    "meaning": "学位",
+    "band": 2,
+    "topic": "学校",
+    "order": 795
+  },
+  {
+    "id": "w-0796",
+    "thai": "มหาวิทยาลัย",
+    "romanization": "má-hǎa-wít-thá-yaa-lai",
+    "meaning": "大学",
+    "band": 2,
+    "topic": "学校",
+    "order": 796
+  },
+  {
+    "id": "w-0797",
+    "thai": "อาจารย์",
+    "romanization": "aa-jaan",
+    "meaning": "大学老师",
+    "band": 2,
+    "topic": "学校",
+    "order": 797
+  },
+  {
+    "id": "w-0798",
+    "thai": "เพื่อนร่วมชั้น",
+    "romanization": "phʉ̂an-rûam-chán",
+    "meaning": "同班同学",
+    "band": 2,
+    "topic": "学校",
+    "order": 798
+  },
+  {
+    "id": "w-0799",
+    "thai": "อากาศ",
+    "romanization": "aa-gàat",
+    "meaning": "天气",
+    "band": 2,
+    "topic": "天气",
+    "order": 799
+  },
+  {
+    "id": "w-0800",
+    "thai": "แดด",
+    "romanization": "dɛ̀ɛt",
+    "meaning": "阳光",
+    "band": 2,
+    "topic": "天气",
+    "order": 800
+  },
+  {
+    "id": "w-0801",
+    "thai": "ฝน",
+    "romanization": "fǒn",
+    "meaning": "雨",
+    "band": 2,
+    "topic": "天气",
+    "order": 801
+  },
+  {
+    "id": "w-0802",
+    "thai": "ลม",
+    "romanization": "lom",
+    "meaning": "风",
+    "band": 2,
+    "topic": "天气",
+    "order": 802
+  },
+  {
+    "id": "w-0803",
+    "thai": "เมฆ",
+    "romanization": "mêek",
+    "meaning": "云",
+    "band": 2,
+    "topic": "天气",
+    "order": 803
+  },
+  {
+    "id": "w-0804",
+    "thai": "ฟ้าผ่า",
+    "romanization": "fáa-phàa",
+    "meaning": "闪电",
+    "band": 2,
+    "topic": "天气",
+    "order": 804
+  },
+  {
+    "id": "w-0805",
+    "thai": "ฟ้าร้อง",
+    "romanization": "fáa-rɔ́ɔng",
+    "meaning": "打雷",
+    "band": 2,
+    "topic": "天气",
+    "order": 805
+  },
+  {
+    "id": "w-0806",
+    "thai": "พายุ",
+    "romanization": "phaa-yú",
+    "meaning": "暴风雨",
+    "band": 2,
+    "topic": "天气",
+    "order": 806
+  },
+  {
+    "id": "w-0807",
+    "thai": "น้ำท่วม",
+    "romanization": "náam-thûam",
+    "meaning": "洪水",
+    "band": 2,
+    "topic": "天气",
+    "order": 807
+  },
+  {
+    "id": "w-0808",
+    "thai": "แล้ง",
+    "romanization": "lɛ́ɛng",
+    "meaning": "干旱",
+    "band": 2,
+    "topic": "天气",
+    "order": 808
+  },
+  {
+    "id": "w-0809",
+    "thai": "หมอก",
+    "romanization": "mɔ̀ɔk",
+    "meaning": "雾",
+    "band": 2,
+    "topic": "天气",
+    "order": 809
+  },
+  {
+    "id": "w-0810",
+    "thai": "หิมะ",
+    "romanization": "hì-má",
+    "meaning": "雪",
+    "band": 2,
+    "topic": "天气",
+    "order": 810
+  },
+  {
+    "id": "w-0811",
+    "thai": "อุณหภูมิ",
+    "romanization": "un-hà-phuum",
+    "meaning": "温度",
+    "band": 2,
+    "topic": "天气",
+    "order": 811
+  },
+  {
+    "id": "w-0812",
+    "thai": "องศา",
+    "romanization": "ong-sǎa",
+    "meaning": "度",
+    "band": 2,
+    "topic": "天气",
+    "order": 812
+  },
+  {
+    "id": "w-0813",
+    "thai": "ฤดู",
+    "romanization": "rʉ́-duu",
+    "meaning": "季节",
+    "band": 2,
+    "topic": "天气",
+    "order": 813
+  },
+  {
+    "id": "w-0814",
+    "thai": "ฤดูร้อน",
+    "romanization": "rʉ́-duu-rɔ́ɔn",
+    "meaning": "热季",
+    "band": 2,
+    "topic": "天气",
+    "order": 814
+  },
+  {
+    "id": "w-0815",
+    "thai": "ฤดูฝน",
+    "romanization": "rʉ́-duu-fǒn",
+    "meaning": "雨季",
+    "band": 2,
+    "topic": "天气",
+    "order": 815
+  },
+  {
+    "id": "w-0816",
+    "thai": "ฤดูหนาว",
+    "romanization": "rʉ́-duu-nǎao",
+    "meaning": "凉季",
+    "band": 2,
+    "topic": "天气",
+    "order": 816
+  },
+  {
+    "id": "w-0817",
+    "thai": "ชื้น",
+    "romanization": "chʉ́ʉn",
+    "meaning": "潮湿",
+    "band": 2,
+    "topic": "天气",
+    "order": 817
+  },
+  {
+    "id": "w-0818",
+    "thai": "แห้งแล้ง",
+    "romanization": "hɛ̂ɛng-lɛ́ɛng",
+    "meaning": "干涸",
+    "band": 2,
+    "topic": "天气",
+    "order": 818
+  },
+  {
+    "id": "w-0819",
+    "thai": "พระอาทิตย์",
+    "romanization": "phrá-aa-thít",
+    "meaning": "太阳",
+    "band": 3,
+    "topic": "自然",
+    "order": 819
+  },
+  {
+    "id": "w-0820",
+    "thai": "พระจันทร์",
+    "romanization": "phrá-jan",
+    "meaning": "月亮",
+    "band": 3,
+    "topic": "自然",
+    "order": 820
+  },
+  {
+    "id": "w-0821",
+    "thai": "ดาว",
+    "romanization": "daao",
+    "meaning": "星星",
+    "band": 3,
+    "topic": "自然",
+    "order": 821
+  },
+  {
+    "id": "w-0822",
+    "thai": "ท้องฟ้า",
+    "romanization": "thɔ́ɔng-fáa",
+    "meaning": "天空",
+    "band": 3,
+    "topic": "自然",
+    "order": 822
+  },
+  {
+    "id": "w-0823",
+    "thai": "ดิน",
+    "romanization": "din",
+    "meaning": "土",
+    "band": 3,
+    "topic": "自然",
+    "order": 823
+  },
+  {
+    "id": "w-0824",
+    "thai": "หิน",
+    "romanization": "hǐn",
+    "meaning": "石头",
+    "band": 3,
+    "topic": "自然",
+    "order": 824
+  },
+  {
+    "id": "w-0825",
+    "thai": "ทราย",
+    "romanization": "saai",
+    "meaning": "沙子",
+    "band": 3,
+    "topic": "自然",
+    "order": 825
+  },
+  {
+    "id": "w-0826",
+    "thai": "โคลน",
+    "romanization": "khloon",
+    "meaning": "泥",
+    "band": 3,
+    "topic": "自然",
+    "order": 826
+  },
+  {
+    "id": "w-0827",
+    "thai": "หญ้า",
+    "romanization": "yâa",
+    "meaning": "草",
+    "band": 3,
+    "topic": "自然",
+    "order": 827
+  },
+  {
+    "id": "w-0828",
+    "thai": "ใบไม้",
+    "romanization": "bai-mái",
+    "meaning": "叶子",
+    "band": 3,
+    "topic": "自然",
+    "order": 828
+  },
+  {
+    "id": "w-0829",
+    "thai": "ราก",
+    "romanization": "râak",
+    "meaning": "根",
+    "band": 3,
+    "topic": "自然",
+    "order": 829
+  },
+  {
+    "id": "w-0830",
+    "thai": "กิ่ง",
+    "romanization": "gìng",
+    "meaning": "树枝",
+    "band": 3,
+    "topic": "自然",
+    "order": 830
+  },
+  {
+    "id": "w-0831",
+    "thai": "เมล็ด",
+    "romanization": "má-lét",
+    "meaning": "种子",
+    "band": 3,
+    "topic": "自然",
+    "order": 831
+  },
+  {
+    "id": "w-0832",
+    "thai": "ผล",
+    "romanization": "phǒn",
+    "meaning": "果实",
+    "band": 3,
+    "topic": "自然",
+    "order": 832
+  },
+  {
+    "id": "w-0833",
+    "thai": "หนาม",
+    "romanization": "nǎam",
+    "meaning": "刺",
+    "band": 3,
+    "topic": "自然",
+    "order": 833
+  },
+  {
+    "id": "w-0834",
+    "thai": "แม่น้ำลำคลอง",
+    "romanization": "mɛ̂ɛ-náam-lam-khlɔɔng",
+    "meaning": "河渠",
+    "band": 3,
+    "topic": "自然",
+    "order": 834
+  },
+  {
+    "id": "w-0835",
+    "thai": "น้ำตก",
+    "romanization": "náam-dtòk",
+    "meaning": "瀑布",
+    "band": 3,
+    "topic": "自然",
+    "order": 835
+  },
+  {
+    "id": "w-0836",
+    "thai": "ถ้ำ",
+    "romanization": "thâm",
+    "meaning": "洞穴",
+    "band": 3,
+    "topic": "自然",
+    "order": 836
+  },
+  {
+    "id": "w-0837",
+    "thai": "หน้าผา",
+    "romanization": "nâa-phǎa",
+    "meaning": "悬崖",
+    "band": 3,
+    "topic": "自然",
+    "order": 837
+  },
+  {
+    "id": "w-0838",
+    "thai": "ทะเลสาบ",
+    "romanization": "thá-lee-sàap",
+    "meaning": "湖",
+    "band": 3,
+    "topic": "自然",
+    "order": 838
+  },
+  {
+    "id": "w-0839",
+    "thai": "คลื่น",
+    "romanization": "klʉ̂n",
+    "meaning": "波浪",
+    "band": 3,
+    "topic": "自然",
+    "order": 839
+  },
+  {
+    "id": "w-0840",
+    "thai": "ชายหาด",
+    "romanization": "chaai-hàat",
+    "meaning": "海岸",
+    "band": 3,
+    "topic": "自然",
+    "order": 840
+  },
+  {
+    "id": "w-0841",
+    "thai": "ปะการัง",
+    "romanization": "bpà-gaa-rang",
+    "meaning": "珊瑚",
+    "band": 3,
+    "topic": "自然",
+    "order": 841
+  },
+  {
+    "id": "w-0842",
+    "thai": "ปลาหมึก",
+    "romanization": "bplaa-mʉ̀k",
+    "meaning": "墨鱼",
+    "band": 3,
+    "topic": "自然",
+    "order": 842
+  },
+  {
+    "id": "w-0843",
+    "thai": "อาชีพ",
+    "romanization": "aa-chîip",
+    "meaning": "职业",
+    "band": 3,
+    "topic": "工作",
+    "order": 843
+  },
+  {
+    "id": "w-0844",
+    "thai": "บริษัท",
+    "romanization": "bɔɔ-rí-sàt",
+    "meaning": "公司",
+    "band": 3,
+    "topic": "工作",
+    "order": 844
+  },
+  {
+    "id": "w-0845",
+    "thai": "สำนักงาน",
+    "romanization": "sǎm-nák-ngaan",
+    "meaning": "办公室",
+    "band": 3,
+    "topic": "工作",
+    "order": 845
+  },
+  {
+    "id": "w-0846",
+    "thai": "เจ้านาย",
+    "romanization": "jâo-naai",
+    "meaning": "老板",
+    "band": 3,
+    "topic": "工作",
+    "order": 846
+  },
+  {
+    "id": "w-0847",
+    "thai": "ลูกน้อง",
+    "romanization": "lûuk-nɔ́ɔng",
+    "meaning": "下属",
+    "band": 3,
+    "topic": "工作",
+    "order": 847
+  },
+  {
+    "id": "w-0848",
+    "thai": "เพื่อนร่วมงาน",
+    "romanization": "phʉ̂an-rûam-ngaan",
+    "meaning": "同事",
+    "band": 3,
+    "topic": "工作",
+    "order": 848
+  },
+  {
+    "id": "w-0849",
+    "thai": "เงินเดือน",
+    "romanization": "ngən-dʉan",
+    "meaning": "工资",
+    "band": 3,
+    "topic": "工作",
+    "order": 849
+  },
+  {
+    "id": "w-0850",
+    "thai": "โบนัส",
+    "romanization": "boo-nát",
+    "meaning": "奖金",
+    "band": 3,
+    "topic": "工作",
+    "order": 850
+  },
+  {
+    "id": "w-0851",
+    "thai": "ภาษี",
+    "romanization": "phaa-sǐi",
+    "meaning": "税",
+    "band": 3,
+    "topic": "工作",
+    "order": 851
+  },
+  {
+    "id": "w-0852",
+    "thai": "ใบเสร็จ",
+    "romanization": "bai-sèt",
+    "meaning": "收据",
+    "band": 3,
+    "topic": "工作",
+    "order": 852
+  },
+  {
+    "id": "w-0853",
+    "thai": "ใบแจ้งหนี้",
+    "romanization": "bai-jɛ̂ɛng-nîi",
+    "meaning": "账单",
+    "band": 3,
+    "topic": "工作",
+    "order": 853
+  },
+  {
+    "id": "w-0854",
+    "thai": "สัญญาจ้าง",
+    "romanization": "sǎn-yaa-jâang",
+    "meaning": "雇佣合同",
+    "band": 3,
+    "topic": "工作",
+    "order": 854
+  },
+  {
+    "id": "w-0855",
+    "thai": "ประชุมทีม",
+    "romanization": "bprà-chum-thiim",
+    "meaning": "团队会议",
+    "band": 3,
+    "topic": "工作",
+    "order": 855
+  },
+  {
+    "id": "w-0856",
+    "thai": "กำหนดส่ง",
+    "romanization": "gam-nòt-sòng",
+    "meaning": "截止日期",
+    "band": 3,
+    "topic": "工作",
+    "order": 856
+  },
+  {
+    "id": "w-0857",
+    "thai": "โครงการ",
+    "romanization": "khroong-gaan",
+    "meaning": "项目",
+    "band": 3,
+    "topic": "工作",
+    "order": 857
+  },
+  {
+    "id": "w-0858",
+    "thai": "เป้าหมาย",
+    "romanization": "bpâo-mǎai",
+    "meaning": "目标",
+    "band": 3,
+    "topic": "工作",
+    "order": 858
+  },
+  {
+    "id": "w-0859",
+    "thai": "ผลงาน",
+    "romanization": "phǒn-ngaan",
+    "meaning": "成果",
+    "band": 3,
+    "topic": "工作",
+    "order": 859
+  },
+  {
+    "id": "w-0860",
+    "thai": "เลื่อนตำแหน่ง",
+    "romanization": "lʉ̂an-dtam-nɛ̀ng",
+    "meaning": "升职",
+    "band": 3,
+    "topic": "工作",
+    "order": 860
+  },
+  {
+    "id": "w-0861",
+    "thai": "ลาพักร้อน",
+    "romanization": "laa-phák-rɔ́ɔn",
+    "meaning": "年假",
+    "band": 3,
+    "topic": "工作",
+    "order": 861
+  },
+  {
+    "id": "w-0862",
+    "thai": "ลากิจ",
+    "romanization": "laa-gìt",
+    "meaning": "事假",
+    "band": 3,
+    "topic": "工作",
+    "order": 862
+  },
+  {
+    "id": "w-0863",
+    "thai": "ลาป่วย",
+    "romanization": "laa-bpùai",
+    "meaning": "病假",
+    "band": 3,
+    "topic": "工作",
+    "order": 863
+  },
+  {
+    "id": "w-0864",
+    "thai": "เครื่องแบบ",
+    "romanization": "krʉ̂ang-bɛ̀ɛp",
+    "meaning": "制服",
+    "band": 3,
+    "topic": "工作",
+    "order": 864
+  },
+  {
+    "id": "w-0865",
+    "thai": "นามบัตร",
+    "romanization": "naam-bàt",
+    "meaning": "名片",
+    "band": 3,
+    "topic": "工作",
+    "order": 865
+  },
+  {
+    "id": "w-0866",
+    "thai": "อีเมล",
+    "romanization": "ii-meeo",
+    "meaning": "电子邮件",
+    "band": 3,
+    "topic": "工作",
+    "order": 866
+  },
+  {
+    "id": "w-0867",
+    "thai": "รหัสผ่าน",
+    "romanization": "rá-hàt-phàan",
+    "meaning": "密码",
+    "band": 3,
+    "topic": "工作",
+    "order": 867
+  },
+  {
+    "id": "w-0868",
+    "thai": "ราคา",
+    "romanization": "raa-khaa",
+    "meaning": "价格",
+    "band": 3,
+    "topic": "购物",
+    "order": 868
+  },
+  {
+    "id": "w-0869",
+    "thai": "ลดราคา",
+    "romanization": "lót-raa-khaa",
+    "meaning": "打折",
+    "band": 3,
+    "topic": "购物",
+    "order": 869
+  },
+  {
+    "id": "w-0870",
+    "thai": "โปรโมชัน",
+    "romanization": "bproo-moo-chân",
+    "meaning": "促销",
+    "band": 3,
+    "topic": "购物",
+    "order": 870
+  },
+  {
+    "id": "w-0871",
+    "thai": "คูปอง",
+    "romanization": "khuu-bpɔɔng",
+    "meaning": "优惠券",
+    "band": 3,
+    "topic": "购物",
+    "order": 871
+  },
+  {
+    "id": "w-0872",
+    "thai": "เงินทอน",
+    "romanization": "ngən-thɔɔn",
+    "meaning": "找的钱",
+    "band": 3,
+    "topic": "购物",
+    "order": 872
+  },
+  {
+    "id": "w-0873",
+    "thai": "เงินสด",
+    "romanization": "ngən-sòt",
+    "meaning": "现金",
+    "band": 3,
+    "topic": "购物",
+    "order": 873
+  },
+  {
+    "id": "w-0874",
+    "thai": "บัตร",
+    "romanization": "bàt",
+    "meaning": "卡",
+    "band": 3,
+    "topic": "购物",
+    "order": 874
+  },
+  {
+    "id": "w-0875",
+    "thai": "บัตรเครดิต",
+    "romanization": "bàt-kree-dìt",
+    "meaning": "信用卡",
+    "band": 3,
+    "topic": "购物",
+    "order": 875
+  },
+  {
+    "id": "w-0876",
+    "thai": "โอน",
+    "romanization": "oon",
+    "meaning": "转账",
+    "band": 3,
+    "topic": "购物",
+    "order": 876
+  },
+  {
+    "id": "w-0877",
+    "thai": "ใบเสร็จรับเงิน",
+    "romanization": "bai-sèt-ráp-ngən",
+    "meaning": "发票",
+    "band": 3,
+    "topic": "购物",
+    "order": 877
+  },
+  {
+    "id": "w-0878",
+    "thai": "ขนาด",
+    "romanization": "khà-nàat",
+    "meaning": "尺码",
+    "band": 3,
+    "topic": "购物",
+    "order": 878
+  },
+  {
+    "id": "w-0879",
+    "thai": "ลอง",
+    "romanization": "lɔɔng",
+    "meaning": "试",
+    "band": 3,
+    "topic": "购物",
+    "order": 879
+  },
+  {
+    "id": "w-0880",
+    "thai": "พอดี",
+    "romanization": "phɔɔ-dii",
+    "meaning": "正好",
+    "band": 3,
+    "topic": "购物",
+    "order": 880
+  },
+  {
+    "id": "w-0881",
+    "thai": "คับ",
+    "romanization": "kháp",
+    "meaning": "紧",
+    "band": 3,
+    "topic": "购物",
+    "order": 881
+  },
+  {
+    "id": "w-0882",
+    "thai": "หลวม",
+    "romanization": "lǔam",
+    "meaning": "松",
+    "band": 3,
+    "topic": "购物",
+    "order": 882
+  },
+  {
+    "id": "w-0883",
+    "thai": "ของแท้",
+    "romanization": "khɔ̌ɔng-thɛ́ɛ",
+    "meaning": "正品",
+    "band": 3,
+    "topic": "购物",
+    "order": 883
+  },
+  {
+    "id": "w-0884",
+    "thai": "ของปลอม",
+    "romanization": "khɔ̌ɔng-bplɔɔm",
+    "meaning": "假货",
+    "band": 3,
+    "topic": "购物",
+    "order": 884
+  },
+  {
+    "id": "w-0885",
+    "thai": "คืนสินค้า",
+    "romanization": "khʉʉn-sǐn-kháa",
+    "meaning": "退货",
+    "band": 3,
+    "topic": "购物",
+    "order": 885
+  },
+  {
+    "id": "w-0886",
+    "thai": "เปลี่ยนสินค้า",
+    "romanization": "bplìan-sǐn-kháa",
+    "meaning": "换货",
+    "band": 3,
+    "topic": "购物",
+    "order": 886
+  },
+  {
+    "id": "w-0887",
+    "thai": "ถุงผ้า",
+    "romanization": "thǔng-phâa",
+    "meaning": "布袋",
+    "band": 3,
+    "topic": "购物",
+    "order": 887
+  },
+  {
+    "id": "w-0888",
+    "thai": "ตะกร้า",
+    "romanization": "dtà-grâa",
+    "meaning": "篮子",
+    "band": 3,
+    "topic": "购物",
+    "order": 888
+  },
+  {
+    "id": "w-0889",
+    "thai": "รถเข็น",
+    "romanization": "rót-khěn",
+    "meaning": "购物车",
+    "band": 3,
+    "topic": "购物",
+    "order": 889
+  },
+  {
+    "id": "w-0890",
+    "thai": "แคชเชียร์",
+    "romanization": "khɛ́ɛt-chîa",
+    "meaning": "收银员",
+    "band": 3,
+    "topic": "购物",
+    "order": 890
+  },
+  {
+    "id": "w-0891",
+    "thai": "คิว",
+    "romanization": "khiw",
+    "meaning": "排队",
+    "band": 3,
+    "topic": "购物",
+    "order": 891
+  },
+  {
+    "id": "w-0892",
+    "thai": "มีความสุข",
+    "romanization": "mii-khwaam-sùk",
+    "meaning": "幸福",
+    "band": 3,
+    "topic": "感受",
+    "order": 892
+  },
+  {
+    "id": "w-0893",
+    "thai": "เศร้า",
+    "romanization": "sâo",
+    "meaning": "悲伤",
+    "band": 3,
+    "topic": "感受",
+    "order": 893
+  },
+  {
+    "id": "w-0894",
+    "thai": "เหงา",
+    "romanization": "ngǎo",
+    "meaning": "寂寞",
+    "band": 3,
+    "topic": "感受",
+    "order": 894
+  },
+  {
+    "id": "w-0895",
+    "thai": "อาย",
+    "romanization": "aai",
+    "meaning": "害羞",
+    "band": 3,
+    "topic": "感受",
+    "order": 895
+  },
+  {
+    "id": "w-0896",
+    "thai": "อายจัง",
+    "romanization": "aai-jang",
+    "meaning": "真不好意思",
+    "band": 3,
+    "topic": "感受",
+    "order": 896
+  },
+  {
+    "id": "w-0897",
+    "thai": "ภูมิใจ",
+    "romanization": "phuum-jai",
+    "meaning": "骄傲",
+    "band": 3,
+    "topic": "感受",
+    "order": 897
+  },
+  {
+    "id": "w-0898",
+    "thai": "ผิดหวัง",
+    "romanization": "phìt-wǎng",
+    "meaning": "失望",
+    "band": 3,
+    "topic": "感受",
+    "order": 898
+  },
+  {
+    "id": "w-0899",
+    "thai": "ประหลาดใจ",
+    "romanization": "bprà-làat-jai",
+    "meaning": "惊讶",
+    "band": 3,
+    "topic": "感受",
+    "order": 899
+  },
+  {
+    "id": "w-0900",
+    "thai": "ตกใจ",
+    "romanization": "dtòk-jai",
+    "meaning": "吓一跳",
+    "band": 3,
+    "topic": "感受",
+    "order": 900
+  },
+  {
+    "id": "w-0901",
+    "thai": "โล่งใจ",
+    "romanization": "lôong-jai",
+    "meaning": "放心",
+    "band": 3,
+    "topic": "感受",
+    "order": 901
+  },
+  {
+    "id": "w-0902",
+    "thai": "ห่วง",
+    "romanization": "hùang",
+    "meaning": "担心",
+    "band": 3,
+    "topic": "感受",
+    "order": 902
+  },
+  {
+    "id": "w-0903",
+    "thai": "คิดถึง",
+    "romanization": "khít-thʉ̌ng",
+    "meaning": "想念",
+    "band": 3,
+    "topic": "感受",
+    "order": 903
+  },
+  {
+    "id": "w-0904",
+    "thai": "เหงื่อ",
+    "romanization": "ngʉ̀a",
+    "meaning": "汗",
+    "band": 3,
+    "topic": "感受",
+    "order": 904
+  },
+  {
+    "id": "w-0905",
+    "thai": "น้ำตา",
+    "romanization": "náam-dtaa",
+    "meaning": "眼泪",
+    "band": 3,
+    "topic": "感受",
+    "order": 905
+  },
+  {
+    "id": "w-0906",
+    "thai": "รอยยิ้ม",
+    "romanization": "rɔɔi-yím",
+    "meaning": "笑容",
+    "band": 3,
+    "topic": "感受",
+    "order": 906
+  },
+  {
+    "id": "w-0907",
+    "thai": "ความรัก",
+    "romanization": "khwaam-rák",
+    "meaning": "爱情",
+    "band": 3,
+    "topic": "感受",
+    "order": 907
+  },
+  {
+    "id": "w-0908",
+    "thai": "มิตรภาพ",
+    "romanization": "mít-trá-phâap",
+    "meaning": "友谊",
+    "band": 3,
+    "topic": "感受",
+    "order": 908
+  },
+  {
+    "id": "w-0909",
+    "thai": "ความหวัง",
+    "romanization": "khwaam-wǎng",
+    "meaning": "希望",
+    "band": 3,
+    "topic": "感受",
+    "order": 909
+  },
+  {
+    "id": "w-0910",
+    "thai": "ความฝัน",
+    "romanization": "khwaam-fǎn",
+    "meaning": "梦想",
+    "band": 3,
+    "topic": "感受",
+    "order": 910
+  },
+  {
+    "id": "w-0911",
+    "thai": "กำลังใจ",
+    "romanization": "gam-lang-jai",
+    "meaning": "鼓励",
+    "band": 3,
+    "topic": "感受",
+    "order": 911
+  },
+  {
+    "id": "w-0912",
+    "thai": "เวลาว่าง",
+    "romanization": "wee-laa-wâang",
+    "meaning": "空闲时间",
+    "band": 4,
+    "topic": "抽象",
+    "order": 912
+  },
+  {
+    "id": "w-0913",
+    "thai": "โอกาส",
+    "romanization": "oo-gàat",
+    "meaning": "机会",
+    "band": 4,
+    "topic": "抽象",
+    "order": 913
+  },
+  {
+    "id": "w-0914",
+    "thai": "ปัญหา",
+    "romanization": "bpan-hǎa",
+    "meaning": "问题",
+    "band": 4,
+    "topic": "抽象",
+    "order": 914
+  },
+  {
+    "id": "w-0915",
+    "thai": "ทางออก",
+    "romanization": "thaang-ɔ̀ɔk",
+    "meaning": "出路",
+    "band": 4,
+    "topic": "抽象",
+    "order": 915
+  },
+  {
+    "id": "w-0916",
+    "thai": "เหตุผล",
+    "romanization": "hèet-phǒn",
+    "meaning": "理由",
+    "band": 4,
+    "topic": "抽象",
+    "order": 916
+  },
+  {
+    "id": "w-0917",
+    "thai": "ผลลัพธ์",
+    "romanization": "phǒn-láp",
+    "meaning": "结果",
+    "band": 4,
+    "topic": "抽象",
+    "order": 917
+  },
+  {
+    "id": "w-0918",
+    "thai": "สาเหตุ",
+    "romanization": "sǎa-hèet",
+    "meaning": "原因",
+    "band": 4,
+    "topic": "抽象",
+    "order": 918
+  },
+  {
+    "id": "w-0919",
+    "thai": "ตัวอย่าง",
+    "romanization": "dtua-yàang",
+    "meaning": "例子",
+    "band": 4,
+    "topic": "抽象",
+    "order": 919
+  },
+  {
+    "id": "w-0920",
+    "thai": "ความหมาย",
+    "romanization": "khwaam-mǎai",
+    "meaning": "意思",
+    "band": 4,
+    "topic": "抽象",
+    "order": 920
+  },
+  {
+    "id": "w-0921",
+    "thai": "คำแปล",
+    "romanization": "kham-bplɛɛ",
+    "meaning": "译文",
+    "band": 4,
+    "topic": "抽象",
+    "order": 921
+  },
+  {
+    "id": "w-0922",
+    "thai": "วรรค",
+    "romanization": "wák",
+    "meaning": "段落",
+    "band": 4,
+    "topic": "抽象",
+    "order": 922
+  },
+  {
+    "id": "w-0923",
+    "thai": "เรื่อง",
+    "romanization": "rʉ̂ang",
+    "meaning": "事情；故事",
+    "band": 4,
+    "topic": "抽象",
+    "order": 923
+  },
+  {
+    "id": "w-0924",
+    "thai": "ข่าว",
+    "romanization": "khàao",
+    "meaning": "新闻",
+    "band": 4,
+    "topic": "抽象",
+    "order": 924
+  },
+  {
+    "id": "w-0925",
+    "thai": "บทความ",
+    "romanization": "bòt-khwaam",
+    "meaning": "文章",
+    "band": 4,
+    "topic": "抽象",
+    "order": 925
+  },
+  {
+    "id": "w-0926",
+    "thai": "นิยาย",
+    "romanization": "ní-yaai",
+    "meaning": "小说",
+    "band": 4,
+    "topic": "抽象",
+    "order": 926
+  },
+  {
+    "id": "w-0927",
+    "thai": "บทกวี",
+    "romanization": "bòt-gà-wii",
+    "meaning": "诗",
+    "band": 4,
+    "topic": "抽象",
+    "order": 927
+  },
+  {
+    "id": "w-0928",
+    "thai": "ละคร",
+    "romanization": "lá-khɔɔn",
+    "meaning": "电视剧",
+    "band": 4,
+    "topic": "抽象",
+    "order": 928
+  },
+  {
+    "id": "w-0929",
+    "thai": "หนัง",
+    "romanization": "nǎng",
+    "meaning": "电影",
+    "band": 4,
+    "topic": "抽象",
+    "order": 929
+  },
+  {
+    "id": "w-0930",
+    "thai": "เพลง",
+    "romanization": "phleeeng",
+    "meaning": "歌",
+    "band": 4,
+    "topic": "抽象",
+    "order": 930
+  },
+  {
+    "id": "w-0931",
+    "thai": "จังหวะ",
+    "romanization": "jang-wà",
+    "meaning": "节奏",
+    "band": 4,
+    "topic": "抽象",
+    "order": 931
+  },
+  {
+    "id": "w-0932",
+    "thai": "ทำนอง",
+    "romanization": "tham-nɔɔng",
+    "meaning": "旋律",
+    "band": 4,
+    "topic": "抽象",
+    "order": 932
+  },
+  {
+    "id": "w-0933",
+    "thai": "เนื้อเพลง",
+    "romanization": "nʉ́a-phleeeng",
+    "meaning": "歌词",
+    "band": 4,
+    "topic": "抽象",
+    "order": 933
+  },
+  {
+    "id": "w-0934",
+    "thai": "เครื่องดนตรี",
+    "romanization": "krʉ̂ang-don-dtrii",
+    "meaning": "乐器",
+    "band": 4,
+    "topic": "抽象",
+    "order": 934
+  },
+  {
+    "id": "w-0935",
+    "thai": "กีตาร์",
+    "romanization": "gii-dtaa",
+    "meaning": "吉他",
+    "band": 4,
+    "topic": "抽象",
+    "order": 935
+  },
+  {
+    "id": "w-0936",
+    "thai": "เปียโน",
+    "romanization": "bpia-noo",
+    "meaning": "钢琴",
+    "band": 4,
+    "topic": "抽象",
+    "order": 936
+  },
+  {
+    "id": "w-0937",
+    "thai": "กลอง",
+    "romanization": "glɔɔng",
+    "meaning": "鼓",
+    "band": 4,
+    "topic": "抽象",
+    "order": 937
+  },
+  {
+    "id": "w-0938",
+    "thai": "ไวโอลิน",
+    "romanization": "wai-oo-lin",
+    "meaning": "小提琴",
+    "band": 4,
+    "topic": "抽象",
+    "order": 938
+  },
+  {
+    "id": "w-0939",
+    "thai": "ขลุ่ย",
+    "romanization": "khlùi",
+    "meaning": "笛子",
+    "band": 4,
+    "topic": "抽象",
+    "order": 939
+  },
+  {
+    "id": "w-0940",
+    "thai": "ระนาด",
+    "romanization": "rá-nâat",
+    "meaning": "木琴",
+    "band": 4,
+    "topic": "抽象",
+    "order": 940
+  },
+  {
+    "id": "w-0941",
+    "thai": "ฆ้อง",
+    "romanization": "khɔ́ɔng",
+    "meaning": "锣",
+    "band": 4,
+    "topic": "抽象",
+    "order": 941
+  },
+  {
+    "id": "w-0942",
+    "thai": "ฉิ่ง",
+    "romanization": "chìng",
+    "meaning": "小钹",
+    "band": 4,
+    "topic": "抽象",
+    "order": 942
+  },
+  {
+    "id": "w-0943",
+    "thai": "ซอ",
+    "romanization": "sɔɔ",
+    "meaning": "胡琴",
+    "band": 4,
+    "topic": "抽象",
+    "order": 943
+  },
+  {
+    "id": "w-0944",
+    "thai": "กฎหมาย",
+    "romanization": "gòt-mǎai",
+    "meaning": "法律",
+    "band": 4,
+    "topic": "抽象",
+    "order": 944
+  },
+  {
+    "id": "w-0945",
+    "thai": "สิทธิ",
+    "romanization": "sìt",
+    "meaning": "权利",
+    "band": 4,
+    "topic": "抽象",
+    "order": 945
+  },
+  {
+    "id": "w-0946",
+    "thai": "หน้าที่",
+    "romanization": "nâa-thîi",
+    "meaning": "责任",
+    "band": 4,
+    "topic": "抽象",
+    "order": 946
+  },
+  {
+    "id": "w-0947",
+    "thai": "เสรีภาพ",
+    "romanization": "sěe-rii-phâap",
+    "meaning": "自由",
+    "band": 4,
+    "topic": "抽象",
+    "order": 947
+  },
+  {
+    "id": "w-0948",
+    "thai": "ความยุติธรรม",
+    "romanization": "khwaam-yút-dtì-tham",
+    "meaning": "公正",
+    "band": 4,
+    "topic": "抽象",
+    "order": 948
+  },
+  {
+    "id": "w-0949",
+    "thai": "สังคม",
+    "romanization": "sǎng-khom",
+    "meaning": "社会",
+    "band": 4,
+    "topic": "抽象",
+    "order": 949
+  },
+  {
+    "id": "w-0950",
+    "thai": "วัฒนธรรม",
+    "romanization": "wát-thá-ná-tham",
+    "meaning": "文化",
+    "band": 4,
+    "topic": "抽象",
+    "order": 950
+  },
+  {
+    "id": "w-0951",
+    "thai": "ประเพณี",
+    "romanization": "bprà-phee-nii",
+    "meaning": "习俗",
+    "band": 4,
+    "topic": "抽象",
+    "order": 951
+  },
+  {
+    "id": "w-0952",
+    "thai": "ศาสนา",
+    "romanization": "sàat-sà-nǎa",
+    "meaning": "宗教",
+    "band": 4,
+    "topic": "抽象",
+    "order": 952
+  },
+  {
+    "id": "w-0953",
+    "thai": "พระ",
+    "romanization": "phrá",
+    "meaning": "僧人",
+    "band": 4,
+    "topic": "抽象",
+    "order": 953
+  },
+  {
+    "id": "w-0954",
+    "thai": "ศีล",
+    "romanization": "sǐin",
+    "meaning": "戒律",
+    "band": 4,
+    "topic": "抽象",
+    "order": 954
+  },
+  {
+    "id": "w-0955",
+    "thai": "กรรม",
+    "romanization": "gam",
+    "meaning": "业",
+    "band": 4,
+    "topic": "抽象",
+    "order": 955
+  },
+  {
+    "id": "w-0956",
+    "thai": "บุญ",
+    "romanization": "bun",
+    "meaning": "功德",
+    "band": 4,
+    "topic": "抽象",
+    "order": 956
+  },
+  {
+    "id": "w-0957",
+    "thai": "บาป",
+    "romanization": "bàap",
+    "meaning": "罪过",
+    "band": 4,
+    "topic": "抽象",
+    "order": 957
+  },
+  {
+    "id": "w-0958",
+    "thai": "สวรรค์",
+    "romanization": "sà-wǎn",
+    "meaning": "天堂",
+    "band": 4,
+    "topic": "抽象",
+    "order": 958
+  },
+  {
+    "id": "w-0959",
+    "thai": "นรก",
+    "romanization": "ná-rók",
+    "meaning": "地狱",
+    "band": 4,
+    "topic": "抽象",
+    "order": 959
+  },
+  {
+    "id": "w-0960",
+    "thai": "วิญญาณ",
+    "romanization": "win-yaan",
+    "meaning": "灵魂",
+    "band": 4,
+    "topic": "抽象",
+    "order": 960
+  },
+  {
+    "id": "w-0961",
+    "thai": "ผี",
+    "romanization": "phǐi",
+    "meaning": "鬼",
+    "band": 4,
+    "topic": "抽象",
+    "order": 961
+  },
+  {
+    "id": "w-0962",
+    "thai": "โชค",
+    "romanization": "chôok",
+    "meaning": "运气",
+    "band": 4,
+    "topic": "抽象",
+    "order": 962
+  },
+  {
+    "id": "w-0963",
+    "thai": "โชคดี",
+    "romanization": "chôok-dii",
+    "meaning": "幸运",
+    "band": 4,
+    "topic": "抽象",
+    "order": 963
+  },
+  {
+    "id": "w-0964",
+    "thai": "โชคร้าย",
+    "romanization": "chôok-ráai",
+    "meaning": "倒霉",
+    "band": 4,
+    "topic": "抽象",
+    "order": 964
+  },
+  {
+    "id": "w-0965",
+    "thai": "ความจริง",
+    "romanization": "khwaam-jing",
+    "meaning": "事实",
+    "band": 4,
+    "topic": "抽象",
+    "order": 965
+  },
+  {
+    "id": "w-0966",
+    "thai": "เรื่องโกหก",
+    "romanization": "rʉ̂ang-goo-hòk",
+    "meaning": "谎话",
+    "band": 4,
+    "topic": "抽象",
+    "order": 966
+  },
+  {
+    "id": "w-0967",
+    "thai": "ความลับ",
+    "romanization": "khwaam-láp",
+    "meaning": "秘密",
+    "band": 4,
+    "topic": "抽象",
+    "order": 967
+  },
+  {
+    "id": "w-0968",
+    "thai": "ข่าวลือ",
+    "romanization": "khàao-lʉʉ",
+    "meaning": "谣言",
+    "band": 4,
+    "topic": "抽象",
+    "order": 968
+  },
+  {
+    "id": "w-0969",
+    "thai": "ชื่อเสียง",
+    "romanization": "chʉ̂ʉ-sǐang",
+    "meaning": "名声",
+    "band": 4,
+    "topic": "抽象",
+    "order": 969
+  },
+  {
+    "id": "w-0970",
+    "thai": "เกียรติ",
+    "romanization": "gìat",
+    "meaning": "荣誉",
+    "band": 4,
+    "topic": "抽象",
+    "order": 970
+  },
+  {
+    "id": "w-0971",
+    "thai": "ซ้าย",
+    "romanization": "sáai",
+    "meaning": "左边",
+    "band": 3,
+    "topic": "方向",
+    "order": 971
+  },
+  {
+    "id": "w-0972",
+    "thai": "ขวา",
+    "romanization": "khwǎa",
+    "meaning": "右边",
+    "band": 3,
+    "topic": "方向",
+    "order": 972
+  },
+  {
+    "id": "w-0973",
+    "thai": "ตรง",
+    "romanization": "dtrong",
+    "meaning": "直走",
+    "band": 3,
+    "topic": "方向",
+    "order": 973
+  },
+  {
+    "id": "w-0974",
+    "thai": "เลี้ยว",
+    "romanization": "líao",
+    "meaning": "转弯",
+    "band": 3,
+    "topic": "方向",
+    "order": 974
+  },
+  {
+    "id": "w-0975",
+    "thai": "ข้างหน้า",
+    "romanization": "khâang-nâa",
+    "meaning": "前面",
+    "band": 3,
+    "topic": "方向",
+    "order": 975
+  },
+  {
+    "id": "w-0976",
+    "thai": "ข้างหลัง",
+    "romanization": "khâang-lǎng",
+    "meaning": "后面",
+    "band": 3,
+    "topic": "方向",
+    "order": 976
+  },
+  {
+    "id": "w-0977",
+    "thai": "ข้างบน",
+    "romanization": "khâang-bon",
+    "meaning": "上面",
+    "band": 3,
+    "topic": "方向",
+    "order": 977
+  },
+  {
+    "id": "w-0978",
+    "thai": "ข้างล่าง",
+    "romanization": "khâang-lâang",
+    "meaning": "下面",
+    "band": 3,
+    "topic": "方向",
+    "order": 978
+  },
+  {
+    "id": "w-0979",
+    "thai": "ใน",
+    "romanization": "nai",
+    "meaning": "里面",
+    "band": 3,
+    "topic": "方向",
+    "order": 979
+  },
+  {
+    "id": "w-0980",
+    "thai": "นอก",
+    "romanization": "nɔ̂ɔk",
+    "meaning": "外面",
+    "band": 3,
+    "topic": "方向",
+    "order": 980
+  },
+  {
+    "id": "w-0981",
+    "thai": "ระหว่าง",
+    "romanization": "rá-wàang",
+    "meaning": "之间",
+    "band": 3,
+    "topic": "方向",
+    "order": 981
+  },
+  {
+    "id": "w-0982",
+    "thai": "ใกล้ๆ",
+    "romanization": "glâi-glâi",
+    "meaning": "附近",
+    "band": 3,
+    "topic": "方向",
+    "order": 982
+  },
+  {
+    "id": "w-0983",
+    "thai": "ตรงข้าม",
+    "romanization": "dtrong-khâam",
+    "meaning": "对面",
+    "band": 3,
+    "topic": "方向",
+    "order": 983
+  },
+  {
+    "id": "w-0984",
+    "thai": "มุม",
+    "romanization": "mum",
+    "meaning": "角落",
+    "band": 3,
+    "topic": "方向",
+    "order": 984
+  },
+  {
+    "id": "w-0985",
+    "thai": "ทางแยก",
+    "romanization": "thaang-yɛ̂ɛk",
+    "meaning": "路口",
+    "band": 3,
+    "topic": "方向",
+    "order": 985
+  },
+  {
+    "id": "w-0986",
+    "thai": "ป้าย",
+    "romanization": "bpâai",
+    "meaning": "牌子",
+    "band": 3,
+    "topic": "方向",
+    "order": 986
+  },
+  {
+    "id": "w-0987",
+    "thai": "แผนที่",
+    "romanization": "phɛ̌ɛn-thîi",
+    "meaning": "地图",
+    "band": 3,
+    "topic": "方向",
+    "order": 987
+  },
+  {
+    "id": "w-0988",
+    "thai": "ที่อยู่",
+    "romanization": "thîi-yùu",
+    "meaning": "地址",
+    "band": 3,
+    "topic": "方向",
+    "order": 988
+  },
+  {
+    "id": "w-0989",
+    "thai": "รหัสไปรษณีย์",
+    "romanization": "rá-hàt-bprai-sà-nii",
+    "meaning": "邮编",
+    "band": 3,
+    "topic": "方向",
+    "order": 989
+  },
+  {
+    "id": "w-0990",
+    "thai": "กิโลเมตร",
+    "romanization": "gì-loo-mét",
+    "meaning": "公里",
+    "band": 3,
+    "topic": "方向",
+    "order": 990
+  },
+  {
+    "id": "w-0991",
+    "thai": "คอมพิวเตอร์",
+    "romanization": "khɔm-phiw-dtəə",
+    "meaning": "电脑",
+    "band": 3,
+    "topic": "科技",
+    "order": 991
+  },
+  {
+    "id": "w-0992",
+    "thai": "โน้ตบุ๊ก",
+    "romanization": "nóot-búk",
+    "meaning": "笔记本",
+    "band": 3,
+    "topic": "科技",
+    "order": 992
+  },
+  {
+    "id": "w-0993",
+    "thai": "หน้าจอ",
+    "romanization": "nâa-jɔɔ",
+    "meaning": "屏幕",
+    "band": 3,
+    "topic": "科技",
+    "order": 993
+  },
+  {
+    "id": "w-0994",
+    "thai": "คีย์บอร์ด",
+    "romanization": "khii-bɔɔt",
+    "meaning": "键盘",
+    "band": 3,
+    "topic": "科技",
+    "order": 994
+  },
+  {
+    "id": "w-0995",
+    "thai": "เมาส์",
+    "romanization": "máo",
+    "meaning": "鼠标",
+    "band": 3,
+    "topic": "科技",
+    "order": 995
+  },
+  {
+    "id": "w-0996",
+    "thai": "อินเทอร์เน็ต",
+    "romanization": "in-thəə-nét",
+    "meaning": "互联网",
+    "band": 3,
+    "topic": "科技",
+    "order": 996
+  },
+  {
+    "id": "w-0997",
+    "thai": "ไวไฟ",
+    "romanization": "wai-fai",
+    "meaning": "无线网",
+    "band": 3,
+    "topic": "科技",
+    "order": 997
+  },
+  {
+    "id": "w-0998",
+    "thai": "รหัส",
+    "romanization": "rá-hàt",
+    "meaning": "代码",
+    "band": 3,
+    "topic": "科技",
+    "order": 998
+  },
+  {
+    "id": "w-0999",
+    "thai": "แอป",
+    "romanization": "ɛ̀p",
+    "meaning": "应用",
+    "band": 3,
+    "topic": "科技",
+    "order": 999
+  },
+  {
+    "id": "w-1000",
+    "thai": "เว็บไซต์",
+    "romanization": "wép-sái",
+    "meaning": "网站",
+    "band": 3,
+    "topic": "科技",
+    "order": 1000
+  },
+  {
+    "id": "w-1001",
+    "thai": "ลิงก์",
+    "romanization": "líng",
+    "meaning": "链接",
+    "band": 3,
+    "topic": "科技",
+    "order": 1001
+  },
+  {
+    "id": "w-1002",
+    "thai": "ไฟล์",
+    "romanization": "fai",
+    "meaning": "文件",
+    "band": 3,
+    "topic": "科技",
+    "order": 1002
+  },
+  {
+    "id": "w-1003",
+    "thai": "โฟลเดอร์",
+    "romanization": "foon-dəə",
+    "meaning": "文件夹",
+    "band": 3,
+    "topic": "科技",
+    "order": 1003
+  },
+  {
+    "id": "w-1004",
+    "thai": "แบตเตอรี่",
+    "romanization": "bɛ̀ɛt-dtəə-rîi",
+    "meaning": "电池",
+    "band": 3,
+    "topic": "科技",
+    "order": 1004
+  },
+  {
+    "id": "w-1005",
+    "thai": "ที่ชาร์จ",
+    "romanization": "thîi-chaa",
+    "meaning": "充电器",
+    "band": 3,
+    "topic": "科技",
+    "order": 1005
+  },
+  {
+    "id": "w-1006",
+    "thai": "หูฟัง",
+    "romanization": "hǔu-fang",
+    "meaning": "耳机",
+    "band": 3,
+    "topic": "科技",
+    "order": 1006
+  },
+  {
+    "id": "w-1007",
+    "thai": "กล้อง",
+    "romanization": "glɔ̂ɔng",
+    "meaning": "相机",
+    "band": 3,
+    "topic": "科技",
+    "order": 1007
+  },
+  {
+    "id": "w-1008",
+    "thai": "วิดีโอ",
+    "romanization": "wí-dii-oo",
+    "meaning": "视频",
+    "band": 3,
+    "topic": "科技",
+    "order": 1008
+  },
+  {
+    "id": "w-1009",
+    "thai": "รูปถ่าย",
+    "romanization": "rûup-thàai",
+    "meaning": "照片",
+    "band": 3,
+    "topic": "科技",
+    "order": 1009
+  },
+  {
+    "id": "w-1010",
+    "thai": "ข้อความ",
+    "romanization": "khɔ̂ɔ-khwaam",
+    "meaning": "消息",
+    "band": 3,
+    "topic": "科技",
+    "order": 1010
+  },
+  {
+    "id": "w-1011",
+    "thai": "ค่าเช่า",
+    "romanization": "khâa-châo",
+    "meaning": "租金",
+    "band": 4,
+    "topic": "生活",
+    "order": 1011
+  },
+  {
+    "id": "w-1012",
+    "thai": "ค่าน้ำ",
+    "romanization": "khâa-náam",
+    "meaning": "水费",
+    "band": 4,
+    "topic": "生活",
+    "order": 1012
+  },
+  {
+    "id": "w-1013",
+    "thai": "ค่าไฟ",
+    "romanization": "khâa-fai",
+    "meaning": "电费",
+    "band": 4,
+    "topic": "生活",
+    "order": 1013
+  },
+  {
+    "id": "w-1014",
+    "thai": "ขยะ",
+    "romanization": "khà-yà",
+    "meaning": "垃圾",
+    "band": 4,
+    "topic": "生活",
+    "order": 1014
+  },
+  {
+    "id": "w-1015",
+    "thai": "ถังขยะ",
+    "romanization": "thǎng-khà-yà",
+    "meaning": "垃圾桶",
+    "band": 4,
+    "topic": "生活",
+    "order": 1015
+  },
+  {
+    "id": "w-1016",
+    "thai": "รีไซเคิล",
+    "romanization": "rii-sai-khən",
+    "meaning": "回收",
+    "band": 4,
+    "topic": "生活",
+    "order": 1016
+  },
+  {
+    "id": "w-1017",
+    "thai": "ซักรีด",
+    "romanization": "sák-rîit",
+    "meaning": "洗衣熨烫",
+    "band": 4,
+    "topic": "生活",
+    "order": 1017
+  },
+  {
+    "id": "w-1018",
+    "thai": "รีดผ้า",
+    "romanization": "rîit-phâa",
+    "meaning": "熨烫",
+    "band": 4,
+    "topic": "生活",
+    "order": 1018
+  },
+  {
+    "id": "w-1019",
+    "thai": "ไม้แขวน",
+    "romanization": "mái-kwɛ̌ɛn",
+    "meaning": "衣架",
+    "band": 4,
+    "topic": "生活",
+    "order": 1019
+  },
+  {
+    "id": "w-1020",
+    "thai": "ผงซักฟอก",
+    "romanization": "phǒng-sák-fɔ̂ɔk",
+    "meaning": "洗衣粉",
+    "band": 4,
+    "topic": "生活",
+    "order": 1020
+  },
+  {
+    "id": "w-1021",
+    "thai": "น้ำยา",
+    "romanization": "náam-yaa",
+    "meaning": "洗涤剂",
+    "band": 4,
+    "topic": "生活",
+    "order": 1021
+  },
+  {
+    "id": "w-1022",
+    "thai": "ฟองน้ำ",
+    "romanization": "fɔɔng-náam",
+    "meaning": "海绵",
+    "band": 4,
+    "topic": "生活",
+    "order": 1022
+  },
+  {
+    "id": "w-1023",
+    "thai": "ไม้กวาด",
+    "romanization": "mái-kwàat",
+    "meaning": "扫帚",
+    "band": 4,
+    "topic": "生活",
+    "order": 1023
+  },
+  {
+    "id": "w-1024",
+    "thai": "ที่ตักผง",
+    "romanization": "thîi-dtàk-phǒng",
+    "meaning": "簸箕",
+    "band": 4,
+    "topic": "生活",
+    "order": 1024
+  },
+  {
+    "id": "w-1025",
+    "thai": "ถัง",
+    "romanization": "thǎng",
+    "meaning": "桶",
+    "band": 4,
+    "topic": "生活",
+    "order": 1025
+  },
+  {
+    "id": "w-1026",
+    "thai": "เชือก",
+    "romanization": "chʉ̂ak",
+    "meaning": "绳子",
+    "band": 4,
+    "topic": "生活",
+    "order": 1026
+  },
+  {
+    "id": "w-1027",
+    "thai": "เทป",
+    "romanization": "théep",
+    "meaning": "胶带",
+    "band": 4,
+    "topic": "生活",
+    "order": 1027
+  },
+  {
+    "id": "w-1028",
+    "thai": "ตะปู",
+    "romanization": "dtà-bpuu",
+    "meaning": "钉子",
+    "band": 4,
+    "topic": "生活",
+    "order": 1028
+  },
+  {
+    "id": "w-1029",
+    "thai": "ค้อน",
+    "romanization": "khɔ́ɔn",
+    "meaning": "锤子",
+    "band": 4,
+    "topic": "生活",
+    "order": 1029
+  },
+  {
+    "id": "w-1030",
+    "thai": "ไขควง",
+    "romanization": "khǎi-khuang",
+    "meaning": "螺丝刀",
+    "band": 4,
+    "topic": "生活",
+    "order": 1030
+  },
+  {
+    "id": "w-1031",
+    "thai": "ประแจ",
+    "romanization": "bprà-jɛɛ",
+    "meaning": "扳手",
+    "band": 4,
+    "topic": "生活",
+    "order": 1031
+  },
+  {
+    "id": "w-1032",
+    "thai": "เลื่อย",
+    "romanization": "lʉ̂ai",
+    "meaning": "锯子",
+    "band": 4,
+    "topic": "生活",
+    "order": 1032
+  },
+  {
+    "id": "w-1033",
+    "thai": "สีทา",
+    "romanization": "sǐi-thaa",
+    "meaning": "油漆",
+    "band": 4,
+    "topic": "生活",
+    "order": 1033
+  },
+  {
+    "id": "w-1034",
+    "thai": "แปรง",
+    "romanization": "bprɛɛng",
+    "meaning": "刷子",
+    "band": 4,
+    "topic": "生活",
+    "order": 1034
+  },
+  {
+    "id": "w-1035",
+    "thai": "บันไดพาด",
+    "romanization": "ban-dai-phâat",
+    "meaning": "梯子",
+    "band": 4,
+    "topic": "生活",
+    "order": 1035
+  },
+  {
+    "id": "w-1036",
+    "thai": "หนังสือเดินทาง",
+    "romanization": "nǎng-sʉ̌ʉ-dəən-thaang",
+    "meaning": "护照",
+    "band": 4,
+    "topic": "旅行",
+    "order": 1036
+  },
+  {
+    "id": "w-1037",
+    "thai": "วีซ่า",
+    "romanization": "wii-sâa",
+    "meaning": "签证",
+    "band": 4,
+    "topic": "旅行",
+    "order": 1037
+  },
+  {
+    "id": "w-1038",
+    "thai": "ตั๋ว",
+    "romanization": "dtǔa",
+    "meaning": "票",
+    "band": 4,
+    "topic": "旅行",
+    "order": 1038
+  },
+  {
+    "id": "w-1039",
+    "thai": "ตั๋วไปกลับ",
+    "romanization": "dtǔa-bpai-glàp",
+    "meaning": "往返票",
+    "band": 4,
+    "topic": "旅行",
+    "order": 1039
+  },
+  {
+    "id": "w-1040",
+    "thai": "เกต",
+    "romanization": "gèet",
+    "meaning": "登机口",
+    "band": 4,
+    "topic": "旅行",
+    "order": 1040
+  },
+  {
+    "id": "w-1041",
+    "thai": "กระเป๋าเดินทาง",
+    "romanization": "grà-bpǎo-dəən-thaang",
+    "meaning": "行李箱",
+    "band": 4,
+    "topic": "旅行",
+    "order": 1041
+  },
+  {
+    "id": "w-1042",
+    "thai": "สัมภาระ",
+    "romanization": "sǎm-phaa-rá",
+    "meaning": "行李",
+    "band": 4,
+    "topic": "旅行",
+    "order": 1042
+  },
+  {
+    "id": "w-1043",
+    "thai": "น้ำหนัก",
+    "romanization": "náam-nàk",
+    "meaning": "重量",
+    "band": 4,
+    "topic": "旅行",
+    "order": 1043
+  },
+  {
+    "id": "w-1044",
+    "thai": "ที่นั่ง",
+    "romanization": "thîi-nâng",
+    "meaning": "座位",
+    "band": 4,
+    "topic": "旅行",
+    "order": 1044
+  },
+  {
+    "id": "w-1045",
+    "thai": "หน้าต่างเครื่อง",
+    "romanization": "nâa-dtàang-krʉ̂ang",
+    "meaning": "靠窗",
+    "band": 4,
+    "topic": "旅行",
+    "order": 1045
+  },
+  {
+    "id": "w-1046",
+    "thai": "ทางเดิน",
+    "romanization": "thaang-dəən",
+    "meaning": "过道",
+    "band": 4,
+    "topic": "旅行",
+    "order": 1046
+  },
+  {
+    "id": "w-1047",
+    "thai": "ห้องพัก",
+    "romanization": "hɔ̂ɔng-phák",
+    "meaning": "客房",
+    "band": 4,
+    "topic": "旅行",
+    "order": 1047
+  },
+  {
+    "id": "w-1048",
+    "thai": "คีย์การ์ด",
+    "romanization": "khii-gáat",
+    "meaning": "房卡",
+    "band": 4,
+    "topic": "旅行",
+    "order": 1048
+  },
+  {
+    "id": "w-1049",
+    "thai": "อาหารเช้า",
+    "romanization": "aa-hǎan-cháo",
+    "meaning": "早餐",
+    "band": 4,
+    "topic": "旅行",
+    "order": 1049
+  },
+  {
+    "id": "w-1050",
+    "thai": "มัดจำ",
+    "romanization": "mát-jam",
+    "meaning": "押金",
+    "band": 4,
+    "topic": "旅行",
+    "order": 1050
+  },
+  {
+    "id": "w-1051",
+    "thai": "เช็คอิน",
+    "romanization": "chék-in",
+    "meaning": "入住",
+    "band": 4,
+    "topic": "旅行",
+    "order": 1051
+  },
+  {
+    "id": "w-1052",
+    "thai": "เช็คเอาท์",
+    "romanization": "chék-ao",
+    "meaning": "退房",
+    "band": 4,
+    "topic": "旅行",
+    "order": 1052
+  },
+  {
+    "id": "w-1053",
+    "thai": "ไกด์",
+    "romanization": "gái",
+    "meaning": "导游",
+    "band": 4,
+    "topic": "旅行",
+    "order": 1053
+  },
+  {
+    "id": "w-1054",
+    "thai": "ทัวร์",
+    "romanization": "thua",
+    "meaning": "旅游团",
+    "band": 4,
+    "topic": "旅行",
+    "order": 1054
+  },
+  {
+    "id": "w-1055",
+    "thai": "แหล่งท่องเที่ยว",
+    "romanization": "lɛ̀ng-thɔ̂ɔng-thîao",
+    "meaning": "景点",
+    "band": 4,
+    "topic": "旅行",
+    "order": 1055
+  },
+  {
+    "id": "w-1056",
+    "thai": "ของที่ระลึก",
+    "romanization": "khɔ̌ɔng-thîi-rá-lʉ́k",
+    "meaning": "纪念品",
+    "band": 4,
+    "topic": "旅行",
+    "order": 1056
+  },
+  {
+    "id": "w-1057",
+    "thai": "โปสการ์ด",
+    "romanization": "bpóot-gáat",
+    "meaning": "明信片",
+    "band": 4,
+    "topic": "旅行",
+    "order": 1057
+  },
+  {
+    "id": "w-1058",
+    "thai": "แสตมป์",
+    "romanization": "sà-dtɛɛm",
+    "meaning": "邮票",
+    "band": 4,
+    "topic": "旅行",
+    "order": 1058
+  },
+  {
+    "id": "w-1059",
+    "thai": "แลกเงิน",
+    "romanization": "lɛ̂ɛk-ngən",
+    "meaning": "换钱",
+    "band": 4,
+    "topic": "旅行",
+    "order": 1059
+  },
+  {
+    "id": "w-1060",
+    "thai": "สูตร",
+    "romanization": "sùut",
+    "meaning": "食谱",
+    "band": 4,
+    "topic": "烹饪",
+    "order": 1060
+  },
+  {
+    "id": "w-1061",
+    "thai": "วัตถุดิบ",
+    "romanization": "wát-thù-dib",
+    "meaning": "食材",
+    "band": 4,
+    "topic": "烹饪",
+    "order": 1061
+  },
+  {
+    "id": "w-1062",
+    "thai": "เครื่องปรุง",
+    "romanization": "krʉ̂ang-bprung",
+    "meaning": "调料",
+    "band": 4,
+    "topic": "烹饪",
+    "order": 1062
+  },
+  {
+    "id": "w-1063",
+    "thai": "น้ำจิ้ม",
+    "romanization": "náam-jîm",
+    "meaning": "蘸酱",
+    "band": 4,
+    "topic": "烹饪",
+    "order": 1063
+  },
+  {
+    "id": "w-1064",
+    "thai": "มะนาว",
+    "romanization": "má-naao",
+    "meaning": "青柠",
+    "band": 4,
+    "topic": "烹饪",
+    "order": 1064
+  },
+  {
+    "id": "w-1065",
+    "thai": "ใบมะกรูด",
+    "romanization": "bai-má-grùut",
+    "meaning": "柠檬叶",
+    "band": 4,
+    "topic": "烹饪",
+    "order": 1065
+  },
+  {
+    "id": "w-1066",
+    "thai": "ตะไคร้",
+    "romanization": "dtà-khrái",
+    "meaning": "香茅",
+    "band": 4,
+    "topic": "烹饪",
+    "order": 1066
+  },
+  {
+    "id": "w-1067",
+    "thai": "ข่า",
+    "romanization": "khàa",
+    "meaning": "南姜",
+    "band": 4,
+    "topic": "烹饪",
+    "order": 1067
+  },
+  {
+    "id": "w-1068",
+    "thai": "ใบโหระพา",
+    "romanization": "bai-hǒo-rá-phaa",
+    "meaning": "九层塔",
+    "band": 4,
+    "topic": "烹饪",
+    "order": 1068
+  },
+  {
+    "id": "w-1069",
+    "thai": "พริกแห้ง",
+    "romanization": "phrík-hɛ̂ɛng",
+    "meaning": "干辣椒",
+    "band": 4,
+    "topic": "烹饪",
+    "order": 1069
+  },
+  {
+    "id": "w-1070",
+    "thai": "กะทิ",
+    "romanization": "gà-thí",
+    "meaning": "椰奶",
+    "band": 4,
+    "topic": "烹饪",
+    "order": 1070
+  },
+  {
+    "id": "w-1071",
+    "thai": "มะพร้าว",
+    "romanization": "má-phráao",
+    "meaning": "椰子",
+    "band": 4,
+    "topic": "烹饪",
+    "order": 1071
+  },
+  {
+    "id": "w-1072",
+    "thai": "น้ำมะขาม",
+    "romanization": "náam-má-khǎam",
+    "meaning": "罗望子汁",
+    "band": 4,
+    "topic": "烹饪",
+    "order": 1072
+  },
+  {
+    "id": "w-1073",
+    "thai": "น้ำตาลปี๊บ",
+    "romanization": "náam-dtaan-bpíip",
+    "meaning": "棕榈糖",
+    "band": 4,
+    "topic": "烹饪",
+    "order": 1073
+  },
+  {
+    "id": "w-1074",
+    "thai": "แป้ง",
+    "romanization": "bpɛ̂ɛng",
+    "meaning": "面粉",
+    "band": 4,
+    "topic": "烹饪",
+    "order": 1074
+  },
+  {
+    "id": "w-1075",
+    "thai": "เส้น",
+    "romanization": "sên",
+    "meaning": "面条的线",
+    "band": 4,
+    "topic": "烹饪",
+    "order": 1075
+  },
+  {
+    "id": "w-1076",
+    "thai": "วุ้นเส้น",
+    "romanization": "wún-sên",
+    "meaning": "粉丝",
+    "band": 4,
+    "topic": "烹饪",
+    "order": 1076
+  },
+  {
+    "id": "w-1077",
+    "thai": "เส้นใหญ่",
+    "romanization": "sên-yài",
+    "meaning": "河粉",
+    "band": 4,
+    "topic": "烹饪",
+    "order": 1077
+  },
+  {
+    "id": "w-1078",
+    "thai": "เส้นเล็ก",
+    "romanization": "sên-lék",
+    "meaning": "细米粉",
+    "band": 4,
+    "topic": "烹饪",
+    "order": 1078
+  },
+  {
+    "id": "w-1079",
+    "thai": "บะหมี่เหลือง",
+    "romanization": "bà-mìi-lʉ̌ang",
+    "meaning": "鸡蛋面",
+    "band": 4,
+    "topic": "烹饪",
+    "order": 1079
+  },
+  {
+    "id": "w-1080",
+    "thai": "เกี๊ยว",
+    "romanization": "gíao",
+    "meaning": "饺子",
+    "band": 4,
+    "topic": "烹饪",
+    "order": 1080
+  },
+  {
+    "id": "w-1081",
+    "thai": "ขนมจีน",
+    "romanization": "khà-nǒm-jiin",
+    "meaning": "米线",
+    "band": 4,
+    "topic": "烹饪",
+    "order": 1081
+  },
+  {
+    "id": "w-1082",
+    "thai": "ข้าวเหนียว",
+    "romanization": "khâao-nǐao",
+    "meaning": "糯米",
+    "band": 4,
+    "topic": "烹饪",
+    "order": 1082
+  },
+  {
+    "id": "w-1083",
+    "thai": "ข้าวกล้อง",
+    "romanization": "khâao-glɔ̂ɔng",
+    "meaning": "糙米",
+    "band": 4,
+    "topic": "烹饪",
+    "order": 1083
+  },
+  {
+    "id": "w-1084",
+    "thai": "ปลาร้า",
+    "romanization": "bplaa-ráa",
+    "meaning": "发酵鱼",
+    "band": 4,
+    "topic": "烹饪",
+    "order": 1084
+  },
+  {
+    "id": "w-1085",
+    "thai": "เพื่อนบ้าน",
+    "romanization": "phʉ̂an-bâan",
+    "meaning": "邻居",
+    "band": 3,
+    "topic": "人",
+    "order": 1085
+  },
+  {
+    "id": "w-1086",
+    "thai": "แขก",
+    "romanization": "khɛ̀k",
+    "meaning": "客人",
+    "band": 3,
+    "topic": "人",
+    "order": 1086
+  },
+  {
+    "id": "w-1087",
+    "thai": "เจ้าของ",
+    "romanization": "jâo-khɔ̌ɔng",
+    "meaning": "主人",
+    "band": 3,
+    "topic": "人",
+    "order": 1087
+  },
+  {
+    "id": "w-1088",
+    "thai": "ลูกค้า",
+    "romanization": "lûuk-kháa",
+    "meaning": "顾客",
+    "band": 3,
+    "topic": "人",
+    "order": 1088
+  },
+  {
+    "id": "w-1089",
+    "thai": "พนักงาน",
+    "romanization": "phá-nák-ngaan",
+    "meaning": "职员",
+    "band": 3,
+    "topic": "人",
+    "order": 1089
+  },
+  {
+    "id": "w-1090",
+    "thai": "ชาวนา",
+    "romanization": "chaao-naa",
+    "meaning": "农民",
+    "band": 3,
+    "topic": "人",
+    "order": 1090
+  },
+  {
+    "id": "w-1091",
+    "thai": "ชาวประมง",
+    "romanization": "chaao-bprà-mong",
+    "meaning": "渔民",
+    "band": 3,
+    "topic": "人",
+    "order": 1091
+  },
+  {
+    "id": "w-1092",
+    "thai": "วิศวกร",
+    "romanization": "wít-sà-wá-gɔɔn",
+    "meaning": "工程师",
+    "band": 3,
+    "topic": "人",
+    "order": 1092
+  },
+  {
+    "id": "w-1093",
+    "thai": "ทนาย",
+    "romanization": "thá-naai",
+    "meaning": "律师",
+    "band": 3,
+    "topic": "人",
+    "order": 1093
+  },
+  {
+    "id": "w-1094",
+    "thai": "นักข่าว",
+    "romanization": "nák-khàao",
+    "meaning": "记者",
+    "band": 3,
+    "topic": "人",
+    "order": 1094
+  },
+  {
+    "id": "w-1095",
+    "thai": "นักเขียน",
+    "romanization": "nák-khǐan",
+    "meaning": "作家",
+    "band": 3,
+    "topic": "人",
+    "order": 1095
+  },
+  {
+    "id": "w-1096",
+    "thai": "นักร้อง",
+    "romanization": "nák-rɔ́ɔng",
+    "meaning": "歌手",
+    "band": 3,
+    "topic": "人",
+    "order": 1096
+  },
+  {
+    "id": "w-1097",
+    "thai": "นักแสดง",
+    "romanization": "nák-sà-dɛɛng",
+    "meaning": "演员",
+    "band": 3,
+    "topic": "人",
+    "order": 1097
+  },
+  {
+    "id": "w-1098",
+    "thai": "ช่าง",
+    "romanization": "châang",
+    "meaning": "技工",
+    "band": 3,
+    "topic": "人",
+    "order": 1098
+  },
+  {
+    "id": "w-1099",
+    "thai": "ช่างตัดผม",
+    "romanization": "châang-dtàt-phǒm",
+    "meaning": "理发师",
+    "band": 3,
+    "topic": "人",
+    "order": 1099
+  },
+  {
+    "id": "w-1100",
+    "thai": "พ่อครัว",
+    "romanization": "phɔ̂ɔ-khrua",
+    "meaning": "厨师",
+    "band": 3,
+    "topic": "人",
+    "order": 1100
+  },
+  {
+    "id": "w-1101",
+    "thai": "บริกร",
+    "romanization": "bɔɔ-rí-gɔɔn",
+    "meaning": "服务员",
+    "band": 3,
+    "topic": "人",
+    "order": 1101
+  },
+  {
+    "id": "w-1102",
+    "thai": "ยาม",
+    "romanization": "yaam",
+    "meaning": "保安",
+    "band": 3,
+    "topic": "人",
+    "order": 1102
+  },
+  {
+    "id": "w-1103",
+    "thai": "ทหาร",
+    "romanization": "thá-hǎan",
+    "meaning": "军人",
+    "band": 3,
+    "topic": "人",
+    "order": 1103
+  },
+  {
+    "id": "w-1104",
+    "thai": "พระสงฆ์",
+    "romanization": "phrá-sǒng",
+    "meaning": "僧侣",
+    "band": 3,
+    "topic": "人",
+    "order": 1104
+  }
+]

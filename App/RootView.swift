@@ -31,6 +31,7 @@ struct RootView: View {
                             case .decks: DecksView()
                             case .script: ScriptView()
                             case .culture: CultureView()
+                            case .vocab: VocabView()
                             case .stats: StatsView()
                             }
                         }

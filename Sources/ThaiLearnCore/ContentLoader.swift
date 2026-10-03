@@ -126,6 +126,7 @@ public enum ContentLoader {
         let minimalSets: [MinimalSet] = decode("minimal_sets.json", from: directory, issues: &issues) ?? []
         let sounds: [SoundLesson] = decode("sounds.json", from: directory, issues: &issues) ?? []
         let culture: [CultureNote] = decode("culture.json", from: directory, issues: &issues) ?? []
+        let words: [VocabWord] = decode("words.json", from: directory, issues: &issues) ?? []
 
         if !issues.isEmpty {
             throw ContentError(issues: issues)
@@ -139,7 +140,8 @@ public enum ContentLoader {
             tones: tones,
             minimalSets: minimalSets,
             sounds: sounds,
-            culture: culture
+            culture: culture,
+            words: words
         )
         let validation = validate(catalog)
         if !validation.isEmpty {
@@ -158,6 +160,7 @@ public enum ContentLoader {
         validateMinimalSets(catalog, issues: &issues)
         validateSounds(catalog, issues: &issues)
         validateCulture(catalog, issues: &issues)
+        validateWords(catalog, issues: &issues)
         return issues
     }
 
@@ -200,6 +203,7 @@ public enum ContentLoader {
         for phrase in catalog.phrases { claim(phrase.id, "句子") }
         for consonant in catalog.consonants { claim(consonant.id, "辅音") }
         for vowel in catalog.vowels { claim(vowel.id, "元音") }
+        for word in catalog.words { claim(word.id, "词") }
         let deckIDs = Set(catalog.decks.map(\.id))
         for phrase in catalog.phrases where !deckIDs.contains(phrase.deck) {
             issues.append("句子 \(phrase.id) 的词组 \(phrase.deck) 不存在")
@@ -366,6 +370,33 @@ public enum ContentLoader {
             }
             for pair in lesson.pairs where !containsThai(pair.thai) || pair.roman.isEmpty || pair.meaning.isEmpty {
                 issues.append("发音例子不完整：\(lesson.id)")
+            }
+        }
+    }
+
+    private static func validateWords(_ catalog: Catalog, issues: inout [String]) {
+        if catalog.words.count < 1000 {
+            issues.append("词汇只有 \(catalog.words.count) 个，至少要 1000 个")
+        }
+        var seenThai: Set<String> = []
+        for word in catalog.words {
+            if word.thai.isEmpty || !containsThai(word.thai) {
+                issues.append("\(word.id) 没有泰文")
+            }
+            if !seenThai.insert(word.thai).inserted {
+                issues.append("泰文重复：\(word.thai)")
+            }
+            if word.romanization.trimmingCharacters(in: .whitespaces).isEmpty {
+                issues.append("\(word.id) 没有罗马音")
+            }
+            if word.meaning.trimmingCharacters(in: .whitespaces).isEmpty {
+                issues.append("\(word.id) 没有中文")
+            }
+            if !(1...4).contains(word.band) {
+                issues.append("\(word.id) 的词频档必须是 1 到 4")
+            }
+            if word.topic.trimmingCharacters(in: .whitespaces).isEmpty {
+                issues.append("\(word.id) 没有话题")
             }
         }
     }

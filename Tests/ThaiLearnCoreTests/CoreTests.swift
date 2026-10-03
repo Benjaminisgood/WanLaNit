@@ -151,6 +151,16 @@ final class ContentTests: XCTestCase {
         XCTAssertEqual(catalog.consonant("ngo-nguu")?.initial, "ng")
         XCTAssertEqual(catalog.consonant("do-dek")?.initial, "d")
         XCTAssertEqual(catalog.consonant("bo-baimaai")?.initial, "b")
+
+        XCTAssertGreaterThanOrEqual(catalog.words.count, 1000)
+        let kin = try XCTUnwrap(catalog.word(thai: "กิน"))
+        XCTAssertEqual(kin.romanization, "kin")
+        XCTAssertEqual(kin.meaning, "吃")
+        XCTAssertEqual(catalog.word(thai: "ไป")?.romanization, "bpai")
+        XCTAssertEqual(catalog.word(thai: "น้ำ")?.romanization, "náam")
+        XCTAssertEqual(catalog.word(thai: "ข้าว")?.romanization, "khâao")
+        let bands = Set(catalog.words.map(\.band))
+        XCTAssertEqual(bands, Set(1...4))
     }
 
     func testBrokenContentIsReported() throws {
@@ -186,6 +196,19 @@ final class SessionTests: XCTestCase {
         XCTAssertEqual(plan.items.filter { $0.kind == .phrase }.count, 4)
         XCTAssertEqual(plan.items.filter { $0.kind == .consonant }.count, 4)
         XCTAssertEqual(catalog.consonant(plan.items.first { $0.kind == .consonant }?.id ?? "")?.symbol, "ก")
+        XCTAssertEqual(plan.items.filter { $0.kind == .word }.count, 0)
+    }
+
+    func testGrammarPhaseIntroducesVocabulary() throws {
+        let catalog = try ContentLoader.load(from: contentDirectory())
+        let start = StudyPlan.defaultStart
+        let today = start.adding(days: 45)
+        let plan = StudySession.planToday(catalog: catalog, progress: .fresh(start: start), today: today)
+        XCTAssertEqual(plan.phase, .grammar)
+        let words = plan.items.filter { $0.kind == .word }
+        XCTAssertEqual(words.count, 8)
+        XCTAssertEqual(words.first?.template, .recognition)
+        XCTAssertEqual(catalog.word(words[0].id)?.thai, "กิน")
     }
 
     func testReviewComesBackAndStreakGrows() throws {

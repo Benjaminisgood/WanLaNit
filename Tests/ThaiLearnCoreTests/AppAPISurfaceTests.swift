@@ -12,6 +12,17 @@ final class AppAPISurfaceTests: XCTestCase {
         XCTAssertEqual(missing.description, missing.issues.joined(separator: "\n"))
 
         let catalog = try ContentLoader.load(from: contentRoot())
+        XCTAssertGreaterThanOrEqual(catalog.words.count, 1000)
+        if let word = catalog.word(thai: "กิน") {
+            _ = word.id
+            _ = word.thai
+            _ = word.spoken
+            _ = word.romanization
+            _ = word.meaning
+            _ = word.band
+            _ = word.topic
+            _ = word.order
+        }
         let today = CivilDay(year: 2026, month: 10, day: 3)
         XCTAssertEqual(today.iso, "2026-10-03")
         XCTAssertEqual(today, today)
@@ -80,7 +91,15 @@ final class AppAPISurfaceTests: XCTestCase {
                     _ = drill.spoken
                 }
             case .word:
-                _ = ref.template.chinese
+                if let word = catalog.word(ref.id) {
+                    _ = word.thai
+                    _ = word.spoken
+                    _ = word.romanization
+                    _ = word.meaning
+                    _ = word.band
+                    _ = word.topic
+                    _ = word.order
+                }
             }
             _ = ref.template
             _ = ref.cardKey

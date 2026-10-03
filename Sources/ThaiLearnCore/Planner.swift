@@ -475,9 +475,13 @@ public enum StudySession {
         let used = phrases.count + script.count + extraPhrases.count
         let toneEntries = entries.filter { $0.ref.kind == .tone && $0.phase <= phase }
         let tones = pickNew(toneEntries, limit: min(toneBudget, max(0, cap - used)), progress: progress)
+        let wordBudget = phase == .grammar ? 8 : 0
+        let afterTones = used + tones.count
+        let wordEntries = entries.filter { $0.ref.kind == .word && $0.phase <= phase }
+        let words = pickNew(wordEntries, limit: min(wordBudget, max(0, cap - afterTones)), progress: progress)
         return assemble(
             reviewsOf: dueRefs(catalog: catalog, progress: progress, today: today, allowed: nil),
-            newItems: phrases + script + extraPhrases + tones,
+            newItems: phrases + script + extraPhrases + tones + words,
             phase: phase,
             day: today,
             start: progress.startDate
@@ -534,6 +538,19 @@ public enum StudySession {
                 sortKey: 200_000 + vowel.order
             ))
         }
+        for word in catalog.words {
+            let key = word.band * 100_000 + word.order
+            entries.append(CurriculumEntry(
+                ref: StudyRef(id: word.id, kind: .word, template: .recognition),
+                phase: .grammar,
+                sortKey: 1_000_000 + key * 2
+            ))
+            entries.append(CurriculumEntry(
+                ref: StudyRef(id: word.id, kind: .word, template: .production),
+                phase: .grammar,
+                sortKey: 1_000_000 + key * 2 + 1
+            ))
+        }
         for (offset, drill) in ToneDrills.all(in: catalog).enumerated() {
             entries.append(CurriculumEntry(
                 ref: StudyRef(id: drill.id, kind: .tone, template: .toneRule),
@@ -573,6 +590,9 @@ public enum StudySession {
         }
         if catalog.vowel(key) != nil {
             return StudyRef(id: key, kind: .vowel, template: .vowelForm)
+        }
+        if catalog.word(key) != nil {
+            return StudyRef(id: key, kind: .word, template: .recognition)
         }
         return nil
     }
