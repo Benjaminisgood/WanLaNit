@@ -10,7 +10,7 @@ final class AppModel {
 
     private(set) var catalog: Catalog?
     private(set) var loadError: String?
-    var progress: Progress
+    var progress: LearningProgress
     var active: ActiveSession?
     var section: AppSection = .today
 

@@ -191,7 +191,7 @@ final class SessionTests: XCTestCase {
     func testReviewComesBackAndStreakGrows() throws {
         let catalog = try ContentLoader.load(from: contentDirectory())
         let start = StudyPlan.defaultStart
-        var progress = Progress.fresh(start: start)
+        var progress = LearningProgress.fresh(start: start)
         let plan = StudySession.planToday(catalog: catalog, progress: progress, today: start)
         var session = StudySession.start(plan)
         let firstID = try XCTUnwrap(session.current?.id)
@@ -219,7 +219,7 @@ final class SessionTests: XCTestCase {
     }
 
     func testMissedDayResetsStreak() {
-        var progress = Progress.fresh()
+        var progress = LearningProgress.fresh()
         let start = progress.startDate
         progress.completeSession(on: start)
         progress.completeSession(on: start.adding(days: 2))

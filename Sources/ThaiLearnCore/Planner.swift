@@ -88,7 +88,7 @@ public struct SessionSnapshot: Codable, Equatable, Sendable {
     public var requeues: [String: Int]
 }
 
-public struct Progress: Codable, Equatable, Sendable {
+public struct LearningProgress: Codable, Equatable, Sendable {
     public var schema: Int
     public var startDate: CivilDay
     public var cards: [String: CardState]
@@ -97,8 +97,8 @@ public struct Progress: Codable, Equatable, Sendable {
     public var dayLogs: [DayLog]
     public var resume: SessionSnapshot?
 
-    public static func fresh(start: CivilDay = StudyPlan.defaultStart) -> Progress {
-        Progress(
+    public static func fresh(start: CivilDay = StudyPlan.defaultStart) -> LearningProgress {
+        LearningProgress(
             schema: 1,
             startDate: start,
             cards: [:],
@@ -148,7 +148,7 @@ public struct ActiveSession: Equatable, Sendable {
         return "\(shown) / \(items.count)"
     }
 
-    public mutating func grade(_ grade: Grade, progress: inout Progress) {
+    public mutating func grade(_ grade: Grade, progress: inout LearningProgress) {
         guard let item = current else { return }
         let isNew = progress.cards[item.id]?.lastReviewed == nil
         var card = progress.cards[item.id] ?? CardState.fresh(on: day)
@@ -204,7 +204,7 @@ public struct ActiveSession: Equatable, Sendable {
 }
 
 public enum StudySession {
-    public static func planToday(catalog: Catalog, progress: Progress, today: CivilDay) -> PlannedSession {
+    public static func planToday(catalog: Catalog, progress: LearningProgress, today: CivilDay) -> PlannedSession {
         let phase = StudyPlan.phase(on: today, start: progress.startDate)
         let budget = StudyPlan.newBudget(for: phase)
         let entries = curriculum(catalog)
@@ -227,7 +227,7 @@ public enum StudySession {
         )
     }
 
-    public static func planDeck(deckID: String, catalog: Catalog, progress: Progress, today: CivilDay) -> PlannedSession {
+    public static func planDeck(deckID: String, catalog: Catalog, progress: LearningProgress, today: CivilDay) -> PlannedSession {
         let entries = curriculum(catalog).filter { entry in
             guard entry.ref.kind == .phrase, let phrase = catalog.phrase(entry.ref.id) else { return false }
             return phrase.deck == deckID
@@ -274,12 +274,12 @@ public enum StudySession {
         }
     }
 
-    private static func pickNew(_ entries: [CurriculumEntry], limit: Int, progress: Progress) -> [StudyRef] {
+    private static func pickNew(_ entries: [CurriculumEntry], limit: Int, progress: LearningProgress) -> [StudyRef] {
         guard limit > 0 else { return [] }
         return entries.filter { progress.cards[$0.ref.id] == nil }.prefix(limit).map(\.ref)
     }
 
-    private static func dueRefs(progress: Progress, today: CivilDay, allowed: Set<StudyRef>) -> [StudyRef] {
+    private static func dueRefs(progress: LearningProgress, today: CivilDay, allowed: Set<StudyRef>) -> [StudyRef] {
         allowed
             .compactMap { ref -> (StudyRef, CivilDay)? in
                 guard let card = progress.cards[ref.id], card.due <= today else { return nil }
@@ -330,7 +330,7 @@ public struct ProgressReport: Equatable, Sendable {
     public var due: Int
     public var decks: [DeckStat]
 
-    public static func make(catalog: Catalog, progress: Progress, today: CivilDay) -> ProgressReport {
+    public static func make(catalog: Catalog, progress: LearningProgress, today: CivilDay) -> ProgressReport {
         let phraseIDs = Set(catalog.phrases.map(\.id))
         let introducedCards = progress.cards.filter { phraseIDs.contains($0.key) || catalog.consonant($0.key) != nil || catalog.vowel($0.key) != nil }
         let mastered = introducedCards.values.filter(\.isMastered).count

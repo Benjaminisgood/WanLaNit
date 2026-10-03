@@ -12,11 +12,11 @@ struct ProgressStore {
         return ProgressStore(fileURL: directory.appendingPathComponent("progress.json"))
     }
 
-    func load() -> Progress {
+    func load() -> LearningProgress {
         guard let data = try? Data(contentsOf: fileURL) else {
             return .fresh()
         }
-        if let progress = try? JSONDecoder().decode(Progress.self, from: data) {
+        if let progress = try? JSONDecoder().decode(LearningProgress.self, from: data) {
             return progress
         }
         let broken = fileURL.deletingLastPathComponent().appendingPathComponent("progress.unreadable.json")
@@ -25,7 +25,7 @@ struct ProgressStore {
         return .fresh()
     }
 
-    func save(_ progress: Progress) {
+    func save(_ progress: LearningProgress) {
         let encoder = JSONEncoder()
         encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
         guard let data = try? encoder.encode(progress) else { return }
