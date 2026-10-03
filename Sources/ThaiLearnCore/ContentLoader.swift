@@ -14,6 +14,108 @@ public struct ContentError: Error, Equatable, CustomStringConvertible {
 }
 
 public enum ContentLoader {
+    /// Marker file. The app bundle is usable only when this sits next to the other course JSON.
+    public static let markerFileName = "phrases.json"
+
+    /// Directories inside `bundle` that may hold the course JSON.
+    /// XcodeGen groups copy files flat into Contents/Resources. A folder reference keeps a Content subdirectory.
+    /// SwiftPM also nests a `ThaiLearn_ThaiLearnCore.bundle` (or `.resources`) inside the app.
+    public static func candidateDirectories(in bundle: Bundle) -> [URL] {
+        var urls: [URL] = []
+        func add(_ url: URL?) {
+            guard let url else { return }
+            let path = url.standardizedFileURL.path
+            guard !urls.contains(where: { $0.standardizedFileURL.path == path }) else { return }
+            urls.append(url)
+        }
+
+        func addTree(_ root: URL?) {
+            guard let root else { return }
+            add(root)
+            add(root.appendingPathComponent("Content", isDirectory: true))
+            addNestedResourceBundles(in: root, add: add)
+        }
+
+        addTree(bundle.resourceURL)
+        let root = bundle.bundleURL
+        addTree(root)
+        addTree(root.appendingPathComponent("Contents/Resources", isDirectory: true))
+        addTree(root.appendingPathComponent("Resources", isDirectory: true))
+        return urls
+    }
+
+    /// Load course JSON from one bundle. Does not consult other bundles.
+    public static func load(from bundle: Bundle) -> Result<Catalog, ContentError> {
+        load(from: candidateDirectories(in: bundle))
+    }
+
+    /// Load course JSON shipped with the running app.
+    /// Looks through `Bundle.main` first. `Bundle.module` is only consulted for SwiftPM builds,
+    /// and only when the app bundle does not already contain the course, so a missing resource
+    /// bundle cannot abort launch after the JSON has been copied into the app.
+    public static func loadApplicationContent() -> Result<Catalog, ContentError> {
+        var directories = candidateDirectories(in: .main)
+        if !directories.contains(where: markerExists) {
+            #if SWIFT_PACKAGE
+            for directory in candidateDirectories(in: .module) {
+                let path = directory.standardizedFileURL.path
+                guard !directories.contains(where: { $0.standardizedFileURL.path == path }) else { continue }
+                directories.append(directory)
+            }
+            #endif
+        }
+        return load(from: directories)
+    }
+
+    /// Load from the first candidate directory that contains `phrases.json`.
+    /// If none do, the error lists every path that was tried.
+    public static func load(from directories: [URL]) -> Result<Catalog, ContentError> {
+        var tried: [String] = []
+        for directory in directories {
+            let marker = directory.appendingPathComponent(markerFileName)
+            tried.append(marker.path)
+            guard FileManager.default.fileExists(atPath: marker.path) else { continue }
+            do {
+                return .success(try load(from: directory))
+            } catch let error as ContentError {
+                return .failure(error)
+            } catch {
+                return .failure(ContentError(issues: [error.localizedDescription]))
+            }
+        }
+
+        var issues = ["应用里没有课程文件。", "找过这些位置："]
+        if tried.isEmpty {
+            issues.append("（没有可搜索的路径）")
+        } else {
+            issues.append(contentsOf: tried)
+        }
+        return .failure(ContentError(issues: issues))
+    }
+
+    private static func markerExists(_ directory: URL) -> Bool {
+        FileManager.default.fileExists(
+            atPath: directory.appendingPathComponent(markerFileName).path
+        )
+    }
+
+    /// SwiftPM resource bundles copied into an app: `Name.bundle` on Apple, `Name.resources` on Linux.
+    private static func addNestedResourceBundles(in directory: URL, add: (URL?) -> Void) {
+        guard let children = try? FileManager.default.contentsOfDirectory(
+            at: directory,
+            includingPropertiesForKeys: nil,
+            options: [.skipsHiddenFiles]
+        ) else { return }
+        for child in children {
+            let name = child.lastPathComponent
+            guard name.hasSuffix(".bundle") || name.hasSuffix(".resources") else { continue }
+            add(child)
+            add(child.appendingPathComponent("Content", isDirectory: true))
+            add(child.appendingPathComponent("Contents/Resources", isDirectory: true))
+            add(child.appendingPathComponent("Contents/Resources/Content", isDirectory: true))
+        }
+    }
+
     public static func load(from directory: URL) throws -> Catalog {
         var issues: [String] = []
         let decks: [Deck] = decode("decks.json", from: directory, issues: &issues) ?? []

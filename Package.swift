@@ -12,7 +12,21 @@ let package = Package(
     targets: [
         .target(
             name: "ThaiLearnCore",
-            path: "Sources/ThaiLearnCore"
+            // The course JSON lives at the repo root so the Xcode app target
+            // can copy the same files. SwiftPM only generates Bundle.module
+            // and copies resources that sit inside the target path.
+            path: ".",
+            exclude: [
+                "App",
+                "Tests",
+                ".github",
+                "README.md",
+                "project.yml"
+            ],
+            sources: ["Sources/ThaiLearnCore"],
+            resources: [
+                .copy("Content")
+            ]
         ),
         .testTarget(
             name: "ThaiLearnCoreTests",

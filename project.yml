@@ -20,8 +20,12 @@ targets:
     platform: macOS
     sources:
       - path: App
-    resources:
+      # `resources:` is not an XcodeGen key, so it was ignored and the JSON
+      # never reached Copy Bundle Resources. A group copies each file to
+      # Contents/Resources/<name>.json (not a Content/ subdirectory).
       - path: Content
+        buildPhase: resources
+        type: group
     dependencies:
       - package: ThaiLearn
         product: ThaiLearnCore

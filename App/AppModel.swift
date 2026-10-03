@@ -108,22 +108,7 @@ enum AppSection: String, CaseIterable, Identifiable {
 
 enum CatalogLocation {
     static func load() -> Result<Catalog, ContentError> {
-        let candidates = [
-            Bundle.main.resourceURL,
-            Bundle.main.bundleURL.appendingPathComponent("Contents/Resources")
-        ].compactMap { $0 }
-        for url in candidates {
-            let phrases = url.appendingPathComponent("phrases.json")
-            guard FileManager.default.fileExists(atPath: phrases.path) else { continue }
-            do {
-                return .success(try ContentLoader.load(from: url))
-            } catch let error as ContentError {
-                return .failure(error)
-            } catch {
-                return .failure(ContentError(issues: [error.localizedDescription]))
-            }
-        }
-        return .failure(ContentError(issues: ["应用里没有课程文件。"]))
+        ContentLoader.loadApplicationContent()
     }
 }
 
