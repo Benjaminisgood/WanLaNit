@@ -78,6 +78,8 @@ struct SessionView: View {
                 case .word:
                     if let word = model.catalog?.word(ref.id) {
                         wordCard(word, template: ref.template)
+                    } else if let note = model.progress.readerNotes.first(where: { $0.id == ref.id }) {
+                        readerNoteCard(note)
                     }
                 }
             }
@@ -218,6 +220,28 @@ struct SessionView: View {
     }
 
     @ViewBuilder
+    private func readerNoteCard(_ note: ReaderNote) -> some View {
+        ThaiLine(text: note.thai, size: 48)
+            .frame(maxWidth: .infinity)
+        PlayButton(text: note.thai)
+            .frame(maxWidth: .infinity)
+        if revealed {
+            if !note.meaning.isEmpty {
+                Text(note.meaning).font(.title3)
+            }
+            if !note.romanization.isEmpty {
+                Text(note.romanization).font(.title3)
+            }
+            if !note.context.isEmpty {
+                Text(note.context)
+                    .font(.callout)
+                    .foregroundStyle(Ink.muted)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+    }
+
+    @ViewBuilder
     private func toneCard(_ drill: ToneDrill) -> some View {
         Text(drill.consonantClass.chinese)
             .font(.title2.bold())
@@ -276,6 +300,12 @@ struct SessionView: View {
                 .font(.caption)
                 .foregroundStyle(Ink.muted)
                 .frame(maxWidth: .infinity)
+            if let context = model.progress.readerNotes.first(where: { $0.id == word.id })?.context, !context.isEmpty {
+                Text(context)
+                    .font(.callout)
+                    .foregroundStyle(Ink.muted)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
         }
     }
 

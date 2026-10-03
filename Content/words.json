@@ -9934,5 +9934,23 @@
     "band": 3,
     "topic": "人",
     "order": 1104
+  },
+  {
+    "id": "w-1105",
+    "thai": "แรง",
+    "romanization": "rɛɛng",
+    "meaning": "用力；强烈",
+    "band": 2,
+    "topic": "描述",
+    "order": 1105
+  },
+  {
+    "id": "w-1106",
+    "thai": "ข้าง",
+    "romanization": "khàang",
+    "meaning": "边；侧",
+    "band": 2,
+    "topic": "方向",
+    "order": 1106
   }
 ]

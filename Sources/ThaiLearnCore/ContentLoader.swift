@@ -127,6 +127,7 @@ public enum ContentLoader {
         let sounds: [SoundLesson] = decode("sounds.json", from: directory, issues: &issues) ?? []
         let culture: [CultureNote] = decode("culture.json", from: directory, issues: &issues) ?? []
         let words: [VocabWord] = decode("words.json", from: directory, issues: &issues) ?? []
+        let starters: [StarterText] = decode("starters.json", from: directory, issues: &issues) ?? []
 
         if !issues.isEmpty {
             throw ContentError(issues: issues)
@@ -141,7 +142,8 @@ public enum ContentLoader {
             minimalSets: minimalSets,
             sounds: sounds,
             culture: culture,
-            words: words
+            words: words,
+            starters: starters
         )
         let validation = validate(catalog)
         if !validation.isEmpty {
@@ -161,6 +163,7 @@ public enum ContentLoader {
         validateSounds(catalog, issues: &issues)
         validateCulture(catalog, issues: &issues)
         validateWords(catalog, issues: &issues)
+        validateStarters(catalog, issues: &issues)
         return issues
     }
 
@@ -397,6 +400,24 @@ public enum ContentLoader {
             }
             if word.topic.trimmingCharacters(in: .whitespaces).isEmpty {
                 issues.append("\(word.id) 没有话题")
+            }
+        }
+    }
+
+    private static func validateStarters(_ catalog: Catalog, issues: inout [String]) {
+        if catalog.starters.count < 3 {
+            issues.append("入门短文至少要 3 篇")
+        }
+        var seen: Set<String> = []
+        for text in catalog.starters {
+            if !seen.insert(text.id).inserted {
+                issues.append("短文 id 重复：\(text.id)")
+            }
+            if text.title.isEmpty || text.body.count < 20 {
+                issues.append("短文 \(text.id) 太短")
+            }
+            if !(1...3).contains(text.level) {
+                issues.append("短文 \(text.id) 的难度必须是 1 到 3")
             }
         }
     }

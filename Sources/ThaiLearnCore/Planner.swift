@@ -279,6 +279,10 @@ public struct LearningProgress: Equatable, Sendable {
     public var desiredRetention: Double
     /// 每天最多引入多少张新卡片。课程节奏还会再收一档。
     public var newCardLimit: Int
+    /// 阅读里每个泰文词的状态。键是泰文，不是卡片 id。
+    public var wordMemory: [String: WordMemory]
+    public var library: [ReaderDocument]
+    public var readerNotes: [ReaderNote]
 
     public init(
         schema: Int,
@@ -289,7 +293,10 @@ public struct LearningProgress: Equatable, Sendable {
         dayLogs: [DayLog],
         resume: SessionSnapshot?,
         desiredRetention: Double = FSRS.defaultDesiredRetention,
-        newCardLimit: Int = 20
+        newCardLimit: Int = 20,
+        wordMemory: [String: WordMemory] = [:],
+        library: [ReaderDocument] = [],
+        readerNotes: [ReaderNote] = []
     ) {
         self.schema = schema
         self.startDate = startDate
@@ -300,6 +307,9 @@ public struct LearningProgress: Equatable, Sendable {
         self.resume = resume
         self.desiredRetention = desiredRetention
         self.newCardLimit = newCardLimit
+        self.wordMemory = wordMemory
+        self.library = library
+        self.readerNotes = readerNotes
     }
 
     public static func fresh(start: CivilDay = StudyPlan.defaultStart) -> LearningProgress {
@@ -345,7 +355,7 @@ public struct LearningProgress: Equatable, Sendable {
 extension LearningProgress: Codable {
     private enum CodingKeys: String, CodingKey {
         case schema, startDate, cards, streak, lastStudiedDay, dayLogs, resume
-        case desiredRetention, newCardLimit
+        case desiredRetention, newCardLimit, wordMemory, library, readerNotes
     }
 
     public init(from decoder: Decoder) throws {
@@ -360,6 +370,9 @@ extension LearningProgress: Codable {
         resume = try container.decodeIfPresent(SessionSnapshot.self, forKey: .resume)
         desiredRetention = try container.decodeIfPresent(Double.self, forKey: .desiredRetention) ?? FSRS.defaultDesiredRetention
         newCardLimit = try container.decodeIfPresent(Int.self, forKey: .newCardLimit) ?? 20
+        wordMemory = try container.decodeIfPresent([String: WordMemory].self, forKey: .wordMemory) ?? [:]
+        library = try container.decodeIfPresent([ReaderDocument].self, forKey: .library) ?? []
+        readerNotes = try container.decodeIfPresent([ReaderNote].self, forKey: .readerNotes) ?? []
     }
 
     public func encode(to encoder: Encoder) throws {
@@ -373,6 +386,9 @@ extension LearningProgress: Codable {
         try container.encodeIfPresent(resume, forKey: .resume)
         try container.encode(desiredRetention, forKey: .desiredRetention)
         try container.encode(newCardLimit, forKey: .newCardLimit)
+        try container.encode(wordMemory, forKey: .wordMemory)
+        try container.encode(library, forKey: .library)
+        try container.encode(readerNotes, forKey: .readerNotes)
     }
 }
 
@@ -570,6 +586,9 @@ public enum StudySession {
     }
 
     static func ref(forCardKey key: String, catalog: Catalog) -> StudyRef? {
+        if key.hasPrefix("reader:") {
+            return StudyRef(id: key, kind: .word, template: .recognition)
+        }
         if key.hasPrefix("tone-") {
             return StudyRef(id: key, kind: .tone, template: .toneRule)
         }

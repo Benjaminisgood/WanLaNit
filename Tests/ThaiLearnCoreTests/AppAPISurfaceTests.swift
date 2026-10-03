@@ -247,6 +247,42 @@ final class AppAPISurfaceTests: XCTestCase {
         ).map { example in
             (example.syllableThai, example.roman, example.phraseThai, example.meaning)
         }
+
+        XCTAssertGreaterThanOrEqual(catalog.starters.count, 3)
+        for text in catalog.starters {
+            _ = text.id
+            _ = text.title
+            _ = text.body
+            _ = text.level
+        }
+        let stripped = HTMLText.plainText(from: "<p>กินข้าว<br>ที่บ้าน</p>")
+        XCTAssertTrue(stripped.contains("กินข้าว"))
+        _ = HTMLText.title(from: "<title>早上</title>")
+        let tokens = ThaiSegmenter.dictionaryTokens(in: "กินข้าว", dictionary: catalog.words.map(\.thai))
+        XCTAssertEqual(tokens.map(\.text), ["กินข้าว"])
+        _ = ThaiSegmenter.tokens(in: "กินข้าว", dictionary: catalog.words.map(\.thai))
+        for mark in [WordMark.new, .learning, .known, .ignored] {
+            _ = mark.rawValue
+        }
+        let memory = WordMemory(status: .learning, level: 1)
+        XCTAssertEqual(memory.status, .learning)
+        progress.wordMemory["กิน"] = memory
+        progress.library.append(ReaderDocument(id: "doc", title: "标题", body: "กินข้าว", source: "粘贴"))
+        ReaderState.setMark(.known, level: 5, thai: "กิน", progress: &progress)
+        let shown = ReaderState.display(thai: "กิน", catalog: catalog, progress: progress)
+        XCTAssertEqual(shown.status, .known)
+        ReaderState.addToReview(thai: "กิน", sentence: "กินข้าว", catalog: catalog, progress: &progress, on: today)
+        XCTAssertFalse(progress.readerNotes.isEmpty)
+        _ = ReaderState.cardKey(for: "กิน", catalog: catalog)
+        let coverage = ReaderState.coverage(in: "กินข้าว", catalog: catalog, progress: progress)
+        _ = coverage.uniqueWords
+        _ = coverage.known
+        _ = coverage.fraction
+        if let token = tokens.first {
+            _ = ReaderState.sentence(around: token, in: tokens)
+        }
+        _ = progress.library.first?.source
+        _ = progress.readerNotes.first?.context
     }
 
     private func touch(_ phrase: Phrase) {

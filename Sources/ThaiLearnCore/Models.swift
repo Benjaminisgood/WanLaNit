@@ -240,6 +240,7 @@ public struct Catalog: Equatable, Sendable {
     public var sounds: [SoundLesson]
     public var culture: [CultureNote]
     public var words: [VocabWord]
+    public var starters: [StarterText]
 
     public init(
         decks: [Deck],
@@ -250,7 +251,8 @@ public struct Catalog: Equatable, Sendable {
         minimalSets: [MinimalSet],
         sounds: [SoundLesson],
         culture: [CultureNote],
-        words: [VocabWord] = []
+        words: [VocabWord] = [],
+        starters: [StarterText] = []
     ) {
         self.decks = decks
         self.phrases = phrases
@@ -261,6 +263,7 @@ public struct Catalog: Equatable, Sendable {
         self.sounds = sounds
         self.culture = culture
         self.words = words
+        self.starters = starters
     }
 
     public func deck(_ id: String) -> Deck? {

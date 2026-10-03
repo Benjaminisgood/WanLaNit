@@ -10,6 +10,7 @@ final class AppModel {
 
     private(set) var catalog: Catalog?
     private(set) var loadError: String?
+    var importMessage: String?
     var progress: LearningProgress
     var active: ActiveSession?
     var section: AppSection = .today
@@ -74,8 +75,87 @@ final class AppModel {
 
     func grade(_ grade: Grade) {
         guard var session = active, !session.isFinished else { return }
+        let ref = session.current
         session.grade(grade, progress: &progress)
+        if let ref, let catalog, ref.kind == .word {
+            ReaderState.sync(ref, catalog: catalog, progress: &progress)
+        }
         active = session
+        store.save(progress)
+    }
+
+    func importPasted(title: String, body: String) {
+        let trimmed = body.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return }
+        let name = title.trimmingCharacters(in: .whitespacesAndNewlines)
+        progress.library.append(ReaderDocument(
+            id: UUID().uuidString,
+            title: name.isEmpty ? "粘贴的文章" : name,
+            body: trimmed,
+            source: "粘贴"
+        ))
+        importMessage = nil
+        store.save(progress)
+    }
+
+    func importFile(_ url: URL) {
+        let accessed = url.startAccessingSecurityScopedResource()
+        defer { if accessed { url.stopAccessingSecurityScopedResource() } }
+        guard let text = try? String(contentsOf: url, encoding: .utf8) else {
+            importMessage = "这个文件不是 UTF-8 文本。"
+            return
+        }
+        let trimmed = text.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else {
+            importMessage = "文件是空的。"
+            return
+        }
+        progress.library.append(ReaderDocument(
+            id: UUID().uuidString,
+            title: url.deletingPathExtension().lastPathComponent,
+            body: trimmed,
+            source: "文件"
+        ))
+        importMessage = nil
+        store.save(progress)
+    }
+
+    func importRemote(_ raw: String) async {
+        let trimmed = raw.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard let url = URL(string: trimmed), let scheme = url.scheme, scheme == "https" || scheme == "http" else {
+            importMessage = "网址看起来不对。"
+            return
+        }
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            let html = String(data: data, encoding: .utf8) ?? String(decoding: data, as: UTF8.self)
+            let body = HTMLText.plainText(from: html)
+            guard !body.isEmpty else {
+                importMessage = "这个页面里没有能取出的文字。"
+                return
+            }
+            let title = HTMLText.title(from: html) ?? url.host ?? "网页"
+            progress.library.append(ReaderDocument(
+                id: UUID().uuidString,
+                title: title,
+                body: body,
+                source: url.absoluteString
+            ))
+            importMessage = nil
+            store.save(progress)
+        } catch {
+            importMessage = "抓取失败。"
+        }
+    }
+
+    func setWordMark(_ thai: String, status: WordMark, level: Int) {
+        ReaderState.setMark(status, level: level, thai: thai, progress: &progress)
+        store.save(progress)
+    }
+
+    func addWordToReview(thai: String, sentence: String) {
+        guard let catalog else { return }
+        ReaderState.addToReview(thai: thai, sentence: sentence, catalog: catalog, progress: &progress, on: today)
         store.save(progress)
     }
 
@@ -98,6 +178,7 @@ enum AppSection: String, CaseIterable, Identifiable {
     case script
     case culture
     case vocab
+    case reader
     case stats
 
     var id: String { rawValue }
@@ -110,6 +191,7 @@ enum AppSection: String, CaseIterable, Identifiable {
         case .script: return "文字"
         case .culture: return "文化"
         case .vocab: return "词汇"
+        case .reader: return "阅读"
         case .stats: return "统计"
         }
     }
@@ -122,6 +204,7 @@ enum AppSection: String, CaseIterable, Identifiable {
         case .script: return "character.book.closed"
         case .culture: return "leaf"
         case .vocab: return "text.book.closed"
+        case .reader: return "book"
         case .stats: return "chart.bar"
         }
     }
