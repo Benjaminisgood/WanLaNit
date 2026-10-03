@@ -8,6 +8,9 @@ struct SessionView: View {
     var body: some View {
         VStack(spacing: 0) {
             header
+            VoiceSourceBar()
+                .padding(.horizontal, 28)
+                .padding(.bottom, 8)
             ScrollView {
                 VStack(spacing: 22) {
                     if let session = model.active, session.isFinished {

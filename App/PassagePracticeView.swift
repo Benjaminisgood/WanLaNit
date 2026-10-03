@@ -23,7 +23,6 @@ private enum PracticeMode: String, CaseIterable, Identifiable {
 
 struct PassagePracticeView: View {
     @Environment(AppModel.self) private var model
-    @Environment(SpeechService.self) private var speech
     @State private var level = 0
     @State private var selectedID: String?
     @State private var mode: PracticeMode = .tap
@@ -101,7 +100,7 @@ struct PassagePracticeView: View {
             shadowReady = false
             added = false
             playing = false
-            speech.stop()
+            model.stopPlayback()
             if let id {
                 picks = Array(repeating: -1, count: catalog.passage(id)?.questions.count ?? 0)
                 model.markPassageRead(id)
@@ -114,7 +113,7 @@ struct PassagePracticeView: View {
             }
         }
         .onDisappear {
-            speech.stop()
+            model.stopPlayback()
         }
     }
 
@@ -138,6 +137,7 @@ struct PassagePracticeView: View {
                     Text(passage.title).font(.title2.bold())
                     Text("第 \(passage.level) 级 · \(passage.topic)")
                         .foregroundStyle(Ink.muted)
+                    VoiceSourceBar(showsSpeed: false)
                 }
                 Spacer()
                 ForEach(PracticeMode.allCases) { item in
@@ -145,7 +145,7 @@ struct PassagePracticeView: View {
                         mode = item
                         playing = false
                         shadowReady = false
-                        speech.stop()
+                        model.stopPlayback()
                     }
                     .buttonStyle(.bordered)
                     .tint(mode == item ? Ink.lacquer : Ink.ink)
@@ -297,7 +297,7 @@ struct PassagePracticeView: View {
                     Button(playing ? "停止" : (shadow ? "播放这一句" : "从头朗读")) {
                         if playing {
                             playing = false
-                            speech.stop()
+                            model.stopPlayback()
                         } else if shadow {
                             speak(sentences, index: sentenceIndex, advance: false)
                         } else {
@@ -306,19 +306,19 @@ struct PassagePracticeView: View {
                     }
                     .buttonStyle(.borderedProminent)
                     .tint(Ink.lacquer)
-                    .disabled(sentences.isEmpty || !speech.hasThaiVoice)
+                    .disabled(sentences.isEmpty || !model.canSpeak)
                     if shadow {
                         Button("上一句") {
                             sentenceIndex = max(0, sentenceIndex - 1)
                             shadowReady = false
-                            speech.stop()
+                            model.stopPlayback()
                             playing = false
                         }
                         .disabled(sentenceIndex == 0)
                         Button("下一句") {
                             sentenceIndex = min(sentences.count - 1, sentenceIndex + 1)
                             shadowReady = false
-                            speech.stop()
+                            model.stopPlayback()
                             playing = false
                         }
                         .disabled(sentenceIndex >= sentences.count - 1)
@@ -462,7 +462,7 @@ struct PassagePracticeView: View {
                     }
                     .buttonStyle(.borderedProminent)
                     .tint(Ink.lacquer)
-                    .disabled(!speech.hasThaiVoice || expected.isEmpty)
+                    .disabled(!model.canSpeak || expected.isEmpty)
                     Button("上一句") { moveDictation(to: index - 1, count: sentences.count) }
                         .disabled(index == 0)
                     Button("下一句") { moveDictation(to: index + 1, count: sentences.count) }
@@ -489,7 +489,7 @@ struct PassagePracticeView: View {
         dictIndex = min(max(0, index), count - 1)
         dictTyped = ""
         reveal = false
-        speech.stop()
+        model.stopPlayback()
         playing = false
     }
 
@@ -502,7 +502,7 @@ struct PassagePracticeView: View {
         shadowReady = false
         let text = sentences[index]
         playing = true
-        let started = speech.speak(text, rateScale: rate) {
+        model.play(text, rate: rate) {
             DispatchQueue.main.async {
                 playing = false
                 if advance, index + 1 < sentences.count {
@@ -512,7 +512,6 @@ struct PassagePracticeView: View {
                 }
             }
         }
-        if !started { playing = false }
     }
 
     private func lookup(_ thai: String, passage: ReadingPassage, catalog: Catalog) -> (roman: String, meaning: String) {

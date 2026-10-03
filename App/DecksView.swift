@@ -57,6 +57,7 @@ private struct DeckDetail: View {
             VStack(alignment: .leading, spacing: 16) {
                 Text(deck.title)
                     .font(.title.bold())
+                VoiceSourceBar()
                 Text(deck.blurb)
                     .foregroundStyle(Ink.muted)
                 Text("\(deck.phase.title) · \(deck.phase.daySpan)")

@@ -372,6 +372,37 @@ final class AppAPISurfaceTests: XCTestCase {
         XCTAssertEqual(passageLog?.correct, 2)
         XCTAssertEqual(passageLog?.asked, 3)
         XCTAssertEqual(passageLog?.dictated, 1)
+
+        let masked = AIKeyMask.mask("sk-test-fixture-not-a-real-key-0001")
+        XCTAssertEqual(masked, "sk-…0001")
+        XCTAssertFalse(masked.contains("fixture"))
+        let parsed = AIKeyParser.parse("OPENAI_API_KEY=sk-test-fixture-not-a-real-key-0001\n")
+        XCTAssertEqual(parsed.first?.provider, .openai)
+        XCTAssertEqual(parsed.first?.maskedKey, masked)
+        _ = parsed.first?.resolvedBaseURL
+        _ = parsed.first?.model(for: .chat, override: nil)
+        _ = AIProvider.openai.chinese
+        _ = AIProvider.openai.capabilities
+        _ = AICapability.chat.chinese
+        let aligned = SpeakAlign.score(target: "กิน", heard: "กิน", dictionary: ["กิน"])
+        XCTAssertEqual(aligned.score, 100)
+        _ = aligned.note
+        _ = aligned.pieces.first?.status
+        let batch = try AIExerciseService.decode("""
+        {"exercises":[{"id":"1","kind":"toThai","prompt":"写成泰文","thai":"","chinese":"吃","answer":"กิน","choices":[],"blank":""}]}
+        """)
+        XCTAssertTrue(AIExerciseService.issues(batch).isEmpty)
+        _ = AIExerciseService.messages(words: ["กิน"], topic: "食物", level: "入门").first?.content
+        var usage = progress.ai.usage
+        XCTAssertTrue(usage.allows(today))
+        usage.record(on: today)
+        progress.ai.usage = usage
+        progress.recordSpeakAttempt(SpeakAttempt(id: "a", target: "กิน", transcript: "กิน", score: 100, on: today.iso))
+        XCTAssertEqual(progress.ai.attempts.first?.score, 100)
+        _ = AICacheKey.sha256("abc")
+        _ = WAVAudio.pcm16(samples: [0], sampleRate: 16000).count
+        XCTAssertFalse(progress.ai.useAIVoice)
+        _ = AIAssignments().chatID
     }
 
     private func touch(_ phrase: Phrase) {

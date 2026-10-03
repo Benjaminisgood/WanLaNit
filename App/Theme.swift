@@ -51,17 +51,61 @@ struct ThaiLine: View {
 }
 
 struct PlayButton: View {
-    @Environment(SpeechService.self) private var speech
+    @Environment(AppModel.self) private var model
     var text: String
     var title: String = "听"
 
     var body: some View {
         Button {
-            speech.speak(text)
+            model.play(text)
         } label: {
             Label(title, systemImage: "speaker.wave.2")
         }
-        .disabled(!speech.hasThaiVoice)
+        .disabled(!model.canSpeak)
+    }
+}
+
+struct VoiceSourceBar: View {
+    @Environment(AppModel.self) private var model
+    var showsSpeed = true
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            Picker("朗读", selection: Binding(
+                get: { model.progress.ai.useAIVoice },
+                set: { model.setUseAIVoice($0) }
+            )) {
+                Text("系统语音").tag(false)
+                Text("AI 语音").tag(true)
+            }
+            .pickerStyle(.segmented)
+            .frame(maxWidth: 260)
+            HStack {
+                if model.progress.ai.useAIVoice {
+                    Picker("音色", selection: Binding(
+                        get: { model.progress.ai.voice },
+                        set: { model.setAIVoice($0) }
+                    )) {
+                        ForEach(model.voiceChoices, id: \.self) { voice in
+                            Text(voice).tag(voice)
+                        }
+                    }
+                    .frame(maxWidth: 240)
+                }
+                if showsSpeed {
+                    Text("语速")
+                        .foregroundStyle(Ink.muted)
+                    Slider(
+                        value: Binding(
+                            get: { model.progress.ai.rate },
+                            set: { model.setAIRate($0) }
+                        ),
+                        in: 0.5...1.2
+                    )
+                    .frame(maxWidth: 160)
+                }
+            }
+        }
     }
 }
 

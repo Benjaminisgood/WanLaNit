@@ -32,6 +32,9 @@ struct VocabView: View {
 
     var body: some View {
         VStack(spacing: 0) {
+            VoiceSourceBar()
+                .padding(.horizontal, 16)
+                .padding(.top, 12)
             HStack(spacing: 12) {
                 TextField("搜泰文、罗马音或中文", text: $query)
                     .textFieldStyle(.roundedBorder)

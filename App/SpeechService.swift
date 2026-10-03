@@ -32,6 +32,9 @@ final class SpeechService {
             synth.delegate = bridge
             self.bridge = bridge
         }
+        playerBridge?.onFinish = nil
+        player?.stop()
+        player = nil
         synth.stopSpeaking(at: .immediate)
         bridge?.onFinish = whenFinished
         let utterance = AVSpeechUtterance(string: text)
@@ -42,9 +45,32 @@ final class SpeechService {
         return true
     }
 
+    private var player: AVAudioPlayer?
+    private var playerBridge: PlayerBridge?
+
+    @discardableResult
+    func playAudio(_ data: Data, whenFinished: (() -> Void)? = nil) -> Bool {
+        stop()
+        do {
+            let player = try AVAudioPlayer(data: data)
+            let bridge = PlayerBridge()
+            bridge.onFinish = whenFinished
+            player.delegate = bridge
+            player.prepareToPlay()
+            self.player = player
+            playerBridge = bridge
+            return player.play()
+        } catch {
+            return false
+        }
+    }
+
     func stop() {
         bridge?.onFinish = nil
         synth.stopSpeaking(at: .immediate)
+        playerBridge?.onFinish = nil
+        player?.stop()
+        player = nil
     }
 }
 
@@ -59,5 +85,15 @@ private final class SpeechBridge: NSObject, AVSpeechSynthesizerDelegate {
 
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
         onFinish = nil
+    }
+}
+
+private final class PlayerBridge: NSObject, AVAudioPlayerDelegate {
+    var onFinish: (() -> Void)?
+
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        let callback = onFinish
+        onFinish = nil
+        callback?()
     }
 }

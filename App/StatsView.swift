@@ -80,6 +80,7 @@ struct StatsView: View {
         .toolbarBackground(.visible, for: .windowToolbar)
     }
 
+    @ViewBuilder
     private var settings: some View {
         CardShell {
             VStack(alignment: .leading, spacing: 14) {
@@ -124,6 +125,7 @@ struct StatsView: View {
                     .fixedSize(horizontal: false, vertical: true)
             }
         }
+        AISettingsView()
     }
 
     private func stat(title: String, value: String) -> some View {

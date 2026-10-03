@@ -55,6 +55,7 @@ struct RootView: View {
             case .reader: ReaderView()
             case .typing: TypingView()
             case .passages: PassagePracticeView()
+            case .ai: AIPracticeView()
             case .stats: StatsView()
             }
         }
@@ -81,7 +82,7 @@ struct RootView: View {
             return LearningPath.isUnlocked(.vocabulary, catalog: catalog, progress: model.progress)
         case .reader:
             return LearningPath.isUnlocked(.reading, catalog: catalog, progress: model.progress)
-        case .today, .decks, .script, .culture, .stats, .typing, .passages:
+        case .today, .decks, .script, .culture, .stats, .typing, .passages, .ai:
             return true
         }
     }

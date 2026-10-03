@@ -91,6 +91,7 @@ struct ReaderView: View {
         return HStack(alignment: .top, spacing: 0) {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
+                    VoiceSourceBar()
                     Text(piece.title).font(.title.bold())
                     Text("\(coverage.uniqueWords) 个不同的词 · 已认识 \(percent(coverage.fraction))")
                         .foregroundStyle(Ink.muted)
