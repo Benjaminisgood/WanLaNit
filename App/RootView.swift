@@ -1,5 +1,6 @@
 import AppKit
 import SwiftUI
+import ThaiLearnCore
 
 struct RootView: View {
     @Environment(AppModel.self) private var model

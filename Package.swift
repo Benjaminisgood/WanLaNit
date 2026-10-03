@@ -19,6 +19,7 @@ let package = Package(
             exclude: [
                 "App",
                 "Tests",
+                "scripts",
                 ".github",
                 "README.md",
                 "project.yml",
