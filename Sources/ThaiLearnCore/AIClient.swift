@@ -338,6 +338,94 @@ public final class AzureSpeech: SpeechSynthesizer {
     }
 }
 
+public final class DashScopeASR: SpeechRecognizer {
+    public let apiKey: String
+    public let model: String
+    public let endpoint: URL
+    public let transport: AITransport
+    public var language: String
+
+    public init(apiKey: String, model: String, endpoint: URL, transport: AITransport, language: String = "th") {
+        self.apiKey = apiKey
+        self.model = model
+        self.endpoint = endpoint
+        self.transport = transport
+        self.language = language
+    }
+
+    /// Native multimodal endpoint. Chat stays on the OpenAI-compatible URL; this one does not.
+    public static func endpoint(baseURL: String?) -> URL {
+        let path = "/api/v1/services/aigc/multimodal-generation/generation"
+        let fallback = URL(string: "https://dashscope.aliyuncs.com\(path)")!
+        guard let baseURL,
+              let parsed = URL(string: baseURL),
+              let host = parsed.host,
+              host.contains("dashscope")
+        else { return fallback }
+        let scheme = parsed.scheme ?? "https"
+        return URL(string: "\(scheme)://\(host)\(path)") ?? fallback
+    }
+
+    public func transcribe(audioWAV: Data) async throws -> String {
+        let audio = "data:audio/wav;base64,\(audioWAV.base64EncodedString())"
+        let payload: [String: Any] = [
+            "model": model,
+            "input": [
+                "messages": [
+                    [
+                        "role": "user",
+                        "content": [
+                            ["audio": audio]
+                        ]
+                    ]
+                ]
+            ],
+            "parameters": [
+                "asr_options": [
+                    "language": language,
+                    "enable_itn": false
+                ]
+            ]
+        ]
+        var request = URLRequest(url: endpoint)
+        request.httpMethod = "POST"
+        request.timeoutInterval = 45
+        request.setValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try JSONSerialization.data(withJSONObject: payload)
+        let response = try await transport.send(request)
+        guard (200..<300).contains(response.status) else {
+            throw AIClientError.http(status: response.status, message: AIKeyMask.redact(response.text, secrets: [apiKey]))
+        }
+        return try Self.transcript(from: response.data)
+    }
+
+    static func transcript(from data: Data) throws -> String {
+        guard let object = try? JSONSerialization.jsonObject(with: data) as? [String: Any] else {
+            throw AIClientError.decode
+        }
+        if let output = object["output"] as? [String: Any] {
+            if let choices = output["choices"] as? [[String: Any]],
+               let message = choices.first?["message"] as? [String: Any] {
+                if let content = message["content"] as? String {
+                    let trimmed = content.trimmingCharacters(in: .whitespacesAndNewlines)
+                    if !trimmed.isEmpty { return trimmed }
+                }
+                if let parts = message["content"] as? [[String: Any]] {
+                    let text = parts.compactMap { $0["text"] as? String }.joined()
+                    let trimmed = text.trimmingCharacters(in: .whitespacesAndNewlines)
+                    if !trimmed.isEmpty { return trimmed }
+                }
+            }
+            if let text = output["text"] as? String {
+                let trimmed = text.trimmingCharacters(in: .whitespacesAndNewlines)
+                if !trimmed.isEmpty { return trimmed }
+            }
+        }
+        throw AIClientError.empty
+    }
+}
+
 public enum AIClients {
     public static func transport(_ session: URLSession = .shared) -> AITransport {
         URLSessionAITransport(session: session)
@@ -392,6 +480,14 @@ public enum AIClients {
 
     public static func recognizer(_ credential: AICredential, model: String, transport: AITransport) throws -> SpeechRecognizer {
         guard credential.provider.capabilities.contains(.transcription) else { throw AIClientError.badURL }
+        if credential.provider == .dashscope {
+            return DashScopeASR(
+                apiKey: credential.apiKey,
+                model: model.isEmpty ? credential.provider.defaultTranscriptionModel : model,
+                endpoint: DashScopeASR.endpoint(baseURL: credential.resolvedBaseURL),
+                transport: transport
+            )
+        }
         guard let url = URL(string: credential.resolvedBaseURL), !credential.resolvedBaseURL.isEmpty else {
             throw AIClientError.badURL
         }

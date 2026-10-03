@@ -57,6 +57,40 @@ final class AITests: XCTestCase {
         let encoded = String(data: (try? JSONEncoder().encode(found)) ?? Data(), encoding: .utf8) ?? ""
         XCTAssertTrue(encoded.contains("sk-test-fixture"))
         XCTAssertFalse(AIKeyMask.mask("sk-test-fixture-not-a-real-key-0001").contains("fixture"))
+        let dash = found.first { $0.provider == .dashscope }
+        XCTAssertEqual(dash?.resolvedBaseURL, "https://dashscope.aliyuncs.com/compatible-mode/v1")
+        XCTAssertEqual(dash?.model(for: .chat, override: nil), "qwen-plus")
+        XCTAssertEqual(dash?.model(for: .transcription, override: nil), "qwen3-asr-flash")
+        XCTAssertFalse(dash?.provider.capabilities.contains(.speech) == true)
+    }
+
+    func testDashScopeIsPreselectedAheadOfOpenAI() {
+        XCTAssertEqual(AIProvider.named("百炼"), .dashscope)
+        XCTAssertEqual(AIProvider.named("通义千问"), .dashscope)
+        XCTAssertEqual(AIProvider.named("qwen"), .dashscope)
+        XCTAssertEqual(AIProvider.named("aliyun"), .dashscope)
+        let text = """
+        OPENAI_API_KEY=sk-test-fixture-not-a-real-key-0001
+        # 百炼
+        model: qwen-max
+        api_key: sk-bailian-heading-test-0001
+        # 通义
+        通义千问: sk-tongyi-label-test-0002
+        BAILIAN_API_KEY=sk-bailian-env-test-0003
+        """
+        let found = AIKeyParser.parse(text)
+        XCTAssertEqual(found.first?.provider, .openai)
+        let dash = found.filter { $0.provider == .dashscope }
+        XCTAssertEqual(dash.count, 3)
+        XCTAssertEqual(dash.first?.models, ["qwen-max"])
+        let chosen = AIAssignments.preselected(from: found)
+        XCTAssertEqual(found.first { $0.id == chosen.chatID }?.provider, .dashscope)
+        XCTAssertEqual(chosen.chatModel, "qwen-max")
+        XCTAssertEqual(chosen.transcriptionModel, "qwen3-asr-flash")
+        XCTAssertNil(chosen.speechID)
+        XCTAssertEqual(AICredential.preferred(.chat, among: found)?.provider, .dashscope)
+        XCTAssertEqual(AICredential.preferred(.speech, among: found)?.provider, .openai)
+        XCTAssertNotEqual(chosen.chatID, found.first?.id)
     }
 
     func testMaskingHidesTheMiddle() {
@@ -246,6 +280,42 @@ final class AITests: XCTestCase {
         }
         let azureOK = await AIClients.probe(azure, model: nil, transport: transport)
         XCTAssertEqual(azureOK, "连接成功")
+
+        let dash = AICredential(
+            id: "dashscope-1",
+            provider: .dashscope,
+            label: "通义千问",
+            apiKey: secret,
+            models: ["qwen-plus"]
+        )
+        XCTAssertEqual(
+            DashScopeASR.endpoint(baseURL: dash.resolvedBaseURL).absoluteString,
+            "https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation"
+        )
+        XCTAssertEqual(
+            DashScopeASR.endpoint(baseURL: "https://dashscope-intl.aliyuncs.com/compatible-mode/v1").host,
+            "dashscope-intl.aliyuncs.com"
+        )
+        MockAIProtocol.handler = { request in
+            XCTAssertEqual(
+                request.url?.absoluteString,
+                "https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation"
+            )
+            XCTAssertEqual(request.value(forHTTPHeaderField: "Authorization"), "Bearer \(secret)")
+            let body = request.httpBody ?? Data()
+            let json = (String(data: body, encoding: .utf8) ?? "").replacingOccurrences(of: "\\/", with: "/")
+            XCTAssertTrue(json.contains("\"model\":\"qwen3-asr-flash\""))
+            XCTAssertTrue(json.contains("\"language\":\"th\""))
+            XCTAssertTrue(json.contains("data:audio/wav;base64,"))
+            XCTAssertFalse(json.contains("/audio/transcriptions"))
+            let reply = """
+            {"output":{"choices":[{"message":{"content":[{"text":"กินข้าว"}]}}]}}
+            """
+            return (200, Data(reply.utf8), "application/json")
+        }
+        let thai = try AIClients.recognizer(dash, model: "qwen3-asr-flash", transport: transport)
+        let heard = try await thai.transcribe(audioWAV: WAVAudio.pcm16(samples: [0.2, -0.2], sampleRate: 16000))
+        XCTAssertEqual(heard, "กินข้าว")
     }
 }
 

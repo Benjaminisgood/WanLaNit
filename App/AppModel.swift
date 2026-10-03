@@ -269,7 +269,7 @@ final class AppModel {
         if let chosen, let match = credentials.first(where: { $0.id == chosen }) {
             return match.provider.capabilities.contains(capability) ? match : nil
         }
-        return credentials.first { $0.provider.capabilities.contains(capability) }
+        return AICredential.preferred(capability, among: credentials)
     }
 
     func probe(_ credential: AICredential, model: String?) async -> String {

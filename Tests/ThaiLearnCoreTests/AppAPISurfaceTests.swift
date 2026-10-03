@@ -403,6 +403,17 @@ final class AppAPISurfaceTests: XCTestCase {
         _ = WAVAudio.pcm16(samples: [0], sampleRate: 16000).count
         XCTAssertFalse(progress.ai.useAIVoice)
         _ = AIAssignments().chatID
+        let dashscope = AICredential(
+            id: "dashscope-1",
+            provider: .dashscope,
+            label: AIProvider.dashscope.chinese,
+            apiKey: "sk-dashscope-test-3456"
+        )
+        XCTAssertEqual(dashscope.model(for: .chat, override: nil), AIProvider.dashscope.defaultChatModel)
+        XCTAssertEqual(dashscope.model(for: .transcription, override: nil), "qwen3-asr-flash")
+        XCTAssertEqual(AICredential.preferred(.chat, among: parsed + [dashscope])?.provider, .dashscope)
+        XCTAssertEqual(AIAssignments.preselected(from: [dashscope]).chatModel, "qwen-plus")
+        _ = DashScopeASR.endpoint(baseURL: dashscope.resolvedBaseURL).absoluteString
     }
 
     private func touch(_ phrase: Phrase) {

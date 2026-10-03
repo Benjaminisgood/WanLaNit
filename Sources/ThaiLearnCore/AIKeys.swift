@@ -53,7 +53,9 @@ public enum AIProvider: String, Codable, CaseIterable, Hashable, Sendable {
             return [.chat, .speech]
         case .azure, .elevenlabs:
             return [.speech]
-        case .gemini, .deepseek, .dashscope, .zhipu, .moonshot, .anthropic, .openrouter:
+        case .dashscope:
+            return [.chat, .transcription]
+        case .gemini, .deepseek, .zhipu, .moonshot, .anthropic, .openrouter:
             return [.chat]
         }
     }
@@ -105,6 +107,7 @@ public enum AIProvider: String, Codable, CaseIterable, Hashable, Sendable {
     public var defaultTranscriptionModel: String {
         switch self {
         case .openai, .custom: return "whisper-1"
+        case .dashscope: return "qwen3-asr-flash"
         default: return ""
         }
     }
@@ -128,12 +131,15 @@ public enum AIProvider: String, Codable, CaseIterable, Hashable, Sendable {
         let name = raw.lowercased()
             .replacingOccurrences(of: " ", with: "")
             .replacingOccurrences(of: "_", with: "")
+            .replacingOccurrences(of: "-", with: "")
             .replacingOccurrences(of: "*", with: "")
         switch name {
         case "openai": return .openai
         case "gemini", "google", "googleai": return .gemini
         case "deepseek": return .deepseek
-        case "dashscope", "qwen", "tongyi", "aliyun": return .dashscope
+        case "dashscope", "qwen", "tongyi", "aliyun", "bailian", "alibaba",
+            "百炼", "通义", "通义千问", "阿里云", "阿里云百炼", "阿里百炼":
+            return .dashscope
         case "zhipu", "zhipuai", "glm", "bigmodel": return .zhipu
         case "moonshot", "kimi": return .moonshot
         case "anthropic", "claude": return .anthropic
@@ -142,7 +148,11 @@ public enum AIProvider: String, Codable, CaseIterable, Hashable, Sendable {
         case "azure", "azurespeech", "microsoft": return .azure
         case "elevenlabs", "eleven", "11labs": return .elevenlabs
         case "custom": return .custom
-        default: return nil
+        default:
+            if name.contains("百炼") || name.contains("通义") || name.contains("dashscope") || name.contains("qwen") {
+                return .dashscope
+            }
+            return nil
         }
     }
 }
@@ -188,12 +198,44 @@ public struct AICredential: Codable, Equatable, Identifiable, Sendable {
     public func model(for capability: AICapability, override: String?) -> String {
         let chosen = override?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         if !chosen.isEmpty { return chosen }
-        if let first = models.first, !first.isEmpty { return first }
         switch capability {
-        case .chat: return provider.defaultChatModel
-        case .speech: return provider.defaultSpeechModel
-        case .transcription: return provider.defaultTranscriptionModel
+        case .chat:
+            if let match = models.first(where: { !Self.looksLikeSpeechModel($0) && !Self.looksLikeTranscriptionModel($0) }) {
+                return match
+            }
+            if !provider.defaultChatModel.isEmpty { return provider.defaultChatModel }
+        case .speech:
+            if let match = models.first(where: Self.looksLikeSpeechModel) {
+                return match
+            }
+            if !provider.defaultSpeechModel.isEmpty { return provider.defaultSpeechModel }
+        case .transcription:
+            if let match = models.first(where: Self.looksLikeTranscriptionModel) {
+                return match
+            }
+            if !provider.defaultTranscriptionModel.isEmpty { return provider.defaultTranscriptionModel }
         }
+        return models.first ?? ""
+    }
+
+    /// Chat and recognition prefer a Bailian / DashScope key when one is present.
+    /// Speech stays with whichever speech provider was listed; DashScope has no Thai system voice.
+    public static func preferred(_ capability: AICapability, among credentials: [AICredential]) -> AICredential? {
+        let capable = credentials.filter { $0.provider.capabilities.contains(capability) }
+        if capability != .speech, let dash = capable.first(where: { $0.provider == .dashscope }) {
+            return dash
+        }
+        return capable.first
+    }
+
+    private static func looksLikeSpeechModel(_ model: String) -> Bool {
+        let lower = model.lowercased()
+        return lower.contains("tts") || lower.contains("cosyvoice") || lower.contains("sambert")
+    }
+
+    private static func looksLikeTranscriptionModel(_ model: String) -> Bool {
+        let lower = model.lowercased()
+        return lower.contains("asr") || lower.contains("whisper") || lower.contains("paraformer") || lower.contains("gummy")
     }
 }
 
@@ -219,6 +261,23 @@ public struct AIAssignments: Codable, Equatable, Sendable {
         self.chatModel = chatModel
         self.speechModel = speechModel
         self.transcriptionModel = transcriptionModel
+    }
+
+    /// Picks the DashScope entry for chat and Thai recognition when the file contains one.
+    /// Speech is left unset so playback stays on the system th-TH voice.
+    public static func preselected(from credentials: [AICredential]) -> AIAssignments {
+        let chat = AICredential.preferred(.chat, among: credentials)
+        let transcription = AICredential.preferred(.transcription, among: credentials)
+        let chatIsDash = chat?.provider == .dashscope
+        let transcriptionIsDash = transcription?.provider == .dashscope
+        return AIAssignments(
+            chatID: chatIsDash ? chat?.id : nil,
+            speechID: nil,
+            transcriptionID: transcriptionIsDash ? transcription?.id : nil,
+            chatModel: chatIsDash ? chat?.model(for: .chat, override: nil) : nil,
+            speechModel: nil,
+            transcriptionModel: transcriptionIsDash ? transcription?.model(for: .transcription, override: nil) : nil
+        )
     }
 }
 
@@ -445,7 +504,8 @@ public enum AIKeyParser {
         case "OPENAI_API_KEY": return .openai
         case "GEMINI_API_KEY", "GOOGLE_API_KEY": return .gemini
         case "DEEPSEEK_API_KEY": return .deepseek
-        case "DASHSCOPE_API_KEY", "QWEN_API_KEY": return .dashscope
+        case "DASHSCOPE_API_KEY", "QWEN_API_KEY", "BAILIAN_API_KEY", "ALIYUN_API_KEY", "TONGYI_API_KEY":
+            return .dashscope
         case "ZHIPU_API_KEY", "ZHIPUAI_API_KEY", "GLM_API_KEY": return .zhipu
         case "MOONSHOT_API_KEY", "KIMI_API_KEY": return .moonshot
         case "ANTHROPIC_API_KEY": return .anthropic
@@ -462,6 +522,11 @@ public enum AIKeyParser {
         if lower.contains("openai") { return .openai }
         if lower.contains("gemini") || lower.contains("google") { return .gemini }
         if lower.contains("azure") { return .azure }
+        if lower.contains("dashscope") || lower.contains("qwen") || lower.contains("aliyun")
+            || lower.contains("bailian") || lower.contains("tongyi")
+            || name.contains("百炼") || name.contains("通义") {
+            return .dashscope
+        }
         return nil
     }
 

@@ -8,7 +8,7 @@ struct AISettingsView: View {
     @State private var draft: [AICredential] = []
     @State private var notice = ""
     @State private var probes: [String: String] = [:]
-    @State private var provider: AIProvider = .openai
+    @State private var provider: AIProvider = .dashscope
     @State private var manualKey = ""
     @State private var manualBase = ""
     @State private var manualModel = ""
@@ -25,7 +25,7 @@ struct AISettingsView: View {
             VStack(alignment: .leading, spacing: 14) {
                 Text("AI 设置")
                     .font(.headline)
-                Text("钥匙只放在系统钥匙串里，服务名是 WanLaNit.AI。不会写进 progress.json，也不会打到日志里。不设置也能学习：朗读用系统泰语，出题用本地题目，跟读用系统语音识别。")
+                Text("钥匙只放在系统钥匙串里，服务名是 WanLaNit.AI。不会写进 progress.json，也不会打到日志里。对话和出题默认通义千问（qwen-plus，可改）。朗读默认系统泰语。语音识别默认通义 qwen3-asr-flash，失败再用系统识别。")
                     .font(.callout)
                     .foregroundStyle(Ink.muted)
                     .fixedSize(horizontal: false, vertical: true)
@@ -83,13 +83,17 @@ struct AISettingsView: View {
                     .font(.headline)
                     .padding(.top, 4)
                 assignmentPicker("对话、出题、批改", selection: $chatID, capability: .chat)
-                TextField("对话模型，可空", text: $chatModel)
+                TextField("对话模型，可空。通义默认 qwen-plus", text: $chatModel)
                     .textFieldStyle(.roundedBorder)
                 assignmentPicker("AI 朗读", selection: $speechID, capability: .speech)
+                Text("朗读默认仍是系统泰语。通义 Qwen-TTS 没有泰语；CosyVoice 的泰语只给复刻音色。要云端朗读再选 OpenAI、硅基流动、Azure 或 ElevenLabs。")
+                    .font(.caption)
+                    .foregroundStyle(Ink.muted)
+                    .fixedSize(horizontal: false, vertical: true)
                 TextField("朗读模型，可空", text: $speechModel)
                     .textFieldStyle(.roundedBorder)
                 assignmentPicker("语音识别", selection: $transcriptionID, capability: .transcription)
-                TextField("识别模型，可空", text: $transcriptionModel)
+                TextField("识别模型，可空。通义默认 qwen3-asr-flash", text: $transcriptionModel)
                     .textFieldStyle(.roundedBorder)
                 VoiceSourceBar()
                 Button("保存到钥匙串") { save() }
@@ -149,7 +153,7 @@ struct AISettingsView: View {
 
     private func assignmentPicker(_ title: String, selection: Binding<String>, capability: AICapability) -> some View {
         Picker(title, selection: selection) {
-            Text("自动（第一条合适的）").tag("")
+            Text(capability == .speech ? "自动（第一条能朗读的）" : "自动（优先通义千问）").tag("")
             ForEach(draft.filter { $0.provider.capabilities.contains(capability) }) { item in
                 Text("\(item.provider.chinese) \(item.maskedKey)").tag(item.id)
             }
@@ -190,7 +194,16 @@ struct AISettingsView: View {
             return
         }
         draft = found
-        notice = "认出 \(found.count) 条。核对打码后的钥匙，选好用途，再保存到钥匙串。"
+        let preferred = AIAssignments.preselected(from: found)
+        chatID = preferred.chatID ?? ""
+        transcriptionID = preferred.transcriptionID ?? ""
+        if let modelName = preferred.chatModel { chatModel = modelName }
+        if let modelName = preferred.transcriptionModel { transcriptionModel = modelName }
+        if preferred.chatID != nil {
+            notice = "认出 \(found.count) 条。对话和识别已预选通义千问，朗读仍用系统泰语。核对后保存到钥匙串。"
+        } else {
+            notice = "认出 \(found.count) 条。没有通义千问的钥匙，对话仍按「自动」选。核对后保存到钥匙串。"
+        }
     }
 
     private func addManual() {

@@ -105,6 +105,12 @@ Actions 里的 “Build macOS app” 会在 macOS 上跑测试、编译，并上
 
 侧栏「AI 练习」一开始就在，不跟学习路线走。没有钥匙也能用：朗读用系统泰语声音，出题用本地题目，跟读用系统的泰语识别。阅读、精读、句子、词汇和这一轮的卡片上可以选「系统语音」或「AI 语音」，并改音色和语速。
 
+导入钥匙之后，对话、出题、批改和对话伙伴默认走通义千问。地址是百炼的 OpenAI 兼容接口 `https://dashscope.aliyuncs.com/compatible-mode/v1`，模型默认 `qwen-plus`，在「AI 设置」里可以改。`APIKEY.md` 里只要出现 `DASHSCOPE_API_KEY`、百炼、通义、qwen 或 aliyun，就会预选这一条，即使 OpenAI 的钥匙写在前面。
+
+朗读仍默认系统泰语（`th-TH`）。官方说明里，Qwen-TTS / qwen3-tts-flash 的语种没有泰语；CosyVoice 的泰语只出现在复刻或设计音色上，v3.5 没有系统音色。Sambert 有泰语女声 `sambert-waan-v1`，但只走 WebSocket，新地址还要业务空间 ID，所以不拿来当默认。要云端朗读，仍可另选 OpenAI、硅基流动、Azure 或 ElevenLabs。
+
+跟读的语音识别默认通义 `qwen3-asr-flash`，语言固定为 `th`。这个接口不是 OpenAI 兼容的转写地址，而是 `https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation`。识别失败，或没有通义钥匙时，再用系统的 `SFSpeechRecognizer`（`th-TH`）。
+
 有钥匙之后可以：
 
 - AI 朗读。同一句会按文字、音色和模型缓存在这台 Mac 上，再听不重复请求。
@@ -117,13 +123,20 @@ Actions 里的 “Build macOS app” 会在 macOS 上跑测试、编译，并上
 
 1. 打开侧栏「统计」或「AI 练习」里的「AI 设置」。
 2. 点「从 APIKEY.md 导入」。文件窗口会先指到 `~/keyoti/keyitems/pems/`，选中你的 `APIKEY.md`。
-3. 核对打码后的钥匙（例如 `sk-…abcd`）、服务、地址和模型，选好哪一条用来对话、朗读、识别，再点「保存到钥匙串」。也可以手动填一条。
+3. 核对打码后的钥匙（例如 `sk-…abcd`）、服务、地址和模型。有通义千问时，对话和识别会预选它，模型分别是 `qwen-plus` 和 `qwen3-asr-flash`，都可以改。朗读不用预选。再点「保存到钥匙串」。也可以手动填一条。
 4. 每条旁边有「测试连接」。
 5. 第一次跟读或说话时，系统会问麦克风和语音识别权限，两点允许。
 
 钥匙只进 macOS 钥匙串，服务名是 `WanLaNit.AI`。不写进 `progress.json`，不放 UserDefaults，也不写进日志。进度里只记跟读分数、转写、对话和每天用了几次。可以设每天请求上限。读到缓存的朗读不计次。
 
 语音会发到你选的那一家。系统识别如果这台 Mac 能在本机完成，就不开云端；做不到时，系统自己的识别可能会把声音交给 Apple。界面会说明跟读分数不是声学评分。
+
+泰语能不能走通义，以这些官方说明为准，没有照搬它们的示例代码：
+
+- Qwen-TTS 语种与接口：[Qwen-TTS API](https://help.aliyun.com/en/model-studio/qwen-tts-api)、[非实时语音合成](https://help.aliyun.com/zh/model-studio/non-realtime-tts-user-guide)
+- CosyVoice 的泰语只给复刻/设计音色：[CosyVoice HTTP](https://help.aliyun.com/zh/model-studio/cosyvoice-tts-http-api)
+- Sambert 泰语女声 `sambert-waan-v1`，WebSocket：[Sambert Python SDK](https://help.aliyun.com/zh/model-studio/sambert-python-sdk)、[Sambert WebSocket](https://help.aliyun.com/zh/model-studio/sambert-websocket-api)
+- Qwen3-ASR-Flash 的 `language` 含 `th`：[DashScope 同步识别](https://docs.qwencloud.com/api-reference/speech-recognition/qwen-asr/dashscope)、[Qwen-ASR API](https://www.alibabacloud.com/help/en/model-studio/qwen-asr-api-reference)
 
 加一句时，复制 `phrases.json` 里一条，换掉 `id`，填泰文、罗马音、中文，以及每个音节。音节要写辅音类、声调符号、活/死、长短。`word` 相同的音节属于同一个词，中间用连字符；不同的 `word` 之间用空格。罗马音必须和这些条件算出来的声调一致，`swift test` 会检查。
 
