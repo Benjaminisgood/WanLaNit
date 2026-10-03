@@ -1,0 +1,47 @@
+[
+  {
+    "id": "tone-mid",
+    "tone": "mid",
+    "mandarin": "接近普通话第一声，但更低、更平。把阴平放在音域的中下部，不要往上扬。",
+    "pitch": "中等高度，从头到尾几乎不动。",
+    "exampleThai": "กา",
+    "exampleRoman": "kaa",
+    "exampleMeaning": "乌鸦"
+  },
+  {
+    "id": "tone-low",
+    "tone": "low",
+    "mandarin": "普通话没有单独的低调。从中偏低的地方轻轻落下，然后停住。不要从很高的地方掉下来。",
+    "pitch": "偏低，轻轻向下，幅度不大。",
+    "exampleThai": "ข่า",
+    "exampleRoman": "khàa",
+    "exampleMeaning": "南姜"
+  },
+  {
+    "id": "tone-falling",
+    "tone": "falling",
+    "mandarin": "很像普通话第四声：从高处明显掉下来。",
+    "pitch": "从高到低，落差大。",
+    "exampleThai": "ค่า",
+    "exampleRoman": "khâa",
+    "exampleMeaning": "价值，价钱"
+  },
+  {
+    "id": "tone-high",
+    "tone": "high",
+    "mandarin": "高度接近第二声，但起点就已经很高，整体比第二声更高，不必大起大落。",
+    "pitch": "高而比较平，可以略往上。",
+    "exampleThai": "ค้า",
+    "exampleRoman": "kháa",
+    "exampleMeaning": "做买卖"
+  },
+  {
+    "id": "tone-rising",
+    "tone": "rising",
+    "mandarin": "很像普通话第三声的拐弯：先低，再往上扬。",
+    "pitch": "先低后高。",
+    "exampleThai": "ขา",
+    "exampleRoman": "khǎa",
+    "exampleMeaning": "腿"
+  }
+]

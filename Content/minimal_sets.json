@@ -1,0 +1,376 @@
+[
+  {
+    "id": "khaa-five",
+    "title": "คา 的五个声调",
+    "hint": "声母都是送气 kh，元音都是长 aa。先听高度，再看字。",
+    "items": [
+      {
+        "id": "khaa-mid",
+        "thai": "คา",
+        "roman": "khaa",
+        "meaning": "卡住；也当这个声调的练习音",
+        "tone": "mid",
+        "syllable": {
+          "thai": "คา",
+          "roman": "khaa",
+          "consonantClass": "low",
+          "toneMark": "none",
+          "ending": "live",
+          "length": "long",
+          "word": 0
+        }
+      },
+      {
+        "id": "khaa-low",
+        "thai": "ข่า",
+        "roman": "khàa",
+        "meaning": "南姜",
+        "tone": "low",
+        "syllable": {
+          "thai": "ข่า",
+          "roman": "khàa",
+          "consonantClass": "high",
+          "toneMark": "maiEk",
+          "ending": "live",
+          "length": "long",
+          "word": 0
+        }
+      },
+      {
+        "id": "khaa-falling",
+        "thai": "ค่า",
+        "roman": "khâa",
+        "meaning": "价值，价钱",
+        "tone": "falling",
+        "syllable": {
+          "thai": "ค่า",
+          "roman": "khâa",
+          "consonantClass": "low",
+          "toneMark": "maiEk",
+          "ending": "live",
+          "length": "long",
+          "word": 0
+        }
+      },
+      {
+        "id": "khaa-high",
+        "thai": "ค้า",
+        "roman": "kháa",
+        "meaning": "做买卖",
+        "tone": "high",
+        "syllable": {
+          "thai": "ค้า",
+          "roman": "kháa",
+          "consonantClass": "low",
+          "toneMark": "maiTho",
+          "ending": "live",
+          "length": "long",
+          "word": 0
+        }
+      },
+      {
+        "id": "khaa-rising",
+        "thai": "ขา",
+        "roman": "khǎa",
+        "meaning": "腿",
+        "tone": "rising",
+        "syllable": {
+          "thai": "ขา",
+          "roman": "khǎa",
+          "consonantClass": "high",
+          "toneMark": "none",
+          "ending": "live",
+          "length": "long",
+          "word": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "kaa-five",
+    "title": "中辅音 กา 的五个声调",
+    "hint": "中辅音才能用五个符号把五个声调都写出来。有的只是练习，不是常用词。",
+    "items": [
+      {
+        "id": "kaa-mid",
+        "thai": "กา",
+        "roman": "kaa",
+        "meaning": "乌鸦",
+        "tone": "mid",
+        "syllable": {
+          "thai": "กา",
+          "roman": "kaa",
+          "consonantClass": "mid",
+          "toneMark": "none",
+          "ending": "live",
+          "length": "long",
+          "word": 0
+        }
+      },
+      {
+        "id": "kaa-low",
+        "thai": "ก่า",
+        "roman": "kàa",
+        "meaning": "练习：低调",
+        "tone": "low",
+        "syllable": {
+          "thai": "ก่า",
+          "roman": "kàa",
+          "consonantClass": "mid",
+          "toneMark": "maiEk",
+          "ending": "live",
+          "length": "long",
+          "word": 0
+        }
+      },
+      {
+        "id": "kaa-falling",
+        "thai": "ก้า",
+        "roman": "kâa",
+        "meaning": "练习：降调",
+        "tone": "falling",
+        "syllable": {
+          "thai": "ก้า",
+          "roman": "kâa",
+          "consonantClass": "mid",
+          "toneMark": "maiTho",
+          "ending": "live",
+          "length": "long",
+          "word": 0
+        }
+      },
+      {
+        "id": "kaa-high",
+        "thai": "ก๊า",
+        "roman": "káa",
+        "meaning": "练习：高调",
+        "tone": "high",
+        "syllable": {
+          "thai": "ก๊า",
+          "roman": "káa",
+          "consonantClass": "mid",
+          "toneMark": "maiTri",
+          "ending": "live",
+          "length": "long",
+          "word": 0
+        }
+      },
+      {
+        "id": "kaa-rising",
+        "thai": "ก๋า",
+        "roman": "kǎa",
+        "meaning": "练习：升调",
+        "tone": "rising",
+        "syllable": {
+          "thai": "ก๋า",
+          "roman": "kǎa",
+          "consonantClass": "mid",
+          "toneMark": "maiChattawa",
+          "ending": "live",
+          "length": "long",
+          "word": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "mai-set",
+    "title": "ไม่ ไหม ใหม่ ไม้",
+    "hint": "这四个很像。ไม้ 的元音更长。先抓声调，再看意思。",
+    "items": [
+      {
+        "id": "mai-no",
+        "thai": "ไม่",
+        "roman": "mâi",
+        "meaning": "不",
+        "tone": "falling",
+        "syllable": {
+          "thai": "ไม่",
+          "roman": "mâi",
+          "consonantClass": "low",
+          "toneMark": "maiEk",
+          "ending": "live",
+          "length": "long",
+          "word": 0
+        }
+      },
+      {
+        "id": "mai-q",
+        "thai": "ไหม",
+        "roman": "mǎi",
+        "meaning": "吗",
+        "tone": "rising",
+        "syllable": {
+          "thai": "ไหม",
+          "roman": "mǎi",
+          "consonantClass": "high",
+          "toneMark": "none",
+          "ending": "live",
+          "length": "long",
+          "word": 0
+        }
+      },
+      {
+        "id": "mai-new",
+        "thai": "ใหม่",
+        "roman": "mài",
+        "meaning": "新",
+        "tone": "low",
+        "syllable": {
+          "thai": "ใหม่",
+          "roman": "mài",
+          "consonantClass": "high",
+          "toneMark": "maiEk",
+          "ending": "live",
+          "length": "long",
+          "word": 0
+        }
+      },
+      {
+        "id": "mai-wood",
+        "thai": "ไม้",
+        "roman": "máai",
+        "meaning": "木头，棍子",
+        "tone": "high",
+        "syllable": {
+          "thai": "ไม้",
+          "roman": "máai",
+          "consonantClass": "low",
+          "toneMark": "maiTho",
+          "ending": "live",
+          "length": "long",
+          "word": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "want-hard",
+    "title": "อยาก 和 ยาก",
+    "hint": "只差一个 อ。อยาก 是“想要”，低调。ยาก 是“难”，降调。",
+    "items": [
+      {
+        "id": "yaak-want",
+        "thai": "อยาก",
+        "roman": "yàak",
+        "meaning": "想要",
+        "tone": "low",
+        "syllable": {
+          "thai": "อยาก",
+          "roman": "yàak",
+          "consonantClass": "mid",
+          "toneMark": "none",
+          "ending": "dead",
+          "length": "long",
+          "note": "อนำ：ย 按中辅音算。",
+          "word": 0
+        }
+      },
+      {
+        "id": "yaak-hard",
+        "thai": "ยาก",
+        "roman": "yâak",
+        "meaning": "难",
+        "tone": "falling",
+        "syllable": {
+          "thai": "ยาก",
+          "roman": "yâak",
+          "consonantClass": "low",
+          "toneMark": "none",
+          "ending": "dead",
+          "length": "long",
+          "word": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "naa-set",
+    "title": "นา 和 ห นำ",
+    "hint": "หนา、หน้า 的声母其实是 น，前面的 ห 不发音，只改变辅音类。",
+    "items": [
+      {
+        "id": "naa-field",
+        "thai": "นา",
+        "roman": "naa",
+        "meaning": "稻田",
+        "tone": "mid",
+        "syllable": {
+          "thai": "นา",
+          "roman": "naa",
+          "consonantClass": "low",
+          "toneMark": "none",
+          "ending": "live",
+          "length": "long",
+          "word": 0
+        }
+      },
+      {
+        "id": "naa-worthy",
+        "thai": "น่า",
+        "roman": "nâa",
+        "meaning": "令人……",
+        "tone": "falling",
+        "syllable": {
+          "thai": "น่า",
+          "roman": "nâa",
+          "consonantClass": "low",
+          "toneMark": "maiEk",
+          "ending": "live",
+          "length": "long",
+          "word": 0
+        }
+      },
+      {
+        "id": "naa-aunt",
+        "thai": "น้า",
+        "roman": "náa",
+        "meaning": "阿姨，叔叔",
+        "tone": "high",
+        "syllable": {
+          "thai": "น้า",
+          "roman": "náa",
+          "consonantClass": "low",
+          "toneMark": "maiTho",
+          "ending": "live",
+          "length": "long",
+          "word": 0
+        }
+      },
+      {
+        "id": "naa-thick",
+        "thai": "หนา",
+        "roman": "nǎa",
+        "meaning": "厚",
+        "tone": "rising",
+        "syllable": {
+          "thai": "หนา",
+          "roman": "nǎa",
+          "consonantClass": "high",
+          "toneMark": "none",
+          "ending": "live",
+          "length": "long",
+          "note": "ห นำ。",
+          "word": 0
+        }
+      },
+      {
+        "id": "naa-face",
+        "thai": "หน้า",
+        "roman": "nâa",
+        "meaning": "脸；页",
+        "tone": "falling",
+        "syllable": {
+          "thai": "หน้า",
+          "roman": "nâa",
+          "consonantClass": "high",
+          "toneMark": "maiTho",
+          "ending": "live",
+          "length": "long",
+          "note": "ห นำ，高辅音加 ้ 是降调。",
+          "word": 0
+        }
+      }
+    ]
+  }
+]

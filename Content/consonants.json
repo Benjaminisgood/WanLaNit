@@ -1,0 +1,1724 @@
+[
+  {
+    "id": "ko-kai",
+    "symbol": "ก",
+    "order": 1,
+    "consonantClass": "mid",
+    "obsolete": false,
+    "nameThai": "ก ไก่",
+    "nameRoman": "kɔɔ kài",
+    "meaning": "鸡",
+    "initial": "k",
+    "exampleThai": "ไก่",
+    "exampleRoman": "kài",
+    "exampleMeaning": "鸡",
+    "syllables": [
+      {
+        "thai": "ก",
+        "roman": "kɔɔ",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "ไก่",
+        "roman": "kài",
+        "consonantClass": "mid",
+        "toneMark": "maiEk",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "final": "k",
+    "finalNote": "韵尾不除阻，不要再加元音",
+    "note": "不送气的 k，接近拼音 g，但不要读成浊音。"
+  },
+  {
+    "id": "kho-khai",
+    "symbol": "ข",
+    "order": 2,
+    "consonantClass": "high",
+    "obsolete": false,
+    "nameThai": "ข ไข่",
+    "nameRoman": "khɔ̌ɔ khài",
+    "meaning": "蛋",
+    "initial": "kh",
+    "exampleThai": "ไข่",
+    "exampleRoman": "khài",
+    "exampleMeaning": "蛋",
+    "syllables": [
+      {
+        "thai": "ข",
+        "roman": "khɔ̌ɔ",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "ไข่",
+        "roman": "khài",
+        "consonantClass": "high",
+        "toneMark": "maiEk",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "final": "k",
+    "finalNote": "韵尾不除阻，不要再加元音",
+    "note": "送气的 kh，接近拼音 k。它是高辅音，和低辅音 ค 声母一样，声调规则不同。"
+  },
+  {
+    "id": "kho-khuat",
+    "symbol": "ฃ",
+    "order": 3,
+    "consonantClass": "high",
+    "obsolete": true,
+    "nameThai": "ฃ ขวด",
+    "nameRoman": "khɔ̌ɔ khùat",
+    "meaning": "瓶子",
+    "initial": "kh",
+    "exampleThai": "ขวด",
+    "exampleRoman": "khùat",
+    "exampleMeaning": "瓶子",
+    "syllables": [
+      {
+        "thai": "ฃ",
+        "roman": "khɔ̌ɔ",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "ขวด",
+        "roman": "khùat",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "dead",
+        "length": "short",
+        "word": 1
+      }
+    ],
+    "final": "k",
+    "finalNote": "废字母，现代拼写不用",
+    "note": "读音和 ข 一样。认出来即可，不用找词。"
+  },
+  {
+    "id": "kho-khwaai",
+    "symbol": "ค",
+    "order": 4,
+    "consonantClass": "low",
+    "obsolete": false,
+    "nameThai": "ค ควาย",
+    "nameRoman": "khɔɔ khwaai",
+    "meaning": "水牛",
+    "initial": "kh",
+    "exampleThai": "ควาย",
+    "exampleRoman": "khwaai",
+    "exampleMeaning": "水牛",
+    "syllables": [
+      {
+        "thai": "ค",
+        "roman": "khɔɔ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "ควาย",
+        "roman": "khwaai",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "final": "k",
+    "finalNote": "韵尾不除阻，不要再加元音"
+  },
+  {
+    "id": "kho-khon",
+    "symbol": "ฅ",
+    "order": 5,
+    "consonantClass": "low",
+    "obsolete": true,
+    "nameThai": "ฅ คน",
+    "nameRoman": "khɔɔ khon",
+    "meaning": "人",
+    "initial": "kh",
+    "exampleThai": "คน",
+    "exampleRoman": "khon",
+    "exampleMeaning": "人",
+    "syllables": [
+      {
+        "thai": "ฅ",
+        "roman": "khɔɔ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "คน",
+        "roman": "khon",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "short",
+        "word": 1
+      }
+    ],
+    "final": "k",
+    "finalNote": "废字母，现代拼写不用",
+    "note": "读音和 ค 一样。现在写“人”只用 ค。"
+  },
+  {
+    "id": "kho-rakhang",
+    "symbol": "ฆ",
+    "order": 6,
+    "consonantClass": "low",
+    "obsolete": false,
+    "nameThai": "ฆ ระฆัง",
+    "nameRoman": "khɔɔ rá-khang",
+    "meaning": "铃",
+    "initial": "kh",
+    "exampleThai": "ระฆัง",
+    "exampleRoman": "rá-khang",
+    "exampleMeaning": "铃",
+    "syllables": [
+      {
+        "thai": "ฆ",
+        "roman": "khɔɔ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "ระ",
+        "roman": "rá",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "dead",
+        "length": "short",
+        "word": 1
+      },
+      {
+        "thai": "ฆัง",
+        "roman": "khang",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "short",
+        "word": 1
+      }
+    ],
+    "final": "k",
+    "finalNote": "很少做韵尾。韵尾不除阻，不要再加元音"
+  },
+  {
+    "id": "ngo-nguu",
+    "symbol": "ง",
+    "order": 7,
+    "consonantClass": "low",
+    "obsolete": false,
+    "nameThai": "ง งู",
+    "nameRoman": "ngɔɔ nguu",
+    "meaning": "蛇",
+    "initial": "ng",
+    "exampleThai": "งู",
+    "exampleRoman": "nguu",
+    "exampleMeaning": "蛇",
+    "syllables": [
+      {
+        "thai": "ง",
+        "roman": "ngɔɔ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "งู",
+        "roman": "nguu",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "final": "ng",
+    "note": "可以出现在词首。先发“嗯”，嘴形不变，直接接元音，前面不要加 e。"
+  },
+  {
+    "id": "jo-jaan",
+    "symbol": "จ",
+    "order": 8,
+    "consonantClass": "mid",
+    "obsolete": false,
+    "nameThai": "จ จาน",
+    "nameRoman": "jɔɔ jaan",
+    "meaning": "盘子",
+    "initial": "j",
+    "exampleThai": "จาน",
+    "exampleRoman": "jaan",
+    "exampleMeaning": "盘子",
+    "syllables": [
+      {
+        "thai": "จ",
+        "roman": "jɔɔ",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "จาน",
+        "roman": "jaan",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "final": "t",
+    "finalNote": "韵尾不除阻，不要再加元音",
+    "note": "接近拼音 j。韵尾读不除阻的 t。"
+  },
+  {
+    "id": "cho-ching",
+    "symbol": "ฉ",
+    "order": 9,
+    "consonantClass": "high",
+    "obsolete": false,
+    "nameThai": "ฉ ฉิ่ง",
+    "nameRoman": "chɔ̌ɔ chìng",
+    "meaning": "小钹",
+    "initial": "ch",
+    "exampleThai": "ฉิ่ง",
+    "exampleRoman": "chìng",
+    "exampleMeaning": "小钹",
+    "syllables": [
+      {
+        "thai": "ฉ",
+        "roman": "chɔ̌ɔ",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "ฉิ่ง",
+        "roman": "chìng",
+        "consonantClass": "high",
+        "toneMark": "maiEk",
+        "ending": "live",
+        "length": "short",
+        "word": 1
+      }
+    ],
+    "final": "t",
+    "finalNote": "很少做韵尾"
+  },
+  {
+    "id": "cho-chaang",
+    "symbol": "ช",
+    "order": 10,
+    "consonantClass": "low",
+    "obsolete": false,
+    "nameThai": "ช ช้าง",
+    "nameRoman": "chɔɔ cháang",
+    "meaning": "大象",
+    "initial": "ch",
+    "exampleThai": "ช้าง",
+    "exampleRoman": "cháang",
+    "exampleMeaning": "大象",
+    "syllables": [
+      {
+        "thai": "ช",
+        "roman": "chɔɔ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "ช้าง",
+        "roman": "cháang",
+        "consonantClass": "low",
+        "toneMark": "maiTho",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "final": "t",
+    "finalNote": "韵尾不除阻，不要再加元音"
+  },
+  {
+    "id": "so-soo",
+    "symbol": "ซ",
+    "order": 11,
+    "consonantClass": "low",
+    "obsolete": false,
+    "nameThai": "ซ โซ่",
+    "nameRoman": "sɔɔ sôo",
+    "meaning": "链子",
+    "initial": "s",
+    "exampleThai": "โซ่",
+    "exampleRoman": "sôo",
+    "exampleMeaning": "链子",
+    "syllables": [
+      {
+        "thai": "ซ",
+        "roman": "sɔɔ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "โซ่",
+        "roman": "sôo",
+        "consonantClass": "low",
+        "toneMark": "maiEk",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "final": "t",
+    "finalNote": "很少做韵尾",
+    "note": "声母是 s，不是 ch。和 ช 字形接近，不要看混。"
+  },
+  {
+    "id": "cho-choe",
+    "symbol": "ฌ",
+    "order": 12,
+    "consonantClass": "low",
+    "obsolete": false,
+    "nameThai": "ฌ เฌอ",
+    "nameRoman": "chɔɔ chəə",
+    "meaning": "树",
+    "initial": "ch",
+    "exampleThai": "เฌอ",
+    "exampleRoman": "chəə",
+    "exampleMeaning": "树",
+    "syllables": [
+      {
+        "thai": "ฌ",
+        "roman": "chɔɔ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "เฌอ",
+        "roman": "chəə",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "final": "n",
+    "finalNote": "很少做韵尾，读 n"
+  },
+  {
+    "id": "yo-ying",
+    "symbol": "ญ",
+    "order": 13,
+    "consonantClass": "low",
+    "obsolete": false,
+    "nameThai": "ญ หญิง",
+    "nameRoman": "yɔɔ yǐng",
+    "meaning": "女人",
+    "initial": "y",
+    "exampleThai": "หญิง",
+    "exampleRoman": "yǐng",
+    "exampleMeaning": "女人",
+    "syllables": [
+      {
+        "thai": "ญ",
+        "roman": "yɔɔ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "หญิง",
+        "roman": "yǐng",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "short",
+        "note": "ห นำ，ญ 在这个词里按高辅音算。",
+        "word": 1
+      }
+    ],
+    "final": "n",
+    "finalNote": "做韵尾时读 n",
+    "note": "做声母时是 y。หญิง 前面的 ห 不发音，只把声调改成高辅音那一列。"
+  },
+  {
+    "id": "do-chadaa",
+    "symbol": "ฎ",
+    "order": 14,
+    "consonantClass": "mid",
+    "obsolete": false,
+    "nameThai": "ฎ ชฎา",
+    "nameRoman": "dɔɔ chá-daa",
+    "meaning": "尖顶冠",
+    "initial": "d",
+    "exampleThai": "ชฎา",
+    "exampleRoman": "chá-daa",
+    "exampleMeaning": "尖顶头饰",
+    "syllables": [
+      {
+        "thai": "ฎ",
+        "roman": "dɔɔ",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "ชะ",
+        "roman": "chá",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "dead",
+        "length": "short",
+        "note": "ช 和后面的音节之间省写了 ะ。",
+        "word": 1
+      },
+      {
+        "thai": "ฎา",
+        "roman": "daa",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "final": "t",
+    "finalNote": "韵尾不除阻，不要再加元音",
+    "note": "读音和 ด 一样，是浊音 d。多出现在梵语、巴利语借词里。"
+  },
+  {
+    "id": "dto-dtak",
+    "symbol": "ฏ",
+    "order": 15,
+    "consonantClass": "mid",
+    "obsolete": false,
+    "nameThai": "ฏ ปฏัก",
+    "nameRoman": "dtɔɔ bpà-dtàk",
+    "meaning": "刺棒",
+    "initial": "dt",
+    "exampleThai": "ปฏัก",
+    "exampleRoman": "bpà-dtàk",
+    "exampleMeaning": "刺棒",
+    "syllables": [
+      {
+        "thai": "ฏ",
+        "roman": "dtɔɔ",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "ปะ",
+        "roman": "bpà",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "dead",
+        "length": "short",
+        "note": "ป 和后面的音节之间省写了 ะ。",
+        "word": 1
+      },
+      {
+        "thai": "ตัก",
+        "roman": "dtàk",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "dead",
+        "length": "short",
+        "word": 1
+      }
+    ],
+    "final": "t",
+    "finalNote": "韵尾不除阻，不要再加元音",
+    "note": "读音和 ต 一样，不送气的 dt。借词里多见。"
+  },
+  {
+    "id": "tho-thaan",
+    "symbol": "ฐ",
+    "order": 16,
+    "consonantClass": "high",
+    "obsolete": false,
+    "nameThai": "ฐ ฐาน",
+    "nameRoman": "thɔ̌ɔ thǎan",
+    "meaning": "底座",
+    "initial": "th",
+    "exampleThai": "ฐาน",
+    "exampleRoman": "thǎan",
+    "exampleMeaning": "底座",
+    "syllables": [
+      {
+        "thai": "ฐ",
+        "roman": "thɔ̌ɔ",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "ฐาน",
+        "roman": "thǎan",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "final": "t",
+    "finalNote": "韵尾不除阻，不要再加元音"
+  },
+  {
+    "id": "tho-monthoo",
+    "symbol": "ฑ",
+    "order": 17,
+    "consonantClass": "low",
+    "obsolete": false,
+    "nameThai": "ฑ มณโฑ",
+    "nameRoman": "thɔɔ mon-thoo",
+    "meaning": "曼陀",
+    "initial": "th",
+    "exampleThai": "มณโฑ",
+    "exampleRoman": "mon-thoo",
+    "exampleMeaning": "神话里的人名",
+    "syllables": [
+      {
+        "thai": "ฑ",
+        "roman": "thɔɔ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "มณ",
+        "roman": "mon",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "short",
+        "word": 1
+      },
+      {
+        "thai": "โฑ",
+        "roman": "thoo",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "final": "t",
+    "finalNote": "很少做韵尾",
+    "note": "不常见。名字里的音和 ท 一样，是送气的 th。"
+  },
+  {
+    "id": "tho-phuuthao",
+    "symbol": "ฒ",
+    "order": 18,
+    "consonantClass": "low",
+    "obsolete": false,
+    "nameThai": "ฒ ผู้เฒ่า",
+    "nameRoman": "thɔɔ phúu-thâo",
+    "meaning": "老人",
+    "initial": "th",
+    "exampleThai": "ผู้เฒ่า",
+    "exampleRoman": "phúu-thâo",
+    "exampleMeaning": "老人",
+    "syllables": [
+      {
+        "thai": "ฒ",
+        "roman": "thɔɔ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "ผู้",
+        "roman": "phúu",
+        "consonantClass": "low",
+        "toneMark": "maiTho",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      },
+      {
+        "thai": "เฒ่า",
+        "roman": "thâo",
+        "consonantClass": "low",
+        "toneMark": "maiEk",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "final": "t",
+    "finalNote": "很少做韵尾",
+    "note": "读音和 ท、ธ 一样。"
+  },
+  {
+    "id": "no-neen",
+    "symbol": "ณ",
+    "order": 19,
+    "consonantClass": "low",
+    "obsolete": false,
+    "nameThai": "ณ เณร",
+    "nameRoman": "nɔɔ neen",
+    "meaning": "沙弥",
+    "initial": "n",
+    "exampleThai": "เณร",
+    "exampleRoman": "neen",
+    "exampleMeaning": "小沙弥",
+    "syllables": [
+      {
+        "thai": "ณ",
+        "roman": "nɔɔ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "เณร",
+        "roman": "neen",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "final": "n",
+    "note": "读音和 น 一样。借词里多见，比如 คุณ。"
+  },
+  {
+    "id": "do-dek",
+    "symbol": "ด",
+    "order": 20,
+    "consonantClass": "mid",
+    "obsolete": false,
+    "nameThai": "ด เด็ก",
+    "nameRoman": "dɔɔ dèk",
+    "meaning": "孩子",
+    "initial": "d",
+    "exampleThai": "เด็ก",
+    "exampleRoman": "dèk",
+    "exampleMeaning": "孩子",
+    "syllables": [
+      {
+        "thai": "ด",
+        "roman": "dɔɔ",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "เด็ก",
+        "roman": "dèk",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "dead",
+        "length": "short",
+        "word": 1
+      }
+    ],
+    "final": "t",
+    "finalNote": "韵尾不除阻，不要再加元音",
+    "note": "真正的浊音 d，声带要振动。普通话没有这个声母。不要读成不送气的 ต dt。"
+  },
+  {
+    "id": "dto-dtao",
+    "symbol": "ต",
+    "order": 21,
+    "consonantClass": "mid",
+    "obsolete": false,
+    "nameThai": "ต เต่า",
+    "nameRoman": "dtɔɔ dtào",
+    "meaning": "乌龟",
+    "initial": "dt",
+    "exampleThai": "เต่า",
+    "exampleRoman": "dtào",
+    "exampleMeaning": "乌龟",
+    "syllables": [
+      {
+        "thai": "ต",
+        "roman": "dtɔɔ",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "เต่า",
+        "roman": "dtào",
+        "consonantClass": "mid",
+        "toneMark": "maiEk",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "final": "t",
+    "finalNote": "韵尾不除阻，不要再加元音",
+    "note": "不送气，接近拼音 d，但不要读浊。和 ด 是两个声母。"
+  },
+  {
+    "id": "tho-thung",
+    "symbol": "ถ",
+    "order": 22,
+    "consonantClass": "high",
+    "obsolete": false,
+    "nameThai": "ถ ถุง",
+    "nameRoman": "thɔ̌ɔ thǔng",
+    "meaning": "袋子",
+    "initial": "th",
+    "exampleThai": "ถุง",
+    "exampleRoman": "thǔng",
+    "exampleMeaning": "袋子",
+    "syllables": [
+      {
+        "thai": "ถ",
+        "roman": "thɔ̌ɔ",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "ถุง",
+        "roman": "thǔng",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "short",
+        "word": 1
+      }
+    ],
+    "final": "t",
+    "finalNote": "很少做韵尾",
+    "note": "送气的 th，接近拼音 t。高辅音。"
+  },
+  {
+    "id": "tho-thahaan",
+    "symbol": "ท",
+    "order": 23,
+    "consonantClass": "low",
+    "obsolete": false,
+    "nameThai": "ท ทหาร",
+    "nameRoman": "thɔɔ thá-hǎan",
+    "meaning": "士兵",
+    "initial": "th",
+    "exampleThai": "ทหาร",
+    "exampleRoman": "thá-hǎan",
+    "exampleMeaning": "士兵",
+    "syllables": [
+      {
+        "thai": "ท",
+        "roman": "thɔɔ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "ทะ",
+        "roman": "thá",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "dead",
+        "length": "short",
+        "note": "ท 和 หาร 之间省写了 ะ。",
+        "word": 1
+      },
+      {
+        "thai": "หาน",
+        "roman": "hǎan",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "final": "t",
+    "finalNote": "韵尾不除阻，不要再加元音",
+    "note": "声母和 ถ 一样送气。它是低辅音，所以没写符号的活音节是中调，不是升调。"
+  },
+  {
+    "id": "tho-thong",
+    "symbol": "ธ",
+    "order": 24,
+    "consonantClass": "low",
+    "obsolete": false,
+    "nameThai": "ธ ธง",
+    "nameRoman": "thɔɔ thong",
+    "meaning": "旗",
+    "initial": "th",
+    "exampleThai": "ธง",
+    "exampleRoman": "thong",
+    "exampleMeaning": "旗",
+    "syllables": [
+      {
+        "thai": "ธ",
+        "roman": "thɔɔ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "ธง",
+        "roman": "thong",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "short",
+        "word": 1
+      }
+    ],
+    "final": "t",
+    "finalNote": "很少做韵尾",
+    "note": "读音和 ท 一样。"
+  },
+  {
+    "id": "no-nuu",
+    "symbol": "น",
+    "order": 25,
+    "consonantClass": "low",
+    "obsolete": false,
+    "nameThai": "น หนู",
+    "nameRoman": "nɔɔ nǔu",
+    "meaning": "老鼠",
+    "initial": "n",
+    "exampleThai": "หนู",
+    "exampleRoman": "nǔu",
+    "exampleMeaning": "老鼠",
+    "syllables": [
+      {
+        "thai": "น",
+        "roman": "nɔɔ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "หนู",
+        "roman": "nǔu",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "note": "ห นำ，น 在这个词里按高辅音算。",
+        "word": 1
+      }
+    ],
+    "final": "n",
+    "note": "最常见的 n。หนู 的 ห 不发音，只负责把声调变成升调。"
+  },
+  {
+    "id": "bo-baimaai",
+    "symbol": "บ",
+    "order": 26,
+    "consonantClass": "mid",
+    "obsolete": false,
+    "nameThai": "บ ใบไม้",
+    "nameRoman": "bɔɔ bai-máai",
+    "meaning": "叶子",
+    "initial": "b",
+    "exampleThai": "ใบไม้",
+    "exampleRoman": "bai-máai",
+    "exampleMeaning": "树叶",
+    "syllables": [
+      {
+        "thai": "บ",
+        "roman": "bɔɔ",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "ใบ",
+        "roman": "bai",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      },
+      {
+        "thai": "ไม้",
+        "roman": "máai",
+        "consonantClass": "low",
+        "toneMark": "maiTho",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "final": "p",
+    "finalNote": "韵尾不除阻，不要再加元音",
+    "note": "真正的浊音 b。和 ป bp 不同，喉咙要振动。"
+  },
+  {
+    "id": "bpo-bplaa",
+    "symbol": "ป",
+    "order": 27,
+    "consonantClass": "mid",
+    "obsolete": false,
+    "nameThai": "ป ปลา",
+    "nameRoman": "bpɔɔ bplaa",
+    "meaning": "鱼",
+    "initial": "bp",
+    "exampleThai": "ปลา",
+    "exampleRoman": "bplaa",
+    "exampleMeaning": "鱼",
+    "syllables": [
+      {
+        "thai": "ป",
+        "roman": "bpɔɔ",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "ปลา",
+        "roman": "bplaa",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "final": "p",
+    "finalNote": "韵尾不除阻，不要再加元音",
+    "note": "不送气，接近拼音 b，但不要读浊。"
+  },
+  {
+    "id": "pho-phueng",
+    "symbol": "ผ",
+    "order": 28,
+    "consonantClass": "high",
+    "obsolete": false,
+    "nameThai": "ผ ผึ้ง",
+    "nameRoman": "phɔ̌ɔ phʉ̂ng",
+    "meaning": "蜜蜂",
+    "initial": "ph",
+    "exampleThai": "ผึ้ง",
+    "exampleRoman": "phʉ̂ng",
+    "exampleMeaning": "蜜蜂",
+    "syllables": [
+      {
+        "thai": "ผ",
+        "roman": "phɔ̌ɔ",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "ผึ้ง",
+        "roman": "phʉ̂ng",
+        "consonantClass": "high",
+        "toneMark": "maiTho",
+        "ending": "live",
+        "length": "short",
+        "word": 1
+      }
+    ],
+    "final": "p",
+    "finalNote": "很少做韵尾",
+    "note": "送气的 ph，接近拼音 p。高辅音。"
+  },
+  {
+    "id": "fo-faa",
+    "symbol": "ฝ",
+    "order": 29,
+    "consonantClass": "high",
+    "obsolete": false,
+    "nameThai": "ฝ ฝา",
+    "nameRoman": "fɔ̌ɔ fǎa",
+    "meaning": "盖子",
+    "initial": "f",
+    "exampleThai": "ฝา",
+    "exampleRoman": "fǎa",
+    "exampleMeaning": "盖子",
+    "syllables": [
+      {
+        "thai": "ฝ",
+        "roman": "fɔ̌ɔ",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "ฝา",
+        "roman": "fǎa",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "final": "p",
+    "finalNote": "很少做韵尾"
+  },
+  {
+    "id": "pho-phaan",
+    "symbol": "พ",
+    "order": 30,
+    "consonantClass": "low",
+    "obsolete": false,
+    "nameThai": "พ พาน",
+    "nameRoman": "phɔɔ phaan",
+    "meaning": "托盘",
+    "initial": "ph",
+    "exampleThai": "พาน",
+    "exampleRoman": "phaan",
+    "exampleMeaning": "托盘",
+    "syllables": [
+      {
+        "thai": "พ",
+        "roman": "phɔɔ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "พาน",
+        "roman": "phaan",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "final": "p",
+    "finalNote": "韵尾不除阻，不要再加元音",
+    "note": "声母和 ผ 一样送气。低辅音。"
+  },
+  {
+    "id": "fo-fan",
+    "symbol": "ฟ",
+    "order": 31,
+    "consonantClass": "low",
+    "obsolete": false,
+    "nameThai": "ฟ ฟัน",
+    "nameRoman": "fɔɔ fan",
+    "meaning": "牙齿",
+    "initial": "f",
+    "exampleThai": "ฟัน",
+    "exampleRoman": "fan",
+    "exampleMeaning": "牙齿",
+    "syllables": [
+      {
+        "thai": "ฟ",
+        "roman": "fɔɔ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "ฟัน",
+        "roman": "fan",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "short",
+        "word": 1
+      }
+    ],
+    "final": "p",
+    "finalNote": "韵尾不除阻，不要再加元音"
+  },
+  {
+    "id": "pho-samphao",
+    "symbol": "ภ",
+    "order": 32,
+    "consonantClass": "low",
+    "obsolete": false,
+    "nameThai": "ภ สำเภา",
+    "nameRoman": "phɔɔ sǎm-phao",
+    "meaning": "帆船",
+    "initial": "ph",
+    "exampleThai": "สำเภา",
+    "exampleRoman": "sǎm-phao",
+    "exampleMeaning": "帆船",
+    "syllables": [
+      {
+        "thai": "ภ",
+        "roman": "phɔɔ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "สำ",
+        "roman": "sǎm",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "short",
+        "word": 1
+      },
+      {
+        "thai": "เภา",
+        "roman": "phao",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "final": "p",
+    "finalNote": "很少做韵尾",
+    "note": "读音和 พ 一样。"
+  },
+  {
+    "id": "mo-maa",
+    "symbol": "ม",
+    "order": 33,
+    "consonantClass": "low",
+    "obsolete": false,
+    "nameThai": "ม ม้า",
+    "nameRoman": "mɔɔ máa",
+    "meaning": "马",
+    "initial": "m",
+    "exampleThai": "ม้า",
+    "exampleRoman": "máa",
+    "exampleMeaning": "马",
+    "syllables": [
+      {
+        "thai": "ม",
+        "roman": "mɔɔ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "ม้า",
+        "roman": "máa",
+        "consonantClass": "low",
+        "toneMark": "maiTho",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "final": "m"
+  },
+  {
+    "id": "yo-yak",
+    "symbol": "ย",
+    "order": 34,
+    "consonantClass": "low",
+    "obsolete": false,
+    "nameThai": "ย ยักษ์",
+    "nameRoman": "yɔɔ yák",
+    "meaning": "巨人",
+    "initial": "y",
+    "exampleThai": "ยักษ์",
+    "exampleRoman": "yák",
+    "exampleMeaning": "巨人",
+    "syllables": [
+      {
+        "thai": "ย",
+        "roman": "yɔɔ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "ยักษ์",
+        "roman": "yák",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "dead",
+        "length": "short",
+        "word": 1
+      }
+    ],
+    "final": "y",
+    "finalNote": "做韵尾时并进元音，或者读成 i 的滑音",
+    "note": "ษ์ 不发音。低辅音短死音节，所以是高调 yák。"
+  },
+  {
+    "id": "ro-ruea",
+    "symbol": "ร",
+    "order": 35,
+    "consonantClass": "low",
+    "obsolete": false,
+    "nameThai": "ร เรือ",
+    "nameRoman": "rɔɔ rʉʉa",
+    "meaning": "船",
+    "initial": "r",
+    "exampleThai": "เรือ",
+    "exampleRoman": "rʉʉa",
+    "exampleMeaning": "船",
+    "syllables": [
+      {
+        "thai": "ร",
+        "roman": "rɔɔ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "เรือ",
+        "roman": "rʉʉa",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "final": "n",
+    "finalNote": "做韵尾时读 n。词首的 r 要轻轻弹一下，不要读成 l。"
+  },
+  {
+    "id": "lo-ling",
+    "symbol": "ล",
+    "order": 36,
+    "consonantClass": "low",
+    "obsolete": false,
+    "nameThai": "ล ลิง",
+    "nameRoman": "lɔɔ ling",
+    "meaning": "猴子",
+    "initial": "l",
+    "exampleThai": "ลิง",
+    "exampleRoman": "ling",
+    "exampleMeaning": "猴子",
+    "syllables": [
+      {
+        "thai": "ล",
+        "roman": "lɔɔ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "ลิง",
+        "roman": "ling",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "short",
+        "word": 1
+      }
+    ],
+    "final": "n",
+    "finalNote": "做韵尾时读 n"
+  },
+  {
+    "id": "wo-waen",
+    "symbol": "ว",
+    "order": 37,
+    "consonantClass": "low",
+    "obsolete": false,
+    "nameThai": "ว แหวน",
+    "nameRoman": "wɔɔ wɛ̌ɛn",
+    "meaning": "戒指",
+    "initial": "w",
+    "exampleThai": "แหวน",
+    "exampleRoman": "wɛ̌ɛn",
+    "exampleMeaning": "戒指",
+    "syllables": [
+      {
+        "thai": "ว",
+        "roman": "wɔɔ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "แหวน",
+        "roman": "wɛ̌ɛn",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "note": "ห นำ，ว 在这个词里按高辅音算。",
+        "word": 1
+      }
+    ],
+    "final": "w",
+    "finalNote": "做韵尾时并进元音"
+  },
+  {
+    "id": "so-saalaa",
+    "symbol": "ศ",
+    "order": 38,
+    "consonantClass": "high",
+    "obsolete": false,
+    "nameThai": "ศ ศาลา",
+    "nameRoman": "sɔ̌ɔ sǎa-laa",
+    "meaning": "亭子",
+    "initial": "s",
+    "exampleThai": "ศาลา",
+    "exampleRoman": "sǎa-laa",
+    "exampleMeaning": "亭子",
+    "syllables": [
+      {
+        "thai": "ศ",
+        "roman": "sɔ̌ɔ",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "ศา",
+        "roman": "sǎa",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      },
+      {
+        "thai": "ลา",
+        "roman": "laa",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "final": "t",
+    "finalNote": "韵尾不除阻，不要再加元音",
+    "note": "声母是 s，和高辅音 ส、ษ 相同。"
+  },
+  {
+    "id": "so-rueasii",
+    "symbol": "ษ",
+    "order": 39,
+    "consonantClass": "high",
+    "obsolete": false,
+    "nameThai": "ษ ฤๅษี",
+    "nameRoman": "sɔ̌ɔ rʉʉ-sǐi",
+    "meaning": "隐士",
+    "initial": "s",
+    "exampleThai": "ฤๅษี",
+    "exampleRoman": "rʉʉ-sǐi",
+    "exampleMeaning": "隐士",
+    "syllables": [
+      {
+        "thai": "ษ",
+        "roman": "sɔ̌ɔ",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "ฤๅ",
+        "roman": "rʉʉ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      },
+      {
+        "thai": "ษี",
+        "roman": "sǐi",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "final": "t",
+    "finalNote": "韵尾不除阻，不要再加元音"
+  },
+  {
+    "id": "so-suea",
+    "symbol": "ส",
+    "order": 40,
+    "consonantClass": "high",
+    "obsolete": false,
+    "nameThai": "ส เสือ",
+    "nameRoman": "sɔ̌ɔ sʉ̌ʉa",
+    "meaning": "老虎",
+    "initial": "s",
+    "exampleThai": "เสือ",
+    "exampleRoman": "sʉ̌ʉa",
+    "exampleMeaning": "老虎",
+    "syllables": [
+      {
+        "thai": "ส",
+        "roman": "sɔ̌ɔ",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "เสือ",
+        "roman": "sʉ̌ʉa",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "final": "t",
+    "finalNote": "韵尾不除阻，不要再加元音",
+    "note": "最常见的 s。没有符号的活音节是升调。"
+  },
+  {
+    "id": "ho-hiip",
+    "symbol": "ห",
+    "order": 41,
+    "consonantClass": "high",
+    "obsolete": false,
+    "nameThai": "ห หีบ",
+    "nameRoman": "hɔ̌ɔ hìip",
+    "meaning": "箱子",
+    "initial": "h",
+    "exampleThai": "หีบ",
+    "exampleRoman": "hìip",
+    "exampleMeaning": "箱子",
+    "syllables": [
+      {
+        "thai": "ห",
+        "roman": "hɔ̌ɔ",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "หีบ",
+        "roman": "hìip",
+        "consonantClass": "high",
+        "toneMark": "none",
+        "ending": "dead",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "finalNote": "做韵尾时不发音",
+    "note": "它自己是 h。写在低辅音前面时常常不发音，只把那个低辅音变成高辅音，这叫 ห นำ。"
+  },
+  {
+    "id": "lo-julaa",
+    "symbol": "ฬ",
+    "order": 42,
+    "consonantClass": "low",
+    "obsolete": false,
+    "nameThai": "ฬ จุฬา",
+    "nameRoman": "lɔɔ jù-laa",
+    "meaning": "风筝",
+    "initial": "l",
+    "exampleThai": "จุฬา",
+    "exampleRoman": "jù-laa",
+    "exampleMeaning": "风筝",
+    "syllables": [
+      {
+        "thai": "ฬ",
+        "roman": "lɔɔ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "จุ",
+        "roman": "jù",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "dead",
+        "length": "short",
+        "word": 1
+      },
+      {
+        "thai": "ฬา",
+        "roman": "laa",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "final": "n",
+    "finalNote": "做韵尾时读 n",
+    "note": "读音和 ล 一样，字少见。"
+  },
+  {
+    "id": "o-aang",
+    "symbol": "อ",
+    "order": 43,
+    "consonantClass": "mid",
+    "obsolete": false,
+    "nameThai": "อ อ่าง",
+    "nameRoman": "ɔɔ àang",
+    "meaning": "盆",
+    "initial": "ʔ",
+    "exampleThai": "อ่าง",
+    "exampleRoman": "àang",
+    "exampleMeaning": "盆",
+    "syllables": [
+      {
+        "thai": "อ",
+        "roman": "ɔɔ",
+        "consonantClass": "mid",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "อ่าง",
+        "roman": "àang",
+        "consonantClass": "mid",
+        "toneMark": "maiEk",
+        "ending": "live",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "finalNote": "อ 不做韵尾辅音",
+    "note": "没有辅音声母，只是元音的架子。อ่าง 直接从元音开始，不要加 g 或 n。"
+  },
+  {
+    "id": "ho-nokhuuk",
+    "symbol": "ฮ",
+    "order": 44,
+    "consonantClass": "low",
+    "obsolete": false,
+    "nameThai": "ฮ นกฮูก",
+    "nameRoman": "hɔɔ nók-hûuk",
+    "meaning": "猫头鹰",
+    "initial": "h",
+    "exampleThai": "นกฮูก",
+    "exampleRoman": "nók-hûuk",
+    "exampleMeaning": "猫头鹰",
+    "syllables": [
+      {
+        "thai": "ฮ",
+        "roman": "hɔɔ",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "live",
+        "length": "long",
+        "word": 0
+      },
+      {
+        "thai": "นก",
+        "roman": "nók",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "dead",
+        "length": "short",
+        "word": 1
+      },
+      {
+        "thai": "ฮูก",
+        "roman": "hûuk",
+        "consonantClass": "low",
+        "toneMark": "none",
+        "ending": "dead",
+        "length": "long",
+        "word": 1
+      }
+    ],
+    "finalNote": "几乎不做韵尾",
+    "note": "声母和 ห 一样是 h，但它是低辅音。นกฮูก 的第二音节以 k 收尾，长死音节，所以是降调。"
+  }
+]

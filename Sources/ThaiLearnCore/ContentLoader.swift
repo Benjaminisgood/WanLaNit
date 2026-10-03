@@ -1,0 +1,341 @@
+import Foundation
+
+public struct ContentError: Error, Equatable, CustomStringConvertible {
+    public var issues: [String]
+
+    public var description: String {
+        issues.joined(separator: "\n")
+    }
+}
+
+public enum ContentLoader {
+    public static func load(from directory: URL) throws -> Catalog {
+        var issues: [String] = []
+        let decks: [Deck] = decode("decks.json", from: directory, issues: &issues) ?? []
+        let phrases: [Phrase] = decode("phrases.json", from: directory, issues: &issues) ?? []
+        let consonants: [Consonant] = decode("consonants.json", from: directory, issues: &issues) ?? []
+        let vowels: [Vowel] = decode("vowels.json", from: directory, issues: &issues) ?? []
+        let tones: [ToneLesson] = decode("tones.json", from: directory, issues: &issues) ?? []
+        let minimalSets: [MinimalSet] = decode("minimal_sets.json", from: directory, issues: &issues) ?? []
+        let sounds: [SoundLesson] = decode("sounds.json", from: directory, issues: &issues) ?? []
+        let culture: [CultureNote] = decode("culture.json", from: directory, issues: &issues) ?? []
+
+        if !issues.isEmpty {
+            throw ContentError(issues: issues)
+        }
+
+        let catalog = Catalog(
+            decks: decks,
+            phrases: phrases,
+            consonants: consonants,
+            vowels: vowels,
+            tones: tones,
+            minimalSets: minimalSets,
+            sounds: sounds,
+            culture: culture
+        )
+        let validation = validate(catalog)
+        if !validation.isEmpty {
+            throw ContentError(issues: validation)
+        }
+        return catalog
+    }
+
+    public static func validate(_ catalog: Catalog) -> [String] {
+        var issues: [String] = []
+        validateIdentity(catalog, issues: &issues)
+        validatePhrases(catalog, issues: &issues)
+        validateConsonants(catalog, issues: &issues)
+        validateVowels(catalog, issues: &issues)
+        validateTones(catalog, issues: &issues)
+        validateMinimalSets(catalog, issues: &issues)
+        validateSounds(catalog, issues: &issues)
+        validateCulture(catalog, issues: &issues)
+        return issues
+    }
+
+    private static func decode<T: Decodable>(
+        _ name: String,
+        from directory: URL,
+        issues: inout [String]
+    ) -> T? {
+        let url = directory.appendingPathComponent(name)
+        let data: Data
+        do {
+            data = try Data(contentsOf: url)
+        } catch {
+            issues.append("找不到内容文件 \(name)")
+            return nil
+        }
+        do {
+            return try JSONDecoder().decode(T.self, from: data)
+        } catch {
+            issues.append("\(name) 读不出来：\(error)")
+            return nil
+        }
+    }
+
+    private static func validateIdentity(_ catalog: Catalog, issues: inout [String]) {
+        var seen: [String: String] = [:]
+        func claim(_ id: String, _ kind: String) {
+            if id.isEmpty {
+                issues.append("\(kind) 有空的 id")
+                return
+            }
+            if let previous = seen[id] {
+                issues.append("id「\(id)」重复了（\(previous) 和 \(kind)）")
+            } else {
+                seen[id] = kind
+            }
+        }
+        if catalog.decks.isEmpty { issues.append("至少要有一个词组") }
+        for deck in catalog.decks { claim(deck.id, "词组") }
+        for phrase in catalog.phrases { claim(phrase.id, "句子") }
+        for consonant in catalog.consonants { claim(consonant.id, "辅音") }
+        for vowel in catalog.vowels { claim(vowel.id, "元音") }
+        let deckIDs = Set(catalog.decks.map(\.id))
+        for phrase in catalog.phrases where !deckIDs.contains(phrase.deck) {
+            issues.append("句子 \(phrase.id) 的词组 \(phrase.deck) 不存在")
+        }
+    }
+
+    private static func validatePhrases(_ catalog: Catalog, issues: inout [String]) {
+        if catalog.phrases.count < 150 {
+            issues.append("句子只有 \(catalog.phrases.count) 条，至少要 150 条")
+        }
+        let required = [
+            "สวัสดีครับ",
+            "ขอบคุณครับ",
+            "ไม่เป็นไร",
+            "ขอโทษครับ",
+            "ยินดีที่ได้รู้จักครับ",
+            "คุณมาจากไหนครับ",
+            "กินข้าวหรือยังครับ",
+            "คุณน่ารักมาก",
+            "ผมกำลังเรียนภาษาไทยครับ"
+        ]
+        for text in required where !catalog.phrases.contains(where: { $0.thai == text }) {
+            issues.append("缺少句子：\(text)")
+        }
+        if !catalog.phrases.contains(where: { $0.thai.contains("ผมชื่อ") && $0.thai.contains("ครับ") }) {
+            issues.append("缺少自我介绍：ผมชื่อ…ครับ")
+        }
+        for phrase in catalog.phrases {
+            if !containsThai(phrase.thai) {
+                issues.append("\(phrase.id) 的泰文是空的")
+            }
+            if phrase.meaning.trimmingCharacters(in: .whitespaces).isEmpty {
+                issues.append("\(phrase.id) 没有中文意思")
+            }
+            if phrase.syllables.isEmpty {
+                issues.append("\(phrase.id) 没有音节切分")
+                continue
+            }
+            checkSyllableGroup(
+                phrase.syllables,
+                owner: phrase.id,
+                joined: phrase.romanization,
+                spelling: phrase.thai,
+                issues: &issues
+            )
+        }
+    }
+
+    private static func validateConsonants(_ catalog: Catalog, issues: inout [String]) {
+        let expected = ThaiAlphabet.entries
+        if catalog.consonants.count != expected.count {
+            issues.append("辅音应有 \(expected.count) 个，现在是 \(catalog.consonants.count) 个")
+        }
+        let sorted = catalog.consonants.sorted { $0.order < $1.order }
+        if sorted.map(\.symbol) != expected.map(\.symbol) {
+            issues.append("辅音顺序或字母和四十四字母表不一致")
+        }
+        for (consonant, entry) in zip(sorted, expected) {
+            if consonant.consonantClass != entry.consonantClass {
+                issues.append("\(consonant.symbol) 的类应是 \(entry.consonantClass.chinese)")
+            }
+            if consonant.obsolete != entry.obsolete {
+                issues.append("\(consonant.symbol) 的废字母标记不对")
+            }
+            if consonant.initial.isEmpty {
+                issues.append("\(consonant.symbol) 没有声母罗马音")
+            }
+            if consonant.nameThai.isEmpty || consonant.meaning.isEmpty {
+                issues.append("\(consonant.symbol) 的名字不完整")
+            }
+            checkSyllableGroup(
+                consonant.syllables,
+                owner: consonant.symbol,
+                joined: consonant.nameRoman,
+                spelling: consonant.nameThai,
+                issues: &issues
+            )
+        }
+    }
+
+    private static func validateVowels(_ catalog: Catalog, issues: inout [String]) {
+        if catalog.vowels.count < 24 {
+            issues.append("元音只有 \(catalog.vowels.count) 个，主要元音至少要 24 个")
+        }
+        var seen: Set<String> = []
+        for vowel in catalog.vowels {
+            if !seen.insert(vowel.id).inserted {
+                issues.append("元音 id 重复：\(vowel.id)")
+            }
+            if vowel.symbols.isEmpty || vowel.roman.isEmpty || vowel.soundHint.isEmpty {
+                issues.append("元音 \(vowel.id) 说明不完整")
+            }
+            checkSyllableGroup(
+                vowel.syllables,
+                owner: vowel.id,
+                joined: vowel.exampleRoman,
+                spelling: vowel.exampleThai,
+                issues: &issues
+            )
+        }
+    }
+
+    private static func validateTones(_ catalog: Catalog, issues: inout [String]) {
+        let tones = catalog.tones.map(\.tone)
+        if tones.sorted(by: { $0.rawValue < $1.rawValue }) != Tone.allCases.sorted(by: { $0.rawValue < $1.rawValue }) {
+            issues.append("声调课必须正好覆盖五个声调")
+        }
+        for lesson in catalog.tones {
+            if RomanTone.tone(in: lesson.exampleRoman) != lesson.tone {
+                issues.append("声调例子 \(lesson.exampleThai) 的罗马音调和 \(lesson.tone.chinese) 不一致")
+            }
+            if lesson.mandarin.isEmpty || lesson.pitch.isEmpty {
+                issues.append("\(lesson.tone.chinese) 缺少和普通话的对照")
+            }
+        }
+    }
+
+    private static func validateMinimalSets(_ catalog: Catalog, issues: inout [String]) {
+        if catalog.minimalSets.isEmpty {
+            issues.append("缺少声调最小对立组")
+        }
+        let classic: [(String, Tone)] = [
+            ("คา", .mid),
+            ("ข่า", .low),
+            ("ค่า", .falling),
+            ("ค้า", .high),
+            ("ขา", .rising)
+        ]
+        let items = catalog.minimalSets.flatMap(\.items)
+        for (thai, tone) in classic {
+            guard let item = items.first(where: { $0.thai == thai }) else {
+                issues.append("最小对立组缺少 \(thai)")
+                continue
+            }
+            if item.tone != tone {
+                issues.append("\(thai) 应是 \(tone.chinese)")
+            }
+        }
+        for set in catalog.minimalSets {
+            for item in set.items {
+                if !sameRoman(item.roman, item.syllable.roman) {
+                    issues.append("\(set.id) 里 \(item.thai) 的罗马音和音节不一致")
+                }
+                if RomanTone.tone(in: item.roman) != item.tone {
+                    issues.append("\(item.thai) 标成 \(item.tone.chinese)，罗马音却不是这个调")
+                }
+                checkSyllable(item.syllable, owner: item.thai, issues: &issues)
+                if item.syllable.exception == nil, item.syllable.expectedTone != item.tone {
+                    issues.append("\(item.thai) 的规则声调不是 \(item.tone.chinese)")
+                }
+            }
+        }
+    }
+
+    private static func validateSounds(_ catalog: Catalog, issues: inout [String]) {
+        let needed = ["voiced-stops", "initial-ng", "unreleased-finals", "aspiration"]
+        let ids = Set(catalog.sounds.map(\.id))
+        for id in needed where !ids.contains(id) {
+            issues.append("缺少发音专题 \(id)")
+        }
+        for lesson in catalog.sounds {
+            if lesson.problem.isEmpty || lesson.howTo.isEmpty || lesson.pairs.isEmpty {
+                issues.append("发音专题 \(lesson.id) 内容不完整")
+            }
+            for pair in lesson.pairs where !containsThai(pair.thai) || pair.roman.isEmpty || pair.meaning.isEmpty {
+                issues.append("发音例子不完整：\(lesson.id)")
+            }
+        }
+    }
+
+    private static func validateCulture(_ catalog: Catalog, issues: inout [String]) {
+        if catalog.culture.count < 6 {
+            issues.append("文化笔记至少 6 则")
+        }
+        for note in catalog.culture where note.title.isEmpty || note.body.count < 20 {
+            issues.append("文化笔记 \(note.id) 太短")
+        }
+    }
+
+    private static func checkSyllableGroup(
+        _ syllables: [Syllable],
+        owner: String,
+        joined: String,
+        spelling: String,
+        issues: inout [String]
+    ) {
+        if syllables.isEmpty {
+            issues.append("\(owner) 没有音节")
+            return
+        }
+        let words = Set(syllables.map(\.word))
+        let maxWord = syllables.map(\.word).max() ?? 0
+        if words != Set(0...maxWord) || syllables.first?.word != 0 {
+            issues.append("\(owner) 的音节分组不连续")
+        }
+        if !sameRoman(joined, RomanizationJoiner.join(syllables)) {
+            issues.append("\(owner) 的罗马音和音节拼起来不一致：\(joined)")
+        }
+        for syllable in syllables {
+            checkSyllable(syllable, owner: owner, issues: &issues)
+        }
+        let spellingMarks = ThaiScriptMarks.toneMarks(in: spelling)
+        let syllableMarks = syllables.flatMap { ThaiScriptMarks.toneMarks(in: $0.thai) }
+        if spelling.contains("ๆ") {
+            for mark in spellingMarks where !syllableMarks.contains(mark) {
+                issues.append("\(owner) 的 ๆ 句子丢了声调符号")
+            }
+        } else if spellingMarks != syllableMarks {
+            issues.append("\(owner) 拼写里的声调符号和音节切分对不上")
+        }
+    }
+
+    private static func checkSyllable(_ syllable: Syllable, owner: String, issues: inout [String]) {
+        let found = ThaiScriptMarks.toneMarks(in: syllable.thai)
+        switch syllable.toneMark {
+        case .none:
+            if !found.isEmpty {
+                issues.append("\(owner) 的音节 \(syllable.thai) 写了声调符号，却标成无符号")
+            }
+        default:
+            if found != [syllable.toneMark] {
+                issues.append("\(owner) 的音节 \(syllable.thai) 的声调符号不是 \(syllable.toneMark.chinese)")
+            }
+        }
+        if syllable.roman.isEmpty {
+            issues.append("\(owner) 有音节没有罗马音")
+            return
+        }
+        let marked = RomanTone.tone(in: syllable.roman)
+        if let exception = syllable.exception {
+            if exception.trimmingCharacters(in: .whitespaces).isEmpty {
+                issues.append("\(owner) 的例外说明是空的")
+            }
+        } else if marked != syllable.expectedTone {
+            issues.append("\(owner) 的 \(syllable.thai)（\(syllable.roman)）按规则应是 \(syllable.expectedTone.chinese)，罗马音却是 \(marked.chinese)")
+        }
+    }
+
+    private static func containsThai(_ text: String) -> Bool {
+        text.unicodeScalars.contains { (0x0E00...0x0E7F).contains($0.value) }
+    }
+
+    private static func sameRoman(_ lhs: String, _ rhs: String) -> Bool {
+        lhs.decomposedStringWithCanonicalMapping == rhs.decomposedStringWithCanonicalMapping
+    }
+}
