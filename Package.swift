@@ -21,7 +21,8 @@ let package = Package(
                 "Tests",
                 ".github",
                 "README.md",
-                "project.yml"
+                "project.yml",
+                "CREDITS.md"
             ],
             sources: ["Sources/ThaiLearnCore"],
             resources: [

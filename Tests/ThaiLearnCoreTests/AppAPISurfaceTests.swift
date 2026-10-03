@@ -69,7 +69,39 @@ final class AppAPISurfaceTests: XCTestCase {
                 if let vowel = catalog.vowel(ref.id) {
                     touch(vowel)
                 }
+            case .tone:
+                if let drill = ToneDrills.drill(id: ref.id, catalog: catalog) {
+                    _ = drill.consonantClass.chinese
+                    _ = drill.toneMark.chinese
+                    _ = drill.ending.chinese
+                    _ = drill.length.chinese
+                    _ = drill.tone.chinese
+                    _ = drill.exampleThai
+                    _ = drill.spoken
+                }
+            case .word:
+                _ = ref.template.chinese
             }
+            _ = ref.template
+            _ = ref.cardKey
+        }
+        _ = progress.desiredRetention
+        _ = progress.newCardLimit
+        _ = StudySession.intervalLabel(for: .good, card: nil, on: today, retention: progress.desiredRetention)
+        let stats = StudyStats.make(catalog: catalog, progress: progress, today: today)
+        _ = stats.retention
+        _ = stats.learning
+        _ = stats.reviewing
+        for day in stats.forecast {
+            _ = day.day.iso
+            _ = day.dueCount
+        }
+        for sample in stats.days {
+            _ = sample.reviews
+            _ = sample.remembered
+        }
+        for template in CardTemplate.allCases {
+            _ = template.chinese
         }
         session.grade(.again, progress: &progress)
         session.grade(.hard, progress: &progress)

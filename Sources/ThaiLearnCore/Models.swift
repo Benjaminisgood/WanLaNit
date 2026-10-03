@@ -51,12 +51,43 @@ public enum StudyKind: String, Codable, Sendable {
     case phrase
     case consonant
     case vowel
+    case tone
+    case word
 
     public var chinese: String {
         switch self {
         case .phrase: return "句子"
         case .consonant: return "辅音"
         case .vowel: return "元音"
+        case .tone: return "声调规则"
+        case .word: return "词"
+        }
+    }
+}
+
+public enum CardTemplate: String, Codable, CaseIterable, Sendable {
+    case recognition
+    case production
+    case consonantClass
+    case vowelForm
+    case toneRule
+
+    public var chinese: String {
+        switch self {
+        case .recognition: return "认出"
+        case .production: return "中文写出泰文"
+        case .consonantClass: return "字母的类和读音"
+        case .vowelForm: return "元音写法"
+        case .toneRule: return "声调规则"
+        }
+    }
+
+    public static func legacyDefault(for kind: StudyKind) -> CardTemplate {
+        switch kind {
+        case .phrase, .word: return .recognition
+        case .consonant: return .consonantClass
+        case .vowel: return .vowelForm
+        case .tone: return .toneRule
         }
     }
 }

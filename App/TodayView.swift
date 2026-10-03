@@ -33,6 +33,11 @@ struct TodayView: View {
                         StatPill(title: "到期", value: "\(report.due)")
                         StatPill(title: "间隔超过三周", value: "\(report.mastered)")
                     }
+                    if let stats = model.stats() {
+                        Text(retentionLine(stats))
+                            .font(.callout)
+                            .foregroundStyle(Ink.muted)
+                    }
                 }
 
                 CardShell {
@@ -75,7 +80,10 @@ struct TodayView: View {
                     }
                 }
 
-                Text("从 \(model.progress.startDate.iso) 开始。进度记在这台 Mac 上。")
+                Button("复习统计和设置") { model.section = .stats }
+                    .buttonStyle(.bordered)
+
+                Text("从 \(model.progress.startDate.iso) 开始。进度记在这台 Mac 上。复习用 FSRS。")
                     .font(.footnote)
                     .foregroundStyle(Ink.muted)
             }
@@ -84,6 +92,17 @@ struct TodayView: View {
         }
         .navigationTitle("今天")
     }
+}
+
+private func retentionLine(_ stats: StudyStats) -> String {
+    let rate: String
+    if let retention = stats.retention {
+        rate = "\(Int((retention * 100).rounded()))%"
+    } else {
+        rate = "还没有"
+    }
+    let dueSoon = stats.forecast.reduce(0) { $0 + $1.dueCount }
+    return "记住率 \(rate)。未来七天一共 \(dueSoon) 张到期。学习中 \(stats.learning)，复习中 \(stats.reviewing)。"
 }
 
 private struct StatPill: View {

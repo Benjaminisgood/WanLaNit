@@ -36,6 +36,21 @@ final class AppModel {
         return ProgressReport.make(catalog: catalog, progress: progress, today: today)
     }
 
+    func stats() -> StudyStats? {
+        guard let catalog else { return nil }
+        return StudyStats.make(catalog: catalog, progress: progress, today: today)
+    }
+
+    func setDesiredRetention(_ value: Double) {
+        progress.desiredRetention = min(0.97, max(0.80, value))
+        store.save(progress)
+    }
+
+    func setNewCardLimit(_ value: Int) {
+        progress.newCardLimit = min(60, max(0, value))
+        store.save(progress)
+    }
+
     func planToday() -> PlannedSession? {
         guard let catalog else { return nil }
         return StudySession.planToday(catalog: catalog, progress: progress, today: today)
@@ -82,6 +97,7 @@ enum AppSection: String, CaseIterable, Identifiable {
     case decks
     case script
     case culture
+    case stats
 
     var id: String { rawValue }
 
@@ -92,6 +108,7 @@ enum AppSection: String, CaseIterable, Identifiable {
         case .decks: return "句子"
         case .script: return "文字"
         case .culture: return "文化"
+        case .stats: return "统计"
         }
     }
 
@@ -102,6 +119,7 @@ enum AppSection: String, CaseIterable, Identifiable {
         case .decks: return "text.bubble"
         case .script: return "character.book.closed"
         case .culture: return "leaf"
+        case .stats: return "chart.bar"
         }
     }
 }

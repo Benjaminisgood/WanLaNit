@@ -195,27 +195,38 @@ final class SessionTests: XCTestCase {
         let plan = StudySession.planToday(catalog: catalog, progress: progress, today: start)
         var session = StudySession.start(plan)
         let firstID = try XCTUnwrap(session.current?.id)
+        XCTAssertEqual(session.current?.template, .recognition)
+        let beforeRequeue = session.items.count
         session.grade(.good, progress: &progress)
-        XCTAssertEqual(progress.cards[firstID]?.due, start.adding(days: 1))
+        XCTAssertEqual(progress.cards[firstID]?.stage, .learning)
+        XCTAssertEqual(progress.cards[firstID]?.due, start)
+        XCTAssertGreaterThan(session.items.count, beforeRequeue)
         XCTAssertEqual(progress.streak, 0, "中途退出不记连续天数")
 
+        var guardCount = 0
         while !session.isFinished {
+            guardCount += 1
+            XCTAssertLessThan(guardCount, 400)
             session.grade(.good, progress: &progress)
         }
         XCTAssertEqual(progress.streak, 1)
         XCTAssertNil(progress.resume)
+        let graduated = try XCTUnwrap(progress.cards[firstID])
+        XCTAssertEqual(graduated.stage, .review)
+        XCTAssertGreaterThanOrEqual(graduated.intervalDays, 1)
+        XCTAssertEqual(graduated.due, start.adding(days: graduated.intervalDays))
 
-        let tomorrow = start.adding(days: 1)
-        let next = StudySession.planToday(catalog: catalog, progress: progress, today: tomorrow)
-        XCTAssertTrue(next.items.contains { $0.id == firstID })
+        let dueDay = graduated.due
+        let next = StudySession.planToday(catalog: catalog, progress: progress, today: dueDay)
+        XCTAssertTrue(next.items.contains { $0.id == firstID && $0.template == .recognition })
         XCTAssertGreaterThan(next.reviewCount, 0)
 
         var again = StudySession.start(next)
         let before = again.items.count
-        let reviewedID = try XCTUnwrap(again.current?.id)
+        let reviewedKey = try XCTUnwrap(again.current?.cardKey)
         again.grade(.again, progress: &progress)
         XCTAssertGreaterThan(again.items.count, before)
-        XCTAssertEqual(progress.cards[reviewedID]?.due, tomorrow.adding(days: 1))
+        XCTAssertEqual(progress.cards[reviewedKey]?.stage, .relearning)
     }
 
     func testMissedDayResetsStreak() {

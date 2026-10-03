@@ -51,7 +51,18 @@ public enum Grade: Int, Codable, CaseIterable, Sendable {
     case good = 4
     case easy = 5
 
+    /// SM-2 的 quality。旧测试和旧字段还认这组数。
     public var quality: Int { rawValue }
+
+    /// FSRS 的评分：Again 1、Hard 2、Good 3、Easy 4。
+    public var fsrsRating: Int {
+        switch self {
+        case .again: return 1
+        case .hard: return 2
+        case .good: return 3
+        case .easy: return 4
+        }
+    }
 
     public var title: String {
         switch self {
@@ -64,10 +75,10 @@ public enum Grade: Int, Codable, CaseIterable, Sendable {
 
     public var hint: String {
         switch self {
-        case .again: return "这张马上再来一次"
+        case .again: return "这一轮再来一次"
         case .hard: return "想起来了，但很勉强"
-        case .good: return "对了，按正常间隔"
-        case .easy: return "太容易了"
+        case .good: return "对了，按记忆曲线排"
+        case .easy: return "太容易了，间隔拉长"
         }
     }
 }

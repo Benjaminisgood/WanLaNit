@@ -17,9 +17,10 @@ struct SessionView: View {
                         if revealed {
                             grades
                         } else {
-                            Button("看罗马音和意思") { revealed = true }
+                            Button("看答案") { revealed = true }
                                 .buttonStyle(.borderedProminent)
                                 .tint(Ink.lacquer)
+                                .keyboardShortcut(.space, modifiers: [])
                         }
                     }
                 }
@@ -40,7 +41,7 @@ struct SessionView: View {
                 Text(session.positionLabel)
                     .font(.headline.monospacedDigit())
                 if let ref = session.current {
-                    Text(ref.kind.chinese)
+                    Text("\(ref.kind.chinese) · \(ref.template.chinese)")
                         .foregroundStyle(Ink.muted)
                 }
             }
@@ -60,7 +61,7 @@ struct SessionView: View {
                 switch ref.kind {
                 case .phrase:
                     if let phrase = model.catalog?.phrase(ref.id) {
-                        phraseCard(phrase)
+                        phraseCard(phrase, template: ref.template)
                     }
                 case .consonant:
                     if let consonant = model.catalog?.consonant(ref.id) {
@@ -70,6 +71,12 @@ struct SessionView: View {
                     if let vowel = model.catalog?.vowel(ref.id) {
                         vowelCard(vowel)
                     }
+                case .tone:
+                    if let drill = model.catalog.flatMap({ ToneDrills.drill(id: ref.id, catalog: $0) }) {
+                        toneCard(drill)
+                    }
+                case .word:
+                    wordCard(ref)
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -77,24 +84,42 @@ struct SessionView: View {
     }
 
     @ViewBuilder
-    private func phraseCard(_ phrase: Phrase) -> some View {
-        HStack {
-            Spacer()
-            ThaiLine(text: phrase.thai)
-            Spacer()
-        }
-        HStack {
-            Spacer()
-            PlayButton(text: phrase.spoken)
-            Spacer()
+    private func phraseCard(_ phrase: Phrase, template: CardTemplate) -> some View {
+        if template == .production {
+            Text(phrase.meaning)
+                .font(.title2.bold())
+                .frame(maxWidth: .infinity)
+            Text("写出泰文")
+                .font(.callout)
+                .foregroundStyle(Ink.muted)
+                .frame(maxWidth: .infinity)
+        } else {
+            HStack {
+                Spacer()
+                ThaiLine(text: phrase.thai)
+                Spacer()
+            }
+            HStack {
+                Spacer()
+                PlayButton(text: phrase.spoken)
+                Spacer()
+            }
         }
         if revealed {
+            if template == .production {
+                ThaiLine(text: phrase.thai, size: 40)
+                    .frame(maxWidth: .infinity)
+                PlayButton(text: phrase.spoken)
+                    .frame(maxWidth: .infinity)
+            }
             Text(phrase.romanization)
                 .font(.title3)
                 .frame(maxWidth: .infinity)
-            Text(phrase.meaning)
-                .font(.title3)
-                .frame(maxWidth: .infinity)
+            if template != .production {
+                Text(phrase.meaning)
+                    .font(.title3)
+                    .frame(maxWidth: .infinity)
+            }
             if let note = phrase.note {
                 Text(note)
                     .font(.callout)
@@ -122,9 +147,14 @@ struct SessionView: View {
 
     @ViewBuilder
     private func consonantCard(_ consonant: Consonant) -> some View {
-        HStack(alignment: .firstTextBaseline, spacing: 16) {
-            ThaiLine(text: consonant.symbol, size: 72)
-            VStack(alignment: .leading, spacing: 4) {
+        ThaiLine(text: consonant.symbol, size: 88)
+            .frame(maxWidth: .infinity)
+        Text("这个字母是哪一类，怎么读？")
+            .font(.callout)
+            .foregroundStyle(Ink.muted)
+            .frame(maxWidth: .infinity)
+        if revealed {
+            HStack(alignment: .firstTextBaseline, spacing: 16) {
                 Text(consonant.consonantClass.chinese)
                     .font(.caption.weight(.semibold))
                     .padding(.horizontal, 8)
@@ -137,13 +167,10 @@ struct SessionView: View {
                         .foregroundStyle(Ink.muted)
                 }
             }
-            Spacer()
-        }
-        ThaiLine(text: consonant.nameThai, size: 28)
-            .frame(maxWidth: .infinity)
-        PlayButton(text: consonant.spoken)
-            .frame(maxWidth: .infinity)
-        if revealed {
+            ThaiLine(text: consonant.nameThai, size: 28)
+                .frame(maxWidth: .infinity)
+            PlayButton(text: consonant.spoken)
+                .frame(maxWidth: .infinity)
             Text(consonant.nameRoman)
                 .font(.title3)
             Text(consonant.meaning)
@@ -161,19 +188,23 @@ struct SessionView: View {
 
     @ViewBuilder
     private func vowelCard(_ vowel: Vowel) -> some View {
-        ThaiLine(text: vowel.symbols, size: 48)
+        ThaiLine(text: vowel.symbols, size: 56)
             .frame(maxWidth: .infinity)
-        Text("\(vowel.lengthLabel) · \(vowel.roman)")
-            .font(.title3)
-            .frame(maxWidth: .infinity)
-        Text(vowel.soundHint)
+        Text("这个元音怎么读？")
+            .font(.callout)
             .foregroundStyle(Ink.muted)
-            .fixedSize(horizontal: false, vertical: true)
-        ThaiLine(text: vowel.exampleThai, size: 32)
-            .frame(maxWidth: .infinity)
-        PlayButton(text: vowel.exampleThai)
             .frame(maxWidth: .infinity)
         if revealed {
+            Text("\(vowel.lengthLabel) · \(vowel.roman)")
+                .font(.title3)
+                .frame(maxWidth: .infinity)
+            Text(vowel.soundHint)
+                .foregroundStyle(Ink.muted)
+                .fixedSize(horizontal: false, vertical: true)
+            ThaiLine(text: vowel.exampleThai, size: 32)
+                .frame(maxWidth: .infinity)
+            PlayButton(text: vowel.exampleThai)
+                .frame(maxWidth: .infinity)
             Text("\(vowel.exampleRoman)  \(vowel.exampleMeaning)")
                 .font(.title3)
             if let note = vowel.note {
@@ -181,6 +212,41 @@ struct SessionView: View {
                     .font(.callout)
                     .foregroundStyle(Ink.muted)
             }
+        }
+    }
+
+    @ViewBuilder
+    private func toneCard(_ drill: ToneDrill) -> some View {
+        Text(drill.consonantClass.chinese)
+            .font(.title2.bold())
+        Text("\(drill.toneMark.chinese) · \(drill.ending.chinese) · \(drill.length.chinese)")
+            .font(.title3)
+        Text("读第几声？")
+            .font(.callout)
+            .foregroundStyle(Ink.muted)
+        if revealed {
+            Text(drill.tone.chinese)
+                .font(.title.bold())
+            if let thai = drill.exampleThai {
+                ThaiLine(text: thai, size: 36)
+                if let roman = drill.exampleRoman, let meaning = drill.exampleMeaning {
+                    Text("\(roman)  \(meaning)")
+                        .foregroundStyle(Ink.muted)
+                }
+                if let spoken = drill.spoken {
+                    PlayButton(text: spoken)
+                }
+            }
+        }
+    }
+
+    @ViewBuilder
+    private func wordCard(_ ref: StudyRef) -> some View {
+        ThaiLine(text: ref.id, size: 40)
+            .frame(maxWidth: .infinity)
+        if revealed {
+            Text("这张词卡会在阅读里补上释义。")
+                .foregroundStyle(Ink.muted)
         }
     }
 
@@ -203,7 +269,7 @@ struct SessionView: View {
         } label: {
             VStack(spacing: 2) {
                 Text(grade.title).font(.body.weight(.semibold))
-                Text(grade.hint)
+                Text(intervalText(grade))
                     .font(.caption2)
                     .foregroundStyle(Ink.muted)
                     .multilineTextAlignment(.center)
@@ -228,6 +294,18 @@ struct SessionView: View {
                     .tint(Ink.lacquer)
             }
         }
+    }
+
+    private func intervalText(_ grade: Grade) -> String {
+        guard let session = model.active, let ref = session.current else { return grade.hint }
+        let card = model.progress.cards[ref.cardKey]
+        let label = StudySession.intervalLabel(
+            for: grade,
+            card: card,
+            on: session.day,
+            retention: model.progress.desiredRetention
+        )
+        return "\(grade.hint) · \(label)"
     }
 
     private func consonantLine(_ consonant: Consonant) -> String {
