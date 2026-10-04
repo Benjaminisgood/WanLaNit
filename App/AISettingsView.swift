@@ -24,6 +24,7 @@ struct AISettingsView: View {
     @State private var importingKeyFile = false
 
     var body: some View {
+        VStack(alignment: .leading, spacing: 16) {
         CardShell {
             VStack(alignment: .leading, spacing: 14) {
                 Text("AI 设置")
@@ -32,7 +33,7 @@ struct AISettingsView: View {
                     .font(.callout)
                     .foregroundStyle(Ink.muted)
                     .fixedSize(horizontal: false, vertical: true)
-                Text("今天用了 \(model.progress.ai.usage.count(on: model.today)) / \(model.progress.ai.usage.dailyCap) 次")
+                Text("今天用了 \(model.progress.ai.usage.count(on: model.today)) / \(model.progress.ai.usage.dailyCap) 次。老师另外计 \(model.progress.tutor.requests(on: model.today)) / \(model.progress.tutor.requestCap) 次，约 \(model.progress.tutor.tokens(on: model.today)) tokens。")
                     .foregroundStyle(Ink.muted)
                 Stepper(
                     "每天最多请求 \(model.progress.ai.usage.dailyCap) 次",
@@ -108,6 +109,8 @@ struct AISettingsView: View {
                         .foregroundStyle(Ink.muted)
                 }
             }
+        }
+        TutorMemoryEditor()
         }
         .onAppear(perform: loadDraft)
         .fileImporter(isPresented: $importingKeyFile, allowedContentTypes: [.plainText, UTType(filenameExtension: "md") ?? .plainText]) { result in

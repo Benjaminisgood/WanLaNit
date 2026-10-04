@@ -101,8 +101,8 @@ enum MicError: Error {
 }
 
 enum AppleThaiSpeech {
-    static func transcribe(samples: [Float], sampleRate: Double) async throws -> String {
-        guard let recognizer = SFSpeechRecognizer(locale: Locale(identifier: "th-TH")), recognizer.isAvailable else {
+    static func transcribe(samples: [Float], sampleRate: Double, locale: String = "th-TH") async throws -> String {
+        guard let recognizer = SFSpeechRecognizer(locale: Locale(identifier: locale)), recognizer.isAvailable else {
             throw MicError.noInput
         }
         guard let format = AVAudioFormat(commonFormat: .pcmFormatFloat32, sampleRate: sampleRate, channels: 1, interleaved: false),

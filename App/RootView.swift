@@ -28,7 +28,18 @@ struct RootView: View {
                         .paper()
                         .macToolbar()
                 }
+                .overlay(alignment: .bottomTrailing) {
+                    if model.selectedSection != .tutor {
+                        Button("问老师") { model.askTeacher = true }
+                            .buttonStyle(.borderedProminent)
+                            .tint(Ink.lacquer)
+                            .padding(20)
+                    }
+                }
             }
+        }
+        .sheet(isPresented: $model.askTeacher) {
+            TutorAskSheet()
         }
         .onAppear(perform: normalizeSelection)
         .onChange(of: model.progress.unlockAll) { _, _ in
@@ -41,11 +52,12 @@ struct RootView: View {
 
     @ViewBuilder
     private func detail(for section: AppSection) -> some View {
-        if model.active != nil {
+        if model.active != nil && section != .tutor {
             SessionView()
         } else {
             switch isVisible(section) ? section : .today {
             case .today: TodayView()
+            case .tutor: TutorView()
             case .tones: ToneTrainerView()
             case .decks: DecksView()
             case .script: ScriptView()
@@ -62,7 +74,11 @@ struct RootView: View {
     }
 
     private var visibleSections: [AppSection] {
-        AppSection.allCases.filter(isVisible)
+        var sections = AppSection.allCases.filter(isVisible)
+        if model.credential(for: .chat) != nil, let index = sections.firstIndex(of: .tutor) {
+            sections.insert(sections.remove(at: index), at: 0)
+        }
+        return sections
     }
 
     private func normalizeSelection() {
@@ -82,7 +98,7 @@ struct RootView: View {
             return LearningPath.isUnlocked(.vocabulary, catalog: catalog, progress: model.progress)
         case .reader:
             return LearningPath.isUnlocked(.reading, catalog: catalog, progress: model.progress)
-        case .today, .decks, .script, .culture, .stats, .typing, .passages, .scenarios, .ai:
+        case .today, .tutor, .decks, .script, .culture, .stats, .typing, .passages, .scenarios, .ai:
             return true
         }
     }

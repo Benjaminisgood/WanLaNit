@@ -190,7 +190,7 @@ public final class OpenAICompatibleClient: ChatModel, SpeechSynthesizer, SpeechR
         throw AIClientError.empty
     }
 
-    private func post(path: String, json: [String: Any]) async throws -> AIHTTPResponse {
+    func post(path: String, json: [String: Any]) async throws -> AIHTTPResponse {
         var request = try makeRequest(path: path)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -204,7 +204,7 @@ public final class OpenAICompatibleClient: ChatModel, SpeechSynthesizer, SpeechR
         return try await transport.send(request)
     }
 
-    private func makeRequest(path: String) throws -> URLRequest {
+    func makeRequest(path: String) throws -> URLRequest {
         let root = baseURL.absoluteString.trimmingCharacters(in: CharacterSet(charactersIn: "/"))
         let suffix = path.hasPrefix("/") ? String(path.dropFirst()) : path
         guard let url = URL(string: root + "/" + suffix) else { throw AIClientError.badURL }
@@ -217,7 +217,7 @@ public final class OpenAICompatibleClient: ChatModel, SpeechSynthesizer, SpeechR
         return request
     }
 
-    private func throwIfNeeded(_ response: AIHTTPResponse) throws {
+    func throwIfNeeded(_ response: AIHTTPResponse) throws {
         guard (200..<300).contains(response.status) else {
             throw AIClientError.http(status: response.status, message: AIKeyMask.redact(response.text, secrets: [apiKey]))
         }

@@ -17,6 +17,16 @@ final class AppModel {
     private(set) var credentials: [AICredential] = []
     var assignments = AIAssignments()
     var aiNotice: String?
+    var askTeacher = false
+    var tutorContext = "今天"
+    var launchDailyLesson = false
+    var tutorExercise: TutorExercise?
+    var tutorQueue: [TutorExercise] = []
+    var tutorCards: [TutorTeachCard] = []
+    var tutorLive = ""
+    var tutorBusy = false
+    var tutorSpeakID = ""
+    var pendingCultureID: String?
     private var playToken = 0
 
     init() {
@@ -70,6 +80,16 @@ final class AppModel {
 
     func recordTyping(lesson id: String, score: TypingScore, expected: String, typed: String) {
         progress.recordTyping(lesson: id, score: score, expected: expected, typed: typed, on: today)
+        if score.wrong > 0 {
+            progress.tutor.addMistake(
+                thai: String(expected.prefix(40)),
+                expected: String(expected.prefix(40)),
+                heard: String(typed.prefix(40)),
+                note: "打字错了 \(score.wrong) 处",
+                source: "typing",
+                on: today.iso
+            )
+        }
         store.save(progress)
     }
 
@@ -116,7 +136,19 @@ final class AppModel {
         if let ref, let catalog, ref.kind == .word {
             ReaderState.sync(ref, catalog: catalog, progress: &progress)
         }
+        if grade == .again, let ref, let catalog {
+            TutorBook.collectReview(ref: ref, catalog: catalog, progress: &progress, on: today)
+        }
         active = session
+        store.save(progress)
+    }
+
+    func tutorGrade(_ grade: Grade, session: inout ActiveSession) {
+        let ref = session.current
+        session.grade(grade, progress: &progress)
+        if grade == .again, let ref, let catalog {
+            TutorBook.collectReview(ref: ref, catalog: catalog, progress: &progress, on: today)
+        }
         store.save(progress)
     }
 
@@ -518,10 +550,13 @@ final class AppModel {
             score: score,
             on: today.iso
         ))
+        if score < 80 {
+            progress.tutor.addMistake(thai: target, expected: target, heard: transcript, note: "跟读 \(score) 分", source: "shadow", on: today.iso)
+        }
         store.save(progress)
     }
 
-    func transcribe(samples: [Float], rate: Double) async -> String {
+    func transcribe(samples: [Float], rate: Double, language: String = "th") async -> String {
         guard !samples.isEmpty else {
             aiNotice = "没有录到声音。"
             return ""
@@ -535,13 +570,17 @@ final class AppModel {
                     model: credential.model(for: .transcription, override: assignments.transcriptionModel),
                     transport: AIClients.transport()
                 )
+                if let dashscope = recognizer as? DashScopeASR {
+                    dashscope.language = language == "zh" ? "zh" : "th"
+                }
                 return try await recognizer.transcribe(audioWAV: wav)
             } catch {
                 aiNotice = (error as? AIClientError)?.description ?? "云端识别失败，改用系统识别。"
             }
         }
         do {
-            return try await AppleThaiSpeech.transcribe(samples: samples, sampleRate: rate)
+            let locale = language == "zh" ? "zh-CN" : "th-TH"
+            return try await AppleThaiSpeech.transcribe(samples: samples, sampleRate: rate, locale: locale)
         } catch {
             aiNotice = "这台 Mac 没有认出泰语。系统识别需要泰语语音识别；也可以在 AI 设置里选带转写的钥匙。"
             return ""
@@ -560,6 +599,203 @@ final class AppModel {
         store.save(progress)
     }
 
+    func noteTutorContext(_ text: String) {
+        let trimmed = text.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return }
+        tutorContext = trimmed
+    }
+
+    func resolvedTutorModel(_ credential: AICredential) -> String {
+        let chosen = progress.tutor.model
+        if chosen == "qwen-plus" || chosen == "qwen-max" { return chosen }
+        return credential.model(for: .chat, override: assignments.chatModel)
+    }
+
+    func setTutorModel(_ name: String) {
+        progress.tutor.model = name == "qwen-plus" || name == "qwen-max" ? name : ""
+        store.save(progress)
+    }
+
+    func setTutorMinutes(_ minutes: Int) {
+        progress.tutor.minutesTarget = min(40, max(10, minutes))
+        store.save(progress)
+    }
+
+    func setTutorVoiceAuto(_ enabled: Bool) {
+        progress.tutor.voiceAutoContinue = enabled
+        store.save(progress)
+    }
+
+    func updateTutorNote(id: String, text: String) {
+        guard let index = progress.tutor.notes.firstIndex(where: { $0.id == id }) else { return }
+        progress.tutor.notes[index].text = String(text.prefix(240))
+        store.save(progress)
+    }
+
+    func deleteTutorNote(id: String) {
+        progress.tutor.notes.removeAll { $0.id == id }
+        store.save(progress)
+    }
+
+    func addTutorNote(_ text: String) {
+        progress.tutor.addNote(text, on: today.iso)
+        store.save(progress)
+    }
+
+    func resolveMistake(id: String) {
+        guard let index = progress.tutor.mistakes.firstIndex(where: { $0.id == id }) else { return }
+        progress.tutor.mistakes[index].resolved = true
+        store.save(progress)
+    }
+
+    func startDailyLesson() {
+        selectedSection = .tutor
+        launchDailyLesson = true
+    }
+
+    func consumeDailyLessonIfNeeded() {
+        guard launchDailyLesson else { return }
+        launchDailyLesson = false
+        Task { await runTutor(userText: "开始今天的课") }
+    }
+
+    func sendTutor(_ text: String) {
+        Task { await runTutor(userText: text) }
+    }
+
+    func submitTutorExercise(_ json: String) {
+        tutorExercise = nil
+        absorbExerciseJSON(json)
+        if !tutorQueue.isEmpty && !tutorCanCall() {
+            let next = tutorQueue.removeFirst()
+            tutorExercise = next
+            progress.tutor.appendTurn(role: "assistant", text: "练习结果已记下。下一步：\(next.title)。\(next.detail)", on: today.iso)
+            tutorSpeakID = progress.tutor.turns.last?.id ?? ""
+            store.save(progress)
+            return
+        }
+        Task { await runTutor(userText: "练习结果：\(json)") }
+    }
+
+    func finishTutorLesson() {
+        let asked = progress.tutor.lessonAsked
+        let score = asked == 0 ? 80 : Int((100.0 * Double(progress.tutor.lessonCorrect) / Double(max(asked, 1))).rounded())
+        let summary = progress.tutor.turns.last(where: { $0.role == "assistant" })?.text ?? "今天的课"
+        progress.tutor.sessions.append(TutorSessionRecord(
+            id: UUID().uuidString,
+            on: today.iso,
+            summary: String(summary.prefix(280)),
+            score: min(100, max(0, score)),
+            minutes: progress.tutor.minutesTarget,
+            homework: progress.tutor.homework
+        ))
+        if progress.tutor.sessions.count > 30 {
+            progress.tutor.sessions.removeFirst(progress.tutor.sessions.count - 30)
+        }
+        progress.tutor.addNote("第 \(StudyPlan.dayNumber(on: today, start: progress.startDate)) 天的课结束了，分数 \(score)。", on: today.iso)
+        store.save(progress)
+    }
+
+    func makeWeekPlan() {
+        guard let catalog else { return }
+        if tutorCanCall() {
+            Task { await runTutor(userText: "请根据进度修订本周计划，并调用 set_plan。里程碑对齐两周发音和句子、大约一个月认字、然后语法和词汇。") }
+            return
+        }
+        progress.tutor.weekPlan = OfflineTutor.weekPlan(catalog: catalog, progress: progress, today: today)
+        store.save(progress)
+    }
+
+    func weeklyCheckIn() {
+        if tutorCanCall() {
+            Task { await runTutor(userText: "做每周核对。看快照，问我这周哪一块最不稳，然后更新计划和记忆。") }
+            return
+        }
+        guard let catalog else { return }
+        let lesson = OfflineTutor.lesson(catalog: catalog, progress: progress, today: today)
+        if let step = lesson.steps.first(where: { $0.exercise?.kind == "checkin" }) {
+            tutorExercise = step.exercise
+        } else {
+            progress.tutor.checkIns.append(today.iso)
+            progress.tutor.addNote("每周核对：按当前阶段继续，每天 \(progress.tutor.minutesTarget) 分钟。", on: today.iso)
+        }
+        store.save(progress)
+    }
+
+    private func tutorCanCall() -> Bool {
+        credential(for: .chat) != nil && TutorBudget.allows(progress.tutor, on: today) && progress.ai.usage.allows(today)
+    }
+
+    private func absorbExerciseJSON(_ json: String) {
+        let object = TutorJSON.object(json)
+        if object["checkIn"] != nil {
+            progress.tutor.checkIns.append(today.iso)
+        }
+        progress.tutor.lessonCorrect += TutorJSON.int(object, "correct", fallback: 0)
+        progress.tutor.lessonAsked += TutorJSON.int(object, "asked", fallback: 0)
+        store.save(progress)
+    }
+
+    private func runTutor(userText: String) async {
+        let trimmed = userText.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty, let catalog else { return }
+        tutorBusy = true
+        tutorLive = ""
+        let result: TutorAgentResult
+        if tutorCanCall(), let chat = try? makeTutorChat() {
+            result = await TutorAgent.respond(
+                fetch: { messages in
+                    try await self.pullTutorTurn(chat, messages: messages)
+                },
+                userText: trimmed,
+                catalog: catalog,
+                progress: progress,
+                today: today,
+                context: tutorContext
+            )
+        } else {
+            result = TutorAgent.offline(userText: trimmed, catalog: catalog, progress: progress, today: today, context: tutorContext)
+        }
+        progress = result.progress
+        tutorCards = result.cards
+        tutorExercise = result.exercise
+        tutorQueue = result.queue
+        tutorLive = ""
+        tutorSpeakID = progress.tutor.turns.last?.id ?? ""
+        if let culture = result.cultureID {
+            pendingCultureID = culture
+            selectedSection = .culture
+        }
+        tutorBusy = false
+        store.save(progress)
+    }
+
+    private func makeTutorChat() throws -> ToolChatModel {
+        guard let credential = credential(for: .chat) else { throw AIClientError.empty }
+        let chat = try AIClients.chat(credential, model: resolvedTutorModel(credential), transport: AIClients.transport())
+        if let client = chat as? OpenAICompatibleClient { return client }
+        return TextOnlyToolChat(base: chat)
+    }
+
+    private func pullTutorTurn(_ chat: ToolChatModel, messages: [TutorWireMessage]) async throws -> LLMTurn {
+        if let streaming = chat as? TutorStreamingChat {
+            var done: LLMTurn?
+            for try await piece in streaming.streamTurn(messages: messages, tools: TutorTools.specs) {
+                switch piece {
+                case .text(let part):
+                    tutorLive += part
+                case .done(let turn):
+                    done = turn
+                }
+            }
+            if let done { return done }
+            throw AIClientError.empty
+        }
+        let turn = try await chat.completeTurn(messages: messages, tools: TutorTools.specs)
+        tutorLive = turn.text
+        return turn
+    }
+
     private func begin(_ plan: PlannedSession) {
         let session = StudySession.start(plan)
         progress.resume = session.snapshot
@@ -570,6 +806,7 @@ final class AppModel {
 
 enum AppSection: String, CaseIterable, Identifiable, Hashable {
     case today
+    case tutor
     case tones
     case decks
     case script
@@ -587,6 +824,7 @@ enum AppSection: String, CaseIterable, Identifiable, Hashable {
     var title: String {
         switch self {
         case .today: return "今天"
+        case .tutor: return "AI 老师"
         case .tones: return "声调"
         case .decks: return "句子"
         case .script: return "文字"
@@ -604,6 +842,7 @@ enum AppSection: String, CaseIterable, Identifiable, Hashable {
     var symbol: String {
         switch self {
         case .today: return "sun.max"
+        case .tutor: return "graduationcap"
         case .tones: return "waveform"
         case .decks: return "text.bubble"
         case .script: return "character.book.closed"

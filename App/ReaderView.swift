@@ -64,6 +64,9 @@ struct ReaderView: View {
         .navigationTitle("阅读")
         .onAppear {
             if selectedID == nil { selectedID = pieces.first?.id }
+            if let title = pieces.first(where: { $0.id == selectedID })?.title ?? pieces.first?.title {
+                model.noteTutorContext("正在阅读：\(title)")
+            }
         }
         .onChange(of: model.progress.library.count) { _, _ in
             if let id = model.progress.library.last?.id {

@@ -421,6 +421,11 @@ final class AppAPISurfaceTests: XCTestCase {
         _ = CulturePhrase(thai: "ครับ", romanization: "khráp", meaning: "礼貌词").thai
         XCTAssertTrue(progress.scenarioLog.isEmpty)
         XCTAssertTrue(progress.cultureLog.isEmpty)
+        XCTAssertEqual(progress.tutor.minutesTarget, 20)
+        XCTAssertTrue(TutorBudget.allows(progress.tutor, on: today))
+        XCTAssertFalse(LearnerModel.snapshot(catalog: catalog, progress: progress, today: today).grounded.isEmpty)
+        XCTAssertTrue(TutorTools.names.contains("start_roleplay"))
+        _ = TutorPrompt.system(snapshot: LearnerModel.snapshot(catalog: catalog, progress: progress, today: today), summary: "", context: "今天", minutes: 20).isEmpty
     }
 
     private func touch(_ phrase: Phrase) {

@@ -71,6 +71,9 @@ struct TodayView: View {
                 }
 
                 HStack(spacing: 12) {
+                    Button("今天的课") { model.startDailyLesson() }
+                        .buttonStyle(.borderedProminent)
+                        .tint(Ink.leaf)
                     Button(typingTitle) { model.selectedSection = .typing }
                         .buttonStyle(.bordered)
                     Button(readingTitle) { model.selectedSection = .passages }

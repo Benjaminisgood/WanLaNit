@@ -5,6 +5,7 @@ struct CultureView: View {
     @Environment(AppModel.self) private var model
     @Environment(\.horizontalSizeClass) private var sizeClass
     @State private var selectedID: String? = "culture-wai"
+    @State private var openedFromTutor = false
 
     private var notes: [CultureNote] {
         (model.catalog?.culture ?? []).sorted { $0.order < $1.order }
@@ -21,9 +22,13 @@ struct CultureView: View {
     var body: some View {
         Group {
             if compact {
-                List(notes) { note in
-                    NavigationLink(note.title) {
-                        article(note)
+                if openedFromTutor, let note = notes.first(where: { $0.id == selectedID }) {
+                    article(note)
+                } else {
+                    List(notes) { note in
+                        NavigationLink(note.title) {
+                            article(note)
+                        }
                     }
                 }
             } else {
@@ -42,6 +47,13 @@ struct CultureView: View {
             }
         }
         .navigationTitle("文化")
+        .onAppear {
+            if let pending = model.pendingCultureID {
+                selectedID = pending
+                openedFromTutor = true
+                model.pendingCultureID = nil
+            }
+        }
     }
 
     private func article(_ note: CultureNote) -> some View {
@@ -89,7 +101,10 @@ struct CultureView: View {
             .padding(32)
             .frame(maxWidth: 680, alignment: .leading)
         }
-        .onAppear { model.markCultureRead(note.id) }
+        .onAppear {
+            model.markCultureRead(note.id)
+            model.noteTutorContext("正在读文化：\(note.title)")
+        }
     }
 }
 

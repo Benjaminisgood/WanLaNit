@@ -87,6 +87,9 @@ struct PassagePracticeView: View {
             if selectedID == nil { selectedID = passages.first?.id }
             if let id = selectedID ?? passages.first?.id {
                 model.markPassageRead(id)
+                if let title = passages.first(where: { $0.id == id })?.title {
+                    model.noteTutorContext("正在精读：\(title)")
+                }
             }
         }
         .onChange(of: selectedID) { _, id in

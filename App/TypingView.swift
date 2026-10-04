@@ -36,6 +36,7 @@ struct TypingView: View {
         .navigationTitle("打字")
         .onAppear {
             thaiKeyboard = ThaiInputSource.isActive()
+            model.noteTutorContext("正在打字")
         }
         #if os(macOS)
         .onReceive(NotificationCenter.default.publisher(for: NSApplication.didBecomeActiveNotification)) { _ in

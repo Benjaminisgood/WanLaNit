@@ -36,6 +36,11 @@ struct SessionView: View {
             revealed = false
         }
         .navigationTitle("这一轮")
+        .onAppear {
+            if let ref = model.active?.current {
+                model.noteTutorContext("正在复习：\(ref.kind.chinese) \(ref.id)")
+            }
+        }
     }
 
     private var header: some View {

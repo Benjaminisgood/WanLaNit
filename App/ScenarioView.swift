@@ -71,6 +71,9 @@ struct ScenarioView: View {
         .navigationTitle("场景")
         .onAppear {
             if scenarioID == nil { scenarioID = scenarios.first?.id }
+            if let title = scenario?.title {
+                model.noteTutorContext("正在练场景：\(title)")
+            }
         }
     }
 

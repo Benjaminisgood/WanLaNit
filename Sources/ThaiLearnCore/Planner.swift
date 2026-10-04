@@ -289,6 +289,7 @@ public struct LearningProgress: Equatable, Sendable {
     public var passageLog: [String: PassageLog]
     public var scenarioLog: [String: ScenarioLog]
     public var cultureLog: [String: CultureLog]
+    public var tutor: TutorRecord
     public var ai: AISettings
 
     public init(
@@ -309,6 +310,7 @@ public struct LearningProgress: Equatable, Sendable {
         passageLog: [String: PassageLog] = [:],
         scenarioLog: [String: ScenarioLog] = [:],
         cultureLog: [String: CultureLog] = [:],
+        tutor: TutorRecord = TutorRecord(),
         ai: AISettings = AISettings()
     ) {
         self.schema = schema
@@ -328,6 +330,7 @@ public struct LearningProgress: Equatable, Sendable {
         self.passageLog = passageLog
         self.scenarioLog = scenarioLog
         self.cultureLog = cultureLog
+        self.tutor = tutor
         self.ai = ai
     }
 
@@ -374,7 +377,7 @@ public struct LearningProgress: Equatable, Sendable {
 extension LearningProgress: Codable {
     private enum CodingKeys: String, CodingKey {
         case schema, startDate, cards, streak, lastStudiedDay, dayLogs, resume
-        case desiredRetention, newCardLimit, wordMemory, library, readerNotes, unlockAll, typing, passageLog, scenarioLog, cultureLog, ai
+        case desiredRetention, newCardLimit, wordMemory, library, readerNotes, unlockAll, typing, passageLog, scenarioLog, cultureLog, tutor, ai
     }
 
     public init(from decoder: Decoder) throws {
@@ -397,6 +400,7 @@ extension LearningProgress: Codable {
         passageLog = try container.decodeIfPresent([String: PassageLog].self, forKey: .passageLog) ?? [:]
         scenarioLog = try container.decodeIfPresent([String: ScenarioLog].self, forKey: .scenarioLog) ?? [:]
         cultureLog = try container.decodeIfPresent([String: CultureLog].self, forKey: .cultureLog) ?? [:]
+        tutor = try container.decodeIfPresent(TutorRecord.self, forKey: .tutor) ?? TutorRecord()
         ai = try container.decodeIfPresent(AISettings.self, forKey: .ai) ?? AISettings()
     }
 
@@ -419,6 +423,7 @@ extension LearningProgress: Codable {
         try container.encode(passageLog, forKey: .passageLog)
         try container.encode(scenarioLog, forKey: .scenarioLog)
         try container.encode(cultureLog, forKey: .cultureLog)
+        try container.encode(tutor, forKey: .tutor)
         try container.encode(ai, forKey: .ai)
     }
 }
