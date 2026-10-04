@@ -16,13 +16,33 @@ xcodegen generate
 open WanLaNit.xcodeproj
 ```
 
-在 Xcode 里选方案 WanLaNit，按 Run。应用名字是 วันละนิด。
+在 Xcode 里选方案 **WanLaNit**，按 Run。应用名字是 วันละนิด。
+
+`App/` 目录里的每个 Swift 文件都会进这个目标，包括 `KeychainVault.swift`（钥匙串和朗读缓存）和 `MicCapture.swift`（系统泰语识别）。如果 Xcode 报 `Cannot find 'KeychainVault'`、`TTSCache` 或 `AppleThaiSpeech`，先再跑一次上面的 `xcodegen generate`，然后 Product → Clean Build Folder。
 
 只想检查课程和复习算法、不打开界面时：
 
 ```bash
 swift test
 ```
+
+## 在自己的 iPhone 上跑
+
+仓库里还有方案 **WanLaNit-iOS**，系统和界面跟 Mac 共用，目标是 iOS 17。这台环境编不了 iPhone 包，下面是在你自己的 Mac 上装到手机的步骤。
+
+1. `xcodegen generate`，用 Xcode 打开 `WanLaNit.xcodeproj`。
+2. 左上角方案选 **WanLaNit-iOS**，不要选 Mac 的 WanLaNit。
+3. 点蓝色项目，选目标 WanLaNit-iOS，Signing & Capabilities 里把 Team 设成你的个人 Apple ID。没有的话，Xcode → Settings → Accounts 先登录。
+4. 用线连上 iPhone。手机上如果弹出「要信任此电脑吗」，点信任。
+5. iPhone 打开「设置」→「隐私与安全性」→「开发者模式」，打开后按提示重启。
+6. 第一次安装后，到「设置」→「通用」→「VPN 与设备管理」，信任你的开发者描述文件。
+7. 按 Run。系统会问麦克风和语音识别，两点允许。打字用系统里的泰文键盘，地球仪键切换。屏幕上的键位只是对照，点它不会输入。
+
+免费 Apple ID 签名大约 **7 天后失效**，到期后再按一次 Run 就行。进度不会因为重装签名自动出现在另一台手机上。
+
+两台设备之间拷进度：在「统计」里「导出进度」，得到一份 JSON，用隔空投送或「文件」App 送到另一台，再点「导入进度」。AI 钥匙仍只在各自的钥匙串里，不会写进这个文件。
+
+iCloud 同步默认关着。要开的话需要付费的 Apple Developer 账号，在目标上加上 iCloud 能力，并把编译条件设为 `WANLANIT_ICLOUD`。没有付费账号就用上面的 JSON。
 
 ## 从 GitHub 下载编好的应用
 
@@ -102,6 +122,8 @@ Actions 里的 “Build macOS app” 会在 macOS 上跑测试、编译，并上
 五种练法：点一个词看意思、罗马音和发音，词的颜色跟阅读里一样；朗读按句播放，当前句高亮，语速可调；跟读是听完一句就停；理解是每篇三四道中文选择题；听写是听一句再打出来，对错算法和打字课相同。点过的词可以加入词汇复习。读过的篇目和测验分数记在 `progress.json`。
 
 ## AI 练习
+
+侧栏「场景」和「文化」一开始就在。「场景」是见面、约会、点餐、坐车、问路和买东西。每课有要完成的事、男生说法 ครับ、女生说法、逐句示范、理解和扮演。没有 AI 时扮演是选择题，也可以自己打一句，模糊对得上就算过。有对话钥匙时，对方按场景说话，一轮结束给中文反馈。短语可以放进复习。
 
 侧栏「AI 练习」一开始就在，不跟学习路线走。没有钥匙也能用：朗读用系统泰语声音，出题用本地题目，跟读用系统的泰语识别。阅读、精读、句子、词汇和这一轮的卡片上可以选「系统语音」或「AI 语音」，并改音色和语速。
 

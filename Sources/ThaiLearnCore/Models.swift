@@ -221,6 +221,18 @@ public struct VocabWord: Codable, Equatable, Identifiable, Sendable {
     public var spoken: String { thai }
 }
 
+public struct CulturePhrase: Codable, Equatable, Sendable {
+    public var thai: String
+    public var romanization: String
+    public var meaning: String
+
+    public init(thai: String, romanization: String, meaning: String) {
+        self.thai = thai
+        self.romanization = romanization
+        self.meaning = meaning
+    }
+}
+
 public struct CultureNote: Codable, Equatable, Identifiable, Sendable {
     public var id: String
     public var title: String
@@ -228,6 +240,56 @@ public struct CultureNote: Codable, Equatable, Identifiable, Sendable {
     public var roman: String?
     public var body: String
     public var order: Int
+    public var phrases: [CulturePhrase]
+    public var questions: [PassageQuestion]
+
+    public init(
+        id: String,
+        title: String,
+        thai: String?,
+        roman: String?,
+        body: String,
+        order: Int,
+        phrases: [CulturePhrase] = [],
+        questions: [PassageQuestion] = []
+    ) {
+        self.id = id
+        self.title = title
+        self.thai = thai
+        self.roman = roman
+        self.body = body
+        self.order = order
+        self.phrases = phrases
+        self.questions = questions
+    }
+
+    private enum CodingKeys: String, CodingKey {
+        case id, title, thai, roman, body, order, phrases, questions
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decode(String.self, forKey: .id)
+        title = try container.decode(String.self, forKey: .title)
+        thai = try container.decodeIfPresent(String.self, forKey: .thai)
+        roman = try container.decodeIfPresent(String.self, forKey: .roman)
+        body = try container.decode(String.self, forKey: .body)
+        order = try container.decode(Int.self, forKey: .order)
+        phrases = try container.decodeIfPresent([CulturePhrase].self, forKey: .phrases) ?? []
+        questions = try container.decodeIfPresent([PassageQuestion].self, forKey: .questions) ?? []
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(id, forKey: .id)
+        try container.encode(title, forKey: .title)
+        try container.encodeIfPresent(thai, forKey: .thai)
+        try container.encodeIfPresent(roman, forKey: .roman)
+        try container.encode(body, forKey: .body)
+        try container.encode(order, forKey: .order)
+        try container.encode(phrases, forKey: .phrases)
+        try container.encode(questions, forKey: .questions)
+    }
 }
 
 public struct Catalog: Equatable, Sendable {
@@ -242,6 +304,7 @@ public struct Catalog: Equatable, Sendable {
     public var words: [VocabWord]
     public var starters: [StarterText]
     public var passages: [ReadingPassage]
+    public var scenarios: [Scenario]
 
     public init(
         decks: [Deck],
@@ -254,7 +317,8 @@ public struct Catalog: Equatable, Sendable {
         culture: [CultureNote],
         words: [VocabWord] = [],
         starters: [StarterText] = [],
-        passages: [ReadingPassage] = []
+        passages: [ReadingPassage] = [],
+        scenarios: [Scenario] = []
     ) {
         self.decks = decks
         self.phrases = phrases
@@ -267,6 +331,11 @@ public struct Catalog: Equatable, Sendable {
         self.words = words
         self.starters = starters
         self.passages = passages
+        self.scenarios = scenarios
+    }
+
+    public func scenario(_ id: String) -> Scenario? {
+        scenarios.first { $0.id == id }
     }
 
     public func passage(_ id: String) -> ReadingPassage? {

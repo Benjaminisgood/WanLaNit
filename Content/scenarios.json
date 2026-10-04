@@ -1,0 +1,2141 @@
+[
+  {
+    "id": "sc-friends",
+    "title": "认识新朋友",
+    "setting": "学校活动或语言交换。对方是来练中文的女生，你用男生的 ครับ 和 ผม。",
+    "order": 1,
+    "goals": [
+      {
+        "id": "greet",
+        "chinese": "打招呼，并说出自己的名字"
+      },
+      {
+        "id": "ask",
+        "chinese": "问对方的名字，或问她从哪里来"
+      },
+      {
+        "id": "plan",
+        "chinese": "礼貌地约下次，或问能不能加 LINE"
+      }
+    ],
+    "phrases": [
+      {
+        "id": "sc-friends-01",
+        "thai": "สวัสดีครับ",
+        "female": "สวัสดีค่ะ",
+        "romanization": "sà-wàt-dii khráp",
+        "meaning": "你好"
+      },
+      {
+        "id": "sc-friends-02",
+        "thai": "ผมชื่อเบนครับ",
+        "female": "ฉันชื่อเบนค่ะ",
+        "romanization": "phǒm chʉ̂ʉ ben khráp",
+        "meaning": "我叫本"
+      },
+      {
+        "id": "sc-friends-03",
+        "thai": "ยินดีที่ได้รู้จักครับ",
+        "female": "ยินดีที่ได้รู้จักค่ะ",
+        "romanization": "yan-dii thîi dâai rúu-jàk khráp",
+        "meaning": "很高兴认识你"
+      },
+      {
+        "id": "sc-friends-04",
+        "thai": "คุณชื่ออะไรครับ",
+        "female": "คุณชื่ออะไรค่ะ",
+        "romanization": "khun chʉ̂ʉ à-rai khráp",
+        "meaning": "你叫什么名字"
+      },
+      {
+        "id": "sc-friends-05",
+        "thai": "คุณมาจากไหนครับ",
+        "female": "คุณมาจากไหนค่ะ",
+        "romanization": "khun maa jàak nǎi khráp",
+        "meaning": "你从哪里来"
+      },
+      {
+        "id": "sc-friends-06",
+        "thai": "ผมมาจากจีนครับ",
+        "female": "ฉันมาจากจีนค่ะ",
+        "romanization": "phǒm maa jàak jiin khráp",
+        "meaning": "我从中国来"
+      },
+      {
+        "id": "sc-friends-07",
+        "thai": "ผมกำลังเรียนภาษาไทยครับ",
+        "female": "ฉันกำลังเรียนภาษาไทยค่ะ",
+        "romanization": "phǒm kam-lang rian phaa-sǎa thai khráp",
+        "meaning": "我正在学泰语"
+      },
+      {
+        "id": "sc-friends-08",
+        "thai": "แลกภาษาได้ไหมครับ",
+        "female": "แลกภาษาได้ไหมคะ",
+        "romanization": "lɛ́ɛk phaa-sǎa dâai mǎi khráp",
+        "meaning": "可以交换语言吗"
+      },
+      {
+        "id": "sc-friends-09",
+        "thai": "พูดช้าๆ ได้ไหมครับ",
+        "female": "พูดช้าๆ ได้ไหมคะ",
+        "romanization": "phûut cháa-cháa dâai mǎi khráp",
+        "meaning": "能说慢一点吗"
+      },
+      {
+        "id": "sc-friends-10",
+        "thai": "ขอไลน์ได้ไหมครับ",
+        "female": "ขอไลน์ได้ไหมคะ",
+        "romanization": "khɔ̌ɔ lai dâai mǎi khráp",
+        "meaning": "可以加 LINE 吗"
+      },
+      {
+        "id": "sc-friends-11",
+        "thai": "วันเสาร์ว่างไหมครับ",
+        "female": "วันเสาร์ว่างไหมคะ",
+        "romanization": "wan-sǎo wâang mǎi khráp",
+        "meaning": "周六有空吗"
+      },
+      {
+        "id": "sc-friends-12",
+        "thai": "แล้วเจอกันครับ",
+        "female": "แล้วเจอกันค่ะ",
+        "romanization": "lɛ́ɛo jəə kan khráp",
+        "meaning": "回头见"
+      }
+    ],
+    "dialogues": [
+      {
+        "id": "sc-friends-d1",
+        "title": "语言交换一开始",
+        "lines": [
+          {
+            "id": "a1",
+            "speaker": "มิ้นท์",
+            "thai": "สวัสดีค่ะ มาแลกภาษาเหรอคะ",
+            "romanization": "sà-wàt-dii khâ maa lɛ́ɛk phaa-sǎa rə̌ə khá",
+            "meaning": "你好，是来交换语言的吗"
+          },
+          {
+            "id": "a2",
+            "speaker": "เบน",
+            "thai": "ใช่ครับ ผมชื่อเบนครับ",
+            "romanization": "châi khráp phǒm chʉ̂ʉ ben khráp",
+            "meaning": "是的，我叫本"
+          },
+          {
+            "id": "a3",
+            "speaker": "มิ้นท์",
+            "thai": "ยินดีค่ะ มิ้นท์เองค่ะ",
+            "romanization": "yan-dii khâ min éeng khâ",
+            "meaning": "很高兴认识你，我是敏"
+          },
+          {
+            "id": "a4",
+            "speaker": "เบน",
+            "thai": "คุณมาจากไหนครับ",
+            "romanization": "khun maa jàak nǎi khráp",
+            "meaning": "你从哪里来"
+          },
+          {
+            "id": "a5",
+            "speaker": "มิ้นท์",
+            "thai": "เชียงใหม่ค่ะ แล้วคุณล่ะคะ",
+            "romanization": "chiang-mài khâ lɛ́ɛo khun lâ khá",
+            "meaning": "清迈。你呢"
+          },
+          {
+            "id": "a6",
+            "speaker": "เบน",
+            "thai": "ผมมาจากจีนครับ ผมกำลังเรียนภาษาไทยครับ",
+            "romanization": "phǒm maa jàak jiin khráp phǒm kam-lang rian phaa-sǎa thai khráp",
+            "meaning": "我从中国来，正在学泰语"
+          }
+        ]
+      },
+      {
+        "id": "sc-friends-d2",
+        "title": "结束时约下次",
+        "lines": [
+          {
+            "id": "b1",
+            "speaker": "มิ้นท์",
+            "thai": "วันนี้สนุกดีนะคะ",
+            "romanization": "wan-níi sà-nùk dii ná khá",
+            "meaning": "今天挺开心的"
+          },
+          {
+            "id": "b2",
+            "speaker": "เบน",
+            "thai": "ผมก็สนุกครับ พูดช้าๆ ได้ไหมครับ บางทีผมฟังไม่ทัน",
+            "romanization": "phǒm kɔ̂ɔ sà-nùk khráp phûut cháa-cháa dâai mǎi khráp",
+            "meaning": "我也很开心。有时能说慢一点吗，我跟不上"
+          },
+          {
+            "id": "b3",
+            "speaker": "มิ้นท์",
+            "thai": "ได้ค่ะ",
+            "romanization": "dâai khâ",
+            "meaning": "可以"
+          },
+          {
+            "id": "b4",
+            "speaker": "เบน",
+            "thai": "ขอไลน์ได้ไหมครับ",
+            "romanization": "khɔ̌ɔ lai dâai mǎi khráp",
+            "meaning": "可以加 LINE 吗"
+          },
+          {
+            "id": "b5",
+            "speaker": "มิ้นท์",
+            "thai": "ได้ค่ะ นี่เลย",
+            "romanization": "dâai khâ nîi ləəi",
+            "meaning": "可以，这是"
+          },
+          {
+            "id": "b6",
+            "speaker": "เบน",
+            "thai": "ขอบคุณครับ แล้วเจอกันครับ",
+            "romanization": "khɔ̀ɔp-khun khráp lɛ́ɛo jəə kan khráp",
+            "meaning": "谢谢，回头见"
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "语言交换刚见面，男生先说哪句最合适？",
+        "choices": [
+          "ผมชื่อเบนครับ",
+          "ลดได้ไหมครับ",
+          "เผ็ดได้ครับ"
+        ],
+        "answer": 0
+      },
+      {
+        "prompt": "没听清时，哪句是在请对方说慢一点？",
+        "choices": [
+          "พูดช้าๆ ได้ไหมครับ",
+          "เท่าไหร่ครับ",
+          "เลี้ยวซ้ายครับ"
+        ],
+        "answer": 0
+      },
+      {
+        "prompt": "想再联系，可以说哪句？",
+        "choices": [
+          "ขอไลน์ได้ไหมครับ",
+          "แพงไปครับ",
+          "จอดตรงนี้ครับ"
+        ],
+        "answer": 0
+      }
+    ],
+    "script": [
+      {
+        "id": "start",
+        "speaker": "มิ้นท์",
+        "thai": "สวัสดีค่ะ มาแลกภาษาเหรอคะ",
+        "romanization": "sà-wàt-dii khâ",
+        "meaning": "你好，是来交换语言的吗",
+        "choices": [
+          {
+            "thai": "ใช่ครับ ผมชื่อเบนครับ",
+            "meaning": "是的，我叫本",
+            "next": "name",
+            "goals": [
+              "greet"
+            ]
+          },
+          {
+            "thai": "ขอโทษครับ พูดอีกทีได้ไหมครับ",
+            "meaning": "对不起，能再说一遍吗",
+            "next": "start",
+            "goals": []
+          }
+        ],
+        "typed": [
+          "ผมชื่อเบน",
+          "สวัสดีครับ",
+          "แลกภาษา"
+        ],
+        "typedNext": "name",
+        "typedGoals": [
+          "greet"
+        ],
+        "end": false
+      },
+      {
+        "id": "name",
+        "speaker": "มิ้นท์",
+        "thai": "ยินดีค่ะ มิ้นท์เองค่ะ คุณมาจากไหนคะ",
+        "romanization": "yan-dii khâ",
+        "meaning": "很高兴认识你，我是敏。你从哪来",
+        "choices": [
+          {
+            "thai": "ผมมาจากจีนครับ แล้วคุณล่ะครับ",
+            "meaning": "我从中国来，你呢",
+            "next": "plan",
+            "goals": [
+              "ask"
+            ]
+          },
+          {
+            "thai": "คุณชื่ออะไรครับ",
+            "meaning": "你叫什么名字",
+            "next": "plan",
+            "goals": [
+              "ask"
+            ]
+          }
+        ],
+        "typed": [
+          "มาจากจีน",
+          "คุณชื่ออะไร",
+          "เชียงใหม่"
+        ],
+        "typedNext": "plan",
+        "typedGoals": [
+          "ask"
+        ],
+        "end": false
+      },
+      {
+        "id": "plan",
+        "speaker": "มิ้นท์",
+        "thai": "อาทิตย์หน้าอยากมาอีกไหมคะ",
+        "romanization": "aa-thít nâa",
+        "meaning": "下周还想来吗",
+        "choices": [
+          {
+            "thai": "อยากครับ ขอไลน์ได้ไหมครับ",
+            "meaning": "想，可以加 LINE 吗",
+            "next": "end",
+            "goals": [
+              "plan"
+            ]
+          },
+          {
+            "thai": "วันเสาร์ว่างไหมครับ ถ้าไม่สะดวกก็ไม่เป็นไรครับ",
+            "meaning": "周六有空吗，不方便也没关系",
+            "next": "end",
+            "goals": [
+              "plan"
+            ]
+          }
+        ],
+        "typed": [
+          "ขอไลน์",
+          "วันเสาร์",
+          "ไม่เป็นไร"
+        ],
+        "typedNext": "end",
+        "typedGoals": [
+          "plan"
+        ],
+        "end": false
+      },
+      {
+        "id": "end",
+        "speaker": "มิ้นท์",
+        "thai": "ได้ค่ะ แล้วเจอกันนะคะ",
+        "romanization": "lɛ́ɛo jəə kan",
+        "meaning": "好，回头见",
+        "choices": [],
+        "typed": [],
+        "typedNext": "",
+        "typedGoals": [],
+        "end": true
+      }
+    ],
+    "persona": {
+      "name": "มิ้นท์",
+      "role": "在语言交换上认识的女生",
+      "brief": "你友善、说话短，会等他。他要是太快问私人问题，你就轻轻带开。不要答应深夜见面。可以给 LINE，但要等他先礼貌地问。",
+      "turnLimit": 8
+    }
+  },
+  {
+    "id": "sc-dating",
+    "title": "约会和聊天",
+    "setting": "LINE 上聊天，以及第一次一起吃饭。夸奖要具体、轻，邀请要留退路。",
+    "order": 2,
+    "goals": [
+      {
+        "id": "hello",
+        "chinese": "打招呼，并说今天见到她很高兴"
+      },
+      {
+        "id": "compliment",
+        "chinese": "夸一件具体的事，不评论身材"
+      },
+      {
+        "id": "askout",
+        "chinese": "礼貌地约下一次，并说明不方便也没关系"
+      }
+    ],
+    "phrases": [
+      {
+        "id": "sc-dating-01",
+        "thai": "สวัสดีครับ วันนี้ดีใจที่ได้เจอครับ",
+        "female": "สวัสดีค่ะ วันนี้ดีใจที่ได้เจอค่ะ",
+        "romanization": "sà-wàt-dii khráp wan-níi dii-jai thîi dâai jəə khráp",
+        "meaning": "你好，今天能见到你很高兴"
+      },
+      {
+        "id": "sc-dating-02",
+        "thai": "คุณหัวเราะแล้วน่ารักครับ",
+        "female": "คุณหัวเราะแล้วน่ารักค่ะ",
+        "romanization": "khun hǔa-rɔ́ nɛ́ɛo nâa-rák khráp",
+        "meaning": "你一笑很好看"
+      },
+      {
+        "id": "sc-dating-03",
+        "thai": "วันนี้ผมสนุกมากครับ",
+        "female": "วันนี้ฉันสนุกมากค่ะ",
+        "romanization": "wan-níi phǒm sà-nùk mâak khráp",
+        "meaning": "我今天很开心"
+      },
+      {
+        "id": "sc-dating-04",
+        "thai": "ไปกินข้าวด้วยกันไหมครับ",
+        "female": "ไปกินข้าวด้วยกันไหมคะ",
+        "romanization": "pai kin khâao dûai gan mǎi khráp",
+        "meaning": "一起吃饭好吗"
+      },
+      {
+        "id": "sc-dating-05",
+        "thai": "ถ้าไม่สะดวกก็ไม่เป็นไรครับ",
+        "female": "ถ้าไม่สะดวกก็ไม่เป็นไรค่ะ",
+        "romanization": "thâa mâi sà-dùak kɔ̂ɔ mâi pen rai khráp",
+        "meaning": "不方便也没关系"
+      },
+      {
+        "id": "sc-dating-06",
+        "thai": "วันเสาร์ว่างไหมครับ",
+        "female": "วันเสาร์ว่างไหมคะ",
+        "romanization": "wan-sǎo wâang mǎi khráp",
+        "meaning": "周六有空吗"
+      },
+      {
+        "id": "sc-dating-07",
+        "thai": "เดี๋ยวผมไปรับครับ",
+        "female": "เดี๋ยวฉันไปรับค่ะ",
+        "romanization": "dǐao phǒm pai ráp khráp",
+        "meaning": "到时候我去接你"
+      },
+      {
+        "id": "sc-dating-08",
+        "thai": "ส่งสติกเกอร์ให้หน่อยได้ไหมครับ",
+        "female": "ส่งสติกเกอร์ให้หน่อยได้ไหมคะ",
+        "romanization": "sòng sà-dtìk-gə̂ə hâi nɔ̀i dâai mǎi khráp",
+        "meaning": "发一个贴纸给我好吗"
+      },
+      {
+        "id": "sc-dating-09",
+        "thai": "คิดถึงนะครับ",
+        "female": "คิดถึงนะคะ",
+        "romanization": "khít-thʉ̌ng ná khráp",
+        "meaning": "有点想你"
+      },
+      {
+        "id": "sc-dating-10",
+        "thai": "ราตรีสวัสดิ์ครับ",
+        "female": "ราตรีสวัสดิ์ค่ะ",
+        "romanization": "raa-dtrii sà-wàt khráp",
+        "meaning": "晚安"
+      },
+      {
+        "id": "sc-dating-11",
+        "thai": "ขอบคุณที่มาวันนี้ครับ",
+        "female": "ขอบคุณที่มาวันนี้ค่ะ",
+        "romanization": "khɔ̀ɔp-khun thîi maa wan-níi khráp",
+        "meaning": "谢谢你今天来"
+      },
+      {
+        "id": "sc-dating-12",
+        "thai": "คืนนี้กลับดีๆ นะครับ",
+        "female": "คืนนี้กลับดีๆ นะคะ",
+        "romanization": "khʉʉn-níi klàp dii-dii ná khráp",
+        "meaning": "今晚好好回去"
+      }
+    ],
+    "dialogues": [
+      {
+        "id": "sc-dating-d1",
+        "title": "LINE 上约吃饭",
+        "lines": [
+          {
+            "id": "c1",
+            "speaker": "เบน",
+            "thai": "สวัสดีครับ วันเสาร์ว่างไหมครับ",
+            "romanization": "wan-sǎo wâang mǎi khráp",
+            "meaning": "你好，周六有空吗"
+          },
+          {
+            "id": "c2",
+            "speaker": "มิ้นท์",
+            "thai": "ว่างค่ะ จะไปไหนคะ",
+            "romanization": "wâang khâ jà pai nǎi khá",
+            "meaning": "有空，去哪"
+          },
+          {
+            "id": "c3",
+            "speaker": "เบน",
+            "thai": "ไปกินข้าวด้วยกันไหมครับ ถ้าไม่สะดวกก็ไม่เป็นไรครับ",
+            "romanization": "pai kin khâao dûai gan mǎi khráp",
+            "meaning": "一起吃饭吗，不方便也没关系"
+          },
+          {
+            "id": "c4",
+            "speaker": "มิ้นท์",
+            "thai": "ได้ค่ะ ร้านนั้นใกล้บ้าน",
+            "romanization": "dâai khâ",
+            "meaning": "可以，那家离我家近"
+          },
+          {
+            "id": "c5",
+            "speaker": "เบน",
+            "thai": "ดีครับ เดี๋ยวผมไปรับครับ",
+            "romanization": "dii khráp dǐao phǒm pai ráp khráp",
+            "meaning": "好，到时候我去接你"
+          },
+          {
+            "id": "c6",
+            "speaker": "มิ้นท์",
+            "thai": "ไม่ต้องค่ะ เจอกันที่ร้านก็ได้",
+            "romanization": "mâi tɔ̂ng khâ",
+            "meaning": "不用，店里见就行"
+          }
+        ]
+      },
+      {
+        "id": "sc-dating-d2",
+        "title": "吃完道谢",
+        "lines": [
+          {
+            "id": "d1",
+            "speaker": "มิ้นท์",
+            "thai": "วันนี้สนุกค่ะ",
+            "romanization": "wan-níi sà-nùk khâ",
+            "meaning": "今天很开心"
+          },
+          {
+            "id": "d2",
+            "speaker": "เบน",
+            "thai": "ผมก็สนุกครับ คุณหัวเราะแล้วน่ารักครับ",
+            "romanization": "phǒm kɔ̂ɔ sà-nùk khráp",
+            "meaning": "我也很开心，你一笑很好看"
+          },
+          {
+            "id": "d3",
+            "speaker": "มิ้นท์",
+            "thai": "ขอบคุณค่ะ",
+            "romanization": "khɔ̀ɔp-khun khâ",
+            "meaning": "谢谢"
+          },
+          {
+            "id": "d4",
+            "speaker": "เบน",
+            "thai": "ขอบคุณที่มาวันนี้ครับ",
+            "romanization": "khɔ̀ɔp-khun thîi maa wan-níi khráp",
+            "meaning": "谢谢你今天来"
+          },
+          {
+            "id": "d5",
+            "speaker": "มิ้นท์",
+            "thai": "ราตรีสวัสดิ์นะคะ",
+            "romanization": "raa-dtrii sà-wàt ná khá",
+            "meaning": "晚安"
+          },
+          {
+            "id": "d6",
+            "speaker": "เบน",
+            "thai": "ราตรีสวัสดิ์ครับ คืนนี้กลับดีๆ นะครับ",
+            "romanization": "raa-dtrii sà-wàt khráp",
+            "meaning": "晚安，好好回去"
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "第一次约吃饭，哪句给对方留了退路？",
+        "choices": [
+          "ถ้าไม่สะดวกก็ไม่เป็นไรครับ",
+          "คุณต้องมา",
+          "ลดได้ไหมครับ"
+        ],
+        "answer": 0
+      },
+      {
+        "prompt": "哪句是在夸她笑起来，而不是评论身材？",
+        "choices": [
+          "คุณหัวเราะแล้วน่ารักครับ",
+          "คุณผอมดี",
+          "ไซส์นี้มีไหมครับ"
+        ],
+        "answer": 0
+      },
+      {
+        "prompt": "夜里分开时，哪句合适？",
+        "choices": [
+          "ราตรีสวัสดิ์ครับ",
+          "เก็บเงินครับ",
+          "เปิดแกร็บครับ"
+        ],
+        "answer": 0
+      }
+    ],
+    "script": [
+      {
+        "id": "start",
+        "speaker": "มิ้นท์",
+        "thai": "สวัสดีค่ะ วันนี้เจอแล้วดีใจนะคะ",
+        "romanization": "dii-jai ná khá",
+        "meaning": "你好，今天见到你挺高兴的",
+        "choices": [
+          {
+            "thai": "สวัสดีครับ วันนี้ดีใจที่ได้เจอครับ",
+            "meaning": "你好，今天能见到你很高兴",
+            "next": "meal",
+            "goals": [
+              "hello"
+            ]
+          },
+          {
+            "thai": "คิดถึงนะครับ",
+            "meaning": "有点想你",
+            "next": "meal",
+            "goals": [
+              "hello"
+            ]
+          }
+        ],
+        "typed": [
+          "ดีใจ",
+          "สวัสดีครับ",
+          "คิดถึง"
+        ],
+        "typedNext": "meal",
+        "typedGoals": [
+          "hello"
+        ],
+        "end": false
+      },
+      {
+        "id": "meal",
+        "speaker": "มิ้นท์",
+        "thai": "ร้านนี้อาหารอร่อยนะคะ",
+        "romanization": "aa-hǎan à-rɔ̀i",
+        "meaning": "这家菜挺好吃的",
+        "choices": [
+          {
+            "thai": "อร่อยครับ คุณหัวเราะแล้วน่ารักครับ",
+            "meaning": "好吃。你一笑很好看",
+            "next": "next",
+            "goals": [
+              "compliment"
+            ]
+          },
+          {
+            "thai": "วันนี้ผมสนุกมากครับ",
+            "meaning": "我今天很开心",
+            "next": "next",
+            "goals": [
+              "compliment"
+            ]
+          }
+        ],
+        "typed": [
+          "น่ารัก",
+          "สนุก",
+          "อร่อย"
+        ],
+        "typedNext": "next",
+        "typedGoals": [
+          "compliment"
+        ],
+        "end": false
+      },
+      {
+        "id": "next",
+        "speaker": "มิ้นท์",
+        "thai": "อาทิตย์หน้ายังว่างไหมคะ",
+        "romanization": "aa-thít nâa",
+        "meaning": "下周还有空吗",
+        "choices": [
+          {
+            "thai": "วันเสาร์ว่างไหมครับ ถ้าไม่สะดวกก็ไม่เป็นไรครับ",
+            "meaning": "周六有空吗，不方便也没关系",
+            "next": "end",
+            "goals": [
+              "askout"
+            ]
+          },
+          {
+            "thai": "ไปกินข้าวด้วยกันไหมครับ",
+            "meaning": "再一起吃饭好吗",
+            "next": "end",
+            "goals": [
+              "askout"
+            ]
+          }
+        ],
+        "typed": [
+          "วันเสาร์",
+          "กินข้าว",
+          "ไม่เป็นไร"
+        ],
+        "typedNext": "end",
+        "typedGoals": [
+          "askout"
+        ],
+        "end": false
+      },
+      {
+        "id": "end",
+        "speaker": "มิ้นท์",
+        "thai": "ได้ค่ะ ราตรีสวัสดิ์นะคะ",
+        "romanization": "raa-dtrii sà-wàt",
+        "meaning": "好，晚安",
+        "choices": [],
+        "typed": [],
+        "typedNext": "",
+        "typedGoals": [],
+        "end": true
+      }
+    ],
+    "persona": {
+      "name": "มิ้นท์",
+      "role": "和他约过一次吃饭的女生",
+      "brief": "你愿意聊天，但节奏由你定。他如果评论身材、催你喝酒，或一直追问前任，你就轻轻拒绝并结束这个话题。夸奖笑容、食物、认真可以接受。邀请必须允许你说不方便。",
+      "turnLimit": 8
+    }
+  },
+  {
+    "id": "sc-food",
+    "title": "点餐",
+    "setting": "路边摊或小饭馆。说清要什么、辣度，再问价和付钱。",
+    "order": 3,
+    "goals": [
+      {
+        "id": "order",
+        "chinese": "点一个菜或一杯饮料"
+      },
+      {
+        "id": "spice",
+        "chinese": "说清要辣、微辣或不辣"
+      },
+      {
+        "id": "pay",
+        "chinese": "问价钱或请对方收钱"
+      }
+    ],
+    "phrases": [
+      {
+        "id": "sc-food-01",
+        "thai": "ขอเมนูครับ",
+        "female": "ขอเมนูค่ะ",
+        "romanization": "khɔ̌ɔ mee-nuu khráp",
+        "meaning": "请给我菜单"
+      },
+      {
+        "id": "sc-food-02",
+        "thai": "เอาข้าวผัดครับ",
+        "female": "เอาข้าวผัดค่ะ",
+        "romanization": "ao khâao-phàt khráp",
+        "meaning": "我要炒饭"
+      },
+      {
+        "id": "sc-food-03",
+        "thai": "เผ็ดได้ครับ",
+        "female": "เผ็ดได้ค่ะ",
+        "romanization": "phèt dâai khráp",
+        "meaning": "可以辣"
+      },
+      {
+        "id": "sc-food-04",
+        "thai": "ไม่เผ็ดครับ",
+        "female": "ไม่เผ็ดค่ะ",
+        "romanization": "mâi phèt khráp",
+        "meaning": "不要辣"
+      },
+      {
+        "id": "sc-food-05",
+        "thai": "เผ็ดนิดหน่อยครับ",
+        "female": "เผ็ดนิดหน่อยค่ะ",
+        "romanization": "phèt nít-nɔ̀i khráp",
+        "meaning": "稍微辣一点"
+      },
+      {
+        "id": "sc-food-06",
+        "thai": "ขอไม่ใส่ผักชีครับ",
+        "female": "ขอไม่ใส่ผักชีค่ะ",
+        "romanization": "khɔ̌ɔ mâi sài phàk-chii khráp",
+        "meaning": "请不要放香菜"
+      },
+      {
+        "id": "sc-food-07",
+        "thai": "น้ำเปล่าครับ",
+        "female": "น้ำเปล่าค่ะ",
+        "romanization": "náam-plàao khráp",
+        "meaning": "白水"
+      },
+      {
+        "id": "sc-food-08",
+        "thai": "เอาใส่ถุงครับ",
+        "female": "เอาใส่ถุงค่ะ",
+        "romanization": "ao sài thǔng khráp",
+        "meaning": "请装袋"
+      },
+      {
+        "id": "sc-food-09",
+        "thai": "เท่าไหร่ครับ",
+        "female": "เท่าไหร่ค่ะ",
+        "romanization": "thâo-rài khráp",
+        "meaning": "多少钱"
+      },
+      {
+        "id": "sc-food-10",
+        "thai": "เก็บเงินครับ",
+        "female": "เก็บเงินค่ะ",
+        "romanization": "kèp ngən khráp",
+        "meaning": "请结账"
+      },
+      {
+        "id": "sc-food-11",
+        "thai": "อร่อยมากครับ",
+        "female": "อร่อยมากค่ะ",
+        "romanization": "à-rɔ̀i mâak khráp",
+        "meaning": "很好吃"
+      },
+      {
+        "id": "sc-food-12",
+        "thai": "ขอเพิ่มข้าวได้ไหมครับ",
+        "female": "ขอเพิ่มข้าวได้ไหมคะ",
+        "romanization": "khɔ̌ɔ phə̂əm khâao dâai mǎi khráp",
+        "meaning": "可以再加一点饭吗"
+      }
+    ],
+    "dialogues": [
+      {
+        "id": "sc-food-d1",
+        "title": "路边摊",
+        "lines": [
+          {
+            "id": "e1",
+            "speaker": "ป้า",
+            "thai": "เอาอะไรดีคะ",
+            "romanization": "ao à-rai dii khá",
+            "meaning": "想要什么"
+          },
+          {
+            "id": "e2",
+            "speaker": "เบน",
+            "thai": "เอาข้าวผัดครับ ไม่เผ็ดครับ",
+            "romanization": "ao khâao-phàt khráp mâi phèt khráp",
+            "meaning": "炒饭，不要辣"
+          },
+          {
+            "id": "e3",
+            "speaker": "ป้า",
+            "thai": "ใส่ไข่ไหมคะ",
+            "romanization": "sài khài mǎi khá",
+            "meaning": "要加蛋吗"
+          },
+          {
+            "id": "e4",
+            "speaker": "เบน",
+            "thai": "ใส่ครับ ขอไม่ใส่ผักชีครับ",
+            "romanization": "sài khráp khɔ̌ɔ mâi sài phàk-chii khráp",
+            "meaning": "加，请不要放香菜"
+          },
+          {
+            "id": "e5",
+            "speaker": "ป้า",
+            "thai": "น้ำอะไรคะ",
+            "romanization": "náam à-rai khá",
+            "meaning": "喝什么"
+          },
+          {
+            "id": "e6",
+            "speaker": "เบน",
+            "thai": "น้ำเปล่าครับ",
+            "romanization": "náam-plàao khráp",
+            "meaning": "白水"
+          }
+        ]
+      },
+      {
+        "id": "sc-food-d2",
+        "title": "吃完付钱",
+        "lines": [
+          {
+            "id": "f1",
+            "speaker": "เบน",
+            "thai": "อร่อยมากครับ",
+            "romanization": "à-rɔ̀i mâak khráp",
+            "meaning": "很好吃"
+          },
+          {
+            "id": "f2",
+            "speaker": "ป้า",
+            "thai": "ขอบคุณค่ะ",
+            "romanization": "khɔ̀ɔp-khun khâ",
+            "meaning": "谢谢"
+          },
+          {
+            "id": "f3",
+            "speaker": "เบน",
+            "thai": "เท่าไหร่ครับ",
+            "romanization": "thâo-rài khráp",
+            "meaning": "多少钱"
+          },
+          {
+            "id": "f4",
+            "speaker": "ป้า",
+            "thai": "หกสิบบาทค่ะ",
+            "romanization": "hòk-sìp bàat khâ",
+            "meaning": "六十铢"
+          },
+          {
+            "id": "f5",
+            "speaker": "เบน",
+            "thai": "เก็บเงินครับ",
+            "romanization": "kèp ngən khráp",
+            "meaning": "请收钱"
+          },
+          {
+            "id": "f6",
+            "speaker": "ป้า",
+            "thai": "รับแล้วค่ะ",
+            "romanization": "ráp lɛ́ɛo khâ",
+            "meaning": "收到了"
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "完全不能吃辣时说哪句？",
+        "choices": [
+          "ไม่เผ็ดครับ",
+          "เผ็ดได้ครับ",
+          "ลดได้ไหมครับ"
+        ],
+        "answer": 0
+      },
+      {
+        "prompt": "吃完想付钱，可以说？",
+        "choices": [
+          "เก็บเงินครับ",
+          "ขอไลน์ได้ไหมครับ",
+          "เลี้ยวซ้ายครับ"
+        ],
+        "answer": 0
+      },
+      {
+        "prompt": "哪句是在点炒饭？",
+        "choices": [
+          "เอาข้าวผัดครับ",
+          "น้ำเปล่าครับ",
+          "ไปที่นี้ครับ"
+        ],
+        "answer": 0
+      }
+    ],
+    "script": [
+      {
+        "id": "start",
+        "speaker": "ป้า",
+        "thai": "เอาอะไรดีคะ",
+        "romanization": "ao à-rai dii khá",
+        "meaning": "想要什么",
+        "choices": [
+          {
+            "thai": "เอาข้าวผัดครับ",
+            "meaning": "我要炒饭",
+            "next": "spice",
+            "goals": [
+              "order"
+            ]
+          },
+          {
+            "thai": "ขอเมนูครับ",
+            "meaning": "请给我菜单",
+            "next": "start",
+            "goals": []
+          }
+        ],
+        "typed": [
+          "ข้าวผัด",
+          "เมนู",
+          "น้ำเปล่า"
+        ],
+        "typedNext": "spice",
+        "typedGoals": [
+          "order"
+        ],
+        "end": false
+      },
+      {
+        "id": "spice",
+        "speaker": "ป้า",
+        "thai": "เผ็ดได้ไหมคะ",
+        "romanization": "phèt dâai mǎi khá",
+        "meaning": "能吃辣吗",
+        "choices": [
+          {
+            "thai": "ไม่เผ็ดครับ",
+            "meaning": "不要辣",
+            "next": "pay",
+            "goals": [
+              "spice"
+            ]
+          },
+          {
+            "thai": "เผ็ดนิดหน่อยครับ",
+            "meaning": "稍微辣一点",
+            "next": "pay",
+            "goals": [
+              "spice"
+            ]
+          }
+        ],
+        "typed": [
+          "ไม่เผ็ด",
+          "เผ็ดนิด",
+          "เผ็ดได้"
+        ],
+        "typedNext": "pay",
+        "typedGoals": [
+          "spice"
+        ],
+        "end": false
+      },
+      {
+        "id": "pay",
+        "speaker": "ป้า",
+        "thai": "อย่างอื่นอีกไหมคะ",
+        "romanization": "yàang ʉ̀ʉn ìik mǎi khá",
+        "meaning": "还要别的吗",
+        "choices": [
+          {
+            "thai": "น้ำเปล่าครับ เท่าไหร่ครับ",
+            "meaning": "白水。多少钱",
+            "next": "end",
+            "goals": [
+              "pay"
+            ]
+          },
+          {
+            "thai": "พอแล้วครับ เก็บเงินครับ",
+            "meaning": "够了，请结账",
+            "next": "end",
+            "goals": [
+              "pay"
+            ]
+          }
+        ],
+        "typed": [
+          "เท่าไหร่",
+          "เก็บเงิน",
+          "น้ำเปล่า"
+        ],
+        "typedNext": "end",
+        "typedGoals": [
+          "pay"
+        ],
+        "end": false
+      },
+      {
+        "id": "end",
+        "speaker": "ป้า",
+        "thai": "หกสิบบาทค่ะ เชิญค่ะ",
+        "romanization": "hòk-sìp bàat",
+        "meaning": "六十铢，请",
+        "choices": [],
+        "typed": [],
+        "typedNext": "",
+        "typedGoals": [],
+        "end": true
+      }
+    ],
+    "persona": {
+      "name": "ป้า",
+      "role": "路边摊的阿姨",
+      "brief": "你说话短、清楚，会问辣不辣、要不要加蛋。报一个简单的价钱。不要催客，也不要讲长故事。",
+      "turnLimit": 8
+    }
+  },
+  {
+    "id": "sc-grab",
+    "title": "出租车和 Grab",
+    "setting": "上车后说目的地、转弯和停车。价格以 App 为准时也可以再确认。",
+    "order": 4,
+    "goals": [
+      {
+        "id": "dest",
+        "chinese": "说明要去哪里"
+      },
+      {
+        "id": "turn",
+        "chinese": "说直走、左转或右转"
+      },
+      {
+        "id": "stop",
+        "chinese": "请司机在这里停，或确认已经到了"
+      }
+    ],
+    "phrases": [
+      {
+        "id": "sc-grab-01",
+        "thai": "ไปที่นี้ครับ",
+        "female": "ไปที่นี้ค่ะ",
+        "romanization": "pai thîi-níi khráp",
+        "meaning": "去这里"
+      },
+      {
+        "id": "sc-grab-02",
+        "thai": "เปิดแกร็บครับ",
+        "female": "เปิดแกร็บค่ะ",
+        "romanization": "pə̀ət grɛ́p khráp",
+        "meaning": "我开了 Grab"
+      },
+      {
+        "id": "sc-grab-03",
+        "thai": "ตรงไปครับ",
+        "female": "ตรงไปค่ะ",
+        "romanization": "trong pai khráp",
+        "meaning": "直走"
+      },
+      {
+        "id": "sc-grab-04",
+        "thai": "เลี้ยวซ้ายครับ",
+        "female": "เลี้ยวซ้ายค่ะ",
+        "romanization": "líao sáai khráp",
+        "meaning": "左转"
+      },
+      {
+        "id": "sc-grab-05",
+        "thai": "เลี้ยวขวาครับ",
+        "female": "เลี้ยวขวาค่ะ",
+        "romanization": "líao kwǎa khráp",
+        "meaning": "右转"
+      },
+      {
+        "id": "sc-grab-06",
+        "thai": "จอดตรงนี้ได้ไหมครับ",
+        "female": "จอดตรงนี้ได้ไหมคะ",
+        "romanization": "jɔ̀ɔt trong-níi dâai mǎi khráp",
+        "meaning": "可以停在这里吗"
+      },
+      {
+        "id": "sc-grab-07",
+        "thai": "ช้าหน่อยครับ",
+        "female": "ช้าหน่อยค่ะ",
+        "romanization": "cháa nɔ̀i khráp",
+        "meaning": "稍慢一点"
+      },
+      {
+        "id": "sc-grab-08",
+        "thai": "ถึงแล้วครับ",
+        "female": "ถึงแล้วค่ะ",
+        "romanization": "thʉ̌ng lɛ́ɛo khráp",
+        "meaning": "到了"
+      },
+      {
+        "id": "sc-grab-09",
+        "thai": "เท่าไหร่ครับ",
+        "female": "เท่าไหร่ค่ะ",
+        "romanization": "thâo-rài khráp",
+        "meaning": "多少钱"
+      },
+      {
+        "id": "sc-grab-10",
+        "thai": "ขอใบเสร็จครับ",
+        "female": "ขอใบเสร็จค่ะ",
+        "romanization": "khɔ̌ɔ bai-sèt khráp",
+        "meaning": "请给我收据"
+      },
+      {
+        "id": "sc-grab-11",
+        "thai": "ขอบคุณครับ",
+        "female": "ขอบคุณค่ะ",
+        "romanization": "khɔ̀ɔp-khun khráp",
+        "meaning": "谢谢"
+      },
+      {
+        "id": "sc-grab-12",
+        "thai": "อีกนิดเดียวครับ",
+        "female": "อีกนิดเดียวค่ะ",
+        "romanization": "ìik nít-diao khráp",
+        "meaning": "就快到了"
+      }
+    ],
+    "dialogues": [
+      {
+        "id": "sc-grab-d1",
+        "title": "上车",
+        "lines": [
+          {
+            "id": "g1",
+            "speaker": "คนขับ",
+            "thai": "ไปไหนครับ",
+            "romanization": "pai nǎi khráp",
+            "meaning": "去哪"
+          },
+          {
+            "id": "g2",
+            "speaker": "เบน",
+            "thai": "ไปที่นี้ครับ เปิดแกร็บครับ",
+            "romanization": "pai thîi-níi khráp pə̀ət grɛ́p khráp",
+            "meaning": "去这里，我开了 Grab"
+          },
+          {
+            "id": "g3",
+            "speaker": "คนขับ",
+            "thai": "ได้ครับ",
+            "romanization": "dâai khráp",
+            "meaning": "好"
+          },
+          {
+            "id": "g4",
+            "speaker": "เบน",
+            "thai": "ตรงไปครับ แล้วเลี้ยวซ้ายครับ",
+            "romanization": "trong pai khráp líao sáai khráp",
+            "meaning": "直走，然后左转"
+          },
+          {
+            "id": "g5",
+            "speaker": "คนขับ",
+            "thai": "ซ้ายนี้ไหมครับ",
+            "romanization": "sáai níi mǎi khráp",
+            "meaning": "是这个左转吗"
+          },
+          {
+            "id": "g6",
+            "speaker": "เบน",
+            "thai": "ใช่ครับ ขอบคุณครับ",
+            "romanization": "châi khráp khɔ̀ɔp-khun khráp",
+            "meaning": "对，谢谢"
+          }
+        ]
+      },
+      {
+        "id": "sc-grab-d2",
+        "title": "下车",
+        "lines": [
+          {
+            "id": "h1",
+            "speaker": "เบน",
+            "thai": "อีกนิดเดียวครับ",
+            "romanization": "ìik nít-diao khráp",
+            "meaning": "就快到了"
+          },
+          {
+            "id": "h2",
+            "speaker": "เบน",
+            "thai": "จอดตรงนี้ได้ไหมครับ",
+            "romanization": "jɔ̀ɔt trong-níi dâai mǎi khráp",
+            "meaning": "可以停在这里吗"
+          },
+          {
+            "id": "h3",
+            "speaker": "คนขับ",
+            "thai": "ได้ครับ",
+            "romanization": "dâai khráp",
+            "meaning": "可以"
+          },
+          {
+            "id": "h4",
+            "speaker": "เบน",
+            "thai": "ถึงแล้วครับ เท่าไหร่ครับ",
+            "romanization": "thʉ̌ng lɛ́ɛo khráp thâo-rài khráp",
+            "meaning": "到了。多少钱"
+          },
+          {
+            "id": "h5",
+            "speaker": "คนขับ",
+            "thai": "ตามแอปครับ",
+            "romanization": "taam ɛ̀ɛp khráp",
+            "meaning": "按 App"
+          },
+          {
+            "id": "h6",
+            "speaker": "เบน",
+            "thai": "ขอบคุณครับ",
+            "romanization": "khɔ̀ɔp-khun khráp",
+            "meaning": "谢谢"
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "想让车往左，说哪句？",
+        "choices": [
+          "เลี้ยวซ้ายครับ",
+          "เลี้ยวขวาครับ",
+          "ไม่เผ็ดครับ"
+        ],
+        "answer": 0
+      },
+      {
+        "prompt": "已经到了，可以说？",
+        "choices": [
+          "ถึงแล้วครับ",
+          "ขอเมนูครับ",
+          "ผมชื่อเบนครับ"
+        ],
+        "answer": 0
+      },
+      {
+        "prompt": "哪句是在请司机停？",
+        "choices": [
+          "จอดตรงนี้ได้ไหมครับ",
+          "เผ็ดได้ครับ",
+          "คิดถึงนะครับ"
+        ],
+        "answer": 0
+      }
+    ],
+    "script": [
+      {
+        "id": "start",
+        "speaker": "คนขับ",
+        "thai": "ไปไหนครับ",
+        "romanization": "pai nǎi khráp",
+        "meaning": "去哪",
+        "choices": [
+          {
+            "thai": "ไปที่นี้ครับ",
+            "meaning": "去这里",
+            "next": "turn",
+            "goals": [
+              "dest"
+            ]
+          },
+          {
+            "thai": "เปิดแกร็บครับ ไปที่นี้ครับ",
+            "meaning": "我开了 Grab，去这里",
+            "next": "turn",
+            "goals": [
+              "dest"
+            ]
+          }
+        ],
+        "typed": [
+          "ไปที่นี้",
+          "แกร็บ"
+        ],
+        "typedNext": "turn",
+        "typedGoals": [
+          "dest"
+        ],
+        "end": false
+      },
+      {
+        "id": "turn",
+        "speaker": "คนขับ",
+        "thai": "เลี้ยวไหนดีครับ",
+        "romanization": "líao nǎi dii khráp",
+        "meaning": "往哪边转",
+        "choices": [
+          {
+            "thai": "ตรงไปครับ แล้วเลี้ยวซ้ายครับ",
+            "meaning": "直走然后左转",
+            "next": "stop",
+            "goals": [
+              "turn"
+            ]
+          },
+          {
+            "thai": "เลี้ยวขวาครับ",
+            "meaning": "右转",
+            "next": "stop",
+            "goals": [
+              "turn"
+            ]
+          }
+        ],
+        "typed": [
+          "เลี้ยวซ้าย",
+          "เลี้ยวขวา",
+          "ตรงไป"
+        ],
+        "typedNext": "stop",
+        "typedGoals": [
+          "turn"
+        ],
+        "end": false
+      },
+      {
+        "id": "stop",
+        "speaker": "คนขับ",
+        "thai": "ถึงหรือยังครับ",
+        "romanization": "thʉ̌ng rʉ̌ʉ yang khráp",
+        "meaning": "到了吗",
+        "choices": [
+          {
+            "thai": "ถึงแล้วครับ จอดตรงนี้ได้ไหมครับ",
+            "meaning": "到了，可以停这里吗",
+            "next": "end",
+            "goals": [
+              "stop"
+            ]
+          },
+          {
+            "thai": "อีกนิดเดียวครับ",
+            "meaning": "就快到了",
+            "next": "stop",
+            "goals": []
+          }
+        ],
+        "typed": [
+          "ถึงแล้ว",
+          "จอดตรงนี้"
+        ],
+        "typedNext": "end",
+        "typedGoals": [
+          "stop"
+        ],
+        "end": false
+      },
+      {
+        "id": "end",
+        "speaker": "คนขับ",
+        "thai": "ได้ครับ ขอบคุณครับ",
+        "romanization": "dâai khráp",
+        "meaning": "好，谢谢",
+        "choices": [],
+        "typed": [],
+        "typedNext": "",
+        "typedGoals": [],
+        "end": true
+      }
+    ],
+    "persona": {
+      "name": "คนขับ",
+      "role": "Grab 司机",
+      "brief": "你只谈路线和停车。句子短。如果他说不清地址，请他指地图。不要聊天打探他的感情生活。",
+      "turnLimit": 8
+    }
+  },
+  {
+    "id": "sc-directions",
+    "title": "问路",
+    "setting": "在街上问去车站或商场的路。先道歉，再问，听完要道谢。",
+    "order": 5,
+    "goals": [
+      {
+        "id": "sorry",
+        "chinese": "先说对不起，再开口问"
+      },
+      {
+        "id": "where",
+        "chinese": "问一个地方怎么走"
+      },
+      {
+        "id": "thanks",
+        "chinese": "听懂或没听懂都要道谢"
+      }
+    ],
+    "phrases": [
+      {
+        "id": "sc-directions-01",
+        "thai": "ขอโทษครับ",
+        "female": "ขอโทษค่ะ",
+        "romanization": "khɔ̌ɔ-thôot khráp",
+        "meaning": "对不起"
+      },
+      {
+        "id": "sc-directions-02",
+        "thai": "ทางไปสถานีรถไฟฟ้าไปทางไหนครับ",
+        "female": "ทางไปสถานีรถไฟฟ้าไปทางไหนค่ะ",
+        "romanization": "thaang pai sà-thǎa-nii rót-fai-fáa pai thaang nǎi khráp",
+        "meaning": "去车站怎么走"
+      },
+      {
+        "id": "sc-directions-03",
+        "thai": "เลี้ยวซ้ายครับ",
+        "female": "เลี้ยวซ้ายค่ะ",
+        "romanization": "líao sáai khráp",
+        "meaning": "左转"
+      },
+      {
+        "id": "sc-directions-04",
+        "thai": "เลี้ยวขวาครับ",
+        "female": "เลี้ยวขวาค่ะ",
+        "romanization": "líao kwǎa khráp",
+        "meaning": "右转"
+      },
+      {
+        "id": "sc-directions-05",
+        "thai": "เดินตรงไปครับ",
+        "female": "เดินตรงไปค่ะ",
+        "romanization": "dəən trong pai khráp",
+        "meaning": "直走"
+      },
+      {
+        "id": "sc-directions-06",
+        "thai": "ไกลไหมครับ",
+        "female": "ไกลไหมคะ",
+        "romanization": "klai mǎi khráp",
+        "meaning": "远吗"
+      },
+      {
+        "id": "sc-directions-07",
+        "thai": "ใกล้แล้วครับ",
+        "female": "ใกล้แล้วค่ะ",
+        "romanization": "glâi lɛ́ɛo khráp",
+        "meaning": "已经很近了"
+      },
+      {
+        "id": "sc-directions-08",
+        "thai": "อยู่ตรงนั้นครับ",
+        "female": "อยู่ตรงนั้นค่ะ",
+        "romanization": "yùu trong-nán khráp",
+        "meaning": "在那边"
+      },
+      {
+        "id": "sc-directions-09",
+        "thai": "ข้ามถนนครับ",
+        "female": "ข้ามถนนค่ะ",
+        "romanization": "khâam thà-nǒn khráp",
+        "meaning": "过马路"
+      },
+      {
+        "id": "sc-directions-10",
+        "thai": "ขอบคุณมากครับ",
+        "female": "ขอบคุณมากค่ะ",
+        "romanization": "khɔ̀ɔp-khun mâak khráp",
+        "meaning": "非常感谢"
+      },
+      {
+        "id": "sc-directions-11",
+        "thai": "พูดอีกทีได้ไหมครับ",
+        "female": "พูดอีกทีได้ไหมคะ",
+        "romanization": "phûut ìik-thii dâai mǎi khráp",
+        "meaning": "能再说一遍吗"
+      },
+      {
+        "id": "sc-directions-12",
+        "thai": "เข้าใจแล้วครับ",
+        "female": "เข้าใจแล้วค่ะ",
+        "romanization": "khâo-jai lɛ́ɛo khráp",
+        "meaning": "我明白了"
+      }
+    ],
+    "dialogues": [
+      {
+        "id": "sc-directions-d1",
+        "title": "问去车站",
+        "lines": [
+          {
+            "id": "i1",
+            "speaker": "เบน",
+            "thai": "ขอโทษครับ",
+            "romanization": "khɔ̌ɔ-thôot khráp",
+            "meaning": "对不起"
+          },
+          {
+            "id": "i2",
+            "speaker": "เบน",
+            "thai": "ทางไปสถานีรถไฟฟ้าไปทางไหนครับ",
+            "romanization": "thaang pai sà-thǎa-nii",
+            "meaning": "去车站怎么走"
+          },
+          {
+            "id": "i3",
+            "speaker": "คนเดิน",
+            "thai": "เดินตรงไปค่ะ แล้วเลี้ยวซ้าย",
+            "romanization": "dəən trong pai khâ",
+            "meaning": "直走，然后左转"
+          },
+          {
+            "id": "i4",
+            "speaker": "เบน",
+            "thai": "ไกลไหมครับ",
+            "romanization": "klai mǎi khráp",
+            "meaning": "远吗"
+          },
+          {
+            "id": "i5",
+            "speaker": "คนเดิน",
+            "thai": "ไม่ไกลค่ะ เดินห้านาที",
+            "romanization": "mâi klai khâ",
+            "meaning": "不远，走五分钟"
+          },
+          {
+            "id": "i6",
+            "speaker": "เบน",
+            "thai": "เข้าใจแล้วครับ ขอบคุณมากครับ",
+            "romanization": "khâo-jai lɛ́ɛo khráp",
+            "meaning": "我明白了，非常感谢"
+          }
+        ]
+      },
+      {
+        "id": "sc-directions-d2",
+        "title": "没听清",
+        "lines": [
+          {
+            "id": "j1",
+            "speaker": "คนเดิน",
+            "thai": "ข้ามถนนแล้วเลี้ยวขวาค่ะ",
+            "romanization": "khâam thà-nǒn",
+            "meaning": "过马路再右转"
+          },
+          {
+            "id": "j2",
+            "speaker": "เบน",
+            "thai": "พูดอีกทีได้ไหมครับ",
+            "romanization": "phûut ìik-thii dâai mǎi khráp",
+            "meaning": "能再说一遍吗"
+          },
+          {
+            "id": "j3",
+            "speaker": "คนเดิน",
+            "thai": "ข้ามถนนค่ะ แล้วขวา",
+            "romanization": "khâam thà-nǒn khâ",
+            "meaning": "过马路，然后右"
+          },
+          {
+            "id": "j4",
+            "speaker": "เบน",
+            "thai": "อยู่ตรงนั้นใช่ไหมครับ",
+            "romanization": "yùu trong-nán châi mǎi khráp",
+            "meaning": "是在那边吗"
+          },
+          {
+            "id": "j5",
+            "speaker": "คนเดิน",
+            "thai": "ใช่ค่ะ ใกล้แล้ว",
+            "romanization": "châi khâ glâi lɛ́ɛo",
+            "meaning": "对，已经很近"
+          },
+          {
+            "id": "j6",
+            "speaker": "เบน",
+            "thai": "ขอบคุณมากครับ",
+            "romanization": "khɔ̀ɔp-khun mâak khráp",
+            "meaning": "非常感谢"
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "问路之前，先说哪句？",
+        "choices": [
+          "ขอโทษครับ",
+          "เก็บเงินครับ",
+          "เผ็ดได้ครับ"
+        ],
+        "answer": 0
+      },
+      {
+        "prompt": "哪句是在问远不远？",
+        "choices": [
+          "ไกลไหมครับ",
+          "เท่าไหร่ครับ",
+          "ขอไลน์ได้ไหมครับ"
+        ],
+        "answer": 0
+      },
+      {
+        "prompt": "听懂以后怎么收尾？",
+        "choices": [
+          "เข้าใจแล้วครับ ขอบคุณมากครับ",
+          "แพงไปครับ",
+          "คิดถึงนะครับ"
+        ],
+        "answer": 0
+      }
+    ],
+    "script": [
+      {
+        "id": "start",
+        "speaker": "คนเดิน",
+        "thai": "มีอะไรให้ช่วยไหมคะ",
+        "romanization": "mii à-rai hâi chûai mǎi khá",
+        "meaning": "需要帮忙吗",
+        "choices": [
+          {
+            "thai": "ขอโทษครับ ทางไปสถานีรถไฟฟ้าไปทางไหนครับ",
+            "meaning": "对不起，去车站怎么走",
+            "next": "how",
+            "goals": [
+              "sorry",
+              "where"
+            ]
+          },
+          {
+            "thai": "ขอโทษครับ",
+            "meaning": "对不起",
+            "next": "how",
+            "goals": [
+              "sorry"
+            ]
+          }
+        ],
+        "typed": [
+          "ขอโทษ",
+          "สถานี",
+          "ทางไป"
+        ],
+        "typedNext": "how",
+        "typedGoals": [
+          "sorry"
+        ],
+        "end": false
+      },
+      {
+        "id": "how",
+        "speaker": "คนเดิน",
+        "thai": "เดินตรงไปค่ะ แล้วเลี้ยวซ้าย ไกลนิดหน่อย",
+        "romanization": "dəən trong pai",
+        "meaning": "直走再左转，有一点远",
+        "choices": [
+          {
+            "thai": "พูดอีกทีได้ไหมครับ",
+            "meaning": "能再说一遍吗",
+            "next": "how",
+            "goals": []
+          },
+          {
+            "thai": "ไกลไหมครับ",
+            "meaning": "远吗",
+            "next": "thanks",
+            "goals": [
+              "where"
+            ]
+          }
+        ],
+        "typed": [
+          "ไกลไหม",
+          "เลี้ยวซ้าย",
+          "เข้าใจ"
+        ],
+        "typedNext": "thanks",
+        "typedGoals": [
+          "where"
+        ],
+        "end": false
+      },
+      {
+        "id": "thanks",
+        "speaker": "คนเดิน",
+        "thai": "เดินห้านาทีค่ะ",
+        "romanization": "dəən hâa naa-thii",
+        "meaning": "走五分钟",
+        "choices": [
+          {
+            "thai": "เข้าใจแล้วครับ ขอบคุณมากครับ",
+            "meaning": "我明白了，谢谢",
+            "next": "end",
+            "goals": [
+              "thanks"
+            ]
+          },
+          {
+            "thai": "ขอบคุณมากครับ",
+            "meaning": "非常感谢",
+            "next": "end",
+            "goals": [
+              "thanks"
+            ]
+          }
+        ],
+        "typed": [
+          "ขอบคุณ",
+          "เข้าใจแล้ว"
+        ],
+        "typedNext": "end",
+        "typedGoals": [
+          "thanks"
+        ],
+        "end": false
+      },
+      {
+        "id": "end",
+        "speaker": "คนเดิน",
+        "thai": "ไม่เป็นไรค่ะ",
+        "romanization": "mâi pen rai khâ",
+        "meaning": "没关系",
+        "choices": [],
+        "typed": [],
+        "typedNext": "",
+        "typedGoals": [],
+        "end": true
+      }
+    ],
+    "persona": {
+      "name": "คนเดิน",
+      "role": "街上的路人",
+      "brief": "你愿意指路，句子短：直走、左转、过马路、五分钟。他没听懂就再说一遍，不要不耐烦。",
+      "turnLimit": 8
+    }
+  },
+  {
+    "id": "sc-shopping",
+    "title": "购物和还价",
+    "setting": "市场或商场。先看货，再问价。还价用商量的语气，不行就说再看看。",
+    "order": 6,
+    "goals": [
+      {
+        "id": "look",
+        "chinese": "请对方拿给你看，或指出要哪一件"
+      },
+      {
+        "id": "price",
+        "chinese": "问价钱"
+      },
+      {
+        "id": "bargain",
+        "chinese": "礼貌地还价，或说太贵、再考虑"
+      }
+    ],
+    "phrases": [
+      {
+        "id": "sc-shopping-01",
+        "thai": "ขอดูหน่อยครับ",
+        "female": "ขอดูหน่อยค่ะ",
+        "romanization": "khɔ̌ɔ duu nɔ̀i khráp",
+        "meaning": "给我看一下"
+      },
+      {
+        "id": "sc-shopping-02",
+        "thai": "อันนี้เท่าไหร่ครับ",
+        "female": "อันนี้เท่าไหร่ค่ะ",
+        "romanization": "an-níi thâo-rài khráp",
+        "meaning": "这个多少钱"
+      },
+      {
+        "id": "sc-shopping-03",
+        "thai": "ลดได้ไหมครับ",
+        "female": "ลดได้ไหมคะ",
+        "romanization": "lót dâai mǎi khráp",
+        "meaning": "可以便宜一点吗"
+      },
+      {
+        "id": "sc-shopping-04",
+        "thai": "แพงไปครับ",
+        "female": "แพงไปค่ะ",
+        "romanization": "phaeng pai khráp",
+        "meaning": "有点贵"
+      },
+      {
+        "id": "sc-shopping-05",
+        "thai": "เอาอันนี้ครับ",
+        "female": "เอาอันนี้ค่ะ",
+        "romanization": "ao an-níi khráp",
+        "meaning": "我要这个"
+      },
+      {
+        "id": "sc-shopping-06",
+        "thai": "ไซส์นี้มีไหมครับ",
+        "female": "ไซส์นี้มีไหมคะ",
+        "romanization": "sai níi mii mǎi khráp",
+        "meaning": "有这个尺码吗"
+      },
+      {
+        "id": "sc-shopping-07",
+        "thai": "รับบัตรไหมครับ",
+        "female": "รับบัตรไหมคะ",
+        "romanization": "ráp bàt mǎi khráp",
+        "meaning": "可以刷卡吗"
+      },
+      {
+        "id": "sc-shopping-08",
+        "thai": "ขอถุงครับ",
+        "female": "ขอถุงค่ะ",
+        "romanization": "khɔ̌ɔ thǔng khráp",
+        "meaning": "请给我袋子"
+      },
+      {
+        "id": "sc-shopping-09",
+        "thai": "สีนี้สวยครับ",
+        "female": "สีนี้สวยค่ะ",
+        "romanization": "sǐi níi sǔai khráp",
+        "meaning": "这个颜色好看"
+      },
+      {
+        "id": "sc-shopping-10",
+        "thai": "ขอคิดดูก่อนครับ",
+        "female": "ขอคิดดูก่อนค่ะ",
+        "romanization": "khɔ̌ɔ khít duu gɔ̀ɔn khráp",
+        "meaning": "我先考虑一下"
+      },
+      {
+        "id": "sc-shopping-11",
+        "thai": "ได้ครับ เอาครับ",
+        "female": "ได้ค่ะ เอาค่ะ",
+        "romanization": "dâai khráp ao khráp",
+        "meaning": "好，我要了"
+      },
+      {
+        "id": "sc-shopping-12",
+        "thai": "ขอบคุณครับ",
+        "female": "ขอบคุณค่ะ",
+        "romanization": "khɔ̀ɔp-khun khráp",
+        "meaning": "谢谢"
+      }
+    ],
+    "dialogues": [
+      {
+        "id": "sc-shopping-d1",
+        "title": "市场还价",
+        "lines": [
+          {
+            "id": "k1",
+            "speaker": "แม่ค้า",
+            "thai": "ดูได้เลยค่ะ",
+            "romanization": "duu dâai ləəi khâ",
+            "meaning": "可以看"
+          },
+          {
+            "id": "k2",
+            "speaker": "เบน",
+            "thai": "ขอดูหน่อยครับ อันนี้เท่าไหร่ครับ",
+            "romanization": "khɔ̌ɔ duu nɔ̀i khráp an-níi thâo-rài khráp",
+            "meaning": "给我看一下。这个多少钱"
+          },
+          {
+            "id": "k3",
+            "speaker": "แม่ค้า",
+            "thai": "สามร้อยค่ะ",
+            "romanization": "sǎam-rɔ́ɔi khâ",
+            "meaning": "三百"
+          },
+          {
+            "id": "k4",
+            "speaker": "เบน",
+            "thai": "แพงไปครับ ลดได้ไหมครับ",
+            "romanization": "phaeng pai khráp lót dâai mǎi khráp",
+            "meaning": "有点贵，可以便宜吗"
+          },
+          {
+            "id": "k5",
+            "speaker": "แม่ค้า",
+            "thai": "สองร้อยห้าสิบได้ค่ะ",
+            "romanization": "sɔ̌ɔng-rɔ́ɔi hâa-sìp dâai khâ",
+            "meaning": "二百五可以"
+          },
+          {
+            "id": "k6",
+            "speaker": "เบน",
+            "thai": "ได้ครับ เอาครับ",
+            "romanization": "dâai khráp ao khráp",
+            "meaning": "好，我要了"
+          }
+        ]
+      },
+      {
+        "id": "sc-shopping-d2",
+        "title": "商场问尺码",
+        "lines": [
+          {
+            "id": "m1",
+            "speaker": "เบน",
+            "thai": "ไซส์นี้มีไหมครับ",
+            "romanization": "sai níi mii mǎi khráp",
+            "meaning": "有这个尺码吗"
+          },
+          {
+            "id": "m2",
+            "speaker": "พนักงาน",
+            "thai": "มีค่ะ สีนี้สวยนะคะ",
+            "romanization": "mii khâ sǐi níi sǔai",
+            "meaning": "有。这个颜色好看"
+          },
+          {
+            "id": "m3",
+            "speaker": "เบน",
+            "thai": "สีนี้สวยครับ รับบัตรไหมครับ",
+            "romanization": "sǐi níi sǔai khráp ráp bàt mǎi khráp",
+            "meaning": "这个颜色好看。可以刷卡吗"
+          },
+          {
+            "id": "m4",
+            "speaker": "พนักงาน",
+            "thai": "ได้ค่ะ",
+            "romanization": "dâai khâ",
+            "meaning": "可以"
+          },
+          {
+            "id": "m5",
+            "speaker": "เบน",
+            "thai": "เอาอันนี้ครับ ขอถุงครับ",
+            "romanization": "ao an-níi khráp khɔ̌ɔ thǔng khráp",
+            "meaning": "我要这个，请给袋子"
+          },
+          {
+            "id": "m6",
+            "speaker": "เบน",
+            "thai": "ขอบคุณครับ",
+            "romanization": "khɔ̀ɔp-khun khráp",
+            "meaning": "谢谢"
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "prompt": "觉得贵，但还想买，怎么说比较礼貌？",
+        "choices": [
+          "แพงไปครับ ลดได้ไหมครับ",
+          "ไม่เอา แพงมาก",
+          "เก็บเงินครับ"
+        ],
+        "answer": 0
+      },
+      {
+        "prompt": "还没决定，可以说？",
+        "choices": [
+          "ขอคิดดูก่อนครับ",
+          "ถึงแล้วครับ",
+          "ไม่เผ็ดครับ"
+        ],
+        "answer": 0
+      },
+      {
+        "prompt": "哪句是在问价？",
+        "choices": [
+          "อันนี้เท่าไหร่ครับ",
+          "เลี้ยวซ้ายครับ",
+          "ราตรีสวัสดิ์ครับ"
+        ],
+        "answer": 0
+      }
+    ],
+    "script": [
+      {
+        "id": "start",
+        "speaker": "แม่ค้า",
+        "thai": "ดูอะไรดีคะ",
+        "romanization": "duu à-rai dii khá",
+        "meaning": "想看什么",
+        "choices": [
+          {
+            "thai": "ขอดูหน่อยครับ",
+            "meaning": "给我看一下",
+            "next": "price",
+            "goals": [
+              "look"
+            ]
+          },
+          {
+            "thai": "ไซส์นี้มีไหมครับ",
+            "meaning": "有这个尺码吗",
+            "next": "price",
+            "goals": [
+              "look"
+            ]
+          }
+        ],
+        "typed": [
+          "ขอดู",
+          "ไซส์",
+          "อันนี้"
+        ],
+        "typedNext": "price",
+        "typedGoals": [
+          "look"
+        ],
+        "end": false
+      },
+      {
+        "id": "price",
+        "speaker": "แม่ค้า",
+        "thai": "อันนี้สามร้อยค่ะ",
+        "romanization": "sǎam-rɔ́ɔi khâ",
+        "meaning": "这个三百",
+        "choices": [
+          {
+            "thai": "อันนี้เท่าไหร่ครับ",
+            "meaning": "这个多少钱",
+            "next": "price",
+            "goals": [
+              "price"
+            ]
+          },
+          {
+            "thai": "แพงไปครับ ลดได้ไหมครับ",
+            "meaning": "有点贵，可以便宜吗",
+            "next": "deal",
+            "goals": [
+              "price",
+              "bargain"
+            ]
+          }
+        ],
+        "typed": [
+          "เท่าไหร่",
+          "ลดได้ไหม",
+          "แพงไป"
+        ],
+        "typedNext": "deal",
+        "typedGoals": [
+          "bargain"
+        ],
+        "end": false
+      },
+      {
+        "id": "deal",
+        "speaker": "แม่ค้า",
+        "thai": "สองร้อยห้าสิบได้ค่ะ",
+        "romanization": "sɔ̌ɔng-rɔ́ɔi hâa-sìp",
+        "meaning": "二百五可以",
+        "choices": [
+          {
+            "thai": "ได้ครับ เอาครับ",
+            "meaning": "好，我要了",
+            "next": "end",
+            "goals": [
+              "bargain"
+            ]
+          },
+          {
+            "thai": "ขอคิดดูก่อนครับ",
+            "meaning": "我先考虑一下",
+            "next": "end",
+            "goals": [
+              "bargain"
+            ]
+          }
+        ],
+        "typed": [
+          "เอาครับ",
+          "คิดดูก่อน",
+          "ได้ครับ"
+        ],
+        "typedNext": "end",
+        "typedGoals": [
+          "bargain"
+        ],
+        "end": false
+      },
+      {
+        "id": "end",
+        "speaker": "แม่ค้า",
+        "thai": "ได้ค่ะ ขอบคุณค่ะ",
+        "romanization": "dâai khâ",
+        "meaning": "好，谢谢",
+        "choices": [],
+        "typed": [],
+        "typedNext": "",
+        "typedGoals": [],
+        "end": true
+      }
+    ],
+    "persona": {
+      "name": "แม่ค้า",
+      "role": "市场摊主",
+      "brief": "你报价清楚，可以小幅让价，但不亏本卖。他如果开玩笑压价太狠，你就笑着说这个价不行。不要嘲讽他。",
+      "turnLimit": 8
+    }
+  }
+]

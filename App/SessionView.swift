@@ -299,7 +299,7 @@ struct SessionView: View {
             Text(word.romanization)
                 .font(.title3)
                 .frame(maxWidth: .infinity)
-            Text("词频第 \(word.band) 档 · \(word.topic)")
+            Text("词频第 \(String(word.band)) 档 · \(word.topic)")
                 .font(.caption)
                 .foregroundStyle(Ink.muted)
                 .frame(maxWidth: .infinity)
@@ -333,7 +333,7 @@ struct SessionView: View {
             model.grade(grade)
         } label: {
             VStack(spacing: 2) {
-                Text("\(shortcut)  \(grade.title)").font(.body.weight(.semibold))
+                Text("\(String(shortcut))  \(grade.title)").font(.body.weight(.semibold))
                 Text(intervalText(grade))
                     .font(.caption2)
                     .foregroundStyle(Ink.muted)
@@ -352,7 +352,7 @@ struct SessionView: View {
             VStack(alignment: .leading, spacing: 10) {
                 Text("今天先到这里")
                     .font(.title2.bold())
-                Text("连续 \(model.progress.streak) 天。明天打开，到期的会自己排进来。")
+                Text("连续 \(String(model.progress.streak)) 天。明天打开，到期的会自己排进来。")
                     .foregroundStyle(Ink.muted)
                 Button("回到今天") { model.closeSession() }
                     .buttonStyle(.borderedProminent)

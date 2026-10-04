@@ -10,10 +10,12 @@ struct ThaiLearnApp: App {
                 .environment(model)
                 .environment(model.speech)
         }
+        #if os(macOS)
         .defaultSize(width: 1100, height: 760)
         .windowToolbarStyle(.unified(showsTitle: true))
         .commands {
             CommandGroup(replacing: .newItem) {}
         }
+        #endif
     }
 }

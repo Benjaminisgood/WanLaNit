@@ -438,6 +438,78 @@ final class AppModel {
         store.save(progress)
     }
 
+    func addScenarioPhrase(_ phrase: ScenarioPhrase) {
+        ScenarioReview.add(phrase: phrase, progress: &progress, on: today)
+        store.save(progress)
+        aiNotice = "已放进复习。"
+    }
+
+    func recordScenarioQuiz(id: String, correct: Int, asked: Int) {
+        var log = progress.scenarioLog[id] ?? ScenarioLog()
+        log.quizCorrect = correct
+        log.quizAsked = asked
+        progress.scenarioLog[id] = log
+        store.save(progress)
+    }
+
+    func recordScenarioRole(id: String, score: Int, goals: [String]) {
+        var log = progress.scenarioLog[id] ?? ScenarioLog()
+        log.roleScore = score
+        log.goalsMet = goals
+        progress.scenarioLog[id] = log
+        store.save(progress)
+    }
+
+    func markCultureRead(_ id: String) {
+        var log = progress.cultureLog[id] ?? CultureLog()
+        if log.read { return }
+        log.read = true
+        progress.cultureLog[id] = log
+        store.save(progress)
+    }
+
+    func recordCultureQuiz(id: String, correct: Int, asked: Int) {
+        var log = progress.cultureLog[id] ?? CultureLog()
+        log.read = true
+        log.correct = correct
+        log.asked = asked
+        progress.cultureLog[id] = log
+        store.save(progress)
+    }
+
+    func scenarioTurn(scenario: Scenario, history: [ScenarioTurn]) async -> ScenarioCoachOutcome {
+        guard let credential = credential(for: .chat) else {
+            return ScenarioCoachOutcome(reply: ScenarioCoach.fallback(scenario: scenario, history: history), usedFallback: true)
+        }
+        do {
+            try reserveAICall()
+            let chat = try AIClients.chat(
+                credential,
+                model: credential.model(for: .chat, override: assignments.chatModel),
+                transport: AIClients.transport()
+            )
+            return await ScenarioCoach.reply(chat: chat, scenario: scenario, history: history)
+        } catch {
+            aiNotice = (error as? AIClientError)?.description ?? "对话没有连上，改用写好的分支。"
+            return ScenarioCoachOutcome(reply: ScenarioCoach.fallback(scenario: scenario, history: history), usedFallback: true)
+        }
+    }
+
+    func progressData() -> Data {
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
+        return (try? encoder.encode(progress)) ?? Data()
+    }
+
+    func replaceProgress(with data: Data) -> String {
+        guard let next = try? JSONDecoder().decode(LearningProgress.self, from: data), next.startDate.iso.count == 10 else {
+            return "这份文件不是进度。"
+        }
+        progress = next
+        store.save(progress)
+        return "进度已经换上。AI 钥匙还在钥匙串里。"
+    }
+
     func saveSpeakAttempt(target: String, transcript: String, score: Int) {
         progress.recordSpeakAttempt(SpeakAttempt(
             id: UUID().uuidString,
@@ -506,6 +578,7 @@ enum AppSection: String, CaseIterable, Identifiable, Hashable {
     case reader
     case typing
     case passages
+    case scenarios
     case ai
     case stats
 
@@ -522,6 +595,7 @@ enum AppSection: String, CaseIterable, Identifiable, Hashable {
         case .reader: return "阅读"
         case .typing: return "打字"
         case .passages: return "精读"
+        case .scenarios: return "场景"
         case .ai: return "AI 练习"
         case .stats: return "统计"
         }
@@ -538,6 +612,7 @@ enum AppSection: String, CaseIterable, Identifiable, Hashable {
         case .reader: return "book"
         case .typing: return "keyboard"
         case .passages: return "book.fill"
+        case .scenarios: return "person.2"
         case .ai: return "sparkles"
         case .stats: return "chart.bar"
         }

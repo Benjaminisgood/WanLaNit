@@ -129,6 +129,7 @@ public enum ContentLoader {
         let words: [VocabWord] = decode("words.json", from: directory, issues: &issues) ?? []
         let starters: [StarterText] = decode("starters.json", from: directory, issues: &issues) ?? []
         let passages: [ReadingPassage] = decode("passages.json", from: directory, issues: &issues) ?? []
+        let scenarios: [Scenario] = decode("scenarios.json", from: directory, issues: &issues) ?? []
 
         if !issues.isEmpty {
             throw ContentError(issues: issues)
@@ -145,7 +146,8 @@ public enum ContentLoader {
             culture: culture,
             words: words,
             starters: starters,
-            passages: passages
+            passages: passages,
+            scenarios: scenarios
         )
         let validation = validate(catalog)
         if !validation.isEmpty {
@@ -167,6 +169,7 @@ public enum ContentLoader {
         validateWords(catalog, issues: &issues)
         validateStarters(catalog, issues: &issues)
         validatePassages(catalog, issues: &issues)
+        validateScenarios(catalog, issues: &issues)
         return issues
     }
 
@@ -478,9 +481,94 @@ public enum ContentLoader {
         if catalog.culture.count < 6 {
             issues.append("文化笔记至少 6 则")
         }
-        for note in catalog.culture where note.title.isEmpty || note.body.count < 20 {
-            issues.append("文化笔记 \(note.id) 太短")
+        let rich = catalog.culture.filter { !$0.phrases.isEmpty }
+        if rich.count < 15 {
+            issues.append("带短语和测验的文化文章至少 15 篇")
         }
+        for note in catalog.culture {
+            if note.title.isEmpty || note.body.count < 20 {
+                issues.append("文化笔记 \(note.id) 太短")
+            }
+            if note.phrases.isEmpty && note.questions.isEmpty { continue }
+            if !(3...6).contains(note.phrases.count) {
+                issues.append("文化文章 \(note.id) 要有 3 到 6 个短语")
+            }
+            if note.questions.count != 3 {
+                issues.append("文化文章 \(note.id) 要有 3 道题")
+            }
+            for phrase in note.phrases {
+                if phrase.thai.isEmpty || phrase.romanization.isEmpty || phrase.meaning.isEmpty {
+                    issues.append("文化文章 \(note.id) 有一条短语是空的")
+                }
+                if !toneMarkBeforeVowel(phrase.thai) {
+                    issues.append("文化文章 \(note.id) 的「\(phrase.thai)」声调符号写在元音后面了")
+                }
+            }
+            for question in note.questions where question.choices.count < 3 || !question.choices.indices.contains(question.answer) {
+                issues.append("文化文章 \(note.id) 有一道题的选项不对")
+            }
+        }
+    }
+
+    private static func validateScenarios(_ catalog: Catalog, issues: inout [String]) {
+        if catalog.scenarios.count < 6 {
+            issues.append("场景至少 6 个")
+        }
+        var seen: Set<String> = []
+        for scenario in catalog.scenarios {
+            if !seen.insert(scenario.id).inserted {
+                issues.append("场景 \(scenario.id) 重复了")
+            }
+            if scenario.goals.count < 3 {
+                issues.append("场景 \(scenario.id) 的目标不够")
+            }
+            if !(10...15).contains(scenario.phrases.count) {
+                issues.append("场景 \(scenario.id) 要有 10 到 15 句")
+            }
+            if !(1...2).contains(scenario.dialogues.count) {
+                issues.append("场景 \(scenario.id) 要有 1 到 2 段示范对话")
+            }
+            for dialogue in scenario.dialogues where dialogue.lines.count < 4 {
+                issues.append("场景 \(scenario.id) 的对话 \(dialogue.id) 太短")
+            }
+            if scenario.questions.count < 3 {
+                issues.append("场景 \(scenario.id) 的理解题不够")
+            }
+            if scenario.script.count < 3 {
+                issues.append("场景 \(scenario.id) 的分支不够")
+            }
+            let nodeIDs = Set(scenario.script.map(\.id))
+            for node in scenario.script where !node.end {
+                for choice in node.choices where !nodeIDs.contains(choice.next) {
+                    issues.append("场景 \(scenario.id) 的选项指向了不存在的 \(choice.next)")
+                }
+                if !node.typedNext.isEmpty && !nodeIDs.contains(node.typedNext) {
+                    issues.append("场景 \(scenario.id) 的打字下一句不存在")
+                }
+            }
+            for phrase in scenario.phrases where !phrase.thai.contains("ครับ") && !phrase.thai.contains("คะ") && !phrase.thai.contains("ค่ะ") {
+                issues.append("场景 \(scenario.id) 的「\(phrase.thai)」没有礼貌词")
+            }
+            for phrase in scenario.phrases where !toneMarkBeforeVowel(phrase.thai) || !toneMarkBeforeVowel(phrase.female) {
+                issues.append("场景 \(scenario.id) 的「\(phrase.thai)」声调符号写在元音后面了")
+            }
+            for question in scenario.questions where question.choices.count < 3 || !question.choices.indices.contains(question.answer) {
+                issues.append("场景 \(scenario.id) 有一道题的选项不对")
+            }
+        }
+    }
+
+    /// This repo stores a tone mark before sara aa (า) and sara am (ำ), not after them.
+    public static func toneMarkBeforeVowel(_ text: String) -> Bool {
+        let scalars = Array(text.unicodeScalars)
+        for index in scalars.indices where index + 1 < scalars.endIndex {
+            let value = scalars[index].value
+            let next = scalars[index + 1].value
+            if (value == 0x0E32 || value == 0x0E33) && (0x0E48...0x0E4B).contains(next) {
+                return false
+            }
+        }
+        return true
     }
 
     private static func checkSyllableGroup(

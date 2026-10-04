@@ -1,10 +1,10 @@
-import AppKit
 import SwiftUI
 import ThaiLearnCore
 
 struct RootView: View {
     @Environment(AppModel.self) private var model
     @Environment(SpeechService.self) private var speech
+    @Environment(\.scenePhase) private var scenePhase
 
     var body: some View {
         @Bindable var model = model
@@ -26,8 +26,7 @@ struct RootView: View {
                     detail(for: model.selectedSection ?? .today)
                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                         .paper()
-                        .toolbarBackground(Ink.paper, for: .windowToolbar)
-                        .toolbarBackground(.visible, for: .windowToolbar)
+                        .macToolbar()
                 }
             }
         }
@@ -35,8 +34,8 @@ struct RootView: View {
         .onChange(of: model.progress.unlockAll) { _, _ in
             normalizeSelection()
         }
-        .onReceive(NotificationCenter.default.publisher(for: NSApplication.didBecomeActiveNotification)) { _ in
-            speech.refresh()
+        .onChange(of: scenePhase) { _, phase in
+            if phase == .active { speech.refresh() }
         }
     }
 
@@ -55,6 +54,7 @@ struct RootView: View {
             case .reader: ReaderView()
             case .typing: TypingView()
             case .passages: PassagePracticeView()
+            case .scenarios: ScenarioView()
             case .ai: AIPracticeView()
             case .stats: StatsView()
             }
@@ -82,7 +82,7 @@ struct RootView: View {
             return LearningPath.isUnlocked(.vocabulary, catalog: catalog, progress: model.progress)
         case .reader:
             return LearningPath.isUnlocked(.reading, catalog: catalog, progress: model.progress)
-        case .today, .decks, .script, .culture, .stats, .typing, .passages, .ai:
+        case .today, .decks, .script, .culture, .stats, .typing, .passages, .scenarios, .ai:
             return true
         }
     }

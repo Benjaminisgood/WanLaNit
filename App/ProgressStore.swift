@@ -30,5 +30,6 @@ struct ProgressStore {
         encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
         guard let data = try? encoder.encode(progress) else { return }
         try? data.write(to: fileURL, options: .atomic)
+        ProgressCloud.push(data)
     }
 }

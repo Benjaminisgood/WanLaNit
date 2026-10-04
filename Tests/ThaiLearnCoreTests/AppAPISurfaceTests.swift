@@ -414,6 +414,13 @@ final class AppAPISurfaceTests: XCTestCase {
         XCTAssertEqual(AICredential.preferred(.chat, among: parsed + [dashscope])?.provider, .dashscope)
         XCTAssertEqual(AIAssignments.preselected(from: [dashscope]).chatModel, "qwen-plus")
         _ = DashScopeASR.endpoint(baseURL: dashscope.resolvedBaseURL).absoluteString
+        XCTAssertFalse(catalog.scenarios.isEmpty)
+        XCTAssertGreaterThanOrEqual(catalog.culture.filter { !$0.phrases.isEmpty }.count, 15)
+        XCTAssertTrue(ScenarioMatch.matches("ผมชื่อเบนครับ", candidates: ["ผมชื่อเบน"]))
+        _ = ScenarioCoach.fallback(scenario: catalog.scenarios[0], history: []).thai
+        _ = CulturePhrase(thai: "ครับ", romanization: "khráp", meaning: "礼貌词").thai
+        XCTAssertTrue(progress.scenarioLog.isEmpty)
+        XCTAssertTrue(progress.cultureLog.isEmpty)
     }
 
     private func touch(_ phrase: Phrase) {

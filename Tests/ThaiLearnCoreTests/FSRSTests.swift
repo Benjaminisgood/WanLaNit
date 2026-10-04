@@ -85,6 +85,8 @@ final class FSRSTests: XCTestCase {
         XCTAssertFalse(progress.unlockAll)
         XCTAssertTrue(progress.typing.best.isEmpty)
         XCTAssertTrue(progress.passageLog.isEmpty)
+        XCTAssertTrue(progress.scenarioLog.isEmpty)
+        XCTAssertTrue(progress.cultureLog.isEmpty)
         XCTAssertFalse(progress.ai.useAIVoice)
         XCTAssertEqual(progress.ai.usage.dailyCap, 40)
         XCTAssertTrue(progress.ai.attempts.isEmpty)

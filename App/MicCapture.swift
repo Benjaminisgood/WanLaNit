@@ -12,7 +12,11 @@ final class MicCapture {
 
     func requestAccess() async -> Bool {
         let microphone = await withCheckedContinuation { (continuation: CheckedContinuation<Bool, Never>) in
+            #if os(iOS)
+            AVAudioSession.sharedInstance().requestRecordPermission { continuation.resume(returning: $0) }
+            #else
             AVCaptureDevice.requestAccess(for: .audio) { continuation.resume(returning: $0) }
+            #endif
         }
         let speech = await withCheckedContinuation { (continuation: CheckedContinuation<Bool, Never>) in
             SFSpeechRecognizer.requestAuthorization { status in
@@ -27,6 +31,11 @@ final class MicCapture {
         lock.lock()
         samples = []
         lock.unlock()
+        #if os(iOS)
+        let session = AVAudioSession.sharedInstance()
+        try session.setCategory(.playAndRecord, mode: .spokenAudio, options: [.defaultToSpeaker, .allowBluetoothHFP])
+        try session.setActive(true)
+        #endif
         let engine = AVAudioEngine()
         let input = engine.inputNode
         let format = input.outputFormat(forBus: 0)

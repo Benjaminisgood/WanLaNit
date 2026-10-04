@@ -23,6 +23,7 @@ final class SpeechService {
     /// `rateScale` 乘在系统默认语速上，1 是原速。
     @discardableResult
     func speak(_ text: String, rateScale: Double = 0.82, whenFinished: (() -> Void)? = nil) -> Bool {
+        preparePlaybackSession()
         guard let voice = AVSpeechSynthesisVoice(language: "th-TH") else {
             hasThaiVoice = false
             return false
@@ -51,6 +52,7 @@ final class SpeechService {
     @discardableResult
     func playAudio(_ data: Data, whenFinished: (() -> Void)? = nil) -> Bool {
         stop()
+        preparePlaybackSession()
         do {
             let player = try AVAudioPlayer(data: data)
             let bridge = PlayerBridge()
@@ -63,6 +65,14 @@ final class SpeechService {
         } catch {
             return false
         }
+    }
+
+    private func preparePlaybackSession() {
+        #if os(iOS)
+        let session = AVAudioSession.sharedInstance()
+        try? session.setCategory(.playback, mode: .spokenAudio)
+        try? session.setActive(true)
+        #endif
     }
 
     func stop() {

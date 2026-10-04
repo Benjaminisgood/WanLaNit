@@ -287,6 +287,8 @@ public struct LearningProgress: Equatable, Sendable {
     public var unlockAll: Bool
     public var typing: TypingProgress
     public var passageLog: [String: PassageLog]
+    public var scenarioLog: [String: ScenarioLog]
+    public var cultureLog: [String: CultureLog]
     public var ai: AISettings
 
     public init(
@@ -305,6 +307,8 @@ public struct LearningProgress: Equatable, Sendable {
         unlockAll: Bool = false,
         typing: TypingProgress = TypingProgress(),
         passageLog: [String: PassageLog] = [:],
+        scenarioLog: [String: ScenarioLog] = [:],
+        cultureLog: [String: CultureLog] = [:],
         ai: AISettings = AISettings()
     ) {
         self.schema = schema
@@ -322,6 +326,8 @@ public struct LearningProgress: Equatable, Sendable {
         self.unlockAll = unlockAll
         self.typing = typing
         self.passageLog = passageLog
+        self.scenarioLog = scenarioLog
+        self.cultureLog = cultureLog
         self.ai = ai
     }
 
@@ -368,7 +374,7 @@ public struct LearningProgress: Equatable, Sendable {
 extension LearningProgress: Codable {
     private enum CodingKeys: String, CodingKey {
         case schema, startDate, cards, streak, lastStudiedDay, dayLogs, resume
-        case desiredRetention, newCardLimit, wordMemory, library, readerNotes, unlockAll, typing, passageLog, ai
+        case desiredRetention, newCardLimit, wordMemory, library, readerNotes, unlockAll, typing, passageLog, scenarioLog, cultureLog, ai
     }
 
     public init(from decoder: Decoder) throws {
@@ -389,6 +395,8 @@ extension LearningProgress: Codable {
         unlockAll = try container.decodeIfPresent(Bool.self, forKey: .unlockAll) ?? false
         typing = try container.decodeIfPresent(TypingProgress.self, forKey: .typing) ?? TypingProgress()
         passageLog = try container.decodeIfPresent([String: PassageLog].self, forKey: .passageLog) ?? [:]
+        scenarioLog = try container.decodeIfPresent([String: ScenarioLog].self, forKey: .scenarioLog) ?? [:]
+        cultureLog = try container.decodeIfPresent([String: CultureLog].self, forKey: .cultureLog) ?? [:]
         ai = try container.decodeIfPresent(AISettings.self, forKey: .ai) ?? AISettings()
     }
 
@@ -409,6 +417,8 @@ extension LearningProgress: Codable {
         try container.encode(unlockAll, forKey: .unlockAll)
         try container.encode(typing, forKey: .typing)
         try container.encode(passageLog, forKey: .passageLog)
+        try container.encode(scenarioLog, forKey: .scenarioLog)
+        try container.encode(cultureLog, forKey: .cultureLog)
         try container.encode(ai, forKey: .ai)
     }
 }
@@ -607,7 +617,7 @@ public enum StudySession {
     }
 
     static func ref(forCardKey key: String, catalog: Catalog) -> StudyRef? {
-        if key.hasPrefix("reader:") {
+        if key.hasPrefix("reader:") || key.hasPrefix("scenario:") {
             return StudyRef(id: key, kind: .word, template: .recognition)
         }
         if key.hasPrefix("tone-") {

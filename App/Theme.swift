@@ -36,6 +36,17 @@ extension View {
     func paper() -> some View {
         modifier(PaperBackground())
     }
+
+    @ViewBuilder
+    func macToolbar() -> some View {
+        #if os(macOS)
+        self
+            .toolbarBackground(Ink.paper, for: .windowToolbar)
+            .toolbarBackground(.visible, for: .windowToolbar)
+        #else
+        self
+        #endif
+    }
 }
 
 struct ThaiLine: View {
@@ -117,7 +128,11 @@ struct VoiceBanner: View {
             VStack(alignment: .leading, spacing: 6) {
                 Label("还没有泰语语音", systemImage: "speaker.slash")
                     .font(.headline)
+                #if os(iOS)
+                Text("到「设置」→「辅助功能」→「朗读内容」，下载泰语（ไทย / th-TH）。下完回到这里，播放就会用这个声音。")
+                #else
                 Text("打开「系统设置」→「辅助功能」→「朗读内容」。在「系统声音」里点「管理声音…」，下载泰语（ไทย / th-TH）。下完回到这里，播放就会用这个声音。")
+                #endif
                     .font(.callout)
                     .foregroundStyle(Ink.muted)
                     .fixedSize(horizontal: false, vertical: true)

@@ -3,14 +3,11 @@ options:
   bundleIdPrefix: app.wanlanit
   deploymentTarget:
     macOS: "14.0"
+    iOS: "17.0"
   createIntermediateGroups: true
 settings:
   base:
     SWIFT_VERSION: "5.9"
-    MACOSX_DEPLOYMENT_TARGET: "14.0"
-    CODE_SIGNING_ALLOWED: NO
-    CODE_SIGNING_REQUIRED: NO
-    ENABLE_HARDENED_RUNTIME: NO
 packages:
   ThaiLearn:
     path: .
@@ -19,6 +16,9 @@ targets:
     type: application
     platform: macOS
     sources:
+      # The whole App directory. A fresh `xcodegen generate` compiles every
+      # Swift file here, including KeychainVault.swift (KeychainVault and
+      # TTSCache) and MicCapture.swift (AppleThaiSpeech).
       - path: App
       # `resources:` is not an XcodeGen key, so it was ignored and the JSON
       # never reached Copy Bundle Resources. A group copies each file to
@@ -35,6 +35,9 @@ targets:
         PRODUCT_NAME: WanLaNit
         MARKETING_VERSION: "1.0"
         CURRENT_PROJECT_VERSION: "1"
+        CODE_SIGNING_ALLOWED: NO
+        CODE_SIGNING_REQUIRED: NO
+        ENABLE_HARDENED_RUNTIME: NO
         GENERATE_INFOPLIST_FILE: YES
         INFOPLIST_KEY_CFBundleDisplayName: วันละนิด
         INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.education
@@ -44,11 +47,47 @@ targets:
         # com.apple.security.network.client, com.apple.security.device.audio-input,
         # and com.apple.security.files.user-selected.read-only.
         ENABLE_APP_SANDBOX: NO
+  WanLaNit-iOS:
+    type: application
+    platform: iOS
+    sources:
+      - path: App
+      - path: Content
+        buildPhase: resources
+        type: group
+    dependencies:
+      - package: ThaiLearn
+        product: ThaiLearnCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.wanlanit.WanLaNit
+        PRODUCT_NAME: WanLaNit
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+        TARGETED_DEVICE_FAMILY: "1,2"
+        SUPPORTS_MACCATALYST: NO
+        CODE_SIGN_STYLE: Automatic
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: วันละนิด
+        INFOPLIST_KEY_NSMicrophoneUsageDescription: "跟读、场景扮演和语音输入需要使用麦克风。这段录音只用于这一次识别。"
+        INFOPLIST_KEY_NSSpeechRecognitionUsageDescription: "没有云端语音时，用系统的泰语识别。能在这台手机上完成时不会把声音发出去。"
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        # WANLANIT_ICLOUD is intentionally absent. Turning on iCloud sync needs
+        # a paid developer account, the iCloud capability, and that flag.
 schemes:
   WanLaNit:
     build:
       targets:
         WanLaNit: all
+    run:
+      config: Debug
+    archive:
+      config: Release
+  WanLaNit-iOS:
+    build:
+      targets:
+        WanLaNit-iOS: all
     run:
       config: Debug
     archive:

@@ -1,10 +1,13 @@
+#if os(macOS)
 import AppKit
 import Carbon
+#endif
 import SwiftUI
 import ThaiLearnCore
 
 struct TypingView: View {
     @Environment(AppModel.self) private var model
+    @Environment(\.horizontalSizeClass) private var sizeClass
     @State private var lessonID: String? = "home-left"
     @State private var typed = ""
     @State private var started: Date?
@@ -12,9 +15,39 @@ struct TypingView: View {
     @State private var previewShift = false
     @State private var thaiKeyboard = false
 
+    private var compact: Bool {
+        #if os(iOS)
+        sizeClass == .compact
+        #else
+        false
+        #endif
+    }
+
     var body: some View {
         let lessons = model.catalog.map { TypingCourse.lessons(in: $0) } ?? []
         let lesson = lessons.first { $0.id == lessonID } ?? (lessonID == "weak" ? lessons.first : lessons.first)
+        Group {
+            if compact {
+                compactBody(lessons: lessons, lesson: lesson)
+            } else {
+                wideBody(lessons: lessons, lesson: lesson)
+            }
+        }
+        .navigationTitle("打字")
+        .onAppear {
+            thaiKeyboard = ThaiInputSource.isActive()
+        }
+        #if os(macOS)
+        .onReceive(NotificationCenter.default.publisher(for: NSApplication.didBecomeActiveNotification)) { _ in
+            thaiKeyboard = ThaiInputSource.isActive()
+        }
+        #endif
+        .onChange(of: lessonID) { _, _ in
+            resetLine()
+        }
+    }
+
+    private func wideBody(lessons: [TypingLesson], lesson: TypingLesson?) -> some View {
         HStack(spacing: 0) {
             List(selection: $lessonID) {
                 ForEach(lessons) { item in
@@ -42,15 +75,22 @@ struct TypingView: View {
             stats
                 .frame(width: 230)
         }
-        .navigationTitle("打字")
-        .onAppear {
-            thaiKeyboard = ThaiInputSource.isActive()
-        }
-        .onReceive(NotificationCenter.default.publisher(for: NSApplication.didBecomeActiveNotification)) { _ in
-            thaiKeyboard = ThaiInputSource.isActive()
-        }
-        .onChange(of: lessonID) { _, _ in
-            resetLine()
+    }
+
+    private func compactBody(lessons: [TypingLesson], lesson: TypingLesson?) -> some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 12) {
+                Picker("课", selection: $lessonID) {
+                    ForEach(lessons) { item in
+                        Text(item.title).tag(Optional(item.id))
+                    }
+                    Text("薄弱键").tag(Optional("weak"))
+                }
+                if let lesson {
+                    practice(lesson)
+                }
+                stats
+            }
         }
     }
 
@@ -75,6 +115,9 @@ struct TypingView: View {
                 .textFieldStyle(.roundedBorder)
                 .font(.system(size: 22, design: .serif))
                 .autocorrectionDisabled()
+                #if os(iOS)
+                .textInputAutocapitalization(.never)
+                #endif
                 if diff.focus?.status == .wrong {
                     Text("这个字不对。按删除键退回，再打一次。")
                         .font(.callout)
@@ -136,13 +179,23 @@ struct TypingView: View {
 
     private var banner: some View {
         VStack(alignment: .leading, spacing: 6) {
+            #if os(iOS)
+            Text("请用系统泰文键盘")
+            #else
             Text("当前不是泰文输入法")
+            #endif
                 .font(.headline)
+            #if os(iOS)
+            Text("在键盘上的地球仪键切到「ไทย」。下面的键位只用来看下一键，点它不会输入。")
+            #else
             Text("打开「系统设置」→「键盘」→「输入法」，添加「泰文」。然后用 Ctrl+Space，或按 Fn（地球仪键）切换。打出泰文以后，这条提示会消失。也可以先用下面的英文字母键位练习。")
+            #endif
                 .font(.callout)
                 .foregroundStyle(Ink.muted)
                 .fixedSize(horizontal: false, vertical: true)
+            #if os(macOS)
             Button("重新检测") { thaiKeyboard = ThaiInputSource.isActive() }
+            #endif
         }
         .padding(12)
         .background(Ink.card, in: RoundedRectangle(cornerRadius: 12))
@@ -184,7 +237,10 @@ struct TypingView: View {
         let label = shifted ? key.shiftedLabel : key.plainLabel
         let active = next == (shifted ? key.shifted : key.plain)
         return Button {
+            #if os(iOS)
+            #else
             updateTyped(typed + (shifted ? key.shifted : key.plain), expected: currentText)
+            #endif
         } label: {
             VStack(spacing: 0) {
                 Text(key.usPlain.uppercased())
@@ -302,6 +358,9 @@ enum ThaiInputSource {
     /// macOS reports the selected keyboard layout. Thai is a layout, not a converting input method.
     /// A stale ASCII layout can still be reported for a moment after switching; typed Thai hides the banner.
     static func isActive() -> Bool {
+        #if os(iOS)
+        return false
+        #else
         guard let unmanaged = TISCopyCurrentKeyboardInputSource() else { return false }
         let source = unmanaged.takeRetainedValue()
         guard let raw = TISGetInputSourceProperty(source, kTISPropertyInputSourceLanguages) else { return false }
@@ -312,5 +371,6 @@ enum ThaiInputSource {
             }
         }
         return false
+        #endif
     }
 }

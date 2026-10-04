@@ -106,7 +106,7 @@ struct TodayView: View {
                 Button("复习统计和设置") { model.selectedSection = .stats }
                     .buttonStyle(.bordered)
 
-                Text("从 \(model.progress.startDate.iso) 开始。进度记在这台 Mac 上。复习用 FSRS。")
+                Text("从 \(model.progress.startDate.iso) 开始。进度记在这台设备上。复习用 FSRS。")
                     .font(.footnote)
                     .foregroundStyle(Ink.muted)
             }
@@ -114,8 +114,7 @@ struct TodayView: View {
             .frame(maxWidth: 760, alignment: .leading)
         }
         .navigationTitle("今天")
-        .toolbarBackground(Ink.paper, for: .windowToolbar)
-        .toolbarBackground(.visible, for: .windowToolbar)
+        .macToolbar()
     }
 }
 

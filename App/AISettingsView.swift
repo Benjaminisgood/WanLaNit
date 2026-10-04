@@ -1,4 +1,6 @@
+#if os(macOS)
 import AppKit
+#endif
 import SwiftUI
 import ThaiLearnCore
 import UniformTypeIdentifiers
@@ -19,6 +21,7 @@ struct AISettingsView: View {
     @State private var chatModel = ""
     @State private var speechModel = ""
     @State private var transcriptionModel = ""
+    @State private var importingKeyFile = false
 
     var body: some View {
         CardShell {
@@ -43,10 +46,10 @@ struct AISettingsView: View {
                     .font(.caption)
                     .foregroundStyle(Ink.muted)
 
-                Button("从 APIKEY.md 导入") { importFile() }
+                Button("从 APIKEY.md 导入") { beginImport() }
                     .buttonStyle(.borderedProminent)
                     .tint(Ink.lacquer)
-                Text("会打开文件选择，并先指到 ~/keyoti/keyitems/pems/。请自己选中那份文件。")
+                Text("Mac 会先指到 ~/keyoti/keyitems/pems/。iPhone 从「文件」里选同一份 APIKEY.md，也可以在下面手动填。")
                     .font(.caption)
                     .foregroundStyle(Ink.muted)
 
@@ -107,6 +110,28 @@ struct AISettingsView: View {
             }
         }
         .onAppear(perform: loadDraft)
+        .fileImporter(isPresented: $importingKeyFile, allowedContentTypes: [.plainText, UTType(filenameExtension: "md") ?? .plainText]) { result in
+            switch result {
+            case .success(let url):
+                let accessed = url.startAccessingSecurityScopedResource()
+                defer { if accessed { url.stopAccessingSecurityScopedResource() } }
+                if let text = try? String(contentsOf: url, encoding: .utf8) {
+                    applyImported(text)
+                } else {
+                    notice = "这个文件读不了。"
+                }
+            case .failure:
+                notice = "没有选到文件。"
+            }
+        }
+    }
+
+    private func beginImport() {
+        #if os(macOS)
+        importFile()
+        #else
+        importingKeyFile = true
+        #endif
     }
 
     private func credentialRow(_ item: AICredential) -> some View {
@@ -170,6 +195,7 @@ struct AISettingsView: View {
         transcriptionModel = model.assignments.transcriptionModel ?? ""
     }
 
+    #if os(macOS)
     private func importFile() {
         let panel = NSOpenPanel()
         panel.canChooseFiles = true
@@ -188,6 +214,11 @@ struct AISettingsView: View {
             notice = "这个文件读不了。"
             return
         }
+        applyImported(text)
+    }
+    #endif
+
+    private func applyImported(_ text: String) {
         let found = AIKeyParser.parse(text)
         guard !found.isEmpty else {
             notice = "没有认出钥匙。可以改用下面的手动添加。"
